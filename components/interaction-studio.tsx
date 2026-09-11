@@ -14,7 +14,7 @@ const modes = [
   {
     name: 'Prototype',
     detail: 'Make an idea tangible and testable.',
-    symbol: '↗',
+    symbol: '↗︎',
   },
 ];
 export function InteractionStudio() {
@@ -314,7 +314,7 @@ export function InteractionStudio() {
                         ? 'Saving…'
                         : status === 'failed'
                           ? 'Try again ↻'
-                          : 'Create demo project ↗'}
+                          : 'Create demo project ↗︎'}
                     </button>
                   )}
                 </div>

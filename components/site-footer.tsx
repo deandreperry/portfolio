@@ -1,3 +1,4 @@
+import { ArrowIcon } from '@/components/arrow-icon';
 import { siteConfig } from '@/data/site';
 export function SiteFooter() {
   return (
@@ -12,7 +13,7 @@ export function SiteFooter() {
           </h2>
         </div>
         <a href="/contact" className="button button-primary">
-          Get in touch <span aria-hidden="true">↗</span>
+          Get in touch <span aria-hidden="true"><ArrowIcon /></span>
         </a>
       </div>
       <div className="footer-base shell">
@@ -26,12 +27,12 @@ export function SiteFooter() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            LinkedIn ↗
+            LinkedIn <ArrowIcon />
           </a>
           <a href={siteConfig.github} target="_blank" rel="noopener noreferrer">
-            GitHub ↗
+            GitHub <ArrowIcon />
           </a>
-          <a href={siteConfig.resume || '/resume'}>Resume ↗</a>
+          <a href={siteConfig.resume || '/resume'}>Resume <ArrowIcon /></a>
         </div>
       </div>
     </footer>

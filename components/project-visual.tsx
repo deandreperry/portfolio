@@ -1,3 +1,4 @@
+import { ArrowIcon } from '@/components/arrow-icon';
 type ProjectVisualProps = { slug: string; compact?: boolean };
 export function ProjectVisual({ slug }: ProjectVisualProps) {
   return (
@@ -40,7 +41,7 @@ export function ProjectVisual({ slug }: ProjectVisualProps) {
                 <b>Explore the possibilities</b>
                 <small>Start with an open question</small>
               </div>
-              <i>↗</i>
+              <i><ArrowIcon /></i>
             </div>
             <div className="phone-option">
               <span>02</span>
@@ -48,7 +49,7 @@ export function ProjectVisual({ slug }: ProjectVisualProps) {
                 <b>Build on an idea</b>
                 <small>Turn a thought into a direction</small>
               </div>
-              <i>↗</i>
+              <i><ArrowIcon /></i>
             </div>
             <div className="phone-bottom">
               Your next step starts here <span>→</span>
@@ -98,7 +99,7 @@ export function ProjectVisual({ slug }: ProjectVisualProps) {
                   <br />
                   and what to test.
                 </small>
-                <b>↗</b>
+                <b><ArrowIcon /></b>
               </div>
             </div>
           </div>
@@ -109,7 +110,7 @@ export function ProjectVisual({ slug }: ProjectVisualProps) {
             <b>workspace /</b>
             <span>Overview</span>
             <span className="selected">
-              Requests <i>↗</i>
+              Requests <i><ArrowIcon /></i>
             </span>
             <span>Activity</span>
             <span>Settings</span>
@@ -117,7 +118,7 @@ export function ProjectVisual({ slug }: ProjectVisualProps) {
           <div className="workflow-main">
             <div className="workflow-heading">
               <span>WORKSPACE / REQUESTS</span>
-              <span>View workflow ↗</span>
+              <span>View workflow <ArrowIcon /></span>
             </div>
             <p className="visual-title">
               The right detail.
@@ -140,7 +141,7 @@ export function ProjectVisual({ slug }: ProjectVisualProps) {
               </div>
               <div>
                 <span>Supporting context</span>
-                <b>One step away ↗</b>
+                <b>One step away <ArrowIcon /></b>
               </div>
               <p>
                 Review request <span>→</span>
@@ -166,10 +167,10 @@ export function ProjectVisual({ slug }: ProjectVisualProps) {
             <span>COMPONENTS / STATES</span>
             <div className="specimen-buttons">
               <b>
-                Continue <i>↗</i>
+                Continue <i><ArrowIcon /></i>
               </b>
               <b>
-                Secondary <i>↗</i>
+                Secondary <i><ArrowIcon /></i>
               </b>
             </div>
             <div className="specimen-input">

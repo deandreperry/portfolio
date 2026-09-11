@@ -1,4 +1,5 @@
 'use client';
+import { ArrowIcon } from '@/components/arrow-icon';
 import { useState } from 'react';
 const stages = [
   {
@@ -69,7 +70,7 @@ export function DesignLab() {
           ) : (
             <div className="choice-model">
               <div className="choice-symbol" aria-hidden="true">
-                ↗
+                <ArrowIcon />
               </div>
               <span className="tiny-label">A LITTLE DIRECTION</span>
               <h2>What’s your next step?</h2>
@@ -94,7 +95,7 @@ export function DesignLab() {
                 {choice === 'Explore a direction'
                   ? 'Begin with a question worth exploring.'
                   : 'Identify the assumption worth testing.'}
-                <span aria-hidden="true">↗</span>
+                <span aria-hidden="true"><ArrowIcon /></span>
               </div>
             </div>
           )}

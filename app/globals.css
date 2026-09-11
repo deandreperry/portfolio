@@ -4501,8 +4501,8 @@ img {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 54px;
-  height: 54px;
+  width: 44px;
+  height: 44px;
   padding: 0;
   border: 0;
   border-radius: 50%;
@@ -4595,3 +4595,5 @@ img {
   .menu-trigger, .menu-icon span { transition: none; }
   .nav-links.is-open { animation: none; }
 }
+
+.case-project-links { display: flex; flex-wrap: wrap; align-items: center; gap: 20px 32px; margin: 28px 0; }

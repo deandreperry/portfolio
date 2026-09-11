@@ -18,6 +18,7 @@ export const toolkit: ToolGroup[] = [
 ];
 export const projectTools: Record<string, ToolGroup[]> = {
   'uxd-systems': [
+    { label: 'Design & interaction', tools: ['Figma', 'Sketch'] },
     {
       label: 'Prototype implementation',
       tools: ['Next.js', 'React', 'TypeScript'],

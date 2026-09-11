@@ -1,3 +1,4 @@
+import { ArrowIcon } from '@/components/arrow-icon';
 import type { Metadata } from 'next';
 import { certificates } from '@/data/profile';
 import { siteConfig } from '@/data/site';
@@ -45,12 +46,12 @@ export default function ResumePage() {
             className="button button-primary"
             href={`mailto:${siteConfig.email}?subject=Resume%20request`}
           >
-            Request my résumé ↗
+            Request my résumé <ArrowIcon />
           </a>
         </section>
       )}
       <a href="/about" className="text-link">
-        Explore my approach <span aria-hidden="true">↗</span>
+        Explore my approach <span aria-hidden="true"><ArrowIcon /></span>
       </a>
     </main>
   );

@@ -1,4 +1,5 @@
 'use client';
+import { ArrowIcon } from '@/components/arrow-icon';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
@@ -59,7 +60,7 @@ export function SiteHeader() {
               onClick={() => setOpen(false)}
             >
               {x.label}
-              {x.label === 'Contact' && <span aria-hidden="true">↗</span>}
+              {x.label === 'Contact' && <span aria-hidden="true"><ArrowIcon /></span>}
             </a>
           ))}
         </div>

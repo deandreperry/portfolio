@@ -1,3 +1,4 @@
+import { ArrowIcon } from '@/components/arrow-icon';
 import type { Metadata } from 'next';
 import { siteConfig } from '@/data/site';
 import { CopyEmail } from '@/components/contact-actions';
@@ -26,7 +27,7 @@ export default function ContactPage() {
               className="button button-primary"
               href={`mailto:${siteConfig.email}`}
             >
-              Email De’Andre ↗
+              Email De’Andre <ArrowIcon />
             </a>
             <CopyEmail email={siteConfig.email} />
           </div>
@@ -44,7 +45,7 @@ export default function ContactPage() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              LinkedIn <span>Visit profile ↗</span>
+              LinkedIn <span>Visit profile <ArrowIcon /></span>
             </a>
           ) : (
             <div>
@@ -52,11 +53,11 @@ export default function ContactPage() {
             </div>
           )}
           <a href={siteConfig.github} target="_blank" rel="noopener noreferrer">
-            GitHub ↗
+            GitHub <ArrowIcon />
           </a>
           <a href={siteConfig.resume || '/resume'}>
             Resume{' '}
-            <span>{siteConfig.resume ? 'View resume ↗' : 'View status ↗'}</span>
+            <span>{siteConfig.resume ? 'View resume ↗︎' : 'View status ↗︎'}</span>
           </a>
         </div>
       </div>

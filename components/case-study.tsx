@@ -1,3 +1,4 @@
+import { ArrowIcon } from '@/components/arrow-icon';
 import { ProjectNarrative } from './project-narrative';
 import Image from 'next/image';
 import type { CaseStudy as Project, ProjectDecision } from '@/data/projects';
@@ -299,7 +300,7 @@ export function CaseStudy({
         </a>
         <a href={`/work/${nextProject.slug}`}>
           <span>NEXT CASE STUDY</span>
-          <b>{nextProject.title} ↗</b>
+          <b>{nextProject.title} <ArrowIcon /></b>
         </a>
       </nav>
     </main>

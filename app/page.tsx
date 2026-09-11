@@ -1,3 +1,4 @@
+import { ArrowIcon } from '@/components/arrow-icon';
 import { Toolkit } from '@/components/toolkit';
 import { ProjectCard } from '@/components/project-card';
 import { siteConfig } from '@/data/site';
@@ -21,10 +22,10 @@ export default function Home() {
           </p>
           <div className="hero-actions">
             <a href="#selected-work" className="button button-primary">
-              View my work <span aria-hidden="true">↘</span>
+              View my work <span aria-hidden="true"><ArrowIcon down /></span>
             </a>
             <a href="/about" className="text-link">
-              A little about me <span aria-hidden="true">↗</span>
+              A little about me <span aria-hidden="true"><ArrowIcon /></span>
             </a>
           </div>
         </div>
@@ -46,7 +47,7 @@ export default function Home() {
           </ul>
           <div>
             <a className="text-link" href={siteConfig.resume || '/resume'}>
-              Resume ↗
+              Resume <ArrowIcon />
             </a>
             <a
               className="text-link"
@@ -54,7 +55,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              LinkedIn ↗
+              LinkedIn <ArrowIcon />
             </a>
           </div>
         </aside>
@@ -109,7 +110,7 @@ export default function Home() {
             understanding a problem and making something genuinely useful.
           </p>
           <a href="/about" className="text-link">
-            My approach & background <span aria-hidden="true">↗</span>
+            My approach & background <span aria-hidden="true"><ArrowIcon /></span>
           </a>
         </div>
       </section>

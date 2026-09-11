@@ -1,3 +1,4 @@
+import { ArrowIcon } from '@/components/arrow-icon';
 import { Toolkit } from '@/components/toolkit';
 import type { Metadata } from 'next';
 import Image from 'next/image';
@@ -178,7 +179,7 @@ export default function AboutPage() {
                   rel="noopener noreferrer"
                   aria-label={`Show credential: ${certificate.title} (opens in a new tab)`}
                 >
-                  Show credential ↗
+                  Show credential <ArrowIcon />
                 </a>
               ) : (
                 <span className="credential-pending">
@@ -190,10 +191,10 @@ export default function AboutPage() {
         </div>
         <div className="hero-actions">
           <a href="/resume" className="button button-secondary">
-            Resume ↗
+            Resume <ArrowIcon />
           </a>
           <a href="/contact" className="text-link">
-            Start a conversation ↗
+            Start a conversation <ArrowIcon />
           </a>
         </div>
       </section>

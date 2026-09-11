@@ -1,3 +1,6 @@
+import { ArrowIcon } from "@/components/arrow-icon";
+
+import { projectLinks } from '@/data/project-links';
 import { scopeNumbers } from '@/data/scope-numbers';
 import { Toolkit } from './toolkit';
 import {
@@ -88,6 +91,10 @@ export function ProjectNarrative({
         </p>
         <h1>{project.title}</h1>
         <p className="narrative-deck">{project.description}</p>
+        <div className="case-project-links">
+          {projectLinks[project.slug]?.live && <a className="button button-primary" href={projectLinks[project.slug].live} target="_blank" rel="noopener noreferrer">Visit live project <ArrowIcon /><span className="sr-only"> (opens in a new tab)</span></a>}
+          <a className="text-link" href={projectLinks[project.slug].source} target="_blank" rel="noopener noreferrer">View project on GitHub <ArrowIcon /><span className="sr-only"> (opens in a new tab)</span></a>
+        </div>
         <dl className="case-metadata">
           <div>
             <dt>Role</dt>
@@ -102,7 +109,7 @@ export function ProjectNarrative({
             <dd>Product implementation review</dd>
           </div>
           <div>
-            <dt>Prototype tools</dt>
+            <dt>Tools</dt>
             <dd>{projectTools[project.slug][0].tools.join(' · ')}</dd>
           </div>
           <div>
@@ -227,7 +234,7 @@ export function ProjectNarrative({
           </section>
           <a href={`/work/${nextProject.slug}`} className="next-project">
             <span>Next case study</span>
-            <h2>{nextProject.title} ↗</h2>
+            <h2>{nextProject.title} <ArrowIcon /></h2>
             <ProjectMedia project={nextProject} />
           </a>
         </div>

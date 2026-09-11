@@ -1,3 +1,4 @@
+import { ArrowIcon } from '@/components/arrow-icon';
 import type { CaseStudy } from '@/data/projects';
 import { ProjectCover } from './project-cover';
 export function ProjectCard({
@@ -16,7 +17,7 @@ export function ProjectCard({
         <div className="project-art">
           <ProjectCover project={project} />
           <span className="project-open" aria-hidden="true">
-            ↗
+            <ArrowIcon />
           </span>
         </div>
         <div className="project-card-copy">
@@ -56,7 +57,7 @@ export function ProjectCard({
               ))}
             </ul>
             <span className="text-link">
-              View case study <span aria-hidden="true">↗</span>
+              View case study <span aria-hidden="true"><ArrowIcon /></span>
             </span>
           </div>
         </div>

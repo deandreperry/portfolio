@@ -1,3 +1,4 @@
+import { ArrowIcon } from '@/components/arrow-icon';
 export function UIDetails() {
   return (
     <section className="ui-details shell" aria-labelledby="ui-details-title">
@@ -7,7 +8,7 @@ export function UIDetails() {
           <h2 id="ui-details-title">Clarity, close up.</h2>
         </div>
         <a className="text-link" href="#interaction-studio">
-          Try the complete interaction study ↗
+          Try the complete interaction study <ArrowIcon />
         </a>
       </div>
       <div className="detail-pair">
@@ -22,7 +23,7 @@ export function UIDetails() {
               <b>Interface review</b>
             </div>
             <div className="detail-action" aria-hidden="true">
-              Create demo project <span>↗</span>
+              Create demo project <span><ArrowIcon /></span>
             </div>
           </div>
           <figcaption>
