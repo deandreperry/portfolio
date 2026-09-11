@@ -4495,7 +4495,8 @@ img {
 .back-to-top {
   position: fixed;
   right: max(1rem, env(safe-area-inset-right));
-  bottom: calc(max(1rem, env(safe-area-inset-bottom)) + 5px);
+  /* Reserve the bottom corner for the accessibility widget and its touch target. */
+  bottom: calc(max(1rem, env(safe-area-inset-bottom)) + 80px);
   z-index: 30;
   display: inline-flex;
   align-items: center;
