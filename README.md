@@ -42,3 +42,7 @@ Routes include Home, Work, four `/work/<slug>` case studies, About, Contact, and
 Confirm the production origin and sitemap, supply the résumé and edX credential URL, and review project authorship, dates, and historical evidence. Search indexing remains disabled until publication readiness is confirmed. The accessibility widget has a singleton asynchronous loader; live vendor loading still needs verification on the intended production origin. Native accessibility does not depend on the widget.
 
 The `.openai/hosting.json` file retains the existing Sites project association. Pushing this repository does not itself deploy the site unless a deployment workflow is configured separately.
+
+## GitHub Pages deployment
+
+`main` is the production source branch. `.github/workflows/deploy.yml` installs locked dependencies, runs lint and TypeScript checks, builds the static application, and publishes only `dist/client` to GitHub Pages. The existing custom domain is `deandreperry.com`; `public/CNAME` preserves it in build output. GitHub Pages must use GitHub Actions as its build source, not the raw repository root.

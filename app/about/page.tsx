@@ -183,7 +183,7 @@ export default function AboutPage() {
                 </a>
               ) : (
                 <span className="credential-pending">
-                  Credential link pending
+                  edX · Credential ID listed above
                 </span>
               )}
             </article>

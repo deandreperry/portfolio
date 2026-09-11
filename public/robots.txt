@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://deandre-perry-ux.info636875.chatgpt.site/sitemap.xml
+Sitemap: https://deandreperry.com/sitemap.xml

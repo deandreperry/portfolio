@@ -737,3 +737,21 @@
     gap: 1rem;
   }
 }
+.resume-background {
+  margin-block: 2rem;
+  max-width: 70ch;
+}
+.resume-background h2 {
+  font-size: 2rem;
+  margin-block: 2rem 1rem;
+}
+.resume-background h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+}
+.resume-background li {
+  margin-block: 0.75rem;
+}
+.resume-background .button {
+  margin-block: 1.5rem;
+}

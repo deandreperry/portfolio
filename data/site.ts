@@ -5,5 +5,5 @@ export const siteConfig = {
   github: 'https://github.com/deandreperry',
   linkedin: 'https://www.linkedin.com/in/iamdeandreperry',
   resume: '',
-  url: 'https://deandre-perry-ux.info636875.chatgpt.site',
+  url: 'https://deandreperry.com',
 };
