@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import { certificates } from '@/data/profile';
 import { siteConfig } from '@/data/site';
 export const metadata: Metadata = {
@@ -50,9 +49,9 @@ export default function ResumePage() {
           </a>
         </section>
       )}
-      <Link href="/about" className="text-link">
+      <a href="/about" className="text-link">
         Explore my approach <span aria-hidden="true">↗</span>
-      </Link>
+      </a>
     </main>
   );
 }

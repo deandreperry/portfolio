@@ -1,5 +1,4 @@
 import { Toolkit } from '@/components/toolkit';
-import Link from 'next/link';
 import { ProjectCard } from '@/components/project-card';
 import { siteConfig } from '@/data/site';
 import { projects } from '@/data/projects';
@@ -21,12 +20,12 @@ export default function Home() {
             research-informed thinking, and high-fidelity prototyping.
           </p>
           <div className="hero-actions">
-            <Link href="#selected-work" className="button button-primary">
+            <a href="#selected-work" className="button button-primary">
               View my work <span aria-hidden="true">↘</span>
-            </Link>
-            <Link href="/about" className="text-link">
+            </a>
+            <a href="/about" className="text-link">
               A little about me <span aria-hidden="true">↗</span>
-            </Link>
+            </a>
           </div>
         </div>
         <aside
@@ -46,9 +45,9 @@ export default function Home() {
             </li>
           </ul>
           <div>
-            <Link className="text-link" href={siteConfig.resume || '/resume'}>
+            <a className="text-link" href={siteConfig.resume || '/resume'}>
               Resume ↗
-            </Link>
+            </a>
             <a
               className="text-link"
               href={siteConfig.linkedin}
@@ -109,9 +108,9 @@ export default function Home() {
             I’m De’Andre, a UX Designer with an interest in the space between
             understanding a problem and making something genuinely useful.
           </p>
-          <Link href="/about" className="text-link">
+          <a href="/about" className="text-link">
             My approach & background <span aria-hidden="true">↗</span>
-          </Link>
+          </a>
         </div>
       </section>
     </main>

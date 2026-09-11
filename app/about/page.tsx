@@ -1,6 +1,5 @@
 import { Toolkit } from '@/components/toolkit';
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import Image from 'next/image';
 import { certificates } from '@/data/profile';
 import { capabilities } from '@/data/projects';
@@ -190,12 +189,12 @@ export default function AboutPage() {
           ))}
         </div>
         <div className="hero-actions">
-          <Link href="/resume" className="button button-secondary">
+          <a href="/resume" className="button button-secondary">
             Resume ↗
-          </Link>
-          <Link href="/contact" className="text-link">
+          </a>
+          <a href="/contact" className="text-link">
             Start a conversation ↗
-          </Link>
+          </a>
         </div>
       </section>
     </main>

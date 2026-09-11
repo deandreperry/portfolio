@@ -9,7 +9,6 @@ import {
 } from './case-visuals';
 import { projectReview } from '@/data/projects';
 import { projectTools } from '@/data/toolkit';
-import Link from 'next/link';
 import type { CaseStudy, Narrative } from '@/data/projects';
 import { CaseStudyTOC } from './case-study-tools';
 import { ProjectMedia } from './project-media';
@@ -79,9 +78,9 @@ export function ProjectNarrative({
       className={`narrative-page narrative-${project.slug}`}
     >
       <header className="case-hero shell">
-        <Link href="/work" className="text-link">
+        <a href="/work" className="text-link">
           ← All work
-        </Link>
+        </a>
         <p className="eyebrow">
           {project.index} /{' '}
           {project.slug === 'uxd-systems' ? 'FLAGSHIP · ' : ''}
@@ -226,11 +225,11 @@ export function ProjectNarrative({
             <h2>Tools supporting the design.</h2>
             <Toolkit project={project.slug} />
           </section>
-          <Link href={`/work/${nextProject.slug}`} className="next-project">
+          <a href={`/work/${nextProject.slug}`} className="next-project">
             <span>Next case study</span>
             <h2>{nextProject.title} ↗</h2>
             <ProjectMedia project={nextProject} />
-          </Link>
+          </a>
         </div>
       </div>
     </main>

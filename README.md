@@ -46,3 +46,7 @@ The `.openai/hosting.json` file retains the existing Sites project association. 
 ## GitHub Pages deployment
 
 `main` is the production source branch. `.github/workflows/deploy.yml` installs locked dependencies, runs lint and TypeScript checks, builds the static application, and publishes only `dist/client` to GitHub Pages. The existing custom domain is `deandreperry.com`; `public/CNAME` preserves it in build output. GitHub Pages must use GitHub Actions as its build source, not the raw repository root.
+
+### Static page navigation
+
+Internal navigation intentionally uses native HTML anchors. The Vinext client router throws during navigation in the exported GitHub Pages build; document navigation loads each published HTML route reliably, including without JavaScript. The Next.js link-only lint rule is disabled for this static deployment. The supplied résumé is served from `public/DeAndre_Perry_Resume.pdf`.

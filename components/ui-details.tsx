@@ -1,4 +1,3 @@
-import Link from 'next/link';
 export function UIDetails() {
   return (
     <section className="ui-details shell" aria-labelledby="ui-details-title">
@@ -7,9 +6,9 @@ export function UIDetails() {
           <p className="eyebrow">Interface details / Original demonstration</p>
           <h2 id="ui-details-title">Clarity, close up.</h2>
         </div>
-        <Link className="text-link" href="#interaction-studio">
+        <a className="text-link" href="#interaction-studio">
           Try the complete interaction study ↗
-        </Link>
+        </a>
       </div>
       <div className="detail-pair">
         <figure>

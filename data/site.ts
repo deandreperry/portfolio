@@ -4,6 +4,6 @@ export const siteConfig = {
   email: 'design@deandreperry.com',
   github: 'https://github.com/deandreperry',
   linkedin: 'https://www.linkedin.com/in/iamdeandreperry',
-  resume: '',
+  resume: '/DeAndre_Perry_Resume.pdf',
   url: 'https://deandreperry.com',
 };

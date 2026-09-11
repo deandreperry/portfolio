@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import { siteConfig } from '@/data/site';
 import { CopyEmail } from '@/components/contact-actions';
 export const metadata: Metadata = {
@@ -55,10 +54,10 @@ export default function ContactPage() {
           <a href={siteConfig.github} target="_blank" rel="noopener noreferrer">
             GitHub ↗
           </a>
-          <Link href={siteConfig.resume || '/resume'}>
+          <a href={siteConfig.resume || '/resume'}>
             Resume{' '}
             <span>{siteConfig.resume ? 'View resume ↗' : 'View status ↗'}</span>
-          </Link>
+          </a>
         </div>
       </div>
       <aside className="contact-card">

@@ -1,4 +1,3 @@
-import Link from 'next/link';
 
 export default function NotFound() {
   return (
@@ -8,12 +7,12 @@ export default function NotFound() {
       <h1>This route doesn’t lead to a case study.</h1>
       <p>The work is still close by.</p>
       <div>
-        <Link className="button button-primary" href="/work">
+        <a className="button button-primary" href="/work">
           View selected work
-        </Link>
-        <Link className="button button-secondary" href="/">
+        </a>
+        <a className="button button-secondary" href="/">
           Return home
-        </Link>
+        </a>
       </div>
     </main>
   );

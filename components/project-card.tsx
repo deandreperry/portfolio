@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import type { CaseStudy } from '@/data/projects';
 import { ProjectCover } from './project-cover';
 export function ProjectCard({
@@ -13,7 +12,7 @@ export function ProjectCard({
       className={`project-card ${featured ? 'project-featured' : ''} project-editorial-${project.index}`}
       style={{ '--project-accent': project.accent } as React.CSSProperties}
     >
-      <Link href={`/work/${project.slug}`} className="project-card-link">
+      <a href={`/work/${project.slug}`} className="project-card-link">
         <div className="project-art">
           <ProjectCover project={project} />
           <span className="project-open" aria-hidden="true">
@@ -61,7 +60,7 @@ export function ProjectCard({
             </span>
           </div>
         </div>
-      </Link>
+      </a>
     </article>
   );
 }

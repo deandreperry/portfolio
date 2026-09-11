@@ -1,6 +1,5 @@
 'use client';
 import Image from 'next/image';
-import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
 import { siteConfig } from '@/data/site';
@@ -27,10 +26,10 @@ export function SiteHeader() {
   return (
     <header className="site-header">
       <nav className="nav shell" aria-label="Primary navigation">
-        <Link href="/" className="brand" aria-label="De’Andre Perry, home">
+        <a href="/" className="brand" aria-label="De’Andre Perry, home">
           <Image src="/brandmark.png" alt="" width={44} height={44} priority />
           <span>De’Andre Perry</span>
-        </Link>
+        </a>
         <button
           ref={trigger}
           type="button"
@@ -43,7 +42,7 @@ export function SiteHeader() {
         </button>
         <div id="nav-links" className={`nav-links ${open ? 'is-open' : ''}`}>
           {links.map((x) => (
-            <Link
+            <a
               href={
                 x.label === 'Resume' && siteConfig.resume
                   ? siteConfig.resume
@@ -58,7 +57,7 @@ export function SiteHeader() {
             >
               {x.label}
               {x.label === 'Contact' && <span aria-hidden="true">↗</span>}
-            </Link>
+            </a>
           ))}
         </div>
       </nav>

@@ -1,6 +1,5 @@
 import { ProjectNarrative } from './project-narrative';
 import Image from 'next/image';
-import Link from 'next/link';
 import type { CaseStudy as Project, ProjectDecision } from '@/data/projects';
 import { ContentSlot, FlowDiagram } from './artifacts';
 import { CaseStudyTOC, VisualLightbox } from './case-study-tools';
@@ -66,9 +65,9 @@ export function CaseStudy({
   return (
     <main id="main-content" tabIndex={-1}>
       <header className="case-hero shell">
-        <Link href="/work" className="text-link">
+        <a href="/work" className="text-link">
           ← Back to work
-        </Link>
+        </a>
         <div className="case-hero-heading">
           <div>
             <p className="eyebrow">
@@ -294,14 +293,14 @@ export function CaseStudy({
         </article>
       </div>
       <nav className="next-project shell" aria-label="Case study pagination">
-        <Link href="/work">
+        <a href="/work">
           <span>BACK TO</span>
           <b>All work ←</b>
-        </Link>
-        <Link href={`/work/${nextProject.slug}`}>
+        </a>
+        <a href={`/work/${nextProject.slug}`}>
           <span>NEXT CASE STUDY</span>
           <b>{nextProject.title} ↗</b>
-        </Link>
+        </a>
       </nav>
     </main>
   );
