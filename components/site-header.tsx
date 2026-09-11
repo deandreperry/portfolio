@@ -15,14 +15,14 @@ export function SiteHeader() {
   const trigger = useRef<HTMLButtonElement>(null);
   useEffect(() => {
     const close = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') {
+      if (e.key === 'Escape' && open) {
         setOpen(false);
         trigger.current?.focus();
       }
     };
     window.addEventListener('keydown', close);
     return () => window.removeEventListener('keydown', close);
-  }, []);
+  }, [open]);
   return (
     <header className="site-header">
       <nav className="nav shell" aria-label="Primary navigation">
@@ -34,11 +34,14 @@ export function SiteHeader() {
           ref={trigger}
           type="button"
           className="menu-trigger"
+          aria-label={open ? 'Close navigation menu' : 'Open navigation menu'}
           aria-expanded={open}
           aria-controls="nav-links"
           onClick={() => setOpen(!open)}
         >
-          {open ? 'Close −' : 'Menu +'}
+          <span className="menu-icon" aria-hidden="true">
+            <span /><span /><span />
+          </span>
         </button>
         <div id="nav-links" className={`nav-links ${open ? 'is-open' : ''}`}>
           {links.map((x) => (
