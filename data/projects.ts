@@ -292,100 +292,8 @@ export const projects: CaseStudy[] = [
     },
   },
   {
-    slug: '508-dev',
-    index: '03',
-    title: '508 Dev',
-    subtitle: '508 Dev — Accessibility / Inclusive Interaction',
-    description:
-      'An interactive accessibility learning environment that makes the consequences of interface decisions tangible.',
-    category: 'Accessibility / Inclusive Interaction',
-    role: 'UX Designer',
-    timeline: 'Dates to confirm',
-    team: 'Authorship scope to confirm',
-    platform: 'Web',
-    services: ['Accessibility', 'Inclusive Design', 'Interaction Design'],
-    accent: '#655a92',
-    status: 'ready',
-    focus:
-      'An interactive accessibility learning environment that makes the consequences of interface decisions tangible.',
-    researchPrompts: [],
-    designPrompts: [],
-    reflectionPrompts: [],
-    narrative: {
-      question:
-        'How can people understand accessibility requirements by experiencing the interaction?',
-      context:
-        '508 Dev places failing and repaired reference patterns alongside practical explanations. The design challenge is to connect a technical requirement to the experience of navigating, understanding, and recovering from an interface.',
-      constraint:
-        'A demonstration is not a conformance guarantee. The product marks examples as reference material until documented browser and assistive-technology testing supports stronger claims.',
-      flow: [
-        'Learn',
-        'Playground',
-        'Patterns',
-        'Test',
-        'Reference & standards',
-      ],
-      decisions: [
-        {
-          title: 'Make the behavioral difference available to inspect',
-          observation:
-            'The playground includes failing and repaired target-size, redundant-entry, contrast, and input-purpose examples.',
-          decision:
-            'Present paired interactions with an explanation of the affected task.',
-          why: 'Experiencing the difference gives a requirement a concrete consequence. The comparison connects observation to an action the learner can apply.',
-          tradeoff:
-            'A deliberately failing example must remain clearly identified and must not prevent navigation out of the lesson.',
-          source: 'README.md: Interactive Accessibility Playgrounds',
-        },
-        {
-          title: 'Connect patterns to keyboard behavior',
-          observation:
-            'The pattern library includes keyboard maps and live examples for dialogs, tabs, menus, and other widgets.',
-          decision:
-            'Describe expected interaction alongside semantic structure.',
-          why: 'A visually correct control can still fail when operated without a pointer. Behavior belongs in the design specification.',
-          tradeoff:
-            'Reference patterns still need testing in the context of the consuming product.',
-          source: 'README.md: Pattern Library; Release Status',
-        },
-        {
-          title: 'Separate reference examples from tested claims',
-          observation:
-            'The product labels examples as Reference until a documented browser and assistive-technology matrix supports a stronger status.',
-          decision:
-            'Keep evaluation status visible beside the educational material.',
-          why: 'A working demonstration does not prove that every interaction is accessible in every browser or assistive-technology combination. Status language helps readers understand the scope of the evidence.',
-          tradeoff:
-            'Qualified claims are less promotional, but prevent a reference implementation from being mistaken for a complete conformance guarantee.',
-          source: 'README.md: QA Status; Release Status',
-        },
-      ],
-      visual:
-        'The paired-example structure gives visual comparison a specific purpose: identifying behavioral differences. Labels and explanations must carry the distinction alongside color so that the teaching mechanism does not depend on the ability it is explaining.',
-      accessibility:
-        'The source documents focus management, skip navigation, keyboard interactions, and reduced motion. Vision simulations illustrate some visual effects; they cannot reproduce lived experience or substitute for research with disabled users. Browser and assistive-technology combinations remain unverified until documented.',
-      outcome:
-        'The product offers interactive reference examples and routes for learning, patterns, testing, and standards. It remains a public preview; no conformance certification or learning outcome is claimed.',
-      reflection:
-        'Demonstrating an inaccessible pattern creates an obligation to protect the surrounding learning experience. Future evaluation needs to establish whether the lesson stays navigable and understandable for the people it is intended to support.',
-      validation: {
-        question:
-          'Can learners explain and repair the interaction problem after comparing examples?',
-        method:
-          'Proposed keyboard walkthroughs and moderated learning tasks, including assistive-technology use.',
-        participants:
-          'Interface designers and developers, including people who use keyboard and screen-reader navigation.',
-        signal:
-          'Identify the failure, explain its user consequence, and apply the reference without becoming trapped in the example.',
-      },
-      capture:
-        'Capture a real playground showing failing and repaired versions with their labels and keyboard instructions.',
-      source: '508Dev',
-    },
-  },
-  {
     slug: 'palette-snap',
-    index: '04',
+    index: '03',
     title: 'Palette Snap',
     subtitle: 'Palette Snap — Visual Design / Color Interaction',
     description:
@@ -473,6 +381,98 @@ export const projects: CaseStudy[] = [
       capture:
         'Capture the current workspace with a source image, named swatches, contrast evaluation, and the grouped export menu.',
       source: 'palette-snap',
+    },
+  },
+  {
+    slug: '508-dev',
+    index: '04',
+    title: '508 Dev',
+    subtitle: '508 Dev — Accessibility / Inclusive Interaction',
+    description:
+      'An interactive accessibility learning environment that makes the consequences of interface decisions tangible.',
+    category: 'Accessibility / Inclusive Interaction',
+    role: 'UX Designer',
+    timeline: 'Dates to confirm',
+    team: 'Authorship scope to confirm',
+    platform: 'Web',
+    services: ['Accessibility', 'Inclusive Design', 'Interaction Design'],
+    accent: '#655a92',
+    status: 'ready',
+    focus:
+      'An interactive accessibility learning environment that makes the consequences of interface decisions tangible.',
+    researchPrompts: [],
+    designPrompts: [],
+    reflectionPrompts: [],
+    narrative: {
+      question:
+        'How can people understand accessibility requirements by experiencing the interaction?',
+      context:
+        '508 Dev places failing and repaired reference patterns alongside practical explanations. The design challenge is to connect a technical requirement to the experience of navigating, understanding, and recovering from an interface.',
+      constraint:
+        'A demonstration is not a conformance guarantee. The product marks examples as reference material until documented browser and assistive-technology testing supports stronger claims.',
+      flow: [
+        'Learn',
+        'Playground',
+        'Patterns',
+        'Test',
+        'Reference & standards',
+      ],
+      decisions: [
+        {
+          title: 'Make the behavioral difference available to inspect',
+          observation:
+            'The playground includes failing and repaired target-size, redundant-entry, contrast, and input-purpose examples.',
+          decision:
+            'Present paired interactions with an explanation of the affected task.',
+          why: 'Experiencing the difference gives a requirement a concrete consequence. The comparison connects observation to an action the learner can apply.',
+          tradeoff:
+            'A deliberately failing example must remain clearly identified and must not prevent navigation out of the lesson.',
+          source: 'README.md: Interactive Accessibility Playgrounds',
+        },
+        {
+          title: 'Connect patterns to keyboard behavior',
+          observation:
+            'The pattern library includes keyboard maps and live examples for dialogs, tabs, menus, and other widgets.',
+          decision:
+            'Describe expected interaction alongside semantic structure.',
+          why: 'A visually correct control can still fail when operated without a pointer. Behavior belongs in the design specification.',
+          tradeoff:
+            'Reference patterns still need testing in the context of the consuming product.',
+          source: 'README.md: Pattern Library; Release Status',
+        },
+        {
+          title: 'Separate reference examples from tested claims',
+          observation:
+            'The product labels examples as Reference until a documented browser and assistive-technology matrix supports a stronger status.',
+          decision:
+            'Keep evaluation status visible beside the educational material.',
+          why: 'A working demonstration does not prove that every interaction is accessible in every browser or assistive-technology combination. Status language helps readers understand the scope of the evidence.',
+          tradeoff:
+            'Qualified claims are less promotional, but prevent a reference implementation from being mistaken for a complete conformance guarantee.',
+          source: 'README.md: QA Status; Release Status',
+        },
+      ],
+      visual:
+        'The paired-example structure gives visual comparison a specific purpose: identifying behavioral differences. Labels and explanations must carry the distinction alongside color so that the teaching mechanism does not depend on the ability it is explaining.',
+      accessibility:
+        'The source documents focus management, skip navigation, keyboard interactions, and reduced motion. Vision simulations illustrate some visual effects; they cannot reproduce lived experience or substitute for research with disabled users. Browser and assistive-technology combinations remain unverified until documented.',
+      outcome:
+        'The product offers interactive reference examples and routes for learning, patterns, testing, and standards. It remains a public preview; no conformance certification or learning outcome is claimed.',
+      reflection:
+        'Demonstrating an inaccessible pattern creates an obligation to protect the surrounding learning experience. Future evaluation needs to establish whether the lesson stays navigable and understandable for the people it is intended to support.',
+      validation: {
+        question:
+          'Can learners explain and repair the interaction problem after comparing examples?',
+        method:
+          'Proposed keyboard walkthroughs and moderated learning tasks, including assistive-technology use.',
+        participants:
+          'Interface designers and developers, including people who use keyboard and screen-reader navigation.',
+        signal:
+          'Identify the failure, explain its user consequence, and apply the reference without becoming trapped in the example.',
+      },
+      capture:
+        'Capture a real playground showing failing and repaired versions with their labels and keyboard instructions.',
+      source: '508Dev',
     },
   },
 ];
