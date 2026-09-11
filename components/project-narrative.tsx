@@ -146,11 +146,15 @@ export function ProjectNarrative({
           <section id="overview" className="case-section">
             <p className="eyebrow">01 / CONTEXT & CHALLENGE</p>
             <h2>{n.question}</h2>
+            <dl className="study-at-a-glance" aria-label="Case study at a glance">
+              <div><dt>The challenge</dt><dd>{n.context}</dd></div>
+              <div><dt>Key design decision</dt><dd>{n.decisions[0].decision}</dd></div>
+              <div><dt>Implemented result</dt><dd>{n.outcome}</dd></div>
+            </dl>
             <p className="audience-line">
               <strong>Designed for</strong>{' '}
               {projectReview[project.slug].audience}
             </p>
-            <p className="section-lede">{n.context}</p>
             <div className="narrative-note">
               <h3>The constraint</h3>
               <p>{n.constraint}</p>

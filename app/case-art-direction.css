@@ -755,3 +755,22 @@
 .resume-background .button {
   margin-block: 1.5rem;
 }
+
+.study-at-a-glance {
+  display: grid;
+  gap: 0;
+  margin: 32px 0;
+  border-top: 1px solid var(--color-border);
+}
+.study-at-a-glance > div {
+  display: grid;
+  grid-template-columns: minmax(140px, 1fr) 3fr;
+  gap: 24px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+.study-at-a-glance dt { font-weight: 650; color: var(--color-text-primary); }
+.study-at-a-glance dd { margin: 0; line-height: 1.7; max-width: 70ch; }
+@media (max-width: 760px) {
+  .study-at-a-glance > div { grid-template-columns: 1fr; gap: 8px; padding: 20px 0; }
+}
