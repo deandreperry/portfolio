@@ -1,19 +1,66 @@
 import Link from 'next/link';
 import type { CaseStudy } from '@/data/projects';
-import { ProjectVisual } from './project-visual';
-
-export function ProjectCard({ project, featured = false }: { project: CaseStudy; featured?: boolean }) {
+import { ProjectCover } from './project-cover';
+export function ProjectCard({
+  project,
+  featured = false,
+}: {
+  project: CaseStudy;
+  featured?: boolean;
+}) {
   return (
-    <article className={`project-card ${featured ? 'featured' : ''}`} style={{ '--project-accent': project.accent } as React.CSSProperties}>
-      <Link href={`/work/${project.slug}`} className="project-card-link" aria-label={`View ${project.title} case study`} data-event="case-study-open" data-project={project.slug}>
-        <div className="project-card-copy">
-          <span className="project-index">{project.index} · {project.category}</span>
-          <h3>{project.title}</h3>
-          <p>{project.description}</p>
-          <dl><div><dt>Role</dt><dd>{project.role}</dd></div><div><dt>Sample impact</dt><dd>{project.outcomes[0].value} {project.outcomes[0].label}</dd></div></dl>
-          <span className="text-link">Explore the story <i aria-hidden="true">↗</i></span>
+    <article
+      className={`project-card ${featured ? 'project-featured' : ''} project-editorial-${project.index}`}
+      style={{ '--project-accent': project.accent } as React.CSSProperties}
+    >
+      <Link href={`/work/${project.slug}`} className="project-card-link">
+        <div className="project-art">
+          <ProjectCover project={project} />
+          <span className="project-open" aria-hidden="true">
+            ↗
+          </span>
         </div>
-        <ProjectVisual slug={project.slug} compact={!featured} />
+        <div className="project-card-copy">
+          <div className="project-topline">
+            <span>
+              {project.index} / {project.category}
+            </span>
+            <span className="status-label">
+              {project.status === 'ready'
+                ? featured
+                  ? 'Flagship case study'
+                  : 'Case study'
+                : 'Content pending'}
+            </span>
+          </div>
+          <h3>{project.title}</h3>
+          <p>{project.story?.problem || project.description}</p>
+          <div className="project-details">
+            <span>
+              <b>ROLE</b>
+              {project.role}
+            </span>
+            <span>
+              <b>FOCUS</b>
+              {project.services.slice(0, 2).join(' · ')}
+            </span>
+            <span>
+              <b>STATUS</b>
+              {project.story?.outcome ||
+                'Functional product · validation proposed'}
+            </span>
+          </div>
+          <div className="project-bottom">
+            <ul className="tags">
+              {project.services.map((s) => (
+                <li key={s}>{s}</li>
+              ))}
+            </ul>
+            <span className="text-link">
+              View case study <span aria-hidden="true">↗</span>
+            </span>
+          </div>
+        </div>
       </Link>
     </article>
   );

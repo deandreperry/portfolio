@@ -1,38 +1,202 @@
 type ProjectVisualProps = { slug: string; compact?: boolean };
-
-export function ProjectVisual({ slug, compact = false }: ProjectVisualProps) {
-  const label = compact ? 'Compact product interface concept' : 'Product interface concept';
-  if (slug === 'carebridge') return (
-    <figure className="visual-frame visual-care" aria-label={`CareBridge ${label}`}>
-      <div className="browser-mock">
-        <div className="browser-bar"><i /><i /><i /><span>carebridge / find-care</span></div>
-        <div className="care-layout"><aside><b>CB</b><span>Find care</span><span>Appointments</span><span>Messages</span></aside><section><small>GUIDED CARE DISCOVERY</small><h3>What can we help with?</h3><p>Choose the option that best describes what you need today.</p><div className="choice-grid"><article className="selected"><b>New symptom</b><span>Get guidance</span></article><article><b>Primary care</b><span>Routine visits</span></article><article><b>Specialist</b><span>Known care type</span></article></div><div className="availability"><span><b>18</b> in-network options</span><span><b>3</b> available today</span></div></section></div>
-      </div>
-    </figure>
-  );
-  if (slug === 'northstar') return (
-    <figure className="visual-frame visual-system" aria-label={`Northstar ${label}`}>
-      <div className="system-canvas"><div className="system-head"><span>NORTHSTAR / INPUT</span><b>Component anatomy</b></div><div className="system-demo"><span className="mock-label">Email address</span><div className="fake-input">name@example.com</div><small>We&apos;ll only use this for account access.</small></div><div className="system-tokens"><span><i className="blue" />Focus</span><span><i />Rest</span><span><i className="error" />Error</span></div><div className="system-code">&lt;Input label=&quot;Email address&quot; required /&gt;</div></div>
-    </figure>
-  );
-  if (slug === 'orbit-ai') return (
-    <figure className="visual-frame visual-orbit" aria-label={`Orbit AI ${label}`}>
-      <div className="orbit-ui"><aside><b>ORBIT</b><span>Sources</span><span>Tasks</span><span>Outputs</span></aside><section><div className="orbit-top"><span>Research synthesis</span><i>3 sources connected</i></div><div className="orbit-answer"><small>GENERATED BRIEF · EDITABLE</small><h3>Three themes are shaping adoption</h3><p>Teams value predictable recovery more than conversational polish.<sup> 1</sup></p><p>Source visibility supports both trust and editing.<sup> 2</sup></p><div className="source-chip">2 · Trust research / Interview set</div></div></section></div>
-    </figure>
-  );
-  if (slug === 'atlas-finance') return (
-    <figure className="visual-frame visual-atlas" aria-label={`Atlas Finance ${label}`}>
-      <div className="finance-ui"><div className="finance-head"><b>September overview</b><span>On track</span></div><article><small>WHAT CHANGED</small><h3>You spent 27% more on dining</h3><p>Most of the increase happened across two weekends.</p><div className="bars"><i /><i /><i /><i /><i /><i /></div><span className="mock-button">See the 8 transactions</span></article><aside><span><small>Available</small><b>$2,840</b></span><span><small>Goal progress</small><b>68%</b></span></aside></div>
-    </figure>
-  );
-  if (slug === 'giveforward') return (
-    <figure className="visual-frame visual-give" aria-label={`GiveForward ${label}`}>
-      <div className="donation-ui"><div className="donation-impact"><small>YOUR IMPACT</small><b>$50</b><p>Funds two weeks of after-school meals.</p></div><div className="donation-form"><span className="steps">1 Impact <i /> 2 Details <i /> 3 Confirm</span><h3>Choose your support</h3><div className="amounts"><b>$25</b><b className="active">$50</b><b>$100</b></div><div className="cadence"><span className="active">One time</span><span>Monthly</span></div><span className="mock-button">Continue securely →</span></div></div>
-    </figure>
-  );
+export function ProjectVisual({ slug }: ProjectVisualProps) {
   return (
-    <figure className="visual-frame visual-move" aria-label={`MoveCity ${label}`}>
-      <div className="transit-ui"><div className="map-grid" aria-hidden="true" /><div className="route-line" aria-hidden="true"><i /><i /><i /><i /></div><aside><small>BEST MATCH</small><h3>Blue + 14 bus</h3><p>42 min · 1 transfer · 6 min walk</p><div className="route-tags"><span>Most reliable</span><span>Step-free</span></div><div className="route-step"><b>8:12</b><span>Blue Line<br /><small>Elevator operating</small></span></div><div className="route-step"><b>8:31</b><span>Transfer at Central<br /><small>7 min · same level</small></span></div></aside></div>
+    <figure className={`project-visual visual-${slug}`}>
+      <figcaption className="visual-label">
+        ILLUSTRATIVE DESIGN STUDY · NOT PROJECT EVIDENCE
+      </figcaption>
+      {slug === 'product-experience' ? (
+        <div className="product-composition">
+          <div className="product-note">
+            <span>THE INTENT</span>
+            <p className="visual-title">
+              Make the next
+              <br />
+              step obvious.
+            </p>
+            <p>Context → Choice → Action</p>
+            <div className="note-line" />
+          </div>
+          <div className="product-phone">
+            <div className="phone-top">
+              <b>
+                path<span> /</span>
+              </b>
+              <span>•••</span>
+            </div>
+            <small>LET’S FIND YOUR DIRECTION</small>
+            <p className="visual-title">
+              A little clarity.
+              <br />A way forward.
+            </p>
+            <div className="phone-progress">
+              <i />
+              <i />
+              <i />
+            </div>
+            <div className="phone-option">
+              <span>01</span>
+              <div>
+                <b>Explore the possibilities</b>
+                <small>Start with an open question</small>
+              </div>
+              <i>↗</i>
+            </div>
+            <div className="phone-option">
+              <span>02</span>
+              <div>
+                <b>Build on an idea</b>
+                <small>Turn a thought into a direction</small>
+              </div>
+              <i>↗</i>
+            </div>
+            <div className="phone-bottom">
+              Your next step starts here <span>→</span>
+            </div>
+          </div>
+          <span className="composition-caption">
+            A simple path through a complex decision.
+          </span>
+        </div>
+      ) : slug === 'research-and-insight' ? (
+        <div className="research-composition">
+          <div className="research-title">
+            <span>RESEARCH → DIRECTION</span>
+            <p className="visual-title">
+              Make the
+              <br />
+              patterns visible.
+            </p>
+          </div>
+          <div className="research-board">
+            <div className="research-column">
+              <span>01 / OBSERVE</span>
+              <div>
+                What people do<small>Capture the context.</small>
+              </div>
+              <div>
+                Where friction appears<small>Keep the evidence.</small>
+              </div>
+            </div>
+            <span className="board-arrow">→</span>
+            <div className="research-column">
+              <span>02 / INTERPRET</span>
+              <div>
+                What it means<small>Identify a pattern.</small>
+              </div>
+              <div>
+                Why it matters<small>Connect to a need.</small>
+              </div>
+            </div>
+            <span className="board-arrow">→</span>
+            <div className="research-column final-column">
+              <span>03 / INFORM</span>
+              <div>
+                A clearer decision
+                <small>
+                  Define what to change
+                  <br />
+                  and what to test.
+                </small>
+                <b>↗</b>
+              </div>
+            </div>
+          </div>
+        </div>
+      ) : slug === 'complex-workflows' ? (
+        <div className="workflow-composition">
+          <div className="workflow-sidebar">
+            <b>workspace /</b>
+            <span>Overview</span>
+            <span className="selected">
+              Requests <i>↗</i>
+            </span>
+            <span>Activity</span>
+            <span>Settings</span>
+          </div>
+          <div className="workflow-main">
+            <div className="workflow-heading">
+              <span>WORKSPACE / REQUESTS</span>
+              <span>View workflow ↗</span>
+            </div>
+            <p className="visual-title">
+              The right detail.
+              <br />
+              At the right time.
+            </p>
+            <div className="workflow-steps">
+              <span className="complete">✓ Context</span>
+              <i>→</i>
+              <span className="current">02 Review</span>
+              <i>→</i>
+              <span>03 Confirm</span>
+            </div>
+            <div className="workflow-detail">
+              <span className="tiny-label">READY FOR REVIEW</span>
+              <p className="visual-subtitle">Keep the decision in focus.</p>
+              <div>
+                <span>Essential information</span>
+                <b>Visible</b>
+              </div>
+              <div>
+                <span>Supporting context</span>
+                <b>One step away ↗</b>
+              </div>
+              <p>
+                Review request <span>→</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      ) : (
+        <div className="system-composition">
+          <div className="type-specimen">
+            <span>FOUNDATIONS / TYPOGRAPHY</span>
+            <p className="visual-title">
+              Aa<span>.</span>
+            </p>
+            <b>Clarity in every character.</b>
+            <p>
+              Plus Jakarta Sans
+              <br />
+              Regular · Medium · Semibold
+            </p>
+          </div>
+          <div className="component-specimen">
+            <span>COMPONENTS / STATES</span>
+            <div className="specimen-buttons">
+              <b>
+                Continue <i>↗</i>
+              </b>
+              <b>
+                Secondary <i>↗</i>
+              </b>
+            </div>
+            <div className="specimen-input">
+              <span>Email address</span>
+              <div>
+                name@example.com <b>✓</b>
+              </div>
+              <small>A clear label. A meaningful state.</small>
+            </div>
+            <div className="swatches">
+              {['#172d26', '#246956', '#b6d0c4', '#e7eee9', '#ffffff'].map(
+                (c) => (
+                  <i key={c} style={{ background: c }} />
+                ),
+              )}
+            </div>
+            <div className="spacing-specimen">
+              <span>4</span>
+              <span>8</span>
+              <span>16</span>
+              <span>24</span>
+              <span>32</span>
+              <span>48</span>
+            </div>
+          </div>
+        </div>
+      )}
     </figure>
   );
 }

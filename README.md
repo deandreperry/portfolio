@@ -1,27 +1,44 @@
-# De'Andre Perry Portfolio
+# De’Andre Perry — UX Designer
 
-A data-driven UX design portfolio built with Vinext/Next.js, TypeScript, React, and custom CSS.
+An editorial UX portfolio built with Vinext, React, and TypeScript. Plus Jakarta Sans is self-hosted. The primary brand color is #146ff8.
 
-## Customize the content
+## Selected work
 
-- Replace case study copy, research counts, and sample metrics in `data/projects.ts`.
-- Replace the career timeline, email, social links, and résumé path in `data/site.ts`.
-- Replace `public/deandre-perry-resume-placeholder.txt` with `public/deandre-perry-resume.pdf`, then update `siteConfig.resume`.
-- Replace or extend the CSS/React product mockups in `components/project-visual.tsx`. If you add exported project images, keep them in `public/projects/<project-slug>/`.
-- Brand color and layout tokens live at the top of `app/globals.css`.
-- The optimized logo and favicon are in `public/brandmark.png` and `public/favicon.png`.
+1. UXD Systems — visual design and design systems; flagship
+2. UXR Forge — research reasoning and research operations
+3. 508 Dev — accessibility and inclusive interaction
+4. Palette Snap — visual design and color interaction
 
-All six included projects are fictional portfolio samples. Do not present the participant counts or outcome metrics as verified client results without replacing them.
+Case studies use actual product captures, implementation analysis, annotated screens, diagrams, and explicitly proposed validation. Product-scope numbers are not participant results or impact metrics. No primary research is fabricated.
 
-## Run locally
+## Development
 
-```bash
+```sh
+npm ci
 npm run dev
-```
-
-## Validate
-
-```bash
 npm run lint
+npx tsc --noEmit --incremental false
 npm run build
 ```
+
+The production static export is generated in `dist/client`. Prerendering requires permission to bind a local port. Generated output, dependencies, local environment files, and caches are excluded from Git.
+
+## Structure
+
+- `app/`: routes, metadata, shared layout, and styles
+- `components/`: reusable navigation, case-study, visual, toolkit, and interaction components
+- `data/projects.ts`: project narratives and review context
+- `data/scope-numbers.ts`: implementation-backed product counts
+- `data/profile.ts`: certificates and credential links
+- `data/toolkit.ts`: overall toolkit and verified project-specific tools
+- `data/site.ts`: identity and contact configuration
+- `public/projects/`: authentic product screenshots and supporting assets
+- `docs/`: evidence audits, capture briefs, and verification reports
+
+Routes include Home, Work, four `/work/<slug>` case studies, About, Contact, and Resume. The legacy Experience route remains available.
+
+## Before publication
+
+Confirm the production origin and sitemap, supply the résumé and edX credential URL, and review project authorship, dates, and historical evidence. Search indexing remains disabled until publication readiness is confirmed. The accessibility widget has a singleton asynchronous loader; live vendor loading still needs verification on the intended production origin. Native accessibility does not depend on the widget.
+
+The `.openai/hosting.json` file retains the existing Sites project association. Pushing this repository does not itself deploy the site unless a deployment workflow is configured separately.

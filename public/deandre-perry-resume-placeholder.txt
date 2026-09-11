@@ -1,9 +1,0 @@
-DE'ANDRE PERRY — RESUME PLACEHOLDER
-
-Replace this file with your real resume at:
-public/deandre-perry-resume.pdf
-
-Then update the resume path in:
-data/site.ts
-
-This placeholder prevents a broken download while the portfolio is being customized.

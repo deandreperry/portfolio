@@ -1,5 +1,20 @@
 import Link from 'next/link';
 
 export default function NotFound() {
-  return <main id="main-content" tabIndex={-1} className="not-found shell"><span>404</span><p className="eyebrow">Wrong turn, clear recovery</p><h1>This route doesn’t lead to a case study.</h1><p>The work is still close by.</p><div><Link className="button button-primary" href="/work">View selected work</Link><Link className="button button-secondary" href="/">Return home</Link></div></main>;
+  return (
+    <main id="main-content" tabIndex={-1} className="not-found shell">
+      <span>404</span>
+      <p className="eyebrow">Wrong turn, clear recovery</p>
+      <h1>This route doesn’t lead to a case study.</h1>
+      <p>The work is still close by.</p>
+      <div>
+        <Link className="button button-primary" href="/work">
+          View selected work
+        </Link>
+        <Link className="button button-secondary" href="/">
+          Return home
+        </Link>
+      </div>
+    </main>
+  );
 }

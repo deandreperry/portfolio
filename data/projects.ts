@@ -1,13 +1,54 @@
-export type Metric = { value: string; label: string; sample: true };
-export type TestResult = {
-  task: string;
-  before: string;
-  after: string;
-  issue: string;
-  severity: 'High' | 'Medium' | 'Low';
-  change: string;
+export type ProjectAsset = {
+  src: string;
+  alt: string;
+  caption: string;
+  width: number;
+  height: number;
+  state?: 'Default' | 'Loading' | 'Empty' | 'Error' | 'Recovery' | 'Responsive';
 };
-
+export type ProjectDecision = {
+  title: string;
+  evidence: string;
+  alternatives: string;
+  tradeoff: string;
+  decision: string;
+  consequence: string;
+  source?: string;
+};
+export type ProjectStory = {
+  problem: string;
+  users: string;
+  contribution: string;
+  outcome: string;
+  decisions: ProjectDecision[];
+  collaboration?: {
+    context: string;
+    tension: string;
+    contribution: string;
+    resolution: string;
+    learning: string;
+  };
+  research?: {
+    method: string;
+    rationale: string;
+    participants: string;
+    finding: string;
+    limitation: string;
+    source?: string;
+  }[];
+  assets?: ProjectAsset[];
+  comparison?: {
+    before: ProjectAsset;
+    after: ProjectAsset;
+    reason: string;
+    evidence: string;
+  };
+  flow?: string[];
+  system?: string;
+  accessibility?: string[];
+  reflection: string;
+  next: string;
+};
 export type CaseStudy = {
   slug: string;
   index: string;
@@ -17,244 +58,509 @@ export type CaseStudy = {
   category: string;
   role: string;
   timeline: string;
-  industry: string;
   team: string;
-  tools: string[];
+  platform: string;
   services: string[];
   accent: string;
-  challenge: string;
-  businessContext: string;
-  audience: string;
-  researchQuestions: string[];
-  research: { method: string; detail: string; why: string }[];
-  findings: { title: string; evidence: string; implication: string }[];
-  segments: { name: string; behavior: string; need: string }[];
-  journey: { phase: string; action: string; feeling: string; opportunity: string }[];
-  reframe: string;
-  hmws: string[];
-  principles: { title: string; detail: string }[];
-  flow: string[];
-  iteration: { before: string; failed: string; after: string };
-  testing: TestResult[];
-  accessibility: string[];
-  outcomes: Metric[];
-  reflection: { worked: string; change: string; learned: string; next: string };
+  status: 'placeholder' | 'ready';
+  story?: ProjectStory;
+  narrative?: Narrative;
+  focus: string;
+  researchPrompts: string[];
+  designPrompts: string[];
+  reflectionPrompts: string[];
 };
-
+export type Narrative = {
+  question: string;
+  context: string;
+  constraint: string;
+  flow: string[];
+  decisions: {
+    title: string;
+    observation: string;
+    decision: string;
+    why: string;
+    tradeoff: string;
+    source: string;
+  }[];
+  visual: string;
+  accessibility: string;
+  outcome: string;
+  reflection: string;
+  validation: {
+    question: string;
+    method: string;
+    participants: string;
+    signal: string;
+  };
+  capture: string;
+  source: string;
+};
 export const projects: CaseStudy[] = [
   {
-    slug: 'carebridge', index: '01', title: 'CareBridge', subtitle: 'Healthcare access, organized around how people actually seek care.',
-    description: 'A guided care discovery and appointment experience designed to reduce decision friction, clarify insurance, and make the next step feel manageable.',
-    category: 'Healthcare access', role: 'Lead UX Designer', timeline: '12 weeks', industry: 'Digital health', team: 'Product manager, 2 engineers, clinical advisor', tools: ['Figma', 'FigJam', 'Maze'],
-    services: ['Discovery research', 'Information architecture', 'Interaction design', 'Accessibility'], accent: '#4e92fa',
-    challenge: 'Patients were expected to navigate provider taxonomy, insurance rules, and uncertain appointment availability while already stressed or unwell.',
-    businessContext: 'The sample product combined a provider directory, scheduling, and digital intake. Fragmentation caused abandonment before a visit was booked.',
-    audience: 'People coordinating their own or a family member’s care, including older adults and first-time insurance users.',
-    researchQuestions: ['How do people decide what kind of care they need?', 'Where does confidence break during provider selection?', 'Which details are essential before committing to an appointment?'],
-    research: [
-      { method: '12 user interviews', detail: 'Recent experiences finding and booking care', why: 'Reveal language, mental models, and trust signals.' },
-      { method: '5 staff interviews', detail: 'Schedulers, care coordinators, and front-desk staff', why: 'Map operational constraints behind the interface.' },
-      { method: 'Competitive review', detail: 'Six healthcare platforms and two adjacent services', why: 'Identify recurring gaps and familiar patterns.' },
-      { method: 'Accessibility audit', detail: 'Keyboard, zoom, labels, errors, and contrast', why: 'Surface barriers before proposing a new flow.' },
-    ],
-    findings: [
-      { title: 'Need before specialty', evidence: '9 of 12 participants began with a symptom or goal, not a provider type.', implication: 'Start discovery in everyday language and translate behind the scenes.' },
-      { title: 'Availability is a trust signal', evidence: 'Participants abandoned options when dates appeared only after multiple steps.', implication: 'Expose realistic appointment windows during comparison.' },
-      { title: 'Insurance needs confirmation', evidence: '“Accepts insurance” felt too vague to support a decision.', implication: 'Show plan-level verification and explain uncertainty.' },
-    ],
-    segments: [
-      { name: 'Coordinating caregiver', behavior: 'Switches between several family members and calendars.', need: 'Fast context switching and saved details.' },
-      { name: 'Complex-care navigator', behavior: 'Compares specialists, access needs, and referrals.', need: 'Visible constraints and dependable preparation.' },
-      { name: 'First-time navigator', behavior: 'Uses symptoms and plain language to begin.', need: 'Guidance without medical jargon.' },
-    ],
-    journey: [
-      { phase: 'Recognize', action: 'Decides the issue needs care', feeling: 'Uncertain', opportunity: 'Clarify urgency safely' },
-      { phase: 'Discover', action: 'Searches symptoms and services', feeling: 'Overloaded', opportunity: 'Translate needs to options' },
-      { phase: 'Compare', action: 'Checks coverage, access, and timing', feeling: 'Cautious', opportunity: 'Surface decision criteria' },
-      { phase: 'Book', action: 'Selects a time and completes intake', feeling: 'Relieved', opportunity: 'Reduce repetition' },
-      { phase: 'Prepare', action: 'Plans for the visit', feeling: 'Focused', opportunity: 'Create a clear checklist' },
-    ],
-    reframe: 'The problem was not “improving provider search.” It was helping people make a safe, informed care decision with incomplete knowledge.',
-    hmws: ['How might we begin with a person’s need rather than clinical taxonomy?', 'How might we show the few details that create confidence before booking?', 'How might we reuse information without taking control away?'],
-    principles: [
-      { title: 'Guide, don’t diagnose', detail: 'Offer orientation and safe next steps without pretending the interface replaces clinical judgment.' },
-      { title: 'Confidence before commitment', detail: 'Reveal coverage, access, location, and availability before asking users to book.' },
-      { title: 'Plain language by default', detail: 'Translate system language into terms people recognize.' },
-      { title: 'Remember with permission', detail: 'Reduce repeat entry while keeping people in control of sensitive data.' },
-    ],
-    flow: ['Describe need', 'Set practical constraints', 'Compare care options', 'Confirm coverage', 'Choose time', 'Prepare for visit'],
-    iteration: { before: 'Version 1 asked users to choose a specialty before showing providers.', failed: '7 of 10 test participants guessed or backtracked; the taxonomy created false confidence.', after: 'Version 2 began with symptoms or goals, then explained why each care option matched.' },
-    testing: [
-      { task: 'Find appropriate care', before: '58%', after: '82%', issue: 'Specialty-first language caused guessing.', severity: 'High', change: 'Added guided need selection and plain-language rationale.' },
-      { task: 'Verify insurance', before: '64%', after: '91%', issue: 'Coverage status looked generic.', severity: 'High', change: 'Added plan name, verification state, and explanation.' },
-      { task: 'Prepare for visit', before: '71%', after: '89%', issue: 'Checklist was hidden after confirmation.', severity: 'Medium', change: 'Made preparation a persistent next step.' },
-    ],
-    accessibility: ['Semantic step and heading structure', 'Keyboard-operable comparison controls', 'Status text beyond color', '44px minimum targets', 'Inline errors tied to fields', 'Reduced-motion transitions'],
-    outcomes: [{ value: '41%', label: 'faster provider discovery', sample: true }, { value: '32%', label: 'less booking abandonment', sample: true }, { value: '+24%', label: 'task success', sample: true }, { value: '+18', label: 'usability score points', sample: true }],
-    reflection: { worked: 'Organizing around decisions, not departments, gave the team a durable product model.', change: 'I would involve more people with cognitive disabilities earlier.', learned: 'Availability and coverage were not metadata; they were core interaction design.', next: 'Test urgent-care guidance in low-connectivity and multilingual contexts.' },
+    slug: 'uxd-systems',
+    index: '01',
+    title: 'UXD Systems',
+    subtitle: 'UXD Systems — Visual Design / Design Systems',
+    description:
+      'A structured environment for exploring how design systems connect principles, tokens, components, and interaction patterns.',
+    category: 'Visual Design / Design Systems',
+    role: 'UX Designer',
+    timeline: 'Dates to confirm',
+    team: 'Authorship scope to confirm',
+    platform: 'Web',
+    services: ['Visual Design', 'Design Systems', 'Interaction Design'],
+    accent: '#146ff8',
+    status: 'ready',
+    focus:
+      'A structured environment for exploring how design systems connect principles, tokens, components, and interaction patterns.',
+    researchPrompts: [],
+    designPrompts: [],
+    reflectionPrompts: [],
+    narrative: {
+      question:
+        'How can designers explore, compare, and apply system knowledge without losing its context?',
+      context:
+        'Design-system guidance lives in separate documentation environments with different terminology, platform assumptions, and levels of detail. UXD Systems brings that material into a consistent learning structure while keeping official references visible.',
+      constraint:
+        'A shared comparison model must not turn educational interpretation into an authoritative implementation specification. The product explicitly separates official guidance, explanation, analysis, and comparison.',
+      flow: [
+        'System library',
+        'Structured profile',
+        'Comparison workspace',
+        'Token Lab',
+        'Learning curriculum',
+      ],
+      decisions: [
+        {
+          title: 'Keep exploration and comparison distinct',
+          observation:
+            'The library has filterable system profiles; the comparison workspace exposes selectable systems and four lenses.',
+          decision:
+            'Use profiles for depth and comparison for a focused question across systems.',
+          why: 'A profile preserves context. Aligned comparison dimensions make differences inspectable without requiring readers to remember separate pages.',
+          tradeoff:
+            'Switching modes adds navigation; profile links preserve a route back to primary references.',
+          source: 'components/CompareClient.tsx; components/SystemExplorer.tsx',
+        },
+        {
+          title: 'Turn abstract tokens into visible consequences',
+          observation:
+            'Token Lab exposes hue, radius, spacing, density, and a dark preview. Changes update shared preview variables.',
+          decision:
+            'Keep controls next to one consistent interface preview and a live white-on-action contrast readout.',
+          why: 'Holding the content constant lets the visual effect of a variable become easier to isolate. Contrast feedback also exposes when a color choice fails a specific text pairing.',
+          tradeoff:
+            'This is an educational preview, not a guarantee that every component and color pair in an exported system is accessible.',
+          source: 'components/TokenLab.tsx',
+        },
+        {
+          title: 'Compare through a common frame, not a common identity',
+          observation:
+            'The comparison table uses shared dimensions, named system columns, and links to each profile.',
+          decision:
+            'Normalize the questions while retaining system names, source scope, and contextual explanation.',
+          why: 'Aligned attributes support cross-system scanning; direct references prevent the comparison from replacing the original guidance.',
+          tradeoff:
+            'Normalization inevitably compresses nuance. The product labels the result as educational analysis.',
+          source: 'components/CompareClient.tsx',
+        },
+        {
+          title: 'Make component states part of the lesson',
+          observation:
+            'A dedicated Button Explorer presents component variants and states.',
+          decision:
+            'Treat the button as a behavioral component rather than a static color specimen.',
+          why: 'Hierarchy, affordance, focus, and disabled behavior affect how an action can be understood and used. A state explorer makes those differences available for inspection.',
+          tradeoff:
+            'An isolated explorer cannot represent every interaction within a complete task.',
+          source: 'components/ButtonExplorer.tsx',
+        },
+      ],
+      visual:
+        'The Token Lab ties a primitive hue to semantic surface and text values, then applies radius, spacing, and density variables to a stable preview. This makes the relationship between a system value and an interface visible. In comparison, column alignment and row headings carry the grouping; system accents identify columns without replacing their labels.',
+      accessibility:
+        'Source inspection confirms labeled range controls, pressed states on density controls, a native theme checkbox, and a live contrast readout in Token Lab. The comparison uses table headers and a labeled focusable overflow region. These are implementation observations, not a complete accessibility certification.',
+      outcome:
+        'The implemented product combines structured system profiles, a comparison workspace, a component explorer, and a manipulable Token Lab. No learning improvement or task-time reduction is claimed.',
+      reflection:
+        'The central tension is between making systems comparable and retaining the context that gives each system meaning. The next review should test whether the navigation separates learning and reference clearly enough; feature completeness alone cannot answer that.',
+      validation: {
+        question:
+          'Can designers explain a system difference and predict what a token change will affect?',
+        method:
+          'Proposed moderated task-based usability sessions with think-aloud and a short explanation task.',
+        participants:
+          'Practicing and early-career designers who use design-system documentation. Recruitment has not begun.',
+        signal:
+          'Observe successful comparison, mistaken interpretations, navigation detours, and whether explanations match the demonstrated token behavior.',
+      },
+      capture:
+        'Capture the comparison workspace with two systems and the Token Lab with density, radius, and contrast controls visible.',
+      source: 'uxd-systems',
+    },
   },
   {
-    slug: 'northstar', index: '02', title: 'Northstar', subtitle: 'A design system built to align decisions—not just components.',
-    description: 'An enterprise system connecting shared foundations, accessible coded components, documentation, and a contribution model across product teams.',
-    category: 'Design systems', role: 'UX Design Engineer', timeline: '16 weeks', industry: 'Enterprise software', team: 'Design systems lead, 3 engineers, 8 product teams', tools: ['Figma', 'Storybook', 'React'],
-    services: ['Interface audit', 'Token architecture', 'Component design', 'Governance'], accent: '#89b7fb',
-    challenge: 'Teams shipped visually similar but behaviorally inconsistent components, slowing delivery and creating accessibility debt.',
-    businessContext: 'Rapid product growth produced 312 interface variations, 47 button styles, 18 input variants, and unclear ownership.', audience: 'Designers and engineers building a connected suite of enterprise products.',
-    researchQuestions: ['Which inconsistencies create the most user and delivery cost?', 'Where do Figma and code diverge?', 'What contribution model will teams actually use?'],
-    research: [
-      { method: 'Interface inventory', detail: '312 patterns across five products', why: 'Quantify fragmentation and prioritize by reach.' },
-      { method: 'Workflow interviews', detail: '18 designers and engineers', why: 'Understand why teams bypass existing patterns.' },
-      { method: 'Accessibility audit', detail: 'Core inputs, navigation, overlays, and feedback', why: 'Define non-negotiable behavior.' },
-      { method: 'Pilot program', detail: 'Two product squads over three sprints', why: 'Test adoption in real delivery conditions.' },
-    ],
-    findings: [
-      { title: 'Variants hid behavioral drift', evidence: 'Inputs shared appearance but differed in errors, focus, and keyboard support.', implication: 'Document anatomy, behavior, and state—not just pixels.' },
-      { title: 'Discovery was the adoption barrier', evidence: 'Teams rebuilt components they could not quickly find or evaluate.', implication: 'Organize docs around product tasks and decision guidance.' },
-      { title: 'Contribution needed a service level', evidence: 'Unclear review timing pushed teams to work around the system.', implication: 'Publish a small, time-bound contribution path.' },
-    ],
-    segments: [
-      { name: 'Product designer', behavior: 'Composes flows under deadline.', need: 'Clear usage guidance and complete states.' },
-      { name: 'Feature engineer', behavior: 'Evaluates APIs and edge cases.', need: 'Stable contracts and accessible defaults.' },
-      { name: 'System contributor', behavior: 'Extends patterns across products.', need: 'Ownership, review criteria, and release visibility.' },
-    ],
-    journey: [
-      { phase: 'Identify', action: 'Finds a product need', feeling: 'Urgent', opportunity: 'Task-oriented search' },
-      { phase: 'Evaluate', action: 'Checks fit and states', feeling: 'Skeptical', opportunity: 'Usage decision guide' },
-      { phase: 'Implement', action: 'Applies design and code', feeling: 'Focused', opportunity: 'Matched properties and APIs' },
-      { phase: 'Validate', action: 'Tests behavior and access', feeling: 'Confident', opportunity: 'Built-in checks' },
-      { phase: 'Contribute', action: 'Proposes an extension', feeling: 'Supported', opportunity: 'Visible review path' },
-    ],
-    reframe: 'The system’s primary product was not the component library. It was a reliable decision-making and contribution workflow.',
-    hmws: ['How might we make the correct accessible pattern the fastest choice?', 'How might we reveal when not to use a component?', 'How might contribution feel predictable to busy teams?'],
-    principles: [{ title: 'Behavior is the contract', detail: 'Accessibility and interaction rules travel with every component.' }, { title: 'Decisions over decoration', detail: 'Documentation explains when, why, and what to avoid.' }, { title: 'One model, two tools', detail: 'Figma properties map intentionally to coded APIs.' }, { title: 'Governance is a product', detail: 'Contribution has users, latency, and success measures.' }],
-    flow: ['Identify need', 'Find pattern', 'Evaluate guidance', 'Implement', 'Validate', 'Contribute improvement'],
-    iteration: { before: 'The first documentation model mirrored component categories.', failed: 'Pilot teams still searched by the task they were solving and missed relevant guidance.', after: 'Navigation shifted to task-led entry points with component-level reference beneath them.' },
-    testing: [
-      { task: 'Select the right input', before: '62%', after: '92%', issue: 'Labels described components, not use cases.', severity: 'High', change: 'Added decision trees and “use when” guidance.' },
-      { task: 'Implement error state', before: '54%', after: '88%', issue: 'Design and code states were mismatched.', severity: 'High', change: 'Aligned properties, examples, and acceptance criteria.' },
-      { task: 'Submit contribution', before: '46%', after: '81%', issue: 'Ownership and timing were unclear.', severity: 'Medium', change: 'Published roles, checkpoints, and response targets.' },
-    ],
-    accessibility: ['WCAG 2.2 AA acceptance criteria', 'Forced-colors support', 'Focus and keyboard contracts', 'Screen reader usage notes', 'Motion-safe defaults', 'Automated and manual test matrix'],
-    outcomes: [{ value: '34%', label: 'faster handoff', sample: true }, { value: '52%', label: 'fewer duplicate components', sample: true }, { value: '8/8', label: 'pilot teams adopted', sample: true }, { value: '63%', label: 'fewer core WCAG issues', sample: true }],
-    reflection: { worked: 'Treating documentation and governance as product surfaces improved adoption.', change: 'I would establish contribution analytics before the pilot.', learned: 'System trust is earned through predictable behavior and response time.', next: 'Measure upgrade effort and expand content design standards.' },
+    slug: 'uxr-forge',
+    index: '02',
+    title: 'UXR Forge',
+    subtitle: 'UXR Forge — User Research / Research Operations',
+    description:
+      'A research learning and practice environment that connects questions, methods, evidence, and proposed decisions.',
+    category: 'User Research / Research Operations',
+    role: 'UX Designer',
+    timeline: 'Dates to confirm',
+    team: 'Authorship scope to confirm',
+    platform: 'Web',
+    services: ['User Research', 'Research Strategy', 'Interaction Design'],
+    accent: '#496856',
+    status: 'ready',
+    focus:
+      'A research learning and practice environment that connects questions, methods, evidence, and proposed decisions.',
+    researchPrompts: [],
+    designPrompts: [],
+    reflectionPrompts: [],
+    narrative: {
+      question:
+        'How can a research tool develop judgment without reducing research to a checklist?',
+      context:
+        'UXR Forge combines method guidance, practice exercises, a Decision Lab, study planning, and synthesis. Its displayed studies are synthetic teaching material—not research conducted with participants.',
+      constraint:
+        'Authored feedback can explain tradeoffs but cannot grade the quality of an open-ended research judgment. The product avoids scores, certificates, and simulated AI critique.',
+      flow: [
+        'Learn',
+        'Practice',
+        'Decision Lab',
+        'Toolkit: plan & synthesis',
+        'Traceable study evidence',
+      ],
+      decisions: [
+        {
+          title: 'Keep evidence traceable',
+          observation:
+            'Study records link observations to themes, insights, recommendations, and counterexamples.',
+          decision:
+            'Retain stable record IDs and direct finding-to-observation navigation.',
+          why: 'Separating observation from interpretation lets a reader inspect what supports a conclusion and what challenges it.',
+          tradeoff:
+            'More explicit relationships increase authoring effort and demand validation of references.',
+          source: 'README.md: Evidence relationships; src/data.ts',
+        },
+        {
+          title: 'Explain method choices rather than score them',
+          observation:
+            'Practice activities provide approach-specific feedback and ungraded written reflections.',
+          decision:
+            'Present costs and assumptions behind defensible approaches.',
+          why: 'A usability task can reveal interaction breakdowns; a survey answers a different kind of question. Method choice should follow the decision to be informed.',
+          tradeoff:
+            'Authored feedback cannot respond to every contextual detail in a learner’s reflection.',
+          source: 'README.md: Learning and practice release',
+        },
+        {
+          title: 'Keep practice and research provenance visible',
+          observation:
+            'Every displayed study is labeled as synthetic; planner exports identify unexecuted drafts.',
+          decision: 'Carry provenance into both the interface and exports.',
+          why: 'An observation count is not a population estimate, and a teaching dataset is not participant evidence. Labels reduce the risk of confusing practice with completed research.',
+          tradeoff:
+            'Repeated labeling adds content, but removing it could create a materially misleading impression.',
+          source: 'README.md: Research status; Local storage and exports',
+        },
+      ],
+      visual:
+        'The product separates learning, practice, and toolkit destinations. Within synthesis, observation IDs and supporting or challenging evidence maintain a readable chain from source material to interpretation. The portfolio presents that chain as the research competency—not the existence of templates.',
+      accessibility:
+        'The implementation documents native select-based evidence assignment, keyboard journeys, recoverable drafts, and explicit confirmation before resets. Automated checks are documented in the source repository; assistive-technology testing and practitioner sessions remain separate validation needs.',
+      outcome:
+        'The product implements planning, synthesis, downloadable resources, and authored research-reasoning exercises. No participant findings or measured research-training outcome is claimed.',
+      reflection:
+        'Research tools need to preserve uncertainty. A structured workflow helps expose reasoning, but it should not make a recommendation appear more certain simply because every field is filled.',
+      validation: {
+        question:
+          'Do learners distinguish observations, interpretations, and proposed recommendations?',
+        method:
+          'Proposed moderated synthesis exercise followed by explanation and navigation tasks.',
+        participants:
+          'Early-career researchers and practitioners reviewing research plans.',
+        signal:
+          'Trace an insight to evidence, identify a counterexample, and explain a method choice without treating synthetic data as real findings.',
+      },
+      capture:
+        'Capture the current learning homepage and a finding with supporting observations and counterexamples.',
+      source: 'uxr-forge',
+    },
   },
   {
-    slug: 'orbit-ai', index: '03', title: 'Orbit AI', subtitle: 'An AI workspace designed around provenance, control, and recovery.',
-    description: 'A source-aware workspace that turns unstructured information into editable project knowledge without hiding how the output was produced.',
-    category: 'AI productivity', role: 'Senior Product Designer', timeline: '14 weeks', industry: 'Knowledge work', team: 'Product, research, ML, and 3 engineers', tools: ['Figma', 'React', 'Prototyping'],
-    services: ['Contextual inquiry', 'Product modeling', 'AI interaction design', 'Prototype testing'], accent: '#3382f9',
-    challenge: 'Useful AI answers disappeared into chats, sources were unclear, and users could not safely recover from unpredictable actions.',
-    businessContext: 'The concept served teams synthesizing research, planning work, and creating documents from distributed sources.', audience: 'Researchers, product teams, and operations leads working across shared source material.',
-    researchQuestions: ['What makes AI output trustworthy enough to reuse?', 'Which actions require confirmation or recovery?', 'How should generated work persist beyond a conversation?'],
-    research: [
-      { method: 'Contextual inquiry', detail: 'Eight knowledge workers completing live synthesis tasks', why: 'See workarounds that interviews miss.' },
-      { method: 'Workflow mapping', detail: 'Inputs, transformations, approvals, and outputs', why: 'Model AI as part of a broader system.' },
-      { method: 'Trust interviews', detail: '12 frequent and occasional AI users', why: 'Separate novelty from dependable value.' },
-      { method: 'Prototype testing', detail: 'Three interaction models across two rounds', why: 'Compare comprehension, control, and recovery.' },
-    ],
-    findings: [
-      { title: 'Provenance supports editing', evidence: 'People checked sources to decide what to keep, not only to verify truth.', implication: 'Keep source context one action away from each claim.' },
-      { title: 'Chat is a moment, not a home', evidence: 'Useful outputs were copied into documents immediately.', implication: 'Make durable, editable output a first-class object.' },
-      { title: 'Recovery creates trust', evidence: 'Undo and version history mattered more than expressive AI personality.', implication: 'Design human confirmation and reversible actions.' },
-    ],
-    segments: [
-      { name: 'Evidence-led synthesizer', behavior: 'Traces claims back to sources.', need: 'Fast provenance and editable structure.' },
-      { name: 'Repeat-work automator', behavior: 'Runs recurring transformations.', need: 'Reusable instructions and predictable outputs.' },
-      { name: 'Cautious collaborator', behavior: 'Reviews before sharing or changing work.', need: 'Clear confidence, confirmation, and history.' },
-    ],
-    journey: [
-      { phase: 'Gather', action: 'Adds project sources', feeling: 'Scattered', opportunity: 'Show coverage and gaps' },
-      { phase: 'Direct', action: 'Chooses a task and instruction', feeling: 'Hopeful', opportunity: 'Offer reusable patterns' },
-      { phase: 'Review', action: 'Checks output and citations', feeling: 'Skeptical', opportunity: 'Preview provenance inline' },
-      { phase: 'Edit', action: 'Refines structure and claims', feeling: 'In control', opportunity: 'Preserve human edits' },
-      { phase: 'Reuse', action: 'Shares or reruns the workflow', feeling: 'Efficient', opportunity: 'Version the recipe' },
-    ],
-    reframe: 'The opportunity was not a smarter chat box. It was an inspectable work system connecting sources, tasks, AI actions, and durable output.',
-    hmws: ['How might every claim carry useful source context?', 'How might generated work become a stable, editable artifact?', 'How might users preview and reverse consequential actions?'],
-    principles: [{ title: 'Show the chain', detail: 'Connect source, instruction, action, and output.' }, { title: 'Editability is agency', detail: 'Human changes remain visible and protected.' }, { title: 'Consequences need consent', detail: 'Destructive or external actions require clear confirmation.' }, { title: 'Recovery over reassurance', detail: 'History and undo build more trust than confident language.' }],
-    flow: ['Create workspace', 'Connect sources', 'Choose task', 'Review plan', 'Inspect output', 'Edit and publish'],
-    iteration: { before: 'Version 1 showed citations in a separate source drawer.', failed: 'Participants overlooked provenance during review and opened the drawer only after prompting.', after: 'Version 2 attached citation previews directly to claims, with deeper source context on demand.' },
-    testing: [
-      { task: 'Verify a generated claim', before: '61%', after: '90%', issue: 'Sources were detached from output.', severity: 'High', change: 'Added inline citation previews and exact source excerpts.' },
-      { task: 'Recover earlier output', before: '55%', after: '87%', issue: 'History was conversation-centric.', severity: 'High', change: 'Added artifact-level version history and restore.' },
-      { task: 'Reuse an instruction', before: '48%', after: '82%', issue: 'Prompts had no durable home.', severity: 'Medium', change: 'Created named, editable instruction recipes.' },
-    ],
-    accessibility: ['Live-region boundaries for streaming updates', 'Pause and stop controls', 'Source previews reachable by keyboard', 'Non-color confidence language', 'Visible change history', 'No forced motion during generation'],
-    outcomes: [{ value: '+28%', label: 'task completion', sample: true }, { value: '+21%', label: 'output trust', sample: true }, { value: '−37%', label: 'repeat workflow time', sample: true }, { value: '90%', label: 'claim verification success', sample: true }],
-    reflection: { worked: 'The source-to-output model made AI behavior discussable across design and engineering.', change: 'I would test more adversarial and ambiguous source sets.', learned: 'Trust came from legibility and recovery, not conversational polish.', next: 'Study shared ownership when several people edit instructions and outputs.' },
+    slug: '508-dev',
+    index: '03',
+    title: '508 Dev',
+    subtitle: '508 Dev — Accessibility / Inclusive Interaction',
+    description:
+      'An interactive accessibility learning environment that makes the consequences of interface decisions tangible.',
+    category: 'Accessibility / Inclusive Interaction',
+    role: 'UX Designer',
+    timeline: 'Dates to confirm',
+    team: 'Authorship scope to confirm',
+    platform: 'Web',
+    services: ['Accessibility', 'Inclusive Design', 'Interaction Design'],
+    accent: '#655a92',
+    status: 'ready',
+    focus:
+      'An interactive accessibility learning environment that makes the consequences of interface decisions tangible.',
+    researchPrompts: [],
+    designPrompts: [],
+    reflectionPrompts: [],
+    narrative: {
+      question:
+        'How can people understand accessibility requirements by experiencing the interaction?',
+      context:
+        '508 Dev places failing and repaired reference patterns alongside practical explanations. The design challenge is to connect a technical requirement to the experience of navigating, understanding, and recovering from an interface.',
+      constraint:
+        'A demonstration is not a conformance guarantee. The product marks examples as reference material until documented browser and assistive-technology testing supports stronger claims.',
+      flow: [
+        'Learn',
+        'Playground',
+        'Patterns',
+        'Test',
+        'Reference & standards',
+      ],
+      decisions: [
+        {
+          title: 'Make the behavioral difference available to inspect',
+          observation:
+            'The playground includes failing and repaired target-size, redundant-entry, contrast, and input-purpose examples.',
+          decision:
+            'Present paired interactions with an explanation of the affected task.',
+          why: 'Experiencing the difference gives a requirement a concrete consequence. The comparison connects observation to an action the learner can apply.',
+          tradeoff:
+            'A deliberately failing example must remain clearly identified and must not prevent navigation out of the lesson.',
+          source: 'README.md: Interactive Accessibility Playgrounds',
+        },
+        {
+          title: 'Connect patterns to keyboard behavior',
+          observation:
+            'The pattern library includes keyboard maps and live examples for dialogs, tabs, menus, and other widgets.',
+          decision:
+            'Describe expected interaction alongside semantic structure.',
+          why: 'A visually correct control can still fail when operated without a pointer. Behavior belongs in the design specification.',
+          tradeoff:
+            'Reference patterns still need testing in the context of the consuming product.',
+          source: 'README.md: Pattern Library; Release Status',
+        },
+        {
+          title: 'Separate reference examples from tested claims',
+          observation:
+            'The product labels examples as Reference until a documented browser and assistive-technology matrix supports a stronger status.',
+          decision:
+            'Keep evaluation status visible beside the educational material.',
+          why: 'A working demonstration does not prove that every interaction is accessible in every browser or assistive-technology combination. Status language helps readers understand the scope of the evidence.',
+          tradeoff:
+            'Qualified claims are less promotional, but prevent a reference implementation from being mistaken for a complete conformance guarantee.',
+          source: 'README.md: QA Status; Release Status',
+        },
+      ],
+      visual:
+        'The paired-example structure gives visual comparison a specific purpose: identifying behavioral differences. Labels and explanations must carry the distinction alongside color so that the teaching mechanism does not depend on the ability it is explaining.',
+      accessibility:
+        'The source documents focus management, skip navigation, keyboard interactions, and reduced motion. Vision simulations illustrate some visual effects; they cannot reproduce lived experience or substitute for research with disabled users. Browser and assistive-technology combinations remain unverified until documented.',
+      outcome:
+        'The product offers interactive reference examples and routes for learning, patterns, testing, and standards. It remains a public preview; no conformance certification or learning outcome is claimed.',
+      reflection:
+        'Demonstrating an inaccessible pattern creates an obligation to protect the surrounding learning experience. Future evaluation needs to establish whether the lesson stays navigable and understandable for the people it is intended to support.',
+      validation: {
+        question:
+          'Can learners explain and repair the interaction problem after comparing examples?',
+        method:
+          'Proposed keyboard walkthroughs and moderated learning tasks, including assistive-technology use.',
+        participants:
+          'Interface designers and developers, including people who use keyboard and screen-reader navigation.',
+        signal:
+          'Identify the failure, explain its user consequence, and apply the reference without becoming trapped in the example.',
+      },
+      capture:
+        'Capture a real playground showing failing and repaired versions with their labels and keyboard instructions.',
+      source: '508Dev',
+    },
   },
   {
-    slug: 'atlas-finance', index: '04', title: 'Atlas Finance', subtitle: 'Financial information reframed as understandable next decisions.',
-    description: 'A personal finance experience that starts with plain-language insight, then lets people progressively inspect the evidence behind it.',
-    category: 'Personal finance', role: 'Product Designer', timeline: '10 weeks', industry: 'Fintech', team: 'Product manager, data analyst, 2 engineers', tools: ['Figma', 'Dovetail', 'ProtoPie'],
-    services: ['Diary study', 'Information hierarchy', 'Data visualization', 'Concept testing'], accent: '#6ca5fb',
-    challenge: 'Most tools displayed transaction totals without explaining what changed, what mattered, or what action was realistic.',
-    businessContext: 'A sample financial clarity product explored how monthly activity could support better decisions without judgment or overload.', audience: 'People with variable income, emerging financial habits, and limited time for detailed budgeting.',
-    researchQuestions: ['What questions do people bring to financial dashboards?', 'Which explanations build or reduce trust?', 'How much detail is useful before it becomes noise?'],
-    research: [{ method: 'Financial diary study', detail: '10 participants over three weeks', why: 'Capture decisions in context, not from recall.' }, { method: 'Customer interviews', detail: '14 varied budgeting behaviors', why: 'Understand language, goals, and avoidance.' }, { method: 'Competitive analysis', detail: 'Seven finance products', why: 'Map conventions and trust gaps.' }, { method: 'Concept testing', detail: 'Progressive disclosure prototypes', why: 'Calibrate depth and terminology.' }],
-    findings: [{ title: 'People wanted explanations', evidence: '“Dining: $642” required too much interpretation to be useful.', implication: 'Lead with what changed and why it may matter.' }, { title: 'Tone affected trust', evidence: 'Judgmental alerts were dismissed even when accurate.', implication: 'Use neutral language and user-defined goals.' }, { title: 'Evidence should stay available', evidence: 'Participants trusted summaries more when transactions were easy to inspect.', implication: 'Pair concise insight with transparent supporting detail.' }],
-    segments: [{ name: 'Quick checker', behavior: 'Scans for anything needing attention.', need: 'Priority and reassurance.' }, { name: 'Goal planner', behavior: 'Compares current choices with a target.', need: 'Forecasts and tradeoffs.' }, { name: 'Detail verifier', behavior: 'Audits categories and transactions.', need: 'Traceable evidence and corrections.' }],
-    journey: [{ phase: 'Orient', action: 'Checks current position', feeling: 'Guarded', opportunity: 'Lead with what changed' }, { phase: 'Interpret', action: 'Opens important insight', feeling: 'Curious', opportunity: 'Explain cause and confidence' }, { phase: 'Inspect', action: 'Reviews supporting activity', feeling: 'Analytical', opportunity: 'Make data traceable' }, { phase: 'Decide', action: 'Sets or changes a goal', feeling: 'Capable', opportunity: 'Show tradeoffs' }, { phase: 'Monitor', action: 'Returns after new activity', feeling: 'Aware', opportunity: 'Keep alerts meaningful' }],
-    reframe: 'The dashboard was not a reporting surface; it was a sequence of questions that helped people decide what deserved attention.',
-    hmws: ['How might we lead with meaning before data?', 'How might evidence remain inspectable without overwhelming the overview?', 'How might alerts inform without judging?'],
-    principles: [{ title: 'Answer first', detail: 'State the meaningful change before showing the chart.' }, { title: 'Evidence on demand', detail: 'Let users inspect calculation and transactions.' }, { title: 'Neutral, not passive', detail: 'Be direct without moralizing spending.' }, { title: 'Goals shape relevance', detail: 'Prioritize insight using intent the user controls.' }],
-    flow: ['Open overview', 'Scan priority insight', 'Inspect explanation', 'Review transactions', 'Choose response', 'Monitor progress'],
-    iteration: { before: 'Version 1 opened with six equally weighted charts.', failed: 'Participants could describe the data but not identify what required action.', after: 'Version 2 prioritized three plain-language insights with optional supporting charts.' },
-    testing: [{ task: 'Explain monthly change', before: '57%', after: '88%', issue: 'Charts lacked interpretation.', severity: 'High', change: 'Added plain-language insight and contributing factors.' }, { task: 'Verify an insight', before: '69%', after: '93%', issue: 'Transaction evidence was buried.', severity: 'Medium', change: 'Added inline “Why this changed” detail.' }, { task: 'Adjust a goal', before: '63%', after: '84%', issue: 'Forecast impact was unclear.', severity: 'Medium', change: 'Previewed tradeoffs before saving.' }],
-    accessibility: ['Text equivalents for every chart', 'Data tables for detailed values', 'User-controlled number formatting', 'No color-only trend meaning', 'Plain-language financial terms', 'Large, persistent disclosure controls'],
-    outcomes: [{ value: '+39%', label: 'insight comprehension', sample: true }, { value: '+26%', label: 'overview completion', sample: true }, { value: '+31%', label: 'alert interaction', sample: true }],
-    reflection: { worked: 'Progressive disclosure supported both quick scanning and verification.', change: 'I would recruit more households managing shared finances.', learned: 'Financial clarity is as much about tone as information architecture.', next: 'Test irregular-income forecasting across longer cycles.' },
-  },
-  {
-    slug: 'giveforward', index: '05', title: 'GiveForward', subtitle: 'A shorter donation flow that keeps meaning and trust intact.',
-    description: 'A mobile-first donation experience clarifying impact, recurring support, validation, and confirmation without making generosity feel transactional.',
-    category: 'Nonprofit giving', role: 'UX Designer', timeline: '8 weeks', industry: 'Civic & nonprofit', team: 'Nonprofit director, fundraiser, 2 engineers', tools: ['Figma', 'Analytics', 'Usability testing'],
-    services: ['Analytics review', 'Form design', 'Mobile UX', 'Accessibility'], accent: '#bfd8fd',
-    challenge: 'Long mobile forms, vague impact, and ambiguous recurring controls caused abandonment and distrust.', businessContext: 'A sample shared donation platform needed a reusable flow for organizations with different programs and supporter relationships.', audience: 'First-time and returning donors contributing on mobile and desktop.',
-    researchQuestions: ['Which details create confidence before payment?', 'Where does mobile abandonment cluster?', 'How should recurring support be explained?'],
-    research: [{ method: 'Donor interviews', detail: '11 recent online donors', why: 'Understand motivation and trust.' }, { method: 'Stakeholder interviews', detail: 'Six fundraising and program leads', why: 'Connect giving choices with real impact models.' }, { method: 'Funnel analysis', detail: 'Field and step abandonment', why: 'Locate measurable friction.' }, { method: 'Accessibility review', detail: 'Forms, errors, payment, confirmation', why: 'Address barriers in the critical path.' }],
-    findings: [{ title: 'Impact precedes amount', evidence: 'Donors wanted to know what a contribution enabled.', implication: 'Connect selectable amounts to transparent examples.' }, { title: 'Recurring ambiguity erodes trust', evidence: 'Preselected or weakly explained recurring options caused hesitation.', implication: 'Use explicit, balanced controls with clear timing.' }, { title: 'Confirmation continues the relationship', evidence: 'A receipt alone felt abrupt and impersonal.', implication: 'Show impact, receipt status, and next steps after payment.' }],
-    segments: [{ name: 'Moment-driven donor', behavior: 'Acts quickly from a campaign link.', need: 'Mobile speed and immediate trust.' }, { name: 'Impact evaluator', behavior: 'Compares programs before giving.', need: 'Transparent allocation.' }, { name: 'Ongoing supporter', behavior: 'Manages repeated contributions.', need: 'Clear cadence and self-service control.' }],
-    journey: [{ phase: 'Connect', action: 'Reads the need', feeling: 'Motivated', opportunity: 'Make impact specific' }, { phase: 'Choose', action: 'Selects impact and amount', feeling: 'Intentional', opportunity: 'Explain allocation' }, { phase: 'Give', action: 'Enters payment details', feeling: 'Cautious', opportunity: 'Reduce fields' }, { phase: 'Confirm', action: 'Checks receipt and result', feeling: 'Reassured', opportunity: 'Close the loop' }, { phase: 'Return', action: 'Reviews or manages giving', feeling: 'Committed', opportunity: 'Make control easy' }],
-    reframe: 'The donation flow had to reduce effort while increasing—rather than compressing—the moments that establish trust.', hmws: ['How might impact remain concrete at every amount?', 'How might recurring giving be equally visible and fully voluntary?', 'How might confirmation show what happens next?'],
-    principles: [{ title: 'Fewer asks, stronger answers', detail: 'Request only what the gift requires.' }, { title: 'Clarity is consent', detail: 'Cadence, fees, and allocation are explicit.' }, { title: 'Impact stays visible', detail: 'Meaning continues through payment and confirmation.' }, { title: 'Errors preserve momentum', detail: 'Validation explains how to recover without clearing work.' }],
-    flow: ['Choose impact', 'Set amount', 'Choose cadence', 'Pay securely', 'Review confirmation', 'Manage donation'],
-    iteration: { before: 'Version 1 combined impact, amount, cadence, identity, and payment in one long form.', failed: 'Mobile users lost orientation and interpreted the recurring toggle as preselected.', after: 'Version 2 used three short, labeled steps and balanced cadence cards with a persistent summary.' },
-    testing: [{ task: 'Make one-time donation', before: '68%', after: '93%', issue: 'Long form increased omissions.', severity: 'High', change: 'Grouped essential fields into short steps.' }, { task: 'Choose donation cadence', before: '72%', after: '96%', issue: 'Toggle meaning was unclear.', severity: 'High', change: 'Replaced toggle with explicit one-time and monthly choices.' }, { task: 'Find receipt', before: '79%', after: '95%', issue: 'Confirmation emphasized sharing over receipt.', severity: 'Low', change: 'Prioritized receipt, impact, and account controls.' }],
-    accessibility: ['Persistent field labels', 'Error summary with focus movement', 'Autocomplete and input modes', 'Wallet payment option', 'No preselected recurring donation', 'Readable receipt and confirmation structure'],
-    outcomes: [{ value: '+22%', label: 'completed donations', sample: true }, { value: '−35%', label: 'mobile abandonment', sample: true }, { value: '+19%', label: 'recurring contributions', sample: true }],
-    reflection: { worked: 'Separating meaning from data entry kept the flow brief without making it cold.', change: 'I would test with more assistive-payment workflows.', learned: 'A trustworthy choice is often more valuable than a clever default.', next: 'Explore saved payment while keeping guest giving effortless.' },
-  },
-  {
-    slug: 'movecity', index: '06', title: 'MoveCity', subtitle: 'Trip planning for the route people can actually take.',
-    description: 'A multimodal planner balancing time with accessibility, transfers, walking, reliability, weather, and personal preference.',
-    category: 'Urban mobility', role: 'UX Researcher & Product Designer', timeline: '11 weeks', industry: 'Transportation', team: 'Transit planner, product manager, 3 engineers', tools: ['Figma', 'Maps', 'Field research'],
-    services: ['Contextual research', 'Service blueprint', 'Route comparison', 'Inclusive design'], accent: '#4e92fa',
-    challenge: 'Route planners optimized for theoretical speed while hiding the real-world conditions that determine whether a trip works.', businessContext: 'A sample urban mobility service combined train, bus, walking, cycling, and rideshare options during frequent service disruption.', audience: 'Daily commuters, occasional riders, and people with mobility, sensory, or energy constraints.',
-    researchQuestions: ['How do riders evaluate a route beyond duration?', 'What creates or destroys transfer confidence?', 'Which accessibility details need real-time status?'],
-    research: [{ method: 'Contextual observation', detail: '14 trips across modes and times', why: 'See real decisions under time pressure.' }, { method: 'Commuter interviews', detail: '16 frequent and occasional riders', why: 'Compare preferences and routines.' }, { method: 'Accessibility interviews', detail: 'Eight riders with varied access needs', why: 'Ground route criteria in lived experience.' }, { method: 'Diary study', detail: 'One week of disrupted journeys', why: 'Understand adaptation over time.' }],
-    findings: [{ title: 'Fastest is conditional', evidence: 'Riders rejected marginally faster routes with risky transfers or long walks.', implication: 'Let people rank the conditions that make a route usable.' }, { title: 'Transfer confidence is contextual', evidence: 'A six-minute transfer could feel safe or impossible depending on station details.', implication: 'Explain distance, level change, and historical reliability.' }, { title: 'Access status must be current', evidence: 'Static elevator labels created false assurance during outages.', implication: 'Pair accessible routes with real-time facility status.' }],
-    segments: [{ name: 'Routine optimizer', behavior: 'Knows the network and watches disruption.', need: 'Fast comparison with reliability.' }, { name: 'Energy manager', behavior: 'Balances duration with walking and crowding.', need: 'Personalized physical demand.' }, { name: 'Access-dependent rider', behavior: 'Requires specific station and vehicle conditions.', need: 'Verified accessible continuity.' }],
-    journey: [{ phase: 'Plan', action: 'Sets destination and timing', feeling: 'Neutral', opportunity: 'Remember preferences' }, { phase: 'Compare', action: 'Balances route conditions', feeling: 'Evaluative', opportunity: 'Show meaningful tradeoffs' }, { phase: 'Commit', action: 'Starts selected route', feeling: 'Prepared', opportunity: 'Explain confidence' }, { phase: 'Transfer', action: 'Navigates between modes', feeling: 'Alert', opportunity: 'Use contextual guidance' }, { phase: 'Adapt', action: 'Responds to disruption', feeling: 'Stressed', opportunity: 'Preserve constraints in reroute' }],
-    reframe: 'The goal was not to calculate the shortest path. It was to help each rider identify and maintain a route that fit their real constraints.', hmws: ['How might route comparison reveal the tradeoffs riders already make?', 'How might we communicate transfer confidence before travel?', 'How might rerouting preserve accessibility and walking preferences?'],
-    principles: [{ title: 'Appropriate beats fastest', detail: 'Time is one route quality among several.' }, { title: 'Confidence needs evidence', detail: 'Explain transfer, reliability, and access conditions.' }, { title: 'Preferences persist', detail: 'Reroutes respect the original constraints.' }, { title: 'Disruption is a core state', detail: 'Design degraded service, not only the ideal trip.' }],
-    flow: ['Set destination', 'Choose route priorities', 'Compare tradeoffs', 'Review transfer details', 'Start guidance', 'Adapt to disruption'],
-    iteration: { before: 'Version 1 used a single weighted “best route” recommendation.', failed: 'Participants distrusted the hidden calculation and could not compare the tradeoffs.', after: 'Version 2 showed three labeled routes—fastest, most reliable, and best match—with adjustable priorities.' },
-    testing: [{ task: 'Choose preferred route', before: '66%', after: '91%', issue: 'Recommendation logic was opaque.', severity: 'High', change: 'Added route rationale and side-by-side tradeoffs.' }, { task: 'Assess transfer', before: '58%', after: '86%', issue: 'Time lacked station context.', severity: 'High', change: 'Added walking distance, levels, and reliability.' }, { task: 'Find accessible reroute', before: '52%', after: '84%', issue: 'Reroute reset constraints.', severity: 'High', change: 'Persisted accessibility and walking preferences.' }],
-    accessibility: ['Wheelchair-continuous route validation', 'Elevator outage status', 'Step-free transfer detail', 'Screen-reader-friendly route summaries', 'Non-map list equivalent', 'Low-motion and high-contrast guidance'],
-    outcomes: [{ value: '−29%', label: 'route selection time', sample: true }, { value: '+44%', label: 'accessible route discovery', sample: true }, { value: '−17%', label: 'missed transfers', sample: true }],
-    reflection: { worked: 'Making route logic visible improved both trust and decision speed.', change: 'I would add more late-night and low-connectivity field sessions.', learned: 'Accessibility information becomes harmful when it is vague or stale.', next: 'Test crowding and weather preferences without making comparison too dense.' },
+    slug: 'palette-snap',
+    index: '04',
+    title: 'Palette Snap',
+    subtitle: 'Palette Snap — Visual Design / Color Interaction',
+    description:
+      'An image-to-color workflow that makes extracted palettes editable, reusable, and easier to evaluate.',
+    category: 'Visual Design / Color Interaction',
+    role: 'UX Designer',
+    timeline: 'Dates to confirm',
+    team: 'Authorship scope to confirm',
+    platform: 'Web',
+    services: ['Visual Design', 'Color Systems', 'Interaction Design'],
+    accent: '#92603e',
+    status: 'ready',
+    focus:
+      'An image-to-color workflow that makes extracted palettes editable, reusable, and easier to evaluate.',
+    researchPrompts: [],
+    designPrompts: [],
+    reflectionPrompts: [],
+    narrative: {
+      question:
+        'How can extracted color become a useful design material rather than a static list of swatches?',
+      context:
+        'Palette Snap organizes the work into Extract, Refine, and Export. Designers can move from image colors to names, semantic roles, contrast checks, and reusable output without an account.',
+      constraint:
+        'A palette alone cannot establish accessibility: contrast depends on a specific foreground and background pairing. Browser clipboard and remote-image capabilities also vary.',
+      flow: [
+        'Extract',
+        'Name & refine',
+        'Assign roles',
+        'Check contrast',
+        'Export',
+      ],
+      decisions: [
+        {
+          title: 'Keep refinement under the designer’s control',
+          observation:
+            'Swatches support editing, ordering, locks, names, and editable semantic-role suggestions.',
+          decision:
+            'Offer suggestions without silently replacing a selected color.',
+          why: 'Color has contextual and expressive value. Explicit acceptance preserves authorship while exposing an accessible alternative for a particular pairing.',
+          tradeoff:
+            'The designer must still evaluate the suggestion in the actual interface.',
+          source: 'README.md: Product capabilities',
+        },
+        {
+          title: 'Make palette changes reversible',
+          observation:
+            'The product includes bounded undo/redo, recent history, and saved palettes.',
+          decision:
+            'Preserve a recovery path while designers explore colors and ordering.',
+          why: 'Experimentation is easier when a previous arrangement can be recovered. Keyboard move controls also offer an alternative to dragging.',
+          tradeoff:
+            'Local history is not a cloud backup; clearing browser storage removes saved work.',
+          source:
+            'README.md: Privacy and browser limitations; palette-history.js',
+        },
+        {
+          title: 'Group export by the next use',
+          observation:
+            'Export supports visual cards, stylesheet formats, structured data, and design tokens.',
+          decision: 'Carry names and roles forward into reusable output.',
+          why: 'A palette becomes more useful when the result fits the next design or implementation task rather than requiring manual transcription.',
+          tradeoff:
+            'Multiple formats create choice; grouped export categories are needed to keep the primary action understandable.',
+          source: 'README.md: Product capabilities',
+        },
+      ],
+      visual:
+        'Swatches are both visual samples and editable design data. Naming and semantic roles connect appearance to purpose; explicit contrast results describe a pairing rather than declaring an entire palette accessible. The extraction, refinement, and export sequence gives each stage a different visual priority.',
+      accessibility:
+        'The implementation documents keyboard reorder controls, accessible dialogs and menus, live action feedback, and explicit contrast results. Unsupported clipboard and EyeDropper paths retain upload or manual fallbacks. These observations do not establish a full accessibility audit.',
+      outcome:
+        'The implemented workflow transforms images into editable palettes and multiple reusable formats, with local processing for uploads and pasted images. No time-saving or satisfaction metric is claimed.',
+      reflection:
+        'Automatic extraction starts the work; naming, grouping, correction, and recovery make the result usable. Future testing should examine whether designers understand the difference between a visually harmonious palette and a passing contrast pair.',
+      validation: {
+        question:
+          'Can a designer refine an extracted palette and export the intended roles without losing work?',
+        method:
+          'Proposed task-based usability sessions covering extraction, keyboard reorder, contrast adjustment, undo, and export.',
+        participants:
+          'Visual and product designers who use image references in their workflow.',
+        signal:
+          'Correct export selection, understandable feedback, recovery from unwanted edits, and accurate interpretation of contrast results.',
+      },
+      capture:
+        'Capture the current workspace with a source image, named swatches, contrast evaluation, and the grouped export menu.',
+      source: 'palette-snap',
+    },
   },
 ];
-
-export const getProject = (slug: string) => projects.find((project) => project.slug === slug);
-
+// Additional context keeps audience and validation tasks separate from completed research.
+export const projectReview: Record<
+  string,
+  { audience: string; tasks: string; works: string; limit: string }
+> = {
+  'uxd-systems': {
+    audience: 'Designers learning and comparing design-system conventions.',
+    tasks:
+      'Compare two systems, explain a meaningful difference, then predict and inspect a density change in Token Lab.',
+    works:
+      'A shared comparison structure retains links back to contextual profiles.',
+    limit:
+      'An educational model simplifies the original systems; understanding still needs practitioner evaluation.',
+  },
+  'uxr-forge': {
+    audience:
+      'Aspiring and practicing researchers developing research judgment.',
+    tasks:
+      'Frame a question, justify a method, inspect a counterexample, and recover a saved draft.',
+    works:
+      'Evidence relationships remain inspectable rather than collapsing into a confidence score.',
+    limit:
+      'Authored scenarios and feedback cannot reproduce the ambiguity of a live research engagement.',
+  },
+  '508-dev': {
+    audience:
+      'Interface designers and developers learning accessible interaction.',
+    tasks:
+      'Navigate a reference example with a keyboard, explain the difference between paired controls, and identify what further testing is required.',
+    works:
+      'The paired reference makes an abstract requirement available for direct inspection.',
+    limit:
+      'A reference example cannot establish the accessibility of an entire product or replace assistive-technology testing.',
+  },
+  'palette-snap': {
+    audience:
+      'Visual and product designers turning image references into usable palettes.',
+    tasks:
+      'Extract a sample palette, name and move a color, check a pair, undo an edit, and choose an export.',
+    works:
+      'Color remains connected to values, names, roles, and recovery controls.',
+    limit:
+      'A suggested role or passing pair cannot guarantee that every use of the palette is accessible.',
+  },
+};
 export const capabilities = [
-  { title: 'UX Research', detail: 'Interviews, contextual inquiry, usability testing, competitive analysis, synthesis' },
-  { title: 'Product Design', detail: 'Product framing, information architecture, interaction design, prototyping' },
-  { title: 'UI & Systems', detail: 'Visual hierarchy, responsive interfaces, components, design systems' },
-  { title: 'Accessibility', detail: 'WCAG, semantic structure, keyboard behavior, inclusive design' },
-  { title: 'UX Engineering', detail: 'HTML, CSS, TypeScript, React, front-end prototyping' },
+  {
+    title: 'Research & insight',
+    detail:
+      'Ask useful questions. Listen carefully. Turn evidence into a direction.',
+    skills: [
+      'User interviews',
+      'Usability testing',
+      'Research synthesis',
+      'Survey design',
+    ],
+  },
+  {
+    title: 'Product & interaction',
+    detail:
+      'Make complex tasks understandable, from the main path to the edge cases.',
+    skills: [
+      'Problem framing',
+      'Information architecture',
+      'User flows',
+      'Prototyping',
+    ],
+  },
+  {
+    title: 'Interface & systems',
+    detail:
+      'Bring clarity to every detail, with consistent, accessible design.',
+    skills: [
+      'Visual design',
+      'Responsive design',
+      'Design systems',
+      'Accessibility',
+    ],
+  },
 ];
-
-export const processSteps = ['Understand', 'Frame', 'Explore', 'Prototype', 'Validate', 'Refine', 'Ship', 'Learn'];
+export const processSteps = [
+  'Understand',
+  'Frame',
+  'Explore',
+  'Validate',
+  'Refine',
+  'Deliver',
+];

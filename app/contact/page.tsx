@@ -1,13 +1,82 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { siteConfig } from '@/data/site';
-
-export const metadata: Metadata = { title: 'Contact', description: "Contact De'Andre Perry about UX design, product design, design systems, accessibility, and UX engineering opportunities.", alternates: { canonical: '/contact' } };
-
+import { CopyEmail } from '@/components/contact-actions';
+export const metadata: Metadata = {
+  title: 'Contact',
+  description: 'Get in touch with De’Andre Perry about UX and product design.',
+  alternates: { canonical: '/contact' },
+};
 export default function ContactPage() {
   return (
     <main id="main-content" tabIndex={-1} className="contact-page shell">
-      <div className="contact-main"><p className="eyebrow">Contact</p><h1>Let’s make the complex feel considered.</h1><p>I’m interested in thoughtful product teams working on meaningful, high-constraint problems—especially where research, accessibility, systems thinking, and implementation need to connect.</p><div className="contact-actions"><a className="button button-primary" href={`mailto:${siteConfig.email}`} data-event="contact-click">Email De&apos;Andre ↗</a><a className="button button-secondary" href={siteConfig.resume} download data-event="resume-click">Résumé placeholder ↓</a></div>{siteConfig.contactIsPlaceholder && <p className="contact-placeholder"><b>Before sharing:</b> replace the placeholder email and social links in <code>data/site.ts</code>.</p>}</div>
-      <aside className="contact-card"><span>Good conversations start with</span><ul><li>A product problem that matters</li><li>The evidence you already have</li><li>The constraints we should respect</li><li>What the team needs to learn next</li></ul><div><small>Current focus</small><p>UX design · Design systems · Accessibility · UX engineering</p></div></aside>
+      <div className="contact-main">
+        <p className="eyebrow">LET’S TALK</p>
+        <h1>
+          Good work starts
+          <br />
+          with a conversation.
+        </h1>
+        <p>
+          A product challenge. A design opportunity. A question worth exploring.
+          Let’s find the next step.
+        </p>
+        {siteConfig.email ? (
+          <div className="contact-actions">
+            <a
+              className="button button-primary"
+              href={`mailto:${siteConfig.email}`}
+            >
+              Email De’Andre ↗
+            </a>
+            <CopyEmail email={siteConfig.email} />
+          </div>
+        ) : (
+          <div className="contact-links">
+            <div>
+              Email<span>Contact details coming soon</span>
+            </div>
+          </div>
+        )}
+        <div className="contact-links">
+          {siteConfig.linkedin ? (
+            <a
+              href={siteConfig.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn <span>Visit profile ↗</span>
+            </a>
+          ) : (
+            <div>
+              LinkedIn<span>Profile link coming soon</span>
+            </div>
+          )}
+          <a href={siteConfig.github} target="_blank" rel="noopener noreferrer">
+            GitHub ↗
+          </a>
+          <Link href={siteConfig.resume || '/resume'}>
+            Resume{' '}
+            <span>{siteConfig.resume ? 'View resume ↗' : 'View status ↗'}</span>
+          </Link>
+        </div>
+      </div>
+      <aside className="contact-card">
+        <span>A useful place to start</span>
+        <ul>
+          <li>The problem you’re working on</li>
+          <li>The people it affects</li>
+          <li>What your team needs to learn</li>
+          <li>Where design could make a difference</li>
+        </ul>
+        <div>
+          <small>DESIGN FOCUS</small>
+          <p>
+            UX research · Product thinking · Interaction design · Interface
+            systems
+          </p>
+        </div>
+      </aside>
     </main>
   );
 }
