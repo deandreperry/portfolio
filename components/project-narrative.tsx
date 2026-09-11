@@ -110,7 +110,7 @@ export function ProjectNarrative({
           </div>
           <div>
             <dt>Tools</dt>
-            <dd>{projectTools[project.slug][0].tools.join(' · ')}</dd>
+            <dd>{projectTools[project.slug].flatMap((group) => group.tools).join(' · ')}</dd>
           </div>
           <div>
             <dt>Status</dt>
