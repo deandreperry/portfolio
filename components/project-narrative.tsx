@@ -71,6 +71,7 @@ export function ProjectNarrative({
     { id: 'visual-system', label: 'Visual system' },
     { id: 'accessibility', label: 'Accessibility' },
     { id: 'outcome', label: 'Outcome' },
+    { id: 'contribution', label: 'Contribution & evidence' },
     { id: 'validation', label: 'Future validation' },
     { id: 'tools', label: 'Tools & workflow' },
   ];
@@ -214,6 +215,35 @@ export function ProjectNarrative({
               <h3>What I would explore next</h3>
               <p>{n.reflection}</p>
             </div>
+          </section>
+          <section id="contribution" className="case-section">
+            <p className="eyebrow">CONTRIBUTION & EVIDENCE</p>
+            <h2>Scope, decisions, and the evidence behind them.</h2>
+            <dl className="study-at-a-glance">
+              <div>
+                <dt>Role & collaboration</dt>
+                <dd>The role presented in this case study is {project.role}, with a focus on {project.services.join(', ')}. Individual ownership boundaries and collaborator contributions are not documented in this implementation review.</dd>
+              </div>
+              <div>
+                <dt>User feedback & iteration</dt>
+                <dd>No participant-feedback record is included in this case study, so the design changes are not attributed to user testing. The next validation question is: {n.validation.question}</dd>
+              </div>
+              <div>
+                <dt>Constraints & priorities</dt>
+                <dd>{n.constraint} A concrete tradeoff: {n.decisions[0].tradeoff} This describes a product tradeoff; no stakeholder disagreement is claimed.</dd>
+              </div>
+              <div>
+                <dt>Evidence of benefit</dt>
+                <dd>{projectReview[project.slug].works} This is observable product behavior. Whether it helps the intended audience remains a question for validation: {n.validation.signal}</dd>
+              </div>
+            </dl>
+            <h3>Verified implementation scope</h3>
+            <dl className="scope-numbers" aria-label="Product counts, not measured user outcomes">
+              {scopeNumbers[project.slug].map(([value, label]) => (
+                <div key={label}><dt>{label}</dt><dd>{value}</dd></div>
+              ))}
+            </dl>
+            <p className="caption">These counts describe the implemented product. They do not measure usability improvement, participant satisfaction, or business impact.</p>
           </section>
           <section id="validation" className="case-section">
             <p className="eyebrow">07 / PROPOSED RESEARCH · NOT CONDUCTED</p>
