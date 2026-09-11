@@ -50,7 +50,9 @@ export function SiteHeader() {
                   : x.href
               }
               key={x.label}
-              aria-current={pathname.startsWith(x.href) ? 'page' : undefined}
+              aria-current={pathname === x.href || pathname.startsWith(`${x.href}/`)
+                  ? 'page'
+                  : undefined}
               className={x.label === 'Contact' ? 'nav-contact' : ''}
               onClick={() => setOpen(false)}
             >

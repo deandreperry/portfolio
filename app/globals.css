@@ -260,13 +260,14 @@ img {
   align-items: center;
   gap: 28px;
   min-height: 44px;
+  border-bottom: 1px solid transparent;
 }
 .nav-links a:hover,
 .nav-links [aria-current] {
   color: var(--color-brand-hover);
 }
-.nav-contact {
-  border-bottom: 1px solid var(--color-text-primary);
+.nav-links a[aria-current="page"] {
+  border-bottom-color: currentColor;
 }
 .menu-trigger {
   display: none;
