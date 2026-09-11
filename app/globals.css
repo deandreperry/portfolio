@@ -4530,6 +4530,8 @@ img {
 /* Mobile navigation uses a compact disclosure with generous link targets. */
 @media (max-width: 760px) {
   .back-to-top {
+    width: 44px;
+    height: 44px;
     right: max(8px, env(safe-area-inset-right));
   }
   .menu-trigger {
