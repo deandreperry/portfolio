@@ -14,11 +14,11 @@ export default function Home() {
           </p>
           <h1>
             Understand the people.
-            <span>Clarify the product.</span>
+            <span>Design with intention.</span>
           </h1>
           <p className="hero-deck">
-            I design accessible digital experiences through visual systems,
-            research-informed thinking, and high-fidelity prototyping.
+            I create accessible digital experiences grounded in research, purposeful
+            visual systems, and high-fidelity prototyping.
           </p>
           <div className="hero-actions">
             <a href="#selected-work" className="button button-primary">

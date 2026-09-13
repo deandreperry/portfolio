@@ -12,7 +12,7 @@
   text-wrap: balance;
 }
 .hero-compact h1 > span {
-  color: var(--color-brand-hover);
+  color: var(--color-brand);
   margin-top: 0.15em;
 }
 .hero-compact .hero-deck {
