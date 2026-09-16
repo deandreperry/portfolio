@@ -198,6 +198,21 @@ export default function AboutPage() {
           </a>
         </div>
       </section>
+      <aside className="apple-recognition shell" aria-label="Apple Teacher recognition">
+        <div className="apple-signature-clearspace">
+          <Image
+            src="/recognition/apple-teacher-swift-playgrounds.svg"
+            alt="Apple Teacher with Swift Playgrounds recognition"
+            width={160}
+            height={41}
+            className="apple-teacher-signature"
+          />
+        </div>
+        <p className="caption apple-trademark-credit">
+          Apple, the Apple logo, and Swift Playgrounds are trademarks of Apple Inc.,
+          registered in the U.S. and other countries.
+        </p>
+      </aside>
     </main>
   );
 }
