@@ -1,5 +1,12 @@
 export const certificates = [
   {
+    title: 'Apple Ads Certification',
+    issuer: 'Apple',
+    date: 'Class of 2026',
+    id: '',
+    url: '/certificates/apple-ads-certification.pdf',
+  },
+  {
     title: 'Google UX Design Professional Certificate',
     issuer: 'Google',
     date: 'Issued September 2026',

@@ -157,15 +157,15 @@ export default function AboutPage() {
         <div className="certificate-list">
           <h3>Professional certificates</h3>
           {certificates.map((certificate) => (
-            <article key={certificate.id} className="certificate-row">
+            <article key={certificate.title} className="certificate-row">
               <div>
                 <p className="eyebrow">
                   {certificate.issuer}
                   {certificate.date ? ` · ${certificate.date}` : ''}
                 </p>
                 <h4>{certificate.title}</h4>
-                <p className="caption">Credential ID: {certificate.id}</p>
-                {certificate.url && (
+                {certificate.id && <p className="caption">Credential ID: {certificate.id}</p>}
+                {certificate.url.startsWith('https://') && (
                   <p className="credential-destination">
                     {certificate.url.replace('https://', '')}
                   </p>
@@ -179,7 +179,7 @@ export default function AboutPage() {
                   rel="noopener noreferrer"
                   aria-label={`Show credential: ${certificate.title} (opens in a new tab)`}
                 >
-                  Show credential <ArrowIcon />
+                  {certificate.url.endsWith('.pdf') ? 'View certificate (PDF)' : 'Show credential'} <ArrowIcon />
                 </a>
               ) : (
                 <span className="credential-pending">
