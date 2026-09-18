@@ -429,3 +429,13 @@
 .apple-signature-clearspace { padding: 24px; width: fit-content; }
 .apple-teacher-signature { display: block; width: 160px; height: auto; max-width: none; opacity: 1; animation: none; transform: none; filter: none; border: 0; border-radius: 0; box-shadow: none; }
 .apple-trademark-credit { max-width: 65ch; margin-top: 16px; }
+
+/* Allow larger utility text to wrap at narrow viewport widths. */
+.contact-main { min-width: 0; }
+.contact-actions { flex-wrap: wrap; }
+@media (max-width: 380px) {
+  .contact-links a { flex-wrap: wrap; gap: 12px; }
+}
+.certificate-row > div { min-width: 0; }
+.certificate-row .caption { overflow-wrap: anywhere; }
+.contact-main h1, .contact-main a { overflow-wrap: anywhere; }

@@ -328,7 +328,7 @@ img {
 .lab-top {
   display: flex;
   justify-content: space-between;
-  font-size: 0.625rem;
+  font-size: 1rem;
   letter-spacing: 0.06em;
   color: var(--color-text-secondary);
   padding: 0 8px 15px;
@@ -356,7 +356,7 @@ img {
 }
 .dimension {
   position: absolute;
-  font-size: 0.6rem;
+  font-size: 1rem;
   color: #606d7c;
   letter-spacing: 0.05em;
   background: #f7f9fc;
@@ -402,7 +402,7 @@ img {
   margin-bottom: 15px;
 }
 .choice-model .tiny-label {
-  font-size: 0.55rem;
+  font-size: 1rem;
   color: var(--color-text-secondary);
 }
 .choice-model h2 {
@@ -410,7 +410,7 @@ img {
   margin: 7px 0;
 }
 .choice-model p {
-  font-size: 0.65rem;
+  font-size: 1rem;
   color: var(--color-text-secondary);
 }
 .lab-options {
@@ -427,7 +427,7 @@ img {
   border: 1px solid #dce1e6;
   border-radius: 4px;
   padding: 10px;
-  font-size: 0.65rem;
+  font-size: 1rem;
   text-align: left;
   min-height: 40px;
 }
@@ -452,7 +452,7 @@ img {
   display: flex;
   justify-content: space-between;
   gap: 8px;
-  font-size: 0.57rem;
+  font-size: 1rem;
   color: var(--color-text-secondary);
   margin-top: 14px;
 }
@@ -470,7 +470,7 @@ img {
   background: white;
   border: 0;
   border-right: 1px solid var(--color-border);
-  font-size: 0.7rem;
+  font-size: 1rem;
   min-height: 46px;
   color: var(--color-text-secondary);
 }
@@ -479,7 +479,7 @@ img {
 }
 .lab-tabs button span {
   margin-right: 8px;
-  font-size: 0.6rem;
+  font-size: 1rem;
   opacity: 0.7;
 }
 .lab-tabs button[aria-pressed='true'] {
@@ -491,7 +491,7 @@ img {
   background: #f1f6ff;
 }
 .lab-caption {
-  font-size: 0.65rem;
+  font-size: 1rem;
   color: var(--color-text-secondary);
   margin-top: 10px;
   text-align: center;
@@ -504,14 +504,14 @@ img {
   margin: 20px 0;
 }
 .question-model p {
-  font-size: 0.8rem;
+  font-size: 1rem;
   color: var(--color-text-secondary);
 }
 .question-tags {
   display: flex;
   gap: 8px;
   margin-top: 25px;
-  font-size: 0.6rem;
+  font-size: 1rem;
 }
 .question-tags span {
   padding: 4px 8px;
@@ -524,7 +524,7 @@ img {
 .structure-model > div {
   border: 1px solid var(--color-border);
   padding: 14px 10px;
-  font-size: 0.75rem;
+  font-size: 1rem;
   position: relative;
   margin-bottom: 23px;
 }
@@ -535,7 +535,7 @@ img {
 }
 .structure-model > div > span {
   color: #6c7886;
-  font-size: 0.6rem;
+  font-size: 1rem;
   margin-right: 13px;
 }
 .structure-model b {
@@ -669,7 +669,7 @@ img {
   position: absolute;
   top: 22px;
   left: 28px;
-  font-size: 0.6rem;
+  font-size: 1rem;
   letter-spacing: 0.11em;
   color: #526574;
   z-index: 2;
@@ -694,7 +694,7 @@ img {
 .research-title > span,
 .type-specimen > span,
 .component-specimen > span {
-  font-size: 0.62rem;
+  font-size: 1rem;
   letter-spacing: 0.1em;
 }
 .product-note .visual-title {
@@ -704,7 +704,7 @@ img {
   color: #1b3559;
 }
 .product-note p {
-  font-size: 0.7rem;
+  font-size: 1rem;
   color: #4e6585;
 }
 .note-line {
@@ -726,7 +726,7 @@ img {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
-  font-size: 0.7rem;
+  font-size: 1rem;
 }
 .phone-top b {
   font-size: 1rem;
@@ -735,7 +735,7 @@ img {
   color: var(--color-brand);
 }
 .product-phone > small {
-  font-size: 0.5rem;
+  font-size: 1rem;
   color: #586c82;
   letter-spacing: 0.06em;
 }
@@ -762,7 +762,7 @@ img {
   gap: 9px;
   padding: 14px 0;
   border-bottom: 1px solid #e9edf4;
-  font-size: 0.5rem;
+  font-size: 1rem;
 }
 .phone-option > span {
   width: 23px;
@@ -774,13 +774,13 @@ img {
 }
 .phone-option b {
   display: block;
-  font-size: 0.58rem;
+  font-size: 1rem;
   font-weight: 600;
 }
 .phone-option small {
   display: block;
   margin-top: 3px;
-  font-size: 0.48rem;
+  font-size: 1rem;
   color: #5d6b7c;
 }
 .phone-option i {
@@ -793,7 +793,7 @@ img {
   color: white;
   padding: 10px;
   border-radius: 4px;
-  font-size: 0.5rem;
+  font-size: 1rem;
   display: flex;
   justify-content: space-between;
 }
@@ -801,7 +801,7 @@ img {
   position: absolute;
   bottom: 21px;
   left: 28px;
-  font-size: 0.65rem;
+  font-size: 1rem;
   color: #526574;
 }
 .visual-research-and-insight {
@@ -831,7 +831,7 @@ img {
   min-width: 0;
 }
 .research-column > span {
-  font-size: 0.56rem;
+  font-size: 1rem;
   font-weight: 600;
   letter-spacing: 0.09em;
   display: block;
@@ -842,14 +842,14 @@ img {
   background: #fffdf9;
   border: 1px solid #e9dfd0;
   padding: 20px;
-  font-size: 0.82rem;
+  font-size: 1rem;
   margin-top: 9px;
   box-shadow: 0 4px 9px #5b382707;
 }
 .research-column small {
   display: block;
   margin-top: 8px;
-  font-size: 0.65rem;
+  font-size: 1rem;
   color: #766b5c;
 }
 .board-arrow {
@@ -887,14 +887,14 @@ img {
   background: #fbfbfe;
 }
 .workflow-sidebar > b {
-  font-size: 0.8rem;
+  font-size: 1rem;
   display: block;
   margin-bottom: 30px;
 }
 .workflow-sidebar > span {
   display: block;
   padding: 11px;
-  font-size: 0.6rem;
+  font-size: 1rem;
   color: #61657a;
 }
 .workflow-sidebar .selected {
@@ -914,7 +914,7 @@ img {
   display: flex;
   justify-content: space-between;
   color: #73758a;
-  font-size: 0.5rem;
+  font-size: 1rem;
   letter-spacing: 0.04em;
 }
 .workflow-main .visual-title {
@@ -925,7 +925,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 0.55rem;
+  font-size: 1rem;
   color: #757789;
 }
 .workflow-steps i {
@@ -946,18 +946,18 @@ img {
   padding: 17px 22px;
 }
 .workflow-detail .tiny-label {
-  font-size: 0.45rem;
+  font-size: 1rem;
   color: #686b86;
 }
 .workflow-detail .visual-subtitle {
-  font-size: 0.95rem;
+  font-size: 1rem;
   margin: 6px 0 14px;
   letter-spacing: -0.02em;
 }
 .workflow-detail > div {
   display: flex;
   justify-content: space-between;
-  font-size: 0.5rem;
+  font-size: 1rem;
   gap: 12px;
   margin-top: 8px;
 }
@@ -969,7 +969,7 @@ img {
   margin-top: 16px;
   background: #5b61b3;
   color: white;
-  font-size: 0.55rem;
+  font-size: 1rem;
   padding: 9px 12px;
 }
 .workflow-detail p > span {
@@ -999,10 +999,10 @@ img {
   color: #327b61;
 }
 .type-specimen > b {
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 .type-specimen p {
-  font-size: 0.65rem;
+  font-size: 1rem;
   margin-top: 15px;
   line-height: 1.9;
   color: #536b5c;
@@ -1017,7 +1017,7 @@ img {
 }
 .specimen-buttons > b {
   font-weight: 500;
-  font-size: 0.58rem;
+  font-size: 1rem;
   background: #246956;
   color: white;
   padding: 11px;
@@ -1035,7 +1035,7 @@ img {
 }
 .specimen-input {
   margin-top: 25px;
-  font-size: 0.6rem;
+  font-size: 1rem;
 }
 .specimen-input > span {
   font-weight: 600;
@@ -1053,7 +1053,7 @@ img {
   color: #246956;
 }
 .specimen-input small {
-  font-size: 0.5rem;
+  font-size: 1rem;
   color: #536b5c;
 }
 .swatches {
@@ -1070,7 +1070,7 @@ img {
 .spacing-specimen {
   display: flex;
   justify-content: space-between;
-  font-size: 0.5rem;
+  font-size: 1rem;
   color: #536b5c;
   margin-top: 18px;
 }
@@ -1458,7 +1458,7 @@ img {
     padding: 25px 20px;
   }
   .lab-tabs button {
-    font-size: 0.6rem;
+    font-size: 1rem;
   }
   .lab-tabs button span {
     margin-right: 3px;
@@ -1567,7 +1567,7 @@ img {
     min-height: 355px;
   }
   .lab-tabs button {
-    font-size: 0.7rem;
+    font-size: 1rem;
   }
   .lab-tabs button span {
     margin-right: 8px;
@@ -1603,7 +1603,7 @@ img {
   .visual-label {
     top: 17px;
     left: 18px;
-    font-size: 0.46rem;
+    font-size: 1rem;
   }
   .product-composition {
     gap: 30px;
@@ -1613,10 +1613,10 @@ img {
     font-size: 1.6rem;
   }
   .product-note > span {
-    font-size: 0.5rem;
+    font-size: 1rem;
   }
   .product-note p {
-    font-size: 0.5rem;
+    font-size: 1rem;
   }
   .product-phone {
     width: 210px;
@@ -1634,18 +1634,18 @@ img {
     padding: 11px 0;
   }
   .phone-option b {
-    font-size: 0.49rem;
+    font-size: 1rem;
   }
   .phone-option small {
-    font-size: 0.42rem;
+    font-size: 1rem;
   }
   .phone-bottom {
-    font-size: 0.44rem;
+    font-size: 1rem;
     padding: 9px;
     margin-top: 16px;
   }
   .composition-caption {
-    font-size: 0.5rem;
+    font-size: 1rem;
     left: 18px;
     bottom: 16px;
   }
@@ -1703,7 +1703,7 @@ img {
     font-size: 1.7rem;
   }
   .research-title > span {
-    font-size: 0.47rem;
+    font-size: 1rem;
     max-width: 80px;
   }
   .research-title {
@@ -1713,17 +1713,17 @@ img {
     gap: 8px;
   }
   .board-arrow {
-    font-size: 0.7rem;
+    font-size: 1rem;
   }
   .research-column > span {
-    font-size: 0.42rem;
+    font-size: 1rem;
   }
   .research-column > div {
     padding: 13px 10px;
-    font-size: 0.58rem;
+    font-size: 1rem;
   }
   .research-column small {
-    font-size: 0.46rem;
+    font-size: 1rem;
   }
   .final-column > div {
     min-height: 143px;
@@ -1739,17 +1739,17 @@ img {
     padding: 21px 10px;
   }
   .workflow-sidebar > b {
-    font-size: 0.5rem;
+    font-size: 1rem;
   }
   .workflow-sidebar > span {
-    font-size: 0.42rem;
+    font-size: 1rem;
     padding: 10px 5px;
   }
   .workflow-main {
     padding: 20px 16px;
   }
   .workflow-heading {
-    font-size: 0.35rem;
+    font-size: 1rem;
   }
   .workflow-heading > span:last-child {
     display: none;
@@ -1758,7 +1758,7 @@ img {
     font-size: 1.3rem;
   }
   .workflow-steps {
-    font-size: 0.39rem;
+    font-size: 1rem;
     gap: 4px;
   }
   .workflow-steps .current {
@@ -1768,13 +1768,13 @@ img {
     padding: 13px 10px;
   }
   .workflow-detail .visual-subtitle {
-    font-size: 0.68rem;
+    font-size: 1rem;
   }
   .workflow-detail > div {
-    font-size: 0.36rem;
+    font-size: 1rem;
   }
   .workflow-detail p {
-    font-size: 0.4rem;
+    font-size: 1rem;
   }
   .system-composition {
     padding: 65px 24px 35px;
@@ -1786,34 +1786,34 @@ img {
   }
   .type-specimen > span,
   .component-specimen > span {
-    font-size: 0.43rem;
+    font-size: 1rem;
   }
   .type-specimen .visual-title {
     font-size: 5.5rem;
     margin-block: 20px;
   }
   .type-specimen > b {
-    font-size: 0.65rem;
+    font-size: 1rem;
   }
   .type-specimen p {
-    font-size: 0.48rem;
+    font-size: 1rem;
   }
   .specimen-buttons {
     gap: 5px;
   }
   .specimen-buttons > b {
-    font-size: 0.4rem;
+    font-size: 1rem;
     padding: 8px;
   }
   .specimen-input {
-    font-size: 0.5rem;
+    font-size: 1rem;
   }
   .specimen-input > div {
     padding: 8px;
-    font-size: 0.44rem;
+    font-size: 1rem;
   }
   .specimen-input small {
-    font-size: 0.4rem;
+    font-size: 1rem;
   }
   .swatches {
     gap: 5px;
@@ -1823,7 +1823,7 @@ img {
     height: 27px;
   }
   .spacing-specimen {
-    font-size: 0.4rem;
+    font-size: 1rem;
   }
   .capability-grid,
   .strength-grid {
@@ -1910,7 +1910,7 @@ img {
     font-size: 1.35rem;
   }
   .product-note p {
-    font-size: 0.45rem;
+    font-size: 1rem;
   }
   .product-composition {
     gap: 18px;
@@ -1924,16 +1924,16 @@ img {
     gap: 5px;
   }
   .phone-option b {
-    font-size: 0.42rem;
+    font-size: 1rem;
   }
   .phone-option small {
-    font-size: 0.35rem;
+    font-size: 1rem;
   }
   .product-phone .visual-title {
     font-size: 1.05rem;
   }
   .phone-bottom {
-    font-size: 0.38rem;
+    font-size: 1rem;
   }
   .hero-baseline > span:last-child {
     display: none;
@@ -2341,10 +2341,10 @@ img {
   width: 100%;
 }
 .wire-layout b {
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 .wire-layout p {
-  font-size: 0.65rem;
+  font-size: 1rem;
   margin-top: 5px;
   color: var(--color-text-secondary);
 }
@@ -2354,7 +2354,7 @@ img {
   margin-top: 13px;
 }
 .wire-action {
-  font-size: 0.6rem;
+  font-size: 1rem;
   background: #045bdc;
   color: white;
   padding: 7px;
@@ -2476,11 +2476,11 @@ img {
     gap: 7px;
   }
   .case-body .research-column > div {
-    font-size: 0.65rem;
+    font-size: 1rem;
     padding: 13px;
   }
   .case-body .research-column small {
-    font-size: 0.5rem;
+    font-size: 1rem;
   }
   .case-body .system-composition {
     padding-inline: 30px;
@@ -2649,7 +2649,7 @@ img {
     width: 210px;
   }
   .case-body .research-column > div {
-    font-size: 0.58rem;
+    font-size: 1rem;
     padding: 13px 10px;
   }
   .case-body .system-composition {
@@ -2736,23 +2736,23 @@ img {
   letter-spacing: -0.045em;
 }
 .lab-options button {
-  font-size: 0.75rem;
+  font-size: 1rem;
   min-height: 44px;
 }
 .lab-tabs button {
-  font-size: 0.75rem;
+  font-size: 1rem;
 }
 .lab-caption {
-  font-size: 0.75rem;
+  font-size: 1rem;
 }
 .lab-result {
-  font-size: 0.65rem;
+  font-size: 1rem;
 }
 .choice-model p {
-  font-size: 0.75rem;
+  font-size: 1rem;
 }
 .choice-model .tiny-label {
-  font-size: 0.6rem;
+  font-size: 1rem;
 }
 .lab-canvas {
   min-height: 385px;
@@ -2828,16 +2828,16 @@ img {
     flex-shrink: 0;
   }
   .phone-option b {
-    font-size: 0.36rem;
+    font-size: 1rem;
   }
   .phone-option small {
-    font-size: 0.31rem;
+    font-size: 1rem;
   }
   .phone-bottom {
-    font-size: 0.31rem;
+    font-size: 1rem;
   }
   .product-phone .visual-title {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
   .phone-top {
     margin-bottom: 15px;
@@ -3032,14 +3032,14 @@ img {
 .lab-tabs button,
 .lab-options button,
 .lab-result {
-  font-size: 0.875rem;
+  font-size: 1rem;
 }
 .lab-options button {
   min-height: 48px;
 }
 .choice-model p,
 .choice-model .tiny-label {
-  font-size: 0.875rem;
+  font-size: 1rem;
 }
 .choice-model h2 {
   font-size: 1.45rem;
@@ -3051,7 +3051,7 @@ img {
   min-height: 425px;
 }
 .lab-tabs button span {
-  font-size: 0.75rem;
+  font-size: 1rem;
 }
 .lab-tabs button {
   padding-inline: 10px;
@@ -3216,10 +3216,10 @@ img {
     font-size: var(--text-small);
   }
   .lab-top {
-    font-size: 0.75rem;
+    font-size: 1rem;
   }
   .lab-tabs button {
-    font-size: 0.875rem;
+    font-size: 1rem;
   }
   .lab-tabs button span {
     display: none;
@@ -3231,7 +3231,7 @@ img {
     padding: 30px 18px;
   }
   .lab-caption {
-    font-size: 0.875rem;
+    font-size: 1rem;
   }
   .choice-model {
     padding: 18px;
@@ -3240,10 +3240,10 @@ img {
     font-size: 1.35rem;
   }
   .lab-options button {
-    font-size: 0.875rem;
+    font-size: 1rem;
   }
   .dimension {
-    font-size: 0.65rem;
+    font-size: 1rem;
   }
   .process-demo {
     padding: 16px;
@@ -3353,7 +3353,7 @@ img {
   min-height: 550px;
 }
 .visual-label {
-  font-size: 0.75rem;
+  font-size: 1rem;
   letter-spacing: 0.02em;
   text-transform: none;
 }
@@ -3371,10 +3371,10 @@ img {
   font-size: 2.2rem;
 }
 .product-phone > small {
-  font-size: 0.75rem;
+  font-size: 1rem;
 }
 .phone-top {
-  font-size: 0.875rem;
+  font-size: 1rem;
 }
 .phone-top b {
   font-size: 1.4rem;
@@ -3386,16 +3386,16 @@ img {
 .phone-option > span {
   width: 32px;
   height: 32px;
-  font-size: 0.75rem;
+  font-size: 1rem;
 }
 .phone-option b {
-  font-size: 0.875rem;
+  font-size: 1rem;
 }
 .phone-option small {
-  font-size: 0.75rem;
+  font-size: 1rem;
 }
 .phone-bottom {
-  font-size: 0.8rem;
+  font-size: 1rem;
   padding: 15px;
 }
 .product-note .visual-title {
@@ -3404,7 +3404,7 @@ img {
 .product-note > span,
 .product-note p,
 .composition-caption {
-  font-size: 0.875rem;
+  font-size: 1rem;
 }
 .project-featured .project-card-link {
   display: block;
@@ -3465,7 +3465,7 @@ img {
 }
 .research-title > span {
   color: #c0d6cf;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 .research-title .visual-title {
   font-size: 2.8rem;
@@ -3475,17 +3475,17 @@ img {
   gap: 10px;
 }
 .research-column > span {
-  font-size: 0.7rem;
+  font-size: 1rem;
   color: #c0d6cf;
 }
 .research-column > div {
-  font-size: 0.9rem;
+  font-size: 1rem;
   padding: 16px;
   background: #fff;
   border: 0;
 }
 .research-column small {
-  font-size: 0.75rem;
+  font-size: 1rem;
 }
 .final-column > div {
   background: #d7eab6;
@@ -3533,34 +3533,34 @@ img {
   font-size: 1.1rem;
 }
 .workflow-sidebar > span {
-  font-size: 0.85rem;
+  font-size: 1rem;
 }
 .workflow-main {
   padding: 30px 45px;
 }
 .workflow-heading {
-  font-size: 0.75rem;
+  font-size: 1rem;
 }
 .workflow-main .visual-title {
   font-size: 2.5rem;
 }
 .workflow-steps {
-  font-size: 0.85rem;
+  font-size: 1rem;
 }
 .workflow-detail {
   padding: 25px;
 }
 .workflow-detail .tiny-label {
-  font-size: 0.7rem;
+  font-size: 1rem;
 }
 .workflow-detail .visual-subtitle {
   font-size: 1.3rem;
 }
 .workflow-detail > div {
-  font-size: 0.85rem;
+  font-size: 1rem;
 }
 .workflow-detail > p:last-child {
-  font-size: 0.875rem;
+  font-size: 1rem;
   padding: 13px;
 }
 .system-composition {
@@ -3572,32 +3572,32 @@ img {
 }
 .type-specimen > span,
 .component-specimen > span {
-  font-size: 0.75rem;
+  font-size: 1rem;
 }
 .type-specimen > b {
   font-size: 1.2rem;
 }
 .type-specimen p {
-  font-size: 0.875rem;
+  font-size: 1rem;
 }
 .specimen-buttons > b {
-  font-size: 0.875rem;
+  font-size: 1rem;
   padding: 16px;
 }
 .specimen-input {
-  font-size: 0.875rem;
+  font-size: 1rem;
 }
 .specimen-input > div {
   padding: 17px;
 }
 .specimen-input small {
-  font-size: 0.75rem;
+  font-size: 1rem;
 }
 .swatches i {
   height: 48px;
 }
 .spacing-specimen {
-  font-size: 0.75rem;
+  font-size: 1rem;
 }
 .project-editorial-04 .project-art {
   border: 1px solid #cbdacf;
@@ -3623,7 +3623,7 @@ img {
   padding: 25px 0;
 }
 .studio-index {
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: var(--color-brand-hover);
 }
 .studio-notes h3 {
@@ -3641,7 +3641,7 @@ img {
   display: grid;
   grid-template-columns: 105px 1fr;
   gap: 15px;
-  font-size: 0.875rem;
+  font-size: 1rem;
 }
 .studio-notes li b {
   font-weight: 550;
@@ -3673,7 +3673,7 @@ img {
   color: var(--color-brand);
 }
 .studio-product > header > span {
-  font-size: 0.75rem;
+  font-size: 1rem;
   color: var(--color-text-secondary);
 }
 .studio-progress {
@@ -3698,12 +3698,12 @@ img {
   outline: none;
 }
 .studio-screen .eyebrow {
-  font-size: 0.8rem;
+  font-size: 1rem;
   margin-bottom: 15px;
   color: #596d83;
 }
 .studio-description {
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: var(--color-text-secondary);
   margin-top: 12px;
 }
@@ -3764,7 +3764,7 @@ img {
 }
 .studio-choices small {
   display: block;
-  font-size: 0.8rem;
+  font-size: 1rem;
   margin-top: 4px;
   color: var(--color-text-secondary);
 }
@@ -3792,7 +3792,7 @@ img {
   margin-top: 30px;
 }
 .studio-actions > span {
-  font-size: 0.75rem;
+  font-size: 1rem;
   color: var(--color-text-secondary);
 }
 .studio-primary {
@@ -3811,7 +3811,7 @@ img {
   background: transparent;
   padding: 12px 0;
   min-height: 48px;
-  font-size: 0.875rem;
+  font-size: 1rem;
 }
 .studio-back:hover {
   color: var(--color-brand-hover);
@@ -3822,14 +3822,14 @@ img {
   display: flex;
   justify-content: space-between;
   gap: 20px;
-  font-size: 0.7rem;
+  font-size: 1rem;
   color: var(--color-text-secondary);
 }
 .studio-field {
   display: block;
   margin: 30px 0 9px;
   font-weight: 550;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 #studio-name {
   width: 100%;
@@ -3846,7 +3846,7 @@ img {
 }
 .studio-error {
   color: #a9222a;
-  font-size: 0.875rem;
+  font-size: 1rem;
   margin-top: 10px;
 }
 .studio-empty {
@@ -3866,10 +3866,10 @@ img {
   display: block;
   margin: 8px 0;
   font-weight: 550;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 .studio-empty p {
-  font-size: 0.8rem;
+  font-size: 1rem;
   color: var(--color-text-secondary);
 }
 .studio-review {
@@ -3880,7 +3880,7 @@ img {
   padding: 18px 0;
 }
 .studio-review dt {
-  font-size: 0.8rem;
+  font-size: 1rem;
   color: var(--color-text-secondary);
 }
 .studio-review dd {
@@ -3893,7 +3893,7 @@ img {
   gap: 10px;
   align-items: center;
   min-height: 44px;
-  font-size: 0.8rem;
+  font-size: 1rem;
   cursor: pointer;
 }
 .studio-simulation input {
@@ -3906,7 +3906,7 @@ img {
   border-radius: 5px;
   margin-top: 18px;
   color: #842f28;
-  font-size: 0.875rem;
+  font-size: 1rem;
 }
 .studio-failure p {
   margin-top: 5px;
@@ -3935,7 +3935,7 @@ img {
   margin: 30px 0;
   background: #f6f8fb;
   padding: 22px;
-  font-size: 0.875rem;
+  font-size: 1rem;
 }
 .studio-receipt > span {
   color: var(--color-text-secondary);
@@ -4027,7 +4027,7 @@ img {
     display: none;
   }
   .product-note > span {
-    font-size: 0.75rem;
+    font-size: 1rem;
   }
   .product-note p:not(.visual-title),
   .note-line {
@@ -4046,30 +4046,30 @@ img {
     font-size: 1.9rem;
   }
   .product-phone > small {
-    font-size: 0.7rem;
+    font-size: 1rem;
   }
   .phone-top {
     margin-bottom: 22px;
   }
   .phone-option b {
-    font-size: 0.85rem;
+    font-size: 1rem;
   }
   .phone-option small {
-    font-size: 0.75rem;
+    font-size: 1rem;
   }
   .phone-option {
     gap: 10px;
     padding: 17px 0;
   }
   .phone-bottom {
-    font-size: 0.75rem;
+    font-size: 1rem;
   }
   .composition-caption {
-    font-size: 0.65rem;
+    font-size: 1rem;
     bottom: 14px;
   }
   .visual-label {
-    font-size: 0.65rem;
+    font-size: 1rem;
     left: 20px;
     top: 18px;
   }
@@ -4108,14 +4108,14 @@ img {
     display: none;
   }
   .research-column > span {
-    font-size: 0.75rem;
+    font-size: 1rem;
   }
   .research-column > div {
     font-size: 1rem;
     padding: 18px;
   }
   .research-column small {
-    font-size: 0.875rem;
+    font-size: 1rem;
   }
   .final-column > div {
     min-height: 0;
@@ -4136,13 +4136,13 @@ img {
     padding: 25px 18px;
   }
   .workflow-heading {
-    font-size: 0.65rem;
+    font-size: 1rem;
   }
   .workflow-main .visual-title {
     font-size: 2rem;
   }
   .workflow-steps {
-    font-size: 0.65rem;
+    font-size: 1rem;
     gap: 5px;
   }
   .workflow-detail {
@@ -4152,11 +4152,11 @@ img {
     font-size: 1.1rem;
   }
   .workflow-detail > div {
-    font-size: 0.7rem;
+    font-size: 1rem;
     gap: 12px;
   }
   .workflow-detail > p:last-child {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
   .system-composition,
   .case-body .system-composition {
@@ -4175,31 +4175,31 @@ img {
     margin: 10px 0;
   }
   .type-specimen p {
-    font-size: 0.875rem;
+    font-size: 1rem;
   }
   .type-specimen > span,
   .component-specimen > span {
-    font-size: 0.75rem;
+    font-size: 1rem;
   }
   .specimen-buttons > b {
-    font-size: 0.875rem;
+    font-size: 1rem;
     padding: 14px;
   }
   .specimen-input {
-    font-size: 0.875rem;
+    font-size: 1rem;
   }
   .specimen-input > div {
-    font-size: 0.875rem;
+    font-size: 1rem;
     padding: 16px;
   }
   .specimen-input small {
-    font-size: 0.75rem;
+    font-size: 1rem;
   }
   .swatches i {
     height: 40px;
   }
   .spacing-specimen {
-    font-size: 0.75rem;
+    font-size: 1rem;
   }
   .studio-layout {
     display: flex;
@@ -4221,7 +4221,7 @@ img {
     margin: 20px 0;
   }
   .studio-notes li {
-    font-size: 0.8rem;
+    font-size: 1rem;
     padding: 12px 0;
   }
   .studio-product {
@@ -4234,7 +4234,7 @@ img {
     font-size: 1rem;
   }
   .studio-product > header > span {
-    font-size: 0.65rem;
+    font-size: 1rem;
   }
   .studio-screen {
     padding: 25px 18px;
@@ -4254,10 +4254,10 @@ img {
     font-size: 1.2rem;
   }
   .studio-choices b {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
   .studio-choices small {
-    font-size: 0.75rem;
+    font-size: 1rem;
   }
   .studio-actions {
     flex-wrap: wrap;
@@ -4267,7 +4267,7 @@ img {
   }
   .studio-actions .studio-primary {
     margin-left: auto;
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
   .studio-product > footer {
     padding: 16px 18px;
@@ -4275,7 +4275,7 @@ img {
     gap: 5px;
   }
   .studio-description {
-    font-size: 0.875rem;
+    font-size: 1rem;
   }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -4311,7 +4311,7 @@ img {
     padding: 18px;
   }
   .case-body .research-column small {
-    font-size: 0.875rem;
+    font-size: 1rem;
   }
 }
 .ui-details.shell {
@@ -4331,7 +4331,7 @@ img {
 }
 .detail-intro .eyebrow {
   margin-bottom: 12px;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 .detail-pair {
   display: grid;
@@ -4348,7 +4348,7 @@ img {
   min-height: 355px;
 }
 .detail-context {
-  font-size: 0.75rem;
+  font-size: 1rem;
   color: #596d83;
 }
 .detail-title {
@@ -4365,7 +4365,7 @@ img {
 }
 .detail-data > span,
 .detail-preserved > span {
-  font-size: 0.75rem;
+  font-size: 1rem;
   color: var(--color-text-secondary);
 }
 .detail-data > b {
@@ -4379,7 +4379,7 @@ img {
   background: #192c46;
   color: white;
   padding: 14px 18px;
-  font-size: 0.875rem;
+  font-size: 1rem;
   border-radius: 4px;
   max-width: 300px;
 }
@@ -4401,16 +4401,16 @@ img {
   padding: 13px 16px;
   background: #fff0ed;
   color: #842f28;
-  font-size: 0.875rem;
+  font-size: 1rem;
 }
 .detail-error p {
   margin-top: 6px;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 .detail-retry {
   display: flex;
   justify-content: space-between;
-  font-size: 0.875rem;
+  font-size: 1rem;
   margin-top: 20px;
   max-width: 150px;
   padding: 10px 14px;
@@ -4422,11 +4422,11 @@ img {
   padding-top: 20px;
 }
 .detail-pair figcaption > span {
-  font-size: 0.8rem;
+  font-size: 1rem;
   color: var(--color-brand-hover);
 }
 .detail-pair figcaption p {
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: var(--color-text-secondary);
   margin-top: 8px;
   max-width: 52ch;
@@ -4469,7 +4469,7 @@ img {
     font-size: 2rem !important;
   }
   .detail-pair figcaption p {
-    font-size: 0.875rem;
+    font-size: 1rem;
   }
 }
 
