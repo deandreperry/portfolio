@@ -4,14 +4,14 @@ import { projects } from '@/data/projects';
 export const metadata: Metadata = {
   title: 'Work',
   description:
-    'UXD Systems, UXR Forge, 508 Dev, and Palette Snap: UX design through systems, research, accessibility, and color.',
+    'Gather, UXD Systems, UXR Forge, Palette Snap, and 508 Dev: UX design through systems, research, accessibility, and color.',
   alternates: { canonical: '/work' },
 };
 export default function WorkPage() {
   return (
     <main id="main-content" tabIndex={-1}>
       <header className="page-hero shell">
-        <p className="eyebrow">SELECTED WORK / 01—04</p>
+        <p className="eyebrow">SELECTED WORK / 01—05</p>
         <h1>
           Every decision
           <br />
@@ -22,7 +22,7 @@ export default function WorkPage() {
           designing with intention.
         </p>
         <div className="page-meta">
-          <span>Four selected projects</span>
+          <span>Five selected projects</span>
           <span>Implementation-backed case studies</span>
         </div>
       </header>

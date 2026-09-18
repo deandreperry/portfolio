@@ -1,3 +1,4 @@
+import { GatherCaseStudy } from './gather-case-study';
 import { ArrowIcon } from '@/components/arrow-icon';
 import { ProjectNarrative } from './project-narrative';
 import Image from 'next/image';
@@ -34,6 +35,7 @@ export function CaseStudy({
   project: Project;
   nextProject: Project;
 }) {
+  if (project.slug === 'gather') return <GatherCaseStudy nextProject={nextProject} />;
   if (project.narrative)
     return <ProjectNarrative project={project} nextProject={nextProject} />;
   const story = project.story;

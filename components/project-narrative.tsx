@@ -87,7 +87,7 @@ export function ProjectNarrative({
         </a>
         <p className="eyebrow">
           {project.index} /{' '}
-          {project.slug === 'uxd-systems' ? 'FLAGSHIP · ' : ''}
+          
           {project.category}
         </p>
         <h1>{project.title}</h1>

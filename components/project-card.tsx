@@ -46,7 +46,7 @@ export function ProjectCard({
             </span>
             <span>
               <b>STATUS</b>
-              {project.story?.outcome ||
+              {(project.slug === 'gather' ? 'Functional iOS concept · sample data' : project.story?.outcome) ||
                 'Functional product · validation proposed'}
             </span>
           </div>

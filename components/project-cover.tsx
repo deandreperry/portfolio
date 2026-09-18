@@ -1,6 +1,8 @@
+import { GatherCover } from './gather-cover';
 import Image from 'next/image';
 import type { CaseStudy } from '@/data/projects';
 export function ProjectCover({ project }: { project: CaseStudy }) {
+  if (project.slug === 'gather') return <GatherCover />;
   const detail =
     project.slug === 'uxd-systems'
       ? 'details/token-comfortable.png'
@@ -14,7 +16,7 @@ export function ProjectCover({ project }: { project: CaseStudy }) {
       <div className="cover-heading">
         <span>
           {project.index} /{' '}
-          {project.slug === 'uxd-systems' ? 'FLAGSHIP' : project.services[0]}
+          {project.services[0]}
         </span>
         <strong>{project.title}</strong>
         <p>{project.category}</p>

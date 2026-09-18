@@ -73,12 +73,12 @@ export default function Home() {
       >
         <div className="section-intro">
           <div>
-            <p className="eyebrow">Selected work / 01—04</p>
+            <p className="eyebrow">Selected work / 01—05</p>
             <h2 id="selected-title">Selected work.</h2>
           </div>
           <div>
             <p className="content-note">
-              Four working products. Four perspectives on research, visual
+              Five working concepts. Five perspectives on research, visual
               systems, and inclusive interaction.
             </p>
           </div>

@@ -774,3 +774,32 @@
 @media (max-width: 760px) {
   .study-at-a-glance > div { grid-template-columns: 1fr; gap: 8px; padding: 20px 0; }
 }
+
+/* Gather's cover pairs its own product palette with the portfolio's editorial grid. */
+.gather-cover { position: relative; display: grid; grid-template-columns: 0.9fr 1.4fr; align-items: center; gap: 32px; padding: clamp(28px,5vw,72px); background: #eaf0e9; color: #173e34; overflow: hidden; min-height: 520px; }
+.gather-cover-copy { position: relative; z-index: 1; }
+.gather-cover-copy strong { display: block; font-size: clamp(44px,5.5vw,80px); letter-spacing: -.06em; line-height: 1.05; margin: 24px 0; }
+.gather-cover-copy p { font-size: clamp(24px,3vw,42px); line-height: 1.15; letter-spacing: -.035em; color: #173e34; }
+.gather-cover-caption { display: block; margin-top: 32px; font-size: 16px; }
+.gather-cover-screens { display: flex; align-items: center; gap: 16px; min-width: 0; padding-block: 20px; }
+.gather-cover-screens img { width: calc((100% - 32px)/3); height: auto; border-radius: 20px; box-shadow: 0 18px 36px #173e3420; }
+.gather-cover-screens img:nth-child(2) { transform: translateY(-22px); }
+.gather-cover-screens img:nth-child(3) { transform: translateY(22px); }
+.gather-screen-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(210px,1fr)); gap: 32px; margin: 32px 0; align-items: start; }
+.gather-screen { margin: 0; max-width: 320px; }
+.gather-screen img { display: block; width: 100%; height: auto; border-radius: 20px; border: 1px solid var(--color-border); }
+.gather-screen figcaption { margin-top: 16px; font-size: 16px; line-height: 1.6; color: var(--color-text-secondary); }
+.gather-palette { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; margin: 32px 0; }
+.gather-palette span { display: block; height: 80px; margin-bottom: 12px; border: 1px solid #00000010; }
+.gather-palette p { font-size: 16px; }
+@media(max-width:760px) {
+ .gather-cover { grid-template-columns: 1fr; gap: 20px; min-height: 0; }
+ .gather-cover-copy strong { margin: 14px 0; }
+ .gather-cover-copy p { font-size: 28px; }
+ .gather-cover-caption { margin-top: 16px; }
+ .gather-cover-screens { gap: 10px; }
+ .gather-cover-screens img { width: calc((100% - 20px)/3); border-radius: 12px; }
+ .gather-screen-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px; }
+ .gather-palette { grid-template-columns: repeat(2,1fr); }
+}
+@media(max-width:380px) { .gather-screen-grid { grid-template-columns: 1fr; } }

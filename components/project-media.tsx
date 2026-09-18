@@ -1,6 +1,8 @@
+import { GatherCover } from './gather-cover';
 import Image from 'next/image';
 import type { CaseStudy } from '@/data/projects';
 export function ProjectMedia({ project }: { project: CaseStudy }) {
+  if (project.slug === 'gather') return <GatherCover />;
   return (
     <figure className={`product-capture capture-${project.slug}`}>
       <div className="capture-mat">

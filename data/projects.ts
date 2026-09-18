@@ -98,8 +98,19 @@ export type Narrative = {
 };
 export const projects: CaseStudy[] = [
   {
+    slug: 'gather', index: '01', title: 'Gather',
+    subtitle: 'Gather — Native iOS Product & Visual Design',
+    description: 'Helping friends turn shared requirements and private choices into one plan they can act on.',
+    category: 'Native iOS / Product & Visual Design',
+    role: 'Product direction & design', timeline: '2026', team: 'Independent concept · AI-assisted implementation',
+    platform: 'iOS · SwiftUI', services: ['Product Design', 'Visual Design', 'Inclusive Interaction'],
+    accent: '#1F5C4D', status: 'ready',
+    focus: 'A functional native iOS concept for shared planning, private voting, and group consensus.',
+    researchPrompts: [], designPrompts: [], reflectionPrompts: [],
+  },
+  {
     slug: 'uxd-systems',
-    index: '01',
+    index: '02',
     title: 'UXD Systems',
     subtitle: 'UXD Systems — Visual Design / Design Systems',
     description:
@@ -202,7 +213,7 @@ export const projects: CaseStudy[] = [
   },
   {
     slug: 'uxr-forge',
-    index: '02',
+    index: '03',
     title: 'UXR Forge',
     subtitle: 'UXR Forge — User Research / Research Operations',
     description:
@@ -293,7 +304,7 @@ export const projects: CaseStudy[] = [
   },
   {
     slug: 'palette-snap',
-    index: '03',
+    index: '04',
     title: 'Palette Snap',
     subtitle: 'Palette Snap — Visual Design / Color Interaction',
     description:
@@ -385,7 +396,7 @@ export const projects: CaseStudy[] = [
   },
   {
     slug: '508-dev',
-    index: '04',
+    index: '05',
     title: '508 Dev',
     subtitle: '508 Dev — Accessibility / Inclusive Interaction',
     description:
