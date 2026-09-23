@@ -1,5 +1,12 @@
 export const certificates = [
   {
+    title: 'Meta Front-End Developer',
+    issuer: 'Meta',
+    date: '',
+    id: '60ZWCM6VJUJF',
+    url: 'https://www.coursera.org/account/accomplishments/professional-cert/certificate/60ZWCM6VJUJF',
+  },
+  {
     title: 'Apple Ads Certification',
     issuer: 'Apple',
     date: 'Class of 2026',
