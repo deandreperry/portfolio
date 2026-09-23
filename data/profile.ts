@@ -7,13 +7,6 @@ export const certificates = [
     url: 'https://www.coursera.org/account/accomplishments/professional-cert/certificate/60ZWCM6VJUJF',
   },
   {
-    title: 'Apple Ads Certification',
-    issuer: 'Apple',
-    date: 'Class of 2026',
-    id: '',
-    url: '/certificates/apple-ads-certification.pdf',
-  },
-  {
     title: 'Google UX Design Professional Certificate',
     issuer: 'Google',
     date: 'Issued September 2026',
@@ -49,4 +42,12 @@ export const certificates = [
     id: '9836d52bed4b4785af6f6cef52cf7abd',
     url: '',
   },
+  {
+    title: 'Apple Ads Certification',
+    issuer: 'Apple',
+    date: 'Class of 2026',
+    id: '',
+    url: '/certificates/apple-ads-certification.pdf',
+  },
+
 ];

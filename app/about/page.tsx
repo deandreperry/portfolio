@@ -189,16 +189,7 @@ export default function AboutPage() {
             </article>
           ))}
         </div>
-        <div className="hero-actions">
-          <a href="/resume" className="button button-secondary">
-            Resume <ArrowIcon />
-          </a>
-          <a href="/contact" className="text-link">
-            Start a conversation <ArrowIcon />
-          </a>
-        </div>
-      </section>
-      <aside className="apple-recognition shell" aria-label="Apple Teacher recognition">
+      <aside className="apple-recognition" aria-label="Apple Teacher recognition">
         <div className="apple-signature-clearspace">
           <Image
             src="/recognition/apple-teacher-swift-playgrounds.svg"
@@ -213,6 +204,16 @@ export default function AboutPage() {
           registered in the U.S. and other countries.
         </p>
       </aside>
+        <div className="hero-actions">
+          <a href="/resume" className="button button-secondary">
+            Resume <ArrowIcon />
+          </a>
+          <a href="/contact" className="text-link">
+            Start a conversation <ArrowIcon />
+          </a>
+        </div>
+      </section>
+
     </main>
   );
 }
