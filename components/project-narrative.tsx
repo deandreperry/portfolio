@@ -1,4 +1,4 @@
-import { ArrowIcon } from "@/components/arrow-icon";
+import { ArrowIcon } from '@/components/arrow-icon';
 
 import { projectLinks } from '@/data/project-links';
 import { scopeNumbers } from '@/data/scope-numbers';
@@ -40,7 +40,6 @@ export function DesignDecision({
           </div>
         ))}
       </dl>
-      <p className="caption">Implementation reference: {item.source}</p>
     </article>
   );
 }
@@ -86,15 +85,31 @@ export function ProjectNarrative({
           ← All work
         </a>
         <p className="eyebrow">
-          {project.index} /{' '}
-          
-          {project.category}
+          {project.index} / {project.category}
         </p>
         <h1>{project.title}</h1>
         <p className="narrative-deck">{project.description}</p>
         <div className="case-project-links">
-          {projectLinks[project.slug]?.live && <a className="button button-primary" href={projectLinks[project.slug].live} target="_blank" rel="noopener noreferrer">Visit live project <ArrowIcon /><span className="sr-only"> (opens in a new tab)</span></a>}
-          <a className="text-link" href={projectLinks[project.slug].source} target="_blank" rel="noopener noreferrer">View project on GitHub <ArrowIcon /><span className="sr-only"> (opens in a new tab)</span></a>
+          {projectLinks[project.slug]?.live && (
+            <a
+              className="button button-primary"
+              href={projectLinks[project.slug].live}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Visit live project <ArrowIcon />
+              <span className="sr-only"> (opens in a new tab)</span>
+            </a>
+          )}
+          <a
+            className="text-link"
+            href={projectLinks[project.slug].source}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View project on GitHub <ArrowIcon />
+            <span className="sr-only"> (opens in a new tab)</span>
+          </a>
         </div>
         <dl className="case-metadata">
           <div>
@@ -106,12 +121,15 @@ export function ProjectNarrative({
             <dd>{project.services.join(' · ')}</dd>
           </div>
           <div>
-            <dt>Evidence</dt>
-            <dd>Product implementation review</dd>
+            <dt>Platform</dt> <dd>{project.platform}</dd>
           </div>
           <div>
             <dt>Tools</dt>
-            <dd>{projectTools[project.slug].flatMap((group) => group.tools).join(' · ')}</dd>
+            <dd>
+              {projectTools[project.slug]
+                .flatMap((group) => group.tools)
+                .join(' · ')}
+            </dd>
           </div>
           <div>
             <dt>Status</dt>
@@ -147,10 +165,22 @@ export function ProjectNarrative({
           <section id="overview" className="case-section">
             <p className="eyebrow">01 / CONTEXT & CHALLENGE</p>
             <h2>{n.question}</h2>
-            <dl className="study-at-a-glance" aria-label="Case study at a glance">
-              <div><dt>The challenge</dt><dd>{n.context}</dd></div>
-              <div><dt>Key design decision</dt><dd>{n.decisions[0].decision}</dd></div>
-              <div><dt>Implemented result</dt><dd>{n.outcome}</dd></div>
+            <dl
+              className="study-at-a-glance"
+              aria-label="Case study at a glance"
+            >
+              <div>
+                <dt>The challenge</dt>
+                <dd>{n.context}</dd>
+              </div>
+              <div>
+                <dt>Key design decision</dt>
+                <dd>{n.decisions[0].decision}</dd>
+              </div>
+              <div>
+                <dt>Implemented result</dt>
+                <dd>{n.outcome}</dd>
+              </div>
             </dl>
             <p className="audience-line">
               <strong>Designed for</strong>{' '}
@@ -161,10 +191,8 @@ export function ProjectNarrative({
               <p>{n.constraint}</p>
             </div>
             <p className="caption">
-              This case study analyzes the current implementation. Rationale
-              describes the design implications of observable choices; it does
-              not claim undocumented interviews, historical alternatives, or
-              measured improvements.
+              The design review focuses on the working product. Participant
+              research and usability evaluation are planned next.
             </p>
           </section>
           <ContextVisual slug={project.slug} />
@@ -173,8 +201,8 @@ export function ProjectNarrative({
             <h2>A structure for different intentions.</h2>
             <ArchitectureVisual slug={project.slug} />
             <p className="caption">
-              Product areas from the repository. This is an orientation model,
-              not a tested linear user journey.
+              The main product areas support different tasks; people can move
+              between them as their needs change.
             </p>
           </section>
           <section id="decisions" className="case-section">
@@ -222,28 +250,51 @@ export function ProjectNarrative({
             <dl className="study-at-a-glance">
               <div>
                 <dt>Role & collaboration</dt>
-                <dd>The role presented in this case study is {project.role}, with a focus on {project.services.join(', ')}. Individual ownership boundaries and collaborator contributions are not documented in this implementation review.</dd>
+                <dd>
+                  {project.role} · {project.services.join(', ')}. The focus is
+                  the product’s structure, interaction patterns, and visual
+                  design.
+                </dd>
               </div>
               <div>
                 <dt>User feedback & iteration</dt>
-                <dd>No participant-feedback record is included in this case study, so the design changes are not attributed to user testing. The next validation question is: {n.validation.question}</dd>
+                <dd>
+                  Participant testing is planned. The central question is:{' '}
+                  {n.validation.question}
+                </dd>
               </div>
               <div>
                 <dt>Constraints & priorities</dt>
-                <dd>{n.constraint} A concrete tradeoff: {n.decisions[0].tradeoff} This describes a product tradeoff; no stakeholder disagreement is claimed.</dd>
+                <dd>
+                  {n.constraint} A concrete tradeoff:{' '}
+                  {n.decisions[0].tradeoff}{' '}
+                </dd>
               </div>
               <div>
                 <dt>Evidence of benefit</dt>
-                <dd>{projectReview[project.slug].works} This is observable product behavior. Whether it helps the intended audience remains a question for validation: {n.validation.signal}</dd>
+                <dd>
+                  {projectReview[project.slug].works} The next evaluation will
+                  examine: {n.validation.signal}
+                </dd>
               </div>
             </dl>
             <h3>Verified implementation scope</h3>
-            <dl className="scope-numbers" aria-label="Product counts, not measured user outcomes">
+            <dl
+              className="scope-numbers"
+              aria-label="Product counts, not measured user outcomes"
+            >
               {scopeNumbers[project.slug].map(([value, label]) => (
-                <div key={label}><dt>{label}</dt><dd>{value}</dd></div>
+                <div key={label}>
+                  <dt>{label}</dt>
+                  <dd>{value}</dd>
+                </div>
               ))}
             </dl>
-            <p className="caption">These counts describe the implemented product. They do not measure usability improvement, participant satisfaction, or business impact.</p>
+            <p className="caption">
+              These counts describe the implemented product. They do not measure
+              usability improvement, participant satisfaction, or business
+              impact.
+            </p>
           </section>
           <section id="validation" className="case-section">
             <p className="eyebrow">07 / PROPOSED RESEARCH · NOT CONDUCTED</p>
@@ -268,7 +319,9 @@ export function ProjectNarrative({
           </section>
           <a href={`/work/${nextProject.slug}`} className="next-project">
             <span>Next case study</span>
-            <h2>{nextProject.title} <ArrowIcon /></h2>
+            <h2>
+              {nextProject.title} <ArrowIcon />
+            </h2>
             <ProjectMedia project={nextProject} />
           </a>
         </div>

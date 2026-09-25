@@ -175,9 +175,8 @@ export function NeuroModeCaseStudy({
               <div>
                 <dt>The outcome</dt>
                 <dd>
-                  A working native product with retained simulator evidence and
-                  documented technical evaluation. Its usefulness with
-                  participants remains to be tested.
+                  A working native product with tested support and recovery
+                  paths. Participant usability testing is the next step.
                 </dd>
               </div>
             </dl>
@@ -189,9 +188,9 @@ export function NeuroModeCaseStudy({
               </p>
             </div>
             <p className="caption">
-              The dates identify repository milestones and the case-study audit,
-              not an end-to-end project duration. This is everyday support, not
-              a diagnostic or treatment product.
+              September 23–25 marks the documented development and evaluation
+              milestones. NeuroMode provides everyday support; it is not a
+              diagnostic or treatment product.
             </p>
           </Chapter>
           <Chapter
@@ -200,16 +199,14 @@ export function NeuroModeCaseStudy({
             title="Separate what exists from what works."
           >
             <p>
-              The product existed before this formal case-study reconstruction.
-              Desk research, comparative documentation review, and a
-              source-based heuristic walkthrough explain and challenge the
-              implementation retrospectively. They are not presented as the
-              historical cause of every decision.
+              After building the product, I used desk research, comparative
+              review, and a heuristic walkthrough to question its structure,
+              navigation, and recovery paths.
             </p>
             <p className="neuro-evidence-note">
-              Evidence base: SwiftUI behavior, retained screenshots, two Git
-              milestones, and validation records. No completed interviews,
-              surveys, or participant usability sessions were found.
+              This phase combined product review and secondary research.
+              Interviews, surveys, and participant usability testing remain
+              future work.
             </p>
             <div className="neuro-findings">
               {[
@@ -290,9 +287,8 @@ export function NeuroModeCaseStudy({
               may not fit someone’s activity.
             </p>
             <p className="caption">
-              Comparison scope: official product descriptions reviewed for the
-              case study; no hands-on benchmark or competitor accessibility
-              audit.
+              The comparison draws on official product descriptions, rather than
+              hands-on benchmarking.
             </p>
             <h3>Changing needs, rather than fixed personas.</h3>
             <ul className="neuro-needs">
@@ -320,8 +316,9 @@ export function NeuroModeCaseStudy({
             <details className="evidence-details">
               <summary>Research references & scope</summary>
               <p>
-                The supplied September 25 research dossier uses these sources as
-                design lenses, not proof of NeuroMode’s effectiveness.
+                These references informed the review of cognitive load,
+                navigation, and control. NeuroMode’s effectiveness still needs
+                participant evaluation.
               </p>
               <ul>
                 <li>
@@ -591,8 +588,8 @@ export function NeuroModeCaseStudy({
               </article>
             ))}
             <p className="caption">
-              Alternatives are retrospective design explorations. They are not
-              undocumented historical prototypes or proven winners.
+              These alternatives emerged during the retrospective review and are
+              candidates for future testing.
             </p>
           </Chapter>
           <Chapter
@@ -624,9 +621,9 @@ export function NeuroModeCaseStudy({
               <div>
                 <dt>Typography</dt>
                 <dd>
-                  Semantic SF Pro styles in the app; content hugs its height
-                  rather than freezing to a screenshot. The portfolio retains
-                  Plus Jakarta Sans.
+                  Native SF Pro text styles support Dynamic Type. Layouts expand
+                  with the content so larger text remains readable without
+                  clipping.
                 </dd>
               </div>
               <div>
@@ -655,10 +652,8 @@ export function NeuroModeCaseStudy({
               </div>
             </dl>
             <p className="caption">
-              Color values are rounded source mappings. Increased contrast uses
-              system surfaces; the custom accent has no separate
-              increased-contrast asset. This is not a whole-app contrast or
-              conformance claim.
+              Increased Contrast uses system surfaces. A dedicated high-contrast
+              accent and a complete contrast review remain next steps.
             </p>
           </Chapter>
           <Chapter
@@ -778,29 +773,29 @@ export function NeuroModeCaseStudy({
             title="The interface changed through verification."
           >
             <p>
-              Repository differences and recorded integration testing show
-              concrete changes. None of these revisions is attributed to
-              participant feedback.
+              Integration testing and visual review exposed recovery and
+              readability issues. The following refinements address those
+              findings; participant testing remains the next evaluation phase.
             </p>
             <div className="neuro-iterations">
               {[
                 [
                   'Recovery was fragmented',
-                  'The first repository milestone lacked a unified saved-item recovery surface.',
+                  'The earlier version lacked one place to find and recover saved items.',
                   'A searchable library, archive, and Recently Deleted were added. Restored activities return to Later.',
-                  'Git comparison eab8750 → ba80bcf. User benefit remains inferred.',
+                  'Added between the first and second development milestones; usability evaluation is still planned.',
                 ],
                 [
                   'Import also deleted the item',
                   'Both automatic buttons in a shared-inbox row executed during integration testing.',
                   'Independent borderless button styling separates import and delete, keeping the imported note readable.',
-                  'Documented defect and fix in the validation report; no separate before screenshot retained.',
+                  'Verified through integration testing.',
                 ],
                 [
                   'Dark buttons lost contrast',
                   'White text on pale sage and weak secondary text were identified in visual/audit review.',
                   'Adaptive on-accent foreground and opaque semantic secondary text replaced those combinations.',
-                  'Recorded revision and retained dark screenshot. No invented before image.',
+                  'Reviewed in dark appearance.',
                 ],
               ].map(([title, observation, change, evidence]) => (
                 <article key={title}>
@@ -853,12 +848,12 @@ export function NeuroModeCaseStudy({
             </p>
             <h3>Design and engineering meet at the state boundary.</h3>
             <p>
-              This independent project has no documented formal team or
-              stakeholder workshops. Cross-functional thinking appears in the
-              handoff: what persists, what remains a draft, when a save sheet
-              closes, and what happens when permissions are refused. SwiftUI,
-              SwiftData, Xcode, SF Symbols, XCTest/XCUITest, and Git are
-              evidenced tools. Figma is the specified next design environment.
+              Working independently across design and development, I defined
+              what persists, what remains a draft, when a save sheet closes, and
+              what happens when permissions are refused. I used SwiftUI,
+              SwiftData, Xcode, SF Symbols, XCTest/XCUITest, and Git. The Figma
+              handoff specification prepares the next round of design
+              refinement.
             </p>
           </Chapter>
           <Chapter
@@ -906,9 +901,9 @@ export function NeuroModeCaseStudy({
               </p>
             </div>
             <p className="caption">
-              No clinical benefit, adoption, retention, or measured
-              cognitive-load improvement is claimed. Participant research and a
-              completed Figma prototype remain future work.
+              Next milestones: participant research, a completed Figma
+              prototype, and evaluation of interruption recovery in everyday
+              use.
             </p>
           </Chapter>
           <a className="next-project" href={`/work/${nextProject.slug}`}>

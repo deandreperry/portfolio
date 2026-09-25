@@ -99,26 +99,48 @@ export type Narrative = {
 };
 export const projects: CaseStudy[] = [
   {
-    visible: true, slug: 'neuromode', index: '01', title: 'NeuroMode',
+    visible: true,
+    slug: 'neuromode',
+    index: '01',
+    title: 'NeuroMode',
     subtitle: 'NeuroMode — Cognitive Accessibility & Product Design Case Study',
-    description: 'An iOS support experience for starting, finding sensory space, and returning after interruptions. I connect product structure, inclusive interaction, and native implementation.',
+    description:
+      'An iOS support experience for starting, finding sensory space, and returning after interruptions. I connect product structure, inclusive interaction, and native implementation.',
     category: 'Product Design / Cognitive Accessibility',
-    role: 'Independent product design & implementation', timeline: 'September 2026 · documented milestones',
-    team: 'Independent project', platform: 'iPhone & iPad · SwiftUI',
-    services: ['Product Design', 'Accessibility', 'UX Analysis'], accent: '#305C52', status: 'ready',
-    focus: 'Designing manageable next steps, reversible sensory controls, and a reliable way back: an implementation-backed UX case study.',
-    researchPrompts: [], designPrompts: [], reflectionPrompts: [],
+    role: 'Independent product design & implementation',
+    timeline: 'September 2026 · documented milestones',
+    team: 'Independent project',
+    platform: 'iPhone & iPad · SwiftUI',
+    services: ['Product Design', 'Accessibility', 'UX Analysis'],
+    accent: '#305C52',
+    status: 'ready',
+    focus:
+      'Designing manageable next steps, reversible sensory controls, and a reliable way back: an implementation-backed UX case study.',
+    researchPrompts: [],
+    designPrompts: [],
+    reflectionPrompts: [],
   },
   {
-    visible: true, slug: 'gather', index: '02', title: 'Gather',
+    visible: true,
+    slug: 'gather',
+    index: '02',
+    title: 'Gather',
     subtitle: 'Gather — Native iOS Product & Visual Design',
-    description: 'A native group-planning concept. I directed a private-voting journey that turns shared requirements into a plan friends can act on.',
+    description:
+      'A native group-planning concept. I directed a private-voting journey that turns shared requirements into a plan friends can act on.',
     category: 'Native iOS / Product & Visual Design',
-    role: 'Product direction & design', timeline: '2026', team: 'Independent concept · AI-assisted implementation',
-    platform: 'iOS · SwiftUI', services: ['Product Design', 'Visual Design', 'Inclusive Interaction'],
-    accent: '#1F5C4D', status: 'ready',
-    focus: 'A functional native iOS concept for shared planning, private voting, and group consensus.',
-    researchPrompts: [], designPrompts: [], reflectionPrompts: [],
+    role: 'Product direction & design',
+    timeline: '2026',
+    team: 'Independent concept · AI-assisted implementation',
+    platform: 'iOS · SwiftUI',
+    services: ['Product Design', 'Visual Design', 'Inclusive Interaction'],
+    accent: '#1F5C4D',
+    status: 'ready',
+    focus:
+      'A functional native iOS concept for shared planning, private voting, and group consensus.',
+    researchPrompts: [],
+    designPrompts: [],
+    reflectionPrompts: [],
   },
   {
     visible: true,
@@ -294,7 +316,7 @@ export const projects: CaseStudy[] = [
         },
       ],
       visual:
-        'The product separates learning, practice, and toolkit destinations. Within synthesis, observation IDs and supporting or challenging evidence maintain a readable chain from source material to interpretation. The portfolio presents that chain as the research competency—not the existence of templates.',
+        'The product separates learning, practice, and toolkit destinations. Within synthesis, observation IDs and supporting or challenging evidence maintain a readable chain from source material to interpretation. Readers can trace a recommendation back to the observations and counterexamples behind it.',
       accessibility:
         'The implementation documents native select-based evidence assignment, keyboard journeys, recoverable drafts, and explicit confirmation before resets. Automated checks are documented in the source repository; assistive-technology testing and practitioner sessions remain separate validation needs.',
       outcome:
