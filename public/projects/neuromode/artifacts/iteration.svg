@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1060" viewBox="0 0 1600 1060" role="img" aria-labelledby="title desc"><title id="title">What changed—and what the evidence can support.</title><desc id="desc">Textual before / after reconstruction • no fabricated historical screenshots</desc>
+<rect width="1600" height="1060" fill="#f7f5ef"/>
+<text x="64" y="55" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#305c52">NEUROMODE / UX RECONSTRUCTION</text>
+<text x="64" y="112" font-family="Arial, sans-serif" font-size="40" font-weight="400" fill="#18251f">What changed—and what the evidence can support.</text>
+<text x="64" y="150" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#555c57">Textual before / after reconstruction • no fabricated historical screenshots</text>
+<text x="64" y="225" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#305c52">BEFORE</text>
+<text x="555" y="225" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#305c52">EVIDENCE / CONSTRAINT</text>
+<text x="1080" y="225" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#305c52">AFTER</text>
+<text x="64" y="285" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#18251f">No unified recovery library in</text>
+<text x="64" y="314" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#18251f">first commit.</text>
+<text x="555" y="285" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#18251f">Git eab8750 → ba80bcf; local</text>
+<text x="555" y="314" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#18251f">content needs an explicit</text>
+<text x="555" y="343" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#18251f">recovery surface.</text>
+<text x="1080" y="285" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#18251f">Saved / Archived / Recently</text>
+<text x="1080" y="314" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#18251f">Deleted; restored activities go</text>
+<text x="1080" y="343" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#18251f">to Later.</text>
+<path d="M64 420 L1536 420" stroke="#8f9992" fill="none"/>
+<text x="64" y="455" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#18251f">No complete backup interface in</text>
+<text x="64" y="484" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#18251f">first commit.</text>
+<text x="555" y="455" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#18251f">Git diff; local storage creates a</text>
+<text x="555" y="484" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#18251f">recovery responsibility.</text>
+<text x="1080" y="455" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#18251f">Validate file → preview → confirm</text>
+<text x="1080" y="484" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#18251f">replacement.</text>
+<path d="M64 590 L1536 590" stroke="#8f9992" fill="none"/>
+<text x="64" y="625" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#18251f">Shared-inbox row actions both</text>
+<text x="64" y="654" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#18251f">executed.</text>
+<text x="555" y="625" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#18251f">Validation record reports a</text>
+<text x="555" y="654" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#18251f">SwiftUI integration defect; no</text>
+<text x="555" y="683" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#18251f">pre-fix commit retained.</text>
+<text x="1080" y="625" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#18251f">Independent button styling;</text>
+<text x="1080" y="654" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#18251f">imported note remains readable.</text>
+<path d="M64 760 L1536 760" stroke="#8f9992" fill="none"/>
+<text x="64" y="795" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#18251f">White foreground on dark filled</text>
+<text x="64" y="824" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#18251f">buttons.</text>
+<text x="555" y="795" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#18251f">Validation record and retained</text>
+<text x="555" y="824" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#18251f">dark screenshot document the</text>
+<text x="555" y="853" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#18251f">contrast revision.</text>
+<text x="1080" y="795" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#18251f">Appearance-aware onAccent</text>
+<text x="1080" y="824" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#18251f">foreground.</text>
+<path d="M64 930 L1536 930" stroke="#8f9992" fill="none"/>
+<text x="64" y="1025" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#555c57">Reconstructed after implementation • baseline ba80bcf • September 25, 2026 • not participant research</text>
+</svg>

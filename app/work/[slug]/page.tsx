@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { projects } from '@/data/projects';
+import { projects, visibleProjects } from '@/data/projects';
 import { CaseStudy } from '@/components/case-study';
 export function generateStaticParams() {
   return projects.map((p) => ({ slug: p.slug }));
@@ -18,16 +18,16 @@ export async function generateMetadata({
     description: p.description,
     alternates: { canonical: `/work/${p.slug}` },
     twitter: {
-      card: 'summary',
+      card: p.slug === 'neuromode' ? 'summary_large_image' : 'summary',
       title: p.subtitle,
       description: p.description,
-      images: [],
+      images: p.slug === 'neuromode' ? ['/projects/neuromode/social-preview.jpg'] : [],
     },
     openGraph: {
       title: `${p.subtitle} — De’Andre Perry`,
       description: p.focus,
       url: `/work/${p.slug}`,
-      images: [],
+      images: p.slug === 'neuromode' ? ['/projects/neuromode/social-preview.jpg'] : [],
     },
   };
 }
@@ -42,7 +42,7 @@ export default async function ProjectPage({
   return (
     <CaseStudy
       project={projects[index]}
-      nextProject={projects[(index + 1) % projects.length]}
+      nextProject={visibleProjects[(visibleProjects.findIndex((p) => p.slug === slug) + 1) % visibleProjects.length]}
     />
   );
 }

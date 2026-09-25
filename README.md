@@ -4,10 +4,14 @@ An editorial UX portfolio built with Vinext, React, and TypeScript. Plus Jakarta
 
 ## Selected work
 
-1. UXD Systems — visual design and design systems; flagship
-2. UXR Forge — research reasoning and research operations
-3. 508 Dev — accessibility and inclusive interaction
-4. Palette Snap — visual design and color interaction
+1. NeuroMode — native product design and cognitive accessibility; flagship
+2. Gather — native group planning and inclusive interaction
+3. UXD Systems — visual design and design systems
+4. UXR Forge — research reasoning and research operations
+
+Project visibility is controlled by `visible` in `data/projects.ts`. Homepage, Work, and next-project navigation use `visibleProjects`. Set a project's `visible` value to `true` to restore it to listings; hidden projects retain their direct routes and assets.
+
+NeuroMode uses an editorial case-study component and optimized WebP captures. Its wireframes are retrospective reconstructions, and its Figma document is a build specification—not a completed Figma prototype. Test counts are attributed to the supplied native validation report; no participant results are claimed.
 
 Case studies use actual product captures, implementation analysis, annotated screens, diagrams, and explicitly proposed validation. Product-scope numbers are not participant results or impact metrics. No primary research is fabricated.
 

@@ -18,7 +18,14 @@ export function CaseStudyTOC({
         let current = sections[0].id;
         for (const x of sections) {
           const el = document.getElementById(x.id);
-          if (el && el.getBoundingClientRect().top <= 160) current = x.id;
+          if (el) {
+            const anchorOffset =
+              (parseFloat(getComputedStyle(el).scrollMarginTop) || 0) +
+              (parseFloat(getComputedStyle(document.documentElement).scrollPaddingTop) || 0);
+            if (el.getBoundingClientRect().top <= Math.max(160, anchorOffset + 2)) {
+              current = x.id;
+            }
+          }
         }
         setActive(current);
       });

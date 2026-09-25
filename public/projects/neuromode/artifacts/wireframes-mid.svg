@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1100" viewBox="0 0 1600 1100" role="img" aria-labelledby="title desc"><title id="title">The next action, then the next decision.</title><desc id="desc">Mid-fidelity reconstruction • real labels, abbreviated content • schematic, not pixel-accurate</desc>
+<rect width="1600" height="1100" fill="#f7f5ef"/>
+<text x="64" y="55" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#305c52">NEUROMODE / UX RECONSTRUCTION</text>
+<text x="64" y="112" font-family="Arial, sans-serif" font-size="40" font-weight="400" fill="#18251f">The next action, then the next decision.</text>
+<text x="64" y="150" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#555c57">Mid-fidelity reconstruction • real labels, abbreviated content • schematic, not pixel-accurate</text>
+<rect x="64" y="225" width="330" height="645" rx="20" fill="#fff" stroke="#59655d"/>
+<text x="86" y="260" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#18251f">9:41</text>
+<text x="86" y="300" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#18251f">Today</text>
+<path d="M80 320 L378 320" stroke="#8f9992" fill="none"/>
+<rect x="84" y="342" width="290" height="44" rx="10" fill="#faf9f5" stroke="#a9aea8"/>
+<text x="97" y="366" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#28352c">Check in · optional</text>
+<rect x="84" y="398" width="290" height="58" rx="10" fill="#faf9f5" stroke="#a9aea8"/>
+<text x="97" y="422" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#28352c">Good morning.</text>
+<rect x="84" y="468" width="290" height="44" rx="10" fill="#e7ebe5" stroke="#a9aea8"/>
+<text x="97" y="492" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#28352c">Help me start</text>
+<rect x="84" y="524" width="290" height="44" rx="10" fill="#e7ebe5" stroke="#a9aea8"/>
+<text x="97" y="548" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#28352c">Help me focus</text>
+<rect x="84" y="580" width="290" height="44" rx="10" fill="#e7ebe5" stroke="#a9aea8"/>
+<text x="97" y="604" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#28352c">Less stimulation</text>
+<rect x="84" y="636" width="290" height="80" rx="10" fill="#faf9f5" stroke="#a9aea8"/>
+<text x="97" y="660" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#28352c">Now · just one thing /</text>
+<text x="97" y="683" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#28352c">recommendation</text>
+<rect x="84" y="728" width="290" height="44" rx="10" fill="#faf9f5" stroke="#a9aea8"/>
+<text x="97" y="752" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#28352c">Why this?        Not now</text>
+<path d="M80 815 L378 815" stroke="#8f9992" fill="none"/>
+<text x="84" y="845" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#18251f">Today   Modes   Plan   Support   You</text>
+<text x="64" y="915" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#18251f">01 / Large text removes greeting</text>
+<text x="64" y="941" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#18251f">and moves check-in below</text>
+<text x="64" y="967" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#18251f">immediate help.</text>
+<rect x="444" y="225" width="330" height="645" rx="20" fill="#fff" stroke="#59655d"/>
+<text x="466" y="260" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#18251f">9:41</text>
+<text x="466" y="300" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#18251f">Next Step</text>
+<path d="M460 320 L758 320" stroke="#8f9992" fill="none"/>
+<rect x="464" y="342" width="290" height="44" rx="10" fill="#faf9f5" stroke="#a9aea8"/>
+<text x="477" y="366" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#28352c">Fold laundry</text>
+<rect x="464" y="398" width="290" height="68" rx="10" fill="#faf9f5" stroke="#a9aea8"/>
+<text x="477" y="422" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#28352c">Fold one item.</text>
+<rect x="464" y="478" width="290" height="44" rx="10" fill="#e7ebe5" stroke="#a9aea8"/>
+<text x="477" y="502" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#28352c">Start</text>
+<rect x="464" y="534" width="290" height="44" rx="10" fill="#faf9f5" stroke="#a9aea8"/>
+<text x="477" y="558" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#28352c">Make it smaller</text>
+<rect x="464" y="590" width="290" height="60" rx="10" fill="#faf9f5" stroke="#a9aea8"/>
+<text x="477" y="614" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#28352c">Different step / Write my own</text>
+<text x="477" y="637" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#28352c">step</text>
+<rect x="464" y="662" width="290" height="44" rx="10" fill="#faf9f5" stroke="#a9aea8"/>
+<text x="477" y="686" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#28352c">Show the plan ›</text>
+<rect x="464" y="718" width="290" height="54" rx="10" fill="#faf9f5" stroke="#a9aea8"/>
+<text x="477" y="742" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#28352c">Focus on this step / Save</text>
+<text x="477" y="765" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#28352c">where I am</text>
+<path d="M460 815 L758 815" stroke="#8f9992" fill="none"/>
+<text x="464" y="845" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#18251f">Today   Modes   Plan   Support   You</text>
+<text x="444" y="915" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#18251f">02 / Smaller and custom steps</text>
+<text x="444" y="941" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#18251f">persist. Undo completion is</text>
+<text x="444" y="967" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#18251f">temporary view state.</text>
+<rect x="824" y="225" width="330" height="645" rx="20" fill="#fff" stroke="#59655d"/>
+<text x="846" y="260" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#18251f">9:41</text>
+<text x="846" y="300" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#18251f">Focus session</text>
+<path d="M840 320 L1138 320" stroke="#8f9992" fill="none"/>
+<rect x="844" y="342" width="290" height="80" rx="10" fill="#faf9f5" stroke="#a9aea8"/>
+<text x="857" y="366" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#28352c">Fold laundry / Fold one item.</text>
+<rect x="844" y="434" width="290" height="50" rx="10" fill="#faf9f5" stroke="#a9aea8"/>
+<text x="857" y="458" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#28352c">Time is tucked away.</text>
+<rect x="844" y="496" width="290" height="44" rx="10" fill="#e7ebe5" stroke="#a9aea8"/>
+<text x="857" y="520" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#28352c">Pause</text>
+<rect x="844" y="552" width="290" height="44" rx="10" fill="#faf9f5" stroke="#a9aea8"/>
+<text x="857" y="576" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#28352c">Keep going · add 10 minutes</text>
+<rect x="844" y="608" width="290" height="44" rx="10" fill="#faf9f5" stroke="#a9aea8"/>
+<text x="857" y="632" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#28352c">Check time</text>
+<rect x="844" y="664" width="290" height="44" rx="10" fill="#faf9f5" stroke="#a9aea8"/>
+<text x="857" y="688" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#28352c">Save my place</text>
+<rect x="844" y="720" width="290" height="44" rx="10" fill="#faf9f5" stroke="#a9aea8"/>
+<text x="857" y="744" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#28352c">End session</text>
+<path d="M840 815 L1138 815" stroke="#8f9992" fill="none"/>
+<text x="844" y="845" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#18251f">Today   Modes   Plan   Support   You</text>
+<text x="824" y="915" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#18251f">03 / Save my place opens a</text>
+<text x="824" y="941" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#18251f">sheet. Save and pause closes</text>
+<text x="824" y="967" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#18251f">only after success.</text>
+<rect x="1204" y="225" width="330" height="645" rx="20" fill="#fff" stroke="#59655d"/>
+<text x="1226" y="260" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#18251f">9:41</text>
+<text x="1224" y="300" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#18251f">Back</text>
+<text x="1282" y="300" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#18251f">Quiet Room</text>
+<text x="1469" y="300" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#18251f">Finish</text>
+<path d="M1220 320 L1518 320" stroke="#8f9992" fill="none"/>
+<rect x="1224" y="342" width="290" height="80" rx="10" fill="#faf9f5" stroke="#a9aea8"/>
+<text x="1237" y="366" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#28352c">Nothing to do here.</text>
+<rect x="1224" y="434" width="290" height="60" rx="10" fill="#faf9f5" stroke="#a9aea8"/>
+<text x="1237" y="458" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#28352c">Stay as long as you need.</text>
+<rect x="1224" y="506" width="290" height="55" rx="10" fill="#faf9f5" stroke="#a9aea8"/>
+<text x="1237" y="530" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#28352c">Optional comforts ›</text>
+<text x="1204" y="915" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#18251f">04 / Finish opens a</text>
+<text x="1204" y="941" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#18251f">leave/reflection state. Back can</text>
+<text x="1204" y="967" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#18251f">also dismiss the room.</text>
+<text x="64" y="1065" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#555c57">Reconstructed after implementation • baseline ba80bcf • September 25, 2026 • not participant research</text>
+</svg>

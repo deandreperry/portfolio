@@ -11,7 +11,7 @@ function Screen({name,caption}:{name:string;caption:string}) {
 }
 export function GatherCaseStudy({nextProject}:{nextProject:CaseStudy}) {
  return <main id="main-content" tabIndex={-1} className="narrative-page gather-study">
-  <header className="case-hero shell"><a href="/work" className="text-link">← All work</a><p className="eyebrow">01 / FEATURED · INDEPENDENT iOS CONCEPT · 2026</p><h1>Gather</h1><p className="narrative-deck">Less debating. More together.</p><p className="section-lede">An iOS concept that helps friends choose a plan with everyone’s needs in mind and room for an honest vote.</p>
+  <header className="case-hero shell"><a href="/work" className="text-link">← All work</a><p className="eyebrow">02 / INDEPENDENT iOS CONCEPT · 2026</p><h1>Gather</h1><p className="narrative-deck">Less debating. More together.</p><p className="section-lede">An iOS concept that helps friends choose a plan with everyone’s needs in mind and room for an honest vote.</p>
   <dl className="case-metadata"><div><dt>Direction</dt><dd>De’Andre Perry</dd></div><div><dt>Focus</dt><dd>Product & visual design</dd></div><div><dt>Platform</dt><dd>Native iOS · SwiftUI</dd></div><div><dt>Scope</dt><dd>Independent functional concept</dd></div></dl>
   <div className="case-project-links"><a href="#experience" className="button button-primary">Explore the iPhone experience ↓</a><a href="/projects/gather/index.html#duo" className="text-link">View the Duo design <ArrowIcon /></a></div><GatherCover /></header>
   <div className="case-layout shell"><CaseStudyTOC sections={sections}/><div className="case-body">

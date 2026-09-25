@@ -34,7 +34,7 @@ export function ProjectCard({
             </span>
           </div>
           <h3>{project.title}</h3>
-          <p>{project.story?.problem || project.description}</p>
+          <p>{project.description}</p>
           <div className="project-details">
             <span>
               <b>ROLE</b>
@@ -46,7 +46,7 @@ export function ProjectCard({
             </span>
             <span>
               <b>STATUS</b>
-              {(project.slug === 'gather' ? 'Functional iOS concept · sample data' : project.story?.outcome) ||
+              {(project.slug === 'neuromode' ? 'Implemented native product · evaluation documented' : project.slug === 'gather' ? 'Functional iOS concept · sample data' : project.story?.outcome) ||
                 'Functional product · validation proposed'}
             </span>
           </div>

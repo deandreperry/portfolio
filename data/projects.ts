@@ -50,6 +50,7 @@ export type ProjectStory = {
   next: string;
 };
 export type CaseStudy = {
+  visible: boolean;
   slug: string;
   index: string;
   title: string;
@@ -98,9 +99,20 @@ export type Narrative = {
 };
 export const projects: CaseStudy[] = [
   {
-    slug: 'gather', index: '01', title: 'Gather',
+    visible: true, slug: 'neuromode', index: '01', title: 'NeuroMode',
+    subtitle: 'NeuroMode — Cognitive Accessibility & Product Design Case Study',
+    description: 'An iOS support experience for starting, finding sensory space, and returning after interruptions. I connect product structure, inclusive interaction, and native implementation.',
+    category: 'Product Design / Cognitive Accessibility',
+    role: 'Independent product design & implementation', timeline: 'September 2026 · documented milestones',
+    team: 'Independent project', platform: 'iPhone & iPad · SwiftUI',
+    services: ['Product Design', 'Accessibility', 'UX Analysis'], accent: '#305C52', status: 'ready',
+    focus: 'Designing manageable next steps, reversible sensory controls, and a reliable way back: an implementation-backed UX case study.',
+    researchPrompts: [], designPrompts: [], reflectionPrompts: [],
+  },
+  {
+    visible: true, slug: 'gather', index: '02', title: 'Gather',
     subtitle: 'Gather — Native iOS Product & Visual Design',
-    description: 'Helping friends turn shared requirements and private choices into one plan they can act on.',
+    description: 'A native group-planning concept. I directed a private-voting journey that turns shared requirements into a plan friends can act on.',
     category: 'Native iOS / Product & Visual Design',
     role: 'Product direction & design', timeline: '2026', team: 'Independent concept · AI-assisted implementation',
     platform: 'iOS · SwiftUI', services: ['Product Design', 'Visual Design', 'Inclusive Interaction'],
@@ -109,12 +121,13 @@ export const projects: CaseStudy[] = [
     researchPrompts: [], designPrompts: [], reflectionPrompts: [],
   },
   {
+    visible: true,
     slug: 'uxd-systems',
-    index: '02',
+    index: '03',
     title: 'UXD Systems',
     subtitle: 'UXD Systems — Visual Design / Design Systems',
     description:
-      'A structured environment for exploring how design systems connect principles, tokens, components, and interaction patterns.',
+      'A design-system learning workspace. My UX work connects principles, tokens, and component comparisons so designers can understand how interface choices fit together.',
     category: 'Visual Design / Design Systems',
     role: 'UX Designer',
     timeline: 'Dates to confirm',
@@ -212,12 +225,13 @@ export const projects: CaseStudy[] = [
     },
   },
   {
+    visible: true,
     slug: 'uxr-forge',
-    index: '03',
+    index: '04',
     title: 'UXR Forge',
     subtitle: 'UXR Forge — User Research / Research Operations',
     description:
-      'A research learning and practice environment that connects questions, methods, evidence, and proposed decisions.',
+      'A research learning environment. My UX work organizes the path from a research question to method selection, synthesis, and a defensible design decision.',
     category: 'User Research / Research Operations',
     role: 'UX Designer',
     timeline: 'Dates to confirm',
@@ -303,8 +317,9 @@ export const projects: CaseStudy[] = [
     },
   },
   {
+    visible: false,
     slug: 'palette-snap',
-    index: '04',
+    index: '05',
     title: 'Palette Snap',
     subtitle: 'Palette Snap — Visual Design / Color Interaction',
     description:
@@ -395,8 +410,9 @@ export const projects: CaseStudy[] = [
     },
   },
   {
+    visible: false,
     slug: '508-dev',
-    index: '05',
+    index: '06',
     title: '508 Dev',
     subtitle: '508 Dev — Accessibility / Inclusive Interaction',
     description:
@@ -575,3 +591,6 @@ export const processSteps = [
   'Refine',
   'Deliver',
 ];
+
+/** Listings and next-project navigation share this single visibility rule. */
+export const visibleProjects = projects.filter((project) => project.visible);

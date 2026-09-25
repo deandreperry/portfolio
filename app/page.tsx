@@ -2,7 +2,7 @@ import { ArrowIcon } from '@/components/arrow-icon';
 import { Toolkit } from '@/components/toolkit';
 import { ProjectCard } from '@/components/project-card';
 import { siteConfig } from '@/data/site';
-import { projects } from '@/data/projects';
+import { visibleProjects } from '@/data/projects';
 export default function Home() {
   return (
     <main id="main-content" tabIndex={-1}>
@@ -73,18 +73,18 @@ export default function Home() {
       >
         <div className="section-intro">
           <div>
-            <p className="eyebrow">Selected work / 01—05</p>
+            <p className="eyebrow">Selected work / 01—04</p>
             <h2 id="selected-title">Selected work.</h2>
           </div>
           <div>
             <p className="content-note">
-              Five working concepts. Five perspectives on research, visual
+              Four case studies. From cognitive accessibility to research, visual
               systems, and inclusive interaction.
             </p>
           </div>
         </div>
         <div className="featured-work">
-          {projects.map((p, index) => (
+          {visibleProjects.map((p, index) => (
             <ProjectCard key={p.slug} project={p} featured={index === 0} />
           ))}
         </div>

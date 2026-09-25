@@ -8,6 +8,7 @@ import { siteConfig } from '@/data/site';
 import './globals.css';
 import './editorial.css';
 import './case-art-direction.css';
+import './neuromode.css';
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
