@@ -501,3 +501,61 @@
   max-width: 100%;
   margin-inline: auto;
 }
+
+.neuro-walkthrough {
+  margin: 48px 0;
+  scroll-margin-top: 160px;
+}
+.neuro-walkthrough-layout {
+  display: grid;
+  grid-template-columns: 1fr minmax(220px, 300px);
+  gap: 40px;
+  align-items: center;
+  background: #f3f5ef;
+  padding: 32px;
+}
+.neuro-walkthrough-layout h3 {
+  margin-top: 16px;
+}
+.neuro-walkthrough video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 884/1920;
+  background: #121413;
+  border: 1px solid #d8dfd4;
+}
+.neuro-transcript {
+  list-style: none;
+  padding: 0;
+}
+.neuro-transcript li {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 16px;
+  margin: 16px 0;
+}
+.neuro-transcript span {
+  font-size: 1rem;
+  font-variant-numeric: tabular-nums;
+  color: #305c52;
+}
+.neuro-transcript p {
+  margin: 0;
+  font-size: 1rem;
+}
+@media (max-width: 760px) {
+  .neuro-walkthrough-layout {
+    grid-template-columns: 1fr;
+    padding: 24px;
+    gap: 24px;
+  }
+  .neuro-walkthrough video {
+    max-width: 320px;
+    justify-self: center;
+  }
+}
+
+.neuro-walkthrough video::cue {
+  font-size: 16px;
+}

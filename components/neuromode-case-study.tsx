@@ -1,3 +1,4 @@
+import { NeuroModeWalkthrough } from './neuromode-walkthrough';
 import Image from 'next/image';
 import type { ReactNode } from 'react';
 import type { CaseStudy } from '@/data/projects';
@@ -122,6 +123,9 @@ export function NeuroModeCaseStudy({
         <div className="case-project-links">
           <a className="button button-primary" href="#overview">
             Read the overview <ArrowIcon down />
+          </a>
+          <a className="text-link" href="#walkthrough">
+            Watch the 65-second walkthrough <ArrowIcon />
           </a>
           <a className="text-link" href="#wireframes">
             Explore the wireframe process <ArrowIcon />
@@ -401,6 +405,7 @@ export function NeuroModeCaseStudy({
               contexts, but Modes and Support may be difficult to distinguish. A
               tree test should challenge that grouping.
             </p>
+            <NeuroModeWalkthrough />
             <h3>One journey: start, leave, return.</h3>
             <ol className="neuro-flow">
               {[
