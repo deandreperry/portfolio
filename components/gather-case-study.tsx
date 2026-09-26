@@ -68,6 +68,9 @@ export function GatherCaseStudy({ nextProject }: { nextProject: CaseStudy }) {
           </div>
         </dl>
         <div className="case-project-links">
+          <a href="#walkthrough" className="text-link">
+            Watch the 40-second walkthrough <ArrowIcon down />
+          </a>
           <a href="#experience" className="button button-primary">
             Explore the iPhone experience ↓
           </a>
@@ -128,6 +131,68 @@ export function GatherCaseStudy({ nextProject }: { nextProject: CaseStudy }) {
               together. Voting makes room for an honest preference; consensus
               turns the aggregate result into a plan.
             </p>
+            <div id="walkthrough" className="gather-walkthrough">
+              <p className="eyebrow">GATHER IN MOTION / 40 SECONDS</p>
+              <h3>From a private vote to a shared plan.</h3>
+              <video
+                controls
+                playsInline
+                preload="metadata"
+                width="1600"
+                height="1000"
+                poster="/projects/gather/assets/gather-walkthrough-poster.jpg"
+                aria-label="Gather: from private voting to a confirmed plan"
+                aria-describedby="gather-film-description"
+              >
+                <source
+                  src="/projects/gather/assets/gather-walkthrough.mp4"
+                  type="video/mp4"
+                />
+                <track
+                  kind="captions"
+                  src="/projects/gather/assets/gather-walkthrough.vtt"
+                  srcLang="en"
+                  label="English"
+                />
+                Your browser does not support embedded video. Open the video
+                separately or read the transcript below.
+              </video>
+              <p className="caption" id="gather-film-description">
+                Silent walkthrough with on-screen captions. Recorded in the
+                running app using sample participants and venues.
+              </p>
+              <a
+                href="/projects/gather/assets/gather-walkthrough.mp4"
+                className="text-link"
+              >
+                Open video separately <ArrowIcon />
+              </a>
+              <details className="evidence-details">
+                <summary>Read the walkthrough transcript</summary>
+                <ol>
+                  <li>
+                    <strong>00:00 — Pick up the plan.</strong> Home makes the
+                    next step clear.
+                  </li>
+                  <li>
+                    <strong>00:04 — Find common ground.</strong> See group
+                    progress without revealing individual choices.
+                  </li>
+                  <li>
+                    <strong>00:09 — Choose honestly.</strong> Choose Love, Good,
+                    or Pass. Review choices before submitting.
+                  </li>
+                  <li>
+                    <strong>00:23 — Reach a decision.</strong> Aggregate results
+                    explain the group match. Confirm the plan.
+                  </li>
+                  <li>
+                    <strong>00:30 — Make it happen.</strong> The final plan
+                    brings details, directions, and a calendar action together.
+                  </li>
+                </ol>
+              </details>
+            </div>
             <div className="gather-screen-grid">
               {[
                 ['Home', 'Pick up the active plan.'],
