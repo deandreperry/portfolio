@@ -81,33 +81,7 @@ export default function AboutPage() {
           ))}
         </div>
       </section>
-      <section className="section shell">
-        <div className="section-intro">
-          <div>
-            <p className="eyebrow">Collaboration</p>
-            <h2>
-              Good decisions
-              <br />
-              are shared work.
-            </h2>
-          </div>
-          <div>
-            <p className="section-lede">
-              A specific example of navigating an engineering constraint,
-              stakeholder disagreement, or product tradeoff will appear here
-              when the project evidence is available.
-            </p>
-            <details className="evidence-details">
-              <summary>What the example will explain</summary>
-              <p>
-                The shared goal, competing constraints, my individual
-                contribution, the decision we reached, and what I learned. No
-                collaboration outcome has been supplied yet.
-              </p>
-            </details>
-          </div>
-        </div>
-      </section>
+
       <section
         className="section shell portfolio-toolkit"
         aria-labelledby="about-toolkit"
@@ -164,7 +138,9 @@ export default function AboutPage() {
                   {certificate.date ? ` · ${certificate.date}` : ''}
                 </p>
                 <h4>{certificate.title}</h4>
-                {certificate.id && <p className="caption">Credential ID: {certificate.id}</p>}
+                {certificate.id && (
+                  <p className="caption">Credential ID: {certificate.id}</p>
+                )}
                 {certificate.url.startsWith('https://') && (
                   <p className="credential-destination">
                     {certificate.url.replace('https://', '')}
@@ -179,7 +155,10 @@ export default function AboutPage() {
                   rel="noopener noreferrer"
                   aria-label={`Show credential: ${certificate.title} (opens in a new tab)`}
                 >
-                  {certificate.url.endsWith('.pdf') ? 'View certificate (PDF)' : 'Show credential'} <ArrowIcon />
+                  {certificate.url.endsWith('.pdf')
+                    ? 'View certificate (PDF)'
+                    : 'Show credential'}{' '}
+                  <ArrowIcon />
                 </a>
               ) : (
                 <span className="credential-pending">
@@ -189,21 +168,24 @@ export default function AboutPage() {
             </article>
           ))}
         </div>
-      <aside className="apple-recognition" aria-label="Apple Teacher recognition">
-        <div className="apple-signature-clearspace">
-          <Image
-            src="/recognition/apple-teacher-swift-playgrounds.svg"
-            alt="Apple Teacher with Swift Playgrounds recognition"
-            width={160}
-            height={41}
-            className="apple-teacher-signature"
-          />
-        </div>
-        <p className="caption apple-trademark-credit">
-          Apple, the Apple logo, and Swift Playgrounds are trademarks of Apple Inc.,
-          registered in the U.S. and other countries.
-        </p>
-      </aside>
+        <aside
+          className="apple-recognition"
+          aria-label="Apple Teacher recognition"
+        >
+          <div className="apple-signature-clearspace">
+            <Image
+              src="/recognition/apple-teacher-swift-playgrounds.svg"
+              alt="Apple Teacher with Swift Playgrounds recognition"
+              width={160}
+              height={41}
+              className="apple-teacher-signature"
+            />
+          </div>
+          <p className="caption apple-trademark-credit">
+            Apple, the Apple logo, and Swift Playgrounds are trademarks of Apple
+            Inc., registered in the U.S. and other countries.
+          </p>
+        </aside>
         <div className="hero-actions">
           <a href="/resume" className="button button-secondary">
             Resume <ArrowIcon />
@@ -213,7 +195,6 @@ export default function AboutPage() {
           </a>
         </div>
       </section>
-
     </main>
   );
 }

@@ -510,7 +510,7 @@ export function NeuroModeCaseStudy({
               name="wireframes-mid"
               title="Mid-fidelity reconstruction: real labels and annotated interaction states; schematic, not pixel-accurate."
             />
-            <h3>From structure to a buildable design contract.</h3>
+            <h3>Connect the wireframes to product behavior.</h3>
             <div className="neuro-spec">
               <div>
                 <p className="eyebrow">PROPOSED FIGMA COMPONENT</p>
@@ -532,8 +532,8 @@ export function NeuroModeCaseStudy({
             <p>
               The handoff specifies semantic color modes, Auto Layout recipes,
               native text styles, component variants, error states, and a
-              start-and-return prototype path. Those contracts make future Figma
-              refinement traceable to actual product behavior.
+              start-and-return prototype path. These details connect future
+              Figma refinements to the way the app works.
             </p>
             <a
               className="text-link"
@@ -568,7 +568,7 @@ export function NeuroModeCaseStudy({
                 'Preview before preference.',
                 'Automatic adaptation risks surprise; one global quiet switch bundles different needs.',
                 'Separate sensory controls, a draft preview, Apply, and local Undo.',
-                'Explicit effects improve inspectability, while additional settings create complexity. Undo is not permanent history.',
+                'Previewing changes makes their effects clear, but more settings add complexity. Undo reverses the latest change.',
               ],
             ].map(([n, title, problem, decision, tradeoff]) => (
               <article className="reasoning-decision" key={n}>
@@ -595,7 +595,7 @@ export function NeuroModeCaseStudy({
           <Chapter
             id="system"
             kicker="06 / VISUAL & INTERACTION SYSTEM"
-            title="A quiet surface. An explicit contract."
+            title="Calm visuals. Clear controls."
           >
             <p>
               Warm neutral surfaces and sage actions establish the product’s
@@ -671,8 +671,8 @@ export function NeuroModeCaseStudy({
                   priority over the greeting.
                 </p>
                 <p className="caption">
-                  Retained dark-appearance capture. Selected simulator states
-                  were reviewed; the complete accessibility matrix remains open.
+                  Dark appearance. Selected simulator states were reviewed; the
+                  complete accessibility matrix remains open.
                 </p>
               </div>
               <Screen
@@ -731,7 +731,7 @@ export function NeuroModeCaseStudy({
                 name="backup-ipad-landscape"
                 width={1600}
                 height={1051}
-                caption="Retained iPad landscape backup interface: preview consequences before committing."
+                caption="iPad backup preview: review what will be replaced before restoring."
               />
             </div>
             <details className="evidence-details">

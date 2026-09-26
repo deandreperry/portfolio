@@ -101,15 +101,17 @@ export function ProjectNarrative({
               <span className="sr-only"> (opens in a new tab)</span>
             </a>
           )}
-          <a
-            className="text-link"
-            href={projectLinks[project.slug].source}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            View project on GitHub <ArrowIcon />
-            <span className="sr-only"> (opens in a new tab)</span>
-          </a>
+          {projectLinks[project.slug].sourcePublic !== false && (
+            <a
+              className="text-link"
+              href={projectLinks[project.slug].source}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View project on GitHub <ArrowIcon />
+              <span className="sr-only"> (opens in a new tab)</span>
+            </a>
+          )}
         </div>
         <dl className="case-metadata">
           <div>

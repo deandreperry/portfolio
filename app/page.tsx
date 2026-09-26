@@ -17,15 +17,21 @@ export default function Home() {
             <span>Design with intention.</span>
           </h1>
           <p className="hero-deck">
-            I create accessible digital experiences grounded in research, purposeful
-            visual systems, and high-fidelity prototyping.
+            I create accessible digital experiences grounded in research,
+            purposeful visual systems, and high-fidelity prototyping.
           </p>
           <div className="hero-actions">
             <a href="#selected-work" className="button button-primary">
-              View my work <span aria-hidden="true"><ArrowIcon down /></span>
+              View my work{' '}
+              <span aria-hidden="true">
+                <ArrowIcon down />
+              </span>
             </a>
             <a href="/about" className="text-link">
-              A little about me <span aria-hidden="true"><ArrowIcon /></span>
+              A little about me{' '}
+              <span aria-hidden="true">
+                <ArrowIcon />
+              </span>
             </a>
           </div>
         </div>
@@ -78,8 +84,8 @@ export default function Home() {
           </div>
           <div>
             <p className="content-note">
-              Four case studies. From cognitive accessibility to research, visual
-              systems, and inclusive interaction.
+              Four case studies. From cognitive accessibility to research,
+              visual systems, and inclusive interaction.
             </p>
           </div>
         </div>
@@ -107,10 +113,13 @@ export default function Home() {
           </h2>
           <p>
             I’m De’Andre, a UX Designer with an interest in the space between
-            understanding a problem and making something genuinely useful.
+            understanding a problem and making something useful.
           </p>
           <a href="/about" className="text-link">
-            My approach & background <span aria-hidden="true"><ArrowIcon /></span>
+            My approach & background{' '}
+            <span aria-hidden="true">
+              <ArrowIcon />
+            </span>
           </a>
         </div>
       </section>
