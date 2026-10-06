@@ -1,3 +1,4 @@
+import { FundraiserCaseStudy } from './fundraiser-case-study';
 import { notFound } from 'next/navigation';
 import type { CaseStudy as Project } from '@/data/projects';
 import { NeuroModeCaseStudy } from './neuromode-case-study';
@@ -11,6 +12,8 @@ export function CaseStudy({
   project: Project;
   nextProject: Project;
 }) {
+  if (project.slug === 'fundraiser-studio')
+    return <FundraiserCaseStudy nextProject={nextProject} />;
   if (project.slug === 'neuromode')
     return <NeuroModeCaseStudy nextProject={nextProject} />;
   if (project.slug === 'gather')

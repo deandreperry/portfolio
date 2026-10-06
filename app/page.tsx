@@ -79,12 +79,15 @@ export default function Home() {
       >
         <div className="section-intro">
           <div>
-            <p className="eyebrow">Selected work / 01—04</p>
+            <p className="eyebrow">
+              Selected work / 01—
+              {String(visibleProjects.length).padStart(2, '0')}
+            </p>
             <h2 id="selected-title">Selected work.</h2>
           </div>
           <div>
             <p className="content-note">
-              Four case studies. From cognitive accessibility to research,
+              Five case studies. From cognitive accessibility to research,
               visual systems, and inclusive interaction.
             </p>
           </div>

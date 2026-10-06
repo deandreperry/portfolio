@@ -339,9 +339,31 @@ export const projects: CaseStudy[] = [
     },
   },
   {
+    visible: true,
+    slug: 'fundraiser-studio',
+    index: '05',
+    title: 'Fundraiser Studio',
+    subtitle: 'Fundraiser Studio — UX Strategy & Organizer Experience',
+    description:
+      'A guided fundraising workspace. I directed the path from a first campaign idea to an invitation, with explainable next steps and clear sharing boundaries.',
+    category: 'UX Strategy / Interaction Design',
+    role: 'Product direction',
+    timeline: 'October 2026',
+    team: 'Independent concept · AI-assisted development',
+    platform: 'Responsive web',
+    services: ['UX Strategy', 'Interaction Design', 'Research Planning'],
+    accent: '#9f2341',
+    status: 'ready',
+    focus:
+      'Helping first-time organizers prepare a campaign, understand the next action, and create an invitation.',
+    researchPrompts: [],
+    designPrompts: [],
+    reflectionPrompts: [],
+  },
+  {
     visible: false,
     slug: 'palette-snap',
-    index: '05',
+    index: '06',
     title: 'Palette Snap',
     subtitle: 'Palette Snap — Visual Design / Color Interaction',
     description:
@@ -434,7 +456,7 @@ export const projects: CaseStudy[] = [
   {
     visible: false,
     slug: '508-dev',
-    index: '06',
+    index: '07',
     title: '508 Dev',
     subtitle: '508 Dev — Accessibility / Inclusive Interaction',
     description:

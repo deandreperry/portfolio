@@ -18,16 +18,28 @@ export async function generateMetadata({
     description: p.description,
     alternates: { canonical: `/work/${p.slug}` },
     twitter: {
-      card: p.slug === 'neuromode' ? 'summary_large_image' : 'summary',
+      card: ['neuromode', 'fundraiser-studio'].includes(p.slug)
+        ? 'summary_large_image'
+        : 'summary',
       title: p.subtitle,
       description: p.description,
-      images: p.slug === 'neuromode' ? ['/projects/neuromode/social-preview.jpg'] : [],
+      images:
+        p.slug === 'neuromode'
+          ? ['/projects/neuromode/social-preview.jpg']
+          : p.slug === 'fundraiser-studio'
+            ? ['/projects/fundraiser-studio/dashboard.webp']
+            : [],
     },
     openGraph: {
       title: `${p.subtitle} — De’Andre Perry`,
       description: p.focus,
       url: `/work/${p.slug}`,
-      images: p.slug === 'neuromode' ? ['/projects/neuromode/social-preview.jpg'] : [],
+      images:
+        p.slug === 'neuromode'
+          ? ['/projects/neuromode/social-preview.jpg']
+          : p.slug === 'fundraiser-studio'
+            ? ['/projects/fundraiser-studio/dashboard.webp']
+            : [],
     },
   };
 }
@@ -42,7 +54,12 @@ export default async function ProjectPage({
   return (
     <CaseStudy
       project={projects[index]}
-      nextProject={visibleProjects[(visibleProjects.findIndex((p) => p.slug === slug) + 1) % visibleProjects.length]}
+      nextProject={
+        visibleProjects[
+          (visibleProjects.findIndex((p) => p.slug === slug) + 1) %
+            visibleProjects.length
+        ]
+      }
     />
   );
 }
