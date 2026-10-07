@@ -10,6 +10,7 @@ const sections = [
   ['strategy', 'Strategy & scope'],
   ['evidence', 'Research & assumptions'],
   ['journey', 'The first invitation'],
+  ['walkthrough', 'Watch the walkthrough'],
   ['guidance', 'Guidance & control'],
   ['continuity', 'Content & trust'],
   ['iteration', 'Iteration & inclusion'],
@@ -80,7 +81,7 @@ export function FundraiserCaseStudy({
           ← All work
         </a>
         <p className="eyebrow">
-          05 / INDEPENDENT PRODUCT DESIGN · OCTOBER 2026
+          04 / INDEPENDENT PRODUCT DESIGN · OCTOBER 2026
         </p>
         <h1>Fundraiser Studio</h1>
         <p className="narrative-deck">
@@ -118,6 +119,9 @@ export function FundraiserCaseStudy({
             Explore the live prototype <ArrowIcon />
             <span className="sr-only"> (opens in a new tab)</span>
           </a>
+          <a className="text-link" href="#walkthrough">
+            Watch the 64-second walkthrough <ArrowIcon down />
+          </a>
           <a
             className="text-link"
             href="/projects/fundraiser-studio/case-study.pdf"
@@ -141,31 +145,32 @@ export function FundraiserCaseStudy({
               <div>
                 <dt>The opportunity</dt>
                 <dd>
-                  Bring a relevant action, its explanation, and the tools to
-                  complete it into one workspace. The hypothesis: knowing what
-                  to do next can help a willing organizer prepare to share.
+                  Help a first-time organizer turn a campaign idea into an
+                  invitation. Each suggested step explains what to do and why it
+                  matters.
                 </dd>
               </div>
               <div>
                 <dt>Who it is for</dt>
                 <dd>
                   Adults preparing their first small community fundraiser with
-                  limited time. This is the proposed research audience, not a
-                  validated user segment.
+                  limited time. I still need to test the concept with people in
+                  this situation.
                 </dd>
               </div>
               <div>
                 <dt>My contribution</dt>
                 <dd>
-                  I directed the product, with AI assistance in design, research
-                  synthesis, development, and verification.
+                  I directed the product and used AI tools to help with design,
+                  organizing research, writing code, and checking the prototype.
                 </dd>
               </div>
               <div>
                 <dt>Where the work stands</dt>
                 <dd>
-                  A working prototype and a defined research plan. Participant
-                  sessions and measured fundraising outcomes are still ahead.
+                  The prototype is ready for a first round of user research.
+                  Participant sessions have not taken place, and fundraising
+                  results have not been measured.
                 </dd>
               </div>
             </dl>
@@ -176,26 +181,26 @@ export function FundraiserCaseStudy({
           >
             <p className="section-lede">
               St. Jude already offers fundraising pages, toolkits, social
-              assets, and support. The opportunity is to test contextual
-              guidance within that journey—not assume the existing services are
-              missing.
+              templates, and support. I focused on a narrower question: could a
+              suggested next step help someone put those resources to use while
+              preparing their first invitation?
             </p>
             <div className="fundraiser-split">
               <div>
                 <h3>Focus first</h3>
                 <p>
                   Setup, a personal story, event details, a saved preview, and
-                  one invitation asset. Together, these produce something an
-                  organizer can review and use.
+                  one invitation. Together, these produce something an organizer
+                  can review and use.
                 </p>
               </div>
               <div>
                 <h3>Defer until useful</h3>
                 <p>
-                  Supporter management, channel analytics, team permissions, and
-                  long-term retention require different research and
-                  integrations. More features would not settle the core
-                  question.
+                  Managing supporters, tracking promotion, and adding team
+                  permissions can wait. The first thing to learn is whether
+                  organizers can prepare an invitation and understand what to do
+                  next.
                 </p>
               </div>
             </div>
@@ -206,34 +211,36 @@ export function FundraiserCaseStudy({
           </Chapter>
           <Chapter id="evidence" title="Test the reason people pause.">
             <p>
-              The riskiest assumption is that organizers stall because they
-              cannot prioritize. They may instead lack time, struggle to recruit
-              help, or feel uncomfortable asking for money. Guidance cannot
-              resolve every barrier.
+              I started with an assumption: organizers may pause because they
+              are unsure what to do next. They may instead lack time, struggle
+              to recruit help, or feel uncomfortable asking for money. Guidance
+              cannot resolve every barrier.
             </p>
             <dl className="study-at-a-glance">
               <div>
                 <dt>Secondary research</dt>
                 <dd>
                   Public fundraising and donation materials established what
-                  services already exist. They did not reveal difficulties
-                  inside authenticated tools or internal abandonment data.
+                  services already exist. They could not tell me where people
+                  struggle after signing in or why they leave a campaign
+                  unfinished.
                 </dd>
               </div>
               <div>
                 <dt>Product review</dt>
                 <dd>
                   Technical and interface checks identified navigation,
-                  empty-state, and small-screen problems. Development feedback
-                  also shaped giving-frequency choices and editable identity.
+                  empty-state, and small-screen problems. My feedback during
+                  development also led to one-time and monthly giving choices
+                  and an editable display name.
                 </dd>
               </div>
               <div>
                 <dt>Still to learn</dt>
                 <dd>
-                  Whether prioritization is a real obstacle, whether the
-                  recommendation fits the organizer’s situation, and whether
-                  existing guidance already meets the need.
+                  Whether people need help choosing their next step, whether the
+                  suggestion is useful, and whether existing resources already
+                  answer their questions.
                 </dd>
               </div>
             </dl>
@@ -252,7 +259,7 @@ export function FundraiserCaseStudy({
                 ['Choose', 'Set a format, date, team, and goal.'],
                 ['Prepare', 'Write the story and explain where to join.'],
                 ['Review', 'Inspect and save the campaign preview.'],
-                ['Invite', 'Reuse the details in a promotional asset.'],
+                ['Invite', 'Use the campaign details to create an invitation.'],
                 ['Return', 'Review the next suggested action.'],
               ].map(([title, text], i) => (
                 <li key={title}>
@@ -265,8 +272,8 @@ export function FundraiserCaseStudy({
             <p>
               The six-step setup collects useful context, but may delay the
               first useful result. I would compare it with a shorter path that
-              asks for extra context only when it changes a recommendation. This
-              journey is a design hypothesis awaiting participant evaluation.
+              asks for more details only when they affect the next step. User
+              sessions will help determine which approach works better.
             </p>
             <Screen
               name="dashboard.webp"
@@ -275,6 +282,87 @@ export function FundraiserCaseStudy({
               alt="Public demo dashboard showing an empty campaign, next-story action, and readiness checklist."
               caption="Current public demo: a fresh campaign starts with no supporters or money raised."
             />
+          </Chapter>
+          <Chapter
+            id="walkthrough"
+            title="From the next step to an invitation."
+          >
+            <div className="fundraiser-walkthrough">
+              <div>
+                <p className="section-lede">
+                  Follow the campaign from a suggested action to an edited
+                  story, a saved preview, and a flyer using the same details.
+                </p>
+                <ol className="fundraiser-video-steps">
+                  <li>
+                    <strong>Understand the suggestion.</strong> Open the
+                    explanation and timing controls.
+                  </li>
+                  <li>
+                    <strong>Prepare the campaign.</strong> Edit the story, save
+                    a preview, and review it.
+                  </li>
+                  <li>
+                    <strong>Create the invitation.</strong> Carry the details
+                    into a flyer and choose an export format.
+                  </li>
+                </ol>
+                <p className="caption" id="fundraiser-video-description">
+                  A silent, captioned sequence of real screens from the October
+                  4 prototype. This earlier version saved a campaign to a shared
+                  link. The current public demo saves in your browser; its links
+                  open the demo. All fundraising figures shown are sample data.
+                </p>
+                <a
+                  className="text-link"
+                  href="/projects/fundraiser-studio/walkthrough.mp4"
+                >
+                  Open video separately <ArrowIcon />
+                </a>
+              </div>
+              <video
+                controls
+                playsInline
+                preload="none"
+                width={1080}
+                height={1920}
+                poster="/projects/fundraiser-studio/walkthrough-poster.jpg"
+                aria-label="Fundraiser Studio campaign walkthrough"
+                aria-describedby="fundraiser-video-description"
+              >
+                <source
+                  src="/projects/fundraiser-studio/walkthrough.mp4"
+                  type="video/mp4"
+                />
+                <track
+                  kind="captions"
+                  src="/projects/fundraiser-studio/walkthrough.vtt"
+                  srcLang="en"
+                  label="English — walkthrough descriptions"
+                />
+                Your browser does not support embedded video. Use the separate
+                video link.
+              </video>
+            </div>
+            <details className="evidence-details">
+              <summary>Read the walkthrough description</summary>
+              <p>
+                The dashboard suggests a next step. Expanding “Why this step?”
+                reveals its explanation and options to change the timing. The
+                recommended action opens the campaign editor.
+              </p>
+              <p>
+                Saving the campaign produces a success message and a preview
+                link. Opening that link shows the matching campaign title and
+                story. The flyer builder reuses those details and offers a QR
+                code. The final screen shows the available export formats.
+              </p>
+              <p>
+                This sequence shows the earlier prototype, not a participant
+                session. It ends at the export dialog; it does not show a
+                downloaded file.
+              </p>
+            </details>
           </Chapter>
           <Chapter
             id="guidance"
@@ -294,7 +382,7 @@ export function FundraiserCaseStudy({
                   ],
                   [
                     'Show the reason',
-                    'Rules use missing content, dates, saved-preview state, and unfinished work. “Why this step?” makes the recommendation understandable. It is rule-based guidance.',
+                    'Suggestions depend on what is missing, upcoming dates, and unfinished tasks. “Why this step?” explains the reason so the organizer can decide whether it fits.',
                   ],
                   [
                     'Keep the choice',
@@ -329,11 +417,11 @@ export function FundraiserCaseStudy({
                 <h3>A draft is not a saved preview</h3>
                 <p>
                   Editing and saving are distinct. Changes need to be saved
-                  again before they appear in the preview. Templates constrain
-                  styling while keeping the personal message and event details
-                  editable.
+                  again before they appear in the preview. Templates keep the
+                  layout consistent while letting organizers change their
+                  message and event details.
                 </p>
-                <h3>The public demo’s boundary</h3>
+                <h3>What the public demo saves</h3>
                 <p>
                   Drafts and previews stay in the current browser. Shared links
                   and QR codes open the demo, not the organizer’s personal
@@ -347,7 +435,7 @@ export function FundraiserCaseStudy({
                 caption="October 4 preview from the earlier hosted prototype. Amounts and supporter counts are illustrative."
               />
             </div>
-            <h3>Giving should be an informed handoff.</h3>
+            <h3>Make it clear where the donation happens.</h3>
             <div className="fundraiser-split">
               <Screen
                 name="giving.png"
@@ -370,39 +458,86 @@ export function FundraiserCaseStudy({
                 </p>
                 <p>
                   A click is not a completed donation. The immediate goal is
-                  understanding the handoff.
+                  making sure people know where they are going and what they
+                  will need to choose again.
                 </p>
               </div>
             </div>
           </Chapter>
-          <Chapter
-            id="iteration"
-            title="Verify the journey, not just the destination."
-          >
+          <Chapter id="iteration" title="Fix the moments that get in the way.">
+            <p>
+              These changes came from checking the prototype and my feedback
+              during development. They have not yet been evaluated in
+              participant sessions.
+            </p>
             <div className="fundraiser-iterations">
               {[
                 [
-                  'Navigation appeared unresponsive',
-                  'Changed the affected links and saved campaign state before navigation.',
-                  'Onboarding and ten workspace destinations were checked on the published build.',
+                  '01',
+                  'Keep the campaign when someone moves on.',
+                  'Some links did not open their destination. Moving between pages also needed to preserve the campaign.',
+                  'Fixed navigation and saved the campaign before leaving the page.',
+                  'Checked onboarding and all ten workspace destinations; the campaign details stayed in place.',
                 ],
                 [
-                  'A new campaign implied existing activity',
-                  'Started fresh campaigns with zero supporters and money, plus blank story and location.',
-                  'Empty states and the next-story suggestion were checked October 5.',
+                  '02',
+                  'Let a fresh campaign start fresh.',
+                  'Sample activity made a new campaign look as though it already had supporters and donations.',
+                  'Started new campaigns with zero supporters and money raised, an empty story, and no location.',
+                  'Checked that the dashboard asks the organizer to write their story next.',
                 ],
                 [
-                  'Feedback covered mobile navigation',
-                  'Moved the notification above navigation and corrected resource-count wrapping.',
-                  'Resource search, singular counts, and small-screen layouts were checked.',
+                  '03',
+                  'Keep mobile navigation within reach.',
+                  'A notification covered the bottom navigation, and a resource count wrapped poorly.',
+                  'Moved the notification above the navigation and corrected the count layout.',
+                  'Checked small-screen layouts, resource search, and the singular result count.',
                 ],
-              ].map(([issue, change, check]) => (
-                <article key={issue}>
-                  <h3>{issue}</h3>
-                  <p>{change}</p>
-                  <p className="caption">{check}</p>
+              ].map(([number, title, before, after, check]) => (
+                <article key={number}>
+                  <p className="eyebrow">{number} / DESIGN CHANGE</p>
+                  <h3>{title}</h3>
+                  <div className="fundraiser-change-pair">
+                    <div>
+                      <h4>Before</h4>
+                      <p>{before}</p>
+                    </div>
+                    <div>
+                      <h4>After</h4>
+                      <p>{after}</p>
+                    </div>
+                  </div>
+                  <p className="caption">
+                    <strong>What I checked:</strong> {check}
+                  </p>
                 </article>
               ))}
+            </div>
+            <div className="fundraiser-split fundraiser-annotated">
+              <Screen
+                name="dashboard.webp"
+                width={1440}
+                height={1000}
+                alt="Updated dashboard with zero raised, zero supporters, and a prompt to write the campaign story."
+                caption="After: the current public demo opens with an empty campaign."
+              />
+              <div>
+                <h3>What changed on the dashboard</h3>
+                <ol>
+                  <li>
+                    <strong>Honest starting point.</strong> Zero totals make it
+                    clear that the organizer is beginning a new campaign.
+                  </li>
+                  <li>
+                    <strong>A relevant next step.</strong> The missing story
+                    becomes the first suggested action.
+                  </li>
+                  <li>
+                    <strong>Progress with a purpose.</strong> The checklist
+                    shows what is still needed before preparing an invitation.
+                  </li>
+                </ol>
+              </div>
             </div>
             <h3>Warmth without pressure.</h3>
             <p>
@@ -452,12 +587,12 @@ export function FundraiserCaseStudy({
                   'Use a neutral scenario and sample data in 30–40 minute sessions. Ask people to prepare and review a campaign, then create an invitation.',
                 ],
                 [
-                  'Probe trust and control',
-                  'Ask what a link exposes, why an action is recommended, what rescheduling does, and what happens after choosing monthly giving.',
+                  'Check what people expect',
+                  'Ask what someone else can see when they open a shared link, why an action is recommended, what rescheduling does, and what happens after choosing monthly giving.',
                 ],
                 [
                   'Revise and retest',
-                  'Record task context, observed behavior, assistance, severity, and the proposed change. Retest critical changes with fresh participants.',
+                  'Record where people hesitate, what help they need, and whether they finish. Use those observations to choose changes, then test the important fixes with new participants.',
                 ],
               ].map(([title, text]) => (
                 <li key={title}>
@@ -479,8 +614,8 @@ export function FundraiserCaseStudy({
                     its wording or hierarchy.
                   </li>
                   <li>
-                    Review any material payment or privacy misunderstanding
-                    immediately.
+                    Address any confusion about payments or who can see a
+                    campaign immediately.
                   </li>
                   <li>
                     Resolve blocking accessibility issues before releasing the
@@ -489,43 +624,44 @@ export function FundraiserCaseStudy({
                 </ul>
               </div>
               <div>
-                <h3>Protect the research</h3>
+                <h3>Respect participants’ privacy</h3>
                 <p>
                   Use voluntary participation, separate recording consent,
                   anonymous IDs, and a stated deletion date. Do not collect
                   donor lists, patient stories, credentials, or payment details.
                 </p>
                 <p>
-                  Use a neutral script and record assistance consistently. Seek
-                  a second review of the synthesis to challenge designer bias.
+                  Use a neutral script and record assistance consistently. Ask
+                  another reviewer to check my interpretation of the findings so
+                  I do not overlook evidence against the design.
                 </p>
               </div>
             </div>
             <h3>Measure readiness before fundraising impact.</h3>
             <p>
-              The proposed measure is the share of eligible new organizers with
-              a campaign meeting agreed readiness criteria and a saved preview
-              within seven days. Include non-completers and allow the full
-              observation window.
+              For a future pilot, I would track how many new organizers prepare
+              a campaign and save its preview within seven days. Before
+              starting, I would define what “ready” means and give everyone the
+              full seven days, including people who do not finish.
             </p>
             <p>
-              Readiness is only a proxy. A production measure needs a baseline,
-              version-consistent previews, approved access, and safeguards for
-              unintended sharing and accessibility barriers. It does not measure
-              invitations sent or donations received.
+              A saved preview would show progress toward an invitation, not
+              prove that someone sent it or raised money. I would compare the
+              result with the existing process and check for problems such as
+              accidental sharing or tasks people cannot complete accessibly.
             </p>
           </Chapter>
           <Chapter
             id="outcome"
-            title="A working direction. A clear next decision."
+            title="Built to try. Ready to learn from organizers."
           >
             <dl className="study-at-a-glance">
               <div>
                 <dt>Delivered</dt>
                 <dd>
-                  Explainable next-step guidance, editable campaign content,
-                  saved previews, connected promotional templates, and an
-                  explicit official-site donation handoff.
+                  A working path from campaign setup to a saved preview and
+                  invitation, with next-step suggestions and a clear link to the
+                  official donation site.
                 </dd>
               </div>
               <div>
@@ -539,17 +675,17 @@ export function FundraiserCaseStudy({
               <div>
                 <dt>What comes next</dt>
                 <dd>
-                  Validate the narrow invitation workflow, revise from observed
-                  behavior, then review organizational fit before proposing
-                  integrations or broader features.
+                  Watch organizers prepare their first invitation and revise the
+                  steps that cause difficulty. Then consider whether the concept
+                  fits alongside the organization’s existing tools.
                 </dd>
               </div>
             </dl>
             <p>
-              The most useful lesson was to separate a working feature from a
-              useful intervention. Fixing navigation and save behavior made the
-              prototype testable. Research still has to establish whether the
-              suggested next step is the one an organizer actually needs.
+              Fixing navigation and saving made the prototype usable enough to
+              test. That still leaves the question I care about most: does the
+              suggested next step help an organizer move forward? My next round
+              of work needs to answer that before I add more features.
             </p>
             <details className="evidence-details">
               <summary>Project references</summary>

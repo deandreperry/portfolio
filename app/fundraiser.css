@@ -149,4 +149,64 @@
   }
 }
 
-.fundraiser-decision > div > div + div { margin-top: 32px; }
+.fundraiser-decision > div > div + div {
+  margin-top: 32px;
+}
+
+.fundraiser-walkthrough {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 320px);
+  align-items: start;
+  gap: 40px;
+  margin-top: 32px;
+}
+.fundraiser-walkthrough video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 9 / 16;
+  background: #f5f2eb;
+  border: 1px solid #d7dcd4;
+}
+.fundraiser-video-steps {
+  padding-left: 24px;
+}
+.fundraiser-video-steps li + li,
+.fundraiser-annotated li + li {
+  margin-top: 20px;
+}
+.fundraiser-change-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+  margin: 24px 0;
+}
+.fundraiser-change-pair > div {
+  border-left: 2px solid #d7dcd4;
+  padding-left: 20px;
+}
+.fundraiser-change-pair > div:last-child {
+  border-color: #84213a;
+}
+.fundraiser-change-pair h4 {
+  font-size: 1rem;
+  margin: 0 0 12px;
+}
+.fundraiser-annotated ol {
+  padding-left: 24px;
+}
+@media (max-width: 900px) {
+  .fundraiser-walkthrough {
+    grid-template-columns: 1fr;
+  }
+  .fundraiser-walkthrough video {
+    max-width: 360px;
+    justify-self: center;
+  }
+}
+@media (max-width: 640px) {
+  .fundraiser-change-pair {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
