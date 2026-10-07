@@ -13,7 +13,8 @@ const sections = [
   ['walkthrough', 'Watch the walkthrough'],
   ['guidance', 'Guidance & control'],
   ['continuity', 'Content & trust'],
-  ['iteration', 'Iteration & inclusion'],
+  ['iteration', 'What changed'],
+  ['accessibility', 'Accessible interactions'],
   ['research', 'Research plan'],
   ['outcome', 'Outcome & reflection'],
 ].map(([id, label]) => ({ id, label }));
@@ -145,9 +146,9 @@ export function FundraiserCaseStudy({
               <div>
                 <dt>The opportunity</dt>
                 <dd>
-                  Help a first-time organizer turn a campaign idea into an
-                  invitation. Each suggested step explains what to do and why it
-                  matters.
+                  Preparing a fundraiser means choosing a format, writing a
+                  story, and deciding when to invite people. I explored whether
+                  one explained next step could make that work easier to begin.
                 </dd>
               </div>
               <div>
@@ -161,8 +162,10 @@ export function FundraiserCaseStudy({
               <div>
                 <dt>My contribution</dt>
                 <dd>
-                  I directed the product and used AI tools to help with design,
-                  organizing research, writing code, and checking the prototype.
+                  I directed the product and set priorities during development,
+                  including clearer giving choices and an editable organizer
+                  name. I used AI tools to help with design, organizing
+                  research, writing code, and checking the prototype.
                 </dd>
               </div>
               <div>
@@ -244,6 +247,47 @@ export function FundraiserCaseStudy({
                 </dd>
               </div>
             </dl>
+            <h3>How the evidence shaped the design</h3>
+            <div className="fundraiser-evidence-chain">
+              {[
+                [
+                  'Build on existing support',
+                  'The desk review found fundraising pages, toolkits, social templates, and an existing mobile app.',
+                  'Another collection of tools would need a stronger reason to exist.',
+                  'Focus the concept on preparing the first invitation and explaining the next step.',
+                ],
+                [
+                  'Make progress believable',
+                  'A prototype review found sample donations and supporters in a new campaign.',
+                  'Those figures could make the organizer misread their starting point.',
+                  'Begin with zero activity and connect the next suggestion to missing campaign content.',
+                ],
+                [
+                  'Explain the donation destination',
+                  'The prototype links to the official donation page; its selected giving frequency does not carry over.',
+                  'A monthly selection could create an expectation the next page will not meet.',
+                  'Explain the transition and test whether a simpler link is clearer than a separate choice.',
+                ],
+              ].map(([title, evidence, meaning, decision]) => (
+                <article key={title}>
+                  <h4>{title}</h4>
+                  <dl>
+                    <div>
+                      <dt>Evidence</dt>
+                      <dd>{evidence}</dd>
+                    </div>
+                    <div>
+                      <dt>What it means</dt>
+                      <dd>{meaning}</dd>
+                    </div>
+                    <div>
+                      <dt>Design response</dt>
+                      <dd>{decision}</dd>
+                    </div>
+                  </dl>
+                </article>
+              ))}
+            </div>
             <p>
               If organizers already know their next action, I would investigate
               what prevents them from completing it. A smaller content or
@@ -539,18 +583,47 @@ export function FundraiserCaseStudy({
                 </ol>
               </div>
             </div>
-            <h3>Warmth without pressure.</h3>
+          </Chapter>
+          <Chapter id="accessibility" title="Keep the next step within reach.">
             <p>
-              The optional heart is a personal reaction, not a popularity count
-              or donation. Its pressed state, keyboard support, 44px target, and
-              reduced-motion behavior keep the interaction optional and
-              understandable.
+              Preparing a campaign should work with a keyboard, a small screen,
+              or reduced motion. The prototype includes the following
+              interaction choices; manual assistive-technology testing is still
+              needed.
             </p>
-            <p>
-              Labeled fields, visible focus, error focus, dialog focus return,
-              flexible layouts, and alternatives to dragging support the core
-              tasks.
-            </p>
+            <div className="fundraiser-accessibility-grid">
+              <div>
+                <h3>Find and recover</h3>
+                <p>
+                  Visible focus shows where a keyboard user is. Invalid fields
+                  receive focus so an error can be corrected without searching
+                  the page.
+                </p>
+              </div>
+              <div>
+                <h3>Return to the task</h3>
+                <p>
+                  Closing a dialog returns focus to the control that opened it.
+                  The organizer can continue from the same place.
+                </p>
+              </div>
+              <div>
+                <h3>Choose how to interact</h3>
+                <p>
+                  Labeled fields and alternatives to dragging support the same
+                  tasks without relying on a pointer. Layouts adapt to smaller
+                  screens.
+                </p>
+              </div>
+              <div>
+                <h3>Keep reactions optional</h3>
+                <p>
+                  The heart has a 44px target, keyboard support, and a clear
+                  selected state. Reduced motion removes the pop animation. It
+                  does not affect donation totals.
+                </p>
+              </div>
+            </div>
             <details className="evidence-details">
               <summary>Technical evaluation and remaining checks</summary>
               <p>
@@ -560,10 +633,10 @@ export function FundraiserCaseStudy({
                 establish usability or complete accessibility.
               </p>
               <p>
-                The PDF records the later display-name edit as build-tested,
-                with browser verification still needed. Manual screen-reader
-                use, zoom, Safari and Firefox, and sessions with disabled
-                participants remain research priorities.
+                Next checks include screen-reader use, browser zoom, Safari,
+                Firefox, and sessions with disabled participants. Automated
+                checks cannot tell me whether someone can comfortably finish
+                their campaign.
               </p>
             </details>
           </Chapter>
@@ -637,6 +710,15 @@ export function FundraiserCaseStudy({
                 </p>
               </div>
             </div>
+            <h3>Define a useful result before testing.</h3>
+            <p>
+              In each session, I would look for three things: can the organizer
+              prepare and review an invitation without help, explain why a step
+              was suggested, and correctly describe what saving or sharing does?
+              I would record hesitation and assistance alongside completion.
+              Five sessions can reveal problems to investigate; they cannot
+              establish a reliable conversion rate.
+            </p>
             <h3>Measure readiness before fundraising impact.</h3>
             <p>
               For a future pilot, I would track how many new organizers prepare
@@ -694,6 +776,26 @@ export function FundraiserCaseStudy({
                 original captures, development checks, and proposed research.
                 The linked public demo is a newer browser-saved edition.
               </p>
+              <ul>
+                <li>
+                  <a href="https://www.stjude.org/get-involved/fundraising-ideas.html">
+                    St. Jude fundraising resources
+                  </a>{' '}
+                  — existing organizer support.
+                </li>
+                <li>
+                  <a href="https://www.stjude.org/support-and-fundraising/i-love-st-jude-app.html">
+                    I Love St. Jude app
+                  </a>{' '}
+                  — publicly described mobile capabilities.
+                </li>
+                <li>
+                  <a href="https://www.stjude.org/donate/donate-to-st-jude.html">
+                    Official donation page
+                  </a>{' '}
+                  — the prototype’s donation destination.
+                </li>
+              </ul>
               <a
                 className="text-link"
                 href="/projects/fundraiser-studio/case-study.pdf"

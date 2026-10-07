@@ -210,3 +210,50 @@
     gap: 24px;
   }
 }
+
+.fundraiser-evidence-chain {
+  margin: 32px 0;
+}
+.fundraiser-evidence-chain article {
+  border-top: 1px solid #d7dcd4;
+  padding: 28px 0;
+}
+.fundraiser-evidence-chain h4 {
+  font-size: 1.25rem;
+  margin: 0 0 24px;
+}
+.fundraiser-evidence-chain dl {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin: 0;
+}
+.fundraiser-evidence-chain dt {
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.fundraiser-evidence-chain dd {
+  margin: 0;
+  color: var(--color-text-secondary, #5b6470);
+  line-height: 1.7;
+}
+.fundraiser-accessibility-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+  margin: 32px 0;
+}
+.fundraiser-accessibility-grid > div {
+  border-top: 1px solid #d7dcd4;
+  padding-top: 24px;
+}
+@media (max-width: 900px) {
+  .fundraiser-evidence-chain dl {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 640px) {
+  .fundraiser-accessibility-grid {
+    grid-template-columns: 1fr;
+  }
+}
