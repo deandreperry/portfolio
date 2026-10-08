@@ -1,3 +1,4 @@
+import { contributions } from '@/data/contributions';
 import Image from 'next/image';
 import type { CaseStudy } from '@/data/projects';
 import { GatherCover } from './gather-cover';
@@ -42,7 +43,7 @@ export function GatherCaseStudy({ nextProject }: { nextProject: CaseStudy }) {
         <a href="/work" className="text-link">
           ← All work
         </a>
-        <p className="eyebrow">02 / INDEPENDENT iOS CONCEPT · 2026</p>
+        <p className="eyebrow">02 / iOS PRODUCT CONCEPT · 2026</p>
         <h1>Gather</h1>
         <p className="narrative-deck">Less debating. More together.</p>
         <p className="section-lede">
@@ -64,7 +65,7 @@ export function GatherCaseStudy({ nextProject }: { nextProject: CaseStudy }) {
           </div>
           <div>
             <dt>Scope</dt>
-            <dd>Independent functional concept</dd>
+            <dd>Functional product concept</dd>
           </div>
         </dl>
         <div className="case-project-links">
@@ -108,19 +109,20 @@ export function GatherCaseStudy({ nextProject }: { nextProject: CaseStudy }) {
                 </dd>
               </div>
               <div>
-                <dt>Contribution</dt>
-                <dd>
-                  I defined the product brief and directed the design. Codex
-                  supported development, procedural artwork, sample content, and
-                  technical testing.
-                </dd>
+                <dt>My role</dt>
+                <dd>{contributions['gather'].role}</dd>
+              </div>
+              <div>
+                <dt>Collaboration</dt>
+                <dd>{contributions['gather'].team}</dd>
               </div>
             </dl>
             <p className="caption">
-              Independent concept developed from a product brief. These premises
-              are hypotheses, not interview findings. Venues, people, votes, and
-              accessibility metadata are sample data; this is not an App Store
-              release or Apple-affiliated project.
+              Concept developed from a product brief with design and development
+              contributions. These premises are hypotheses, not interview
+              findings. Venues, people, votes, and accessibility metadata are
+              sample data; this is not an App Store release or Apple-affiliated
+              project.
             </p>
           </section>
           <section id="experience" className="case-section">
@@ -441,7 +443,7 @@ export function GatherCaseStudy({ nextProject }: { nextProject: CaseStudy }) {
               real venue providers, reservations, widgets, and Live Activities
               remain future work.
             </p>
-            <h3>What I would test next</h3>
+            <h3>Questions for the next study</h3>
             <ul>
               <li>
                 Do people understand the difference between a preference and a

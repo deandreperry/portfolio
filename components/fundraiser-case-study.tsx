@@ -1,3 +1,4 @@
+import { contributions } from '@/data/contributions';
 import Image from 'next/image';
 import type { ReactNode } from 'react';
 import type { CaseStudy } from '@/data/projects';
@@ -147,26 +148,26 @@ export function FundraiserCaseStudy({
                 <dt>The opportunity</dt>
                 <dd>
                   Preparing a fundraiser means choosing a format, writing a
-                  story, and deciding when to invite people. I explored whether
-                  one explained next step could make that work easier to begin.
+                  story, and deciding when to invite people. The concept
+                  explores whether one explained next step could make that work
+                  easier to begin.
                 </dd>
               </div>
               <div>
                 <dt>Who it is for</dt>
                 <dd>
                   Adults preparing their first small community fundraiser with
-                  limited time. I still need to test the concept with people in
-                  this situation.
+                  limited time. Evaluation with people in this situation is
+                  still planned.
                 </dd>
               </div>
               <div>
-                <dt>My contribution</dt>
-                <dd>
-                  I directed the product and set priorities during development,
-                  including clearer giving choices and an editable organizer
-                  name. I used AI tools to help with design, organizing
-                  research, writing code, and checking the prototype.
-                </dd>
+                <dt>My role</dt>
+                <dd>{contributions['fundraiser-studio'].role}</dd>
+              </div>
+              <div>
+                <dt>Collaboration</dt>
+                <dd>{contributions['fundraiser-studio'].team}</dd>
               </div>
               <div>
                 <dt>Where the work stands</dt>
@@ -184,9 +185,9 @@ export function FundraiserCaseStudy({
           >
             <p className="section-lede">
               St. Jude already offers fundraising pages, toolkits, social
-              templates, and support. I focused on a narrower question: could a
-              suggested next step help someone put those resources to use while
-              preparing their first invitation?
+              templates, and support. The project focuses on a narrower
+              question: could a suggested next step help someone put those
+              resources to use while preparing their first invitation?
             </p>
             <div className="fundraiser-split">
               <div>
@@ -214,7 +215,7 @@ export function FundraiserCaseStudy({
           </Chapter>
           <Chapter id="evidence" title="Test the reason people pause.">
             <p>
-              I started with an assumption: organizers may pause because they
+              The starting assumption is that organizers may pause because they
               are unsure what to do next. They may instead lack time, struggle
               to recruit help, or feel uncomfortable asking for money. Guidance
               cannot resolve every barrier.
@@ -233,9 +234,9 @@ export function FundraiserCaseStudy({
                 <dt>Product review</dt>
                 <dd>
                   Technical and interface checks identified navigation,
-                  empty-state, and small-screen problems. My feedback during
-                  development also led to one-time and monthly giving choices
-                  and an editable display name.
+                  empty-state, and small-screen problems. Product-direction
+                  feedback also led to one-time and monthly giving choices and
+                  an editable display name.
                 </dd>
               </div>
               <div>
@@ -289,9 +290,10 @@ export function FundraiserCaseStudy({
               ))}
             </div>
             <p>
-              If organizers already know their next action, I would investigate
-              what prevents them from completing it. A smaller content or
-              onboarding improvement may be more useful than another workspace.
+              If organizers already know their next action, the research needs
+              to establish what prevents them from completing it. A smaller
+              content or onboarding improvement may be more useful than another
+              workspace.
             </p>
           </Chapter>
           <Chapter
@@ -315,9 +317,9 @@ export function FundraiserCaseStudy({
             </ol>
             <p>
               The six-step setup collects useful context, but may delay the
-              first useful result. I would compare it with a shorter path that
-              asks for more details only when they affect the next step. User
-              sessions will help determine which approach works better.
+              first useful result. A useful comparison would be a shorter path
+              that asks for more details only when they affect the next step.
+              User sessions will help determine which approach works better.
             </p>
             <Screen
               name="dashboard.webp"
@@ -496,8 +498,8 @@ export function FundraiserCaseStudy({
                   campaign.
                 </p>
                 <p>
-                  That extra choice may be redundant. I would compare a clear
-                  explanatory link with the dialog and ask participants where
+                  That extra choice may be redundant. The proposed study would
+                  compare an explanatory link with the dialog and ask where
                   payment happens and whether their choice carries over.
                 </p>
                 <p>
@@ -510,8 +512,8 @@ export function FundraiserCaseStudy({
           </Chapter>
           <Chapter id="iteration" title="Fix the moments that get in the way.">
             <p>
-              These changes came from checking the prototype and my feedback
-              during development. They have not yet been evaluated in
+              These changes came from prototype checks and product-direction
+              feedback during development. They have not yet been evaluated in
               participant sessions.
             </p>
             <div className="fundraiser-iterations">
@@ -552,7 +554,7 @@ export function FundraiserCaseStudy({
                     </div>
                   </div>
                   <p className="caption">
-                    <strong>What I checked:</strong> {check}
+                    <strong>Verification:</strong> {check}
                   </p>
                 </article>
               ))}
@@ -635,7 +637,7 @@ export function FundraiserCaseStudy({
               <p>
                 Next checks include screen-reader use, browser zoom, Safari,
                 Firefox, and sessions with disabled participants. Automated
-                checks cannot tell me whether someone can comfortably finish
+                checks cannot establish whether someone can comfortably finish
                 their campaign.
               </p>
             </details>
@@ -705,32 +707,33 @@ export function FundraiserCaseStudy({
                 </p>
                 <p>
                   Use a neutral script and record assistance consistently. Ask
-                  another reviewer to check my interpretation of the findings so
-                  I do not overlook evidence against the design.
+                  another reviewer to challenge the interpretation of the
+                  findings, including evidence against the design.
                 </p>
               </div>
             </div>
             <h3>Define a useful result before testing.</h3>
             <p>
-              In each session, I would look for three things: can the organizer
+              Each session would examine three questions: can the organizer
               prepare and review an invitation without help, explain why a step
               was suggested, and correctly describe what saving or sharing does?
-              I would record hesitation and assistance alongside completion.
+              Hesitation and assistance would be recorded alongside completion.
               Five sessions can reveal problems to investigate; they cannot
               establish a reliable conversion rate.
             </p>
             <h3>Measure readiness before fundraising impact.</h3>
             <p>
-              For a future pilot, I would track how many new organizers prepare
-              a campaign and save its preview within seven days. Before
-              starting, I would define what “ready” means and give everyone the
-              full seven days, including people who do not finish.
+              A future pilot could track how many new organizers prepare a
+              campaign and save its preview within seven days. Before starting,
+              the study needs to define “ready” and give everyone the full seven
+              days, including people who do not finish.
             </p>
             <p>
               A saved preview would show progress toward an invitation, not
-              prove that someone sent it or raised money. I would compare the
-              result with the existing process and check for problems such as
-              accidental sharing or tasks people cannot complete accessibly.
+              prove that someone sent it or raised money. The evaluation would
+              compare the result with the existing process and check for
+              problems such as accidental sharing or tasks people cannot
+              complete accessibly.
             </p>
           </Chapter>
           <Chapter
@@ -765,9 +768,9 @@ export function FundraiserCaseStudy({
             </dl>
             <p>
               Fixing navigation and saving made the prototype usable enough to
-              test. That still leaves the question I care about most: does the
-              suggested next step help an organizer move forward? My next round
-              of work needs to answer that before I add more features.
+              test. The next question is whether the suggested step helps an
+              organizer move forward. That answer should guide further
+              development before more features are added.
             </p>
             <details className="evidence-details">
               <summary>Project references</summary>

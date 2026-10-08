@@ -1,3 +1,4 @@
+import { contributions } from '@/data/contributions';
 import { NeuroModeWalkthrough } from './neuromode-walkthrough';
 import Image from 'next/image';
 import type { ReactNode } from 'react';
@@ -93,9 +94,7 @@ export function NeuroModeCaseStudy({
         <a href="/work" className="text-link">
           ← All work
         </a>
-        <p className="eyebrow">
-          01 / FLAGSHIP CASE STUDY · INDEPENDENT PRODUCT
-        </p>
+        <p className="eyebrow">01 / FLAGSHIP CASE STUDY · PRODUCT DESIGN</p>
         <h1>NeuroMode</h1>
         <p className="narrative-deck">Support for the next moment.</p>
         <p className="section-lede">
@@ -117,7 +116,7 @@ export function NeuroModeCaseStudy({
           </div>
           <div>
             <dt>Context</dt>
-            <dd>Independent · retrospective UX analysis</dd>
+            <dd>Product design · retrospective UX analysis</dd>
           </div>
         </dl>
         <div className="case-project-links">
@@ -164,13 +163,12 @@ export function NeuroModeCaseStudy({
                 </dd>
               </div>
               <div>
-                <dt>My contribution</dt>
-                <dd>
-                  An independent product-design and SwiftUI implementation
-                  project, brought into an explicit UX model through structural
-                  analysis, reconstructed wireframes, accessibility review, and
-                  a design handoff specification.
-                </dd>
+                <dt>My role</dt>
+                <dd>{contributions['neuromode'].role}</dd>
+              </div>
+              <div>
+                <dt>Collaboration</dt>
+                <dd>{contributions['neuromode'].team}</dd>
               </div>
               <div>
                 <dt>The outcome</dt>
@@ -199,8 +197,8 @@ export function NeuroModeCaseStudy({
             title="Separate what exists from what works."
           >
             <p>
-              After building the product, I used desk research, comparative
-              review, and a heuristic walkthrough to question its structure,
+              After the initial build, desk research, comparative review, and a
+              heuristic walkthrough examined the product’s structure,
               navigation, and recovery paths.
             </p>
             <p className="neuro-evidence-note">
@@ -848,12 +846,11 @@ export function NeuroModeCaseStudy({
             </p>
             <h3>Design and engineering meet at the state boundary.</h3>
             <p>
-              Working independently across design and development, I defined
-              what persists, what remains a draft, when a save sheet closes, and
-              what happens when permissions are refused. I used SwiftUI,
-              SwiftData, Xcode, SF Symbols, XCTest/XCUITest, and Git. The Figma
-              handoff specification prepares the next round of design
-              refinement.
+              Persistence and recovery connect design decisions to engineering
+              constraints: what stays saved, what remains a draft, when a save
+              sheet closes, and what happens when permission is refused. The
+              Figma handoff specification documents these states for further
+              review and refinement.
             </p>
           </Chapter>
           <Chapter

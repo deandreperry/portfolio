@@ -1,3 +1,4 @@
+import { contributions } from '@/data/contributions';
 import { ArrowIcon } from '@/components/arrow-icon';
 
 import { projectLinks } from '@/data/project-links';
@@ -242,7 +243,7 @@ export function ProjectNarrative({
               <p>{projectReview[project.slug].works}</p>
               <h3>What remains limited</h3>
               <p>{projectReview[project.slug].limit}</p>
-              <h3>What I would explore next</h3>
+              <h3>Next questions</h3>
               <p>{n.reflection}</p>
             </div>
           </section>
@@ -251,13 +252,15 @@ export function ProjectNarrative({
             <h2>Scope, decisions, and the evidence behind them.</h2>
             <dl className="study-at-a-glance">
               <div>
-                <dt>Role & collaboration</dt>
-                <dd>
-                  {project.role} · {project.services.join(', ')}. The focus is
-                  the product’s structure, interaction patterns, and visual
-                  design.
-                </dd>
+                <dt>My contribution</dt>
+                <dd>{contributions[project.slug]?.role}</dd>
               </div>
+              {contributions[project.slug]?.team ? (
+                <div>
+                  <dt>Collaboration</dt>
+                  <dd>{contributions[project.slug].team}</dd>
+                </div>
+              ) : null}
               <div>
                 <dt>User feedback & iteration</dt>
                 <dd>
