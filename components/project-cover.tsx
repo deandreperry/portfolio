@@ -1,3 +1,4 @@
+import { SbfCover } from './sbf-cover';
 import { PolishPatrolCover } from './polish-patrol-cover';
 import { FundraiserCover } from './fundraiser-cover';
 import { NeuroModeCover } from './neuromode-cover';
@@ -5,6 +6,7 @@ import { GatherCover } from './gather-cover';
 import Image from 'next/image';
 import type { CaseStudy } from '@/data/projects';
 export function ProjectCover({ project }: { project: CaseStudy }) {
+  if (project.slug === 'sbf') return <SbfCover />;
   if (project.slug === 'polish-patrol') return <PolishPatrolCover />;
   if (project.slug === 'fundraiser-studio') return <FundraiserCover />;
   if (project.slug === 'neuromode') return <NeuroModeCover />;

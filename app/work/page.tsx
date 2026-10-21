@@ -4,7 +4,7 @@ import { visibleProjects } from '@/data/projects';
 export const metadata: Metadata = {
   title: 'Work',
   description:
-    'NeuroMode, Polish Patrol, Gather, UXD Systems, Fundraiser Studio, and UXR Forge: product design, client collaboration, accessibility, and research.',
+    'NeuroMode, Polish Patrol, Social Butterflies Foundation, Gather, UXD Systems, and Fundraiser Studio: product design, client collaboration, accessibility, and research.',
   alternates: { canonical: '/work' },
 };
 export default function WorkPage() {

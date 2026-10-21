@@ -18,32 +18,38 @@ export async function generateMetadata({
     description: p.description,
     alternates: { canonical: `/work/${p.slug}` },
     twitter: {
-      card: ['neuromode', 'fundraiser-studio', 'polish-patrol'].includes(p.slug)
+      card: ['neuromode', 'fundraiser-studio', 'polish-patrol', 'sbf'].includes(
+        p.slug,
+      )
         ? 'summary_large_image'
         : 'summary',
       title: p.subtitle,
       description: p.description,
       images:
-        p.slug === 'polish-patrol'
-          ? ['/projects/polish-patrol/home.webp']
-          : p.slug === 'neuromode'
-            ? ['/projects/neuromode/social-preview.jpg']
-            : p.slug === 'fundraiser-studio'
-              ? ['/projects/fundraiser-studio/dashboard.webp']
-              : [],
+        p.slug === 'sbf'
+          ? ['/projects/sbf/apparel.webp']
+          : p.slug === 'polish-patrol'
+            ? ['/projects/polish-patrol/home.webp']
+            : p.slug === 'neuromode'
+              ? ['/projects/neuromode/social-preview.jpg']
+              : p.slug === 'fundraiser-studio'
+                ? ['/projects/fundraiser-studio/dashboard.webp']
+                : [],
     },
     openGraph: {
       title: `${p.subtitle} — De’Andre Perry`,
       description: p.focus,
       url: `/work/${p.slug}`,
       images:
-        p.slug === 'polish-patrol'
-          ? ['/projects/polish-patrol/home.webp']
-          : p.slug === 'neuromode'
-            ? ['/projects/neuromode/social-preview.jpg']
-            : p.slug === 'fundraiser-studio'
-              ? ['/projects/fundraiser-studio/dashboard.webp']
-              : [],
+        p.slug === 'sbf'
+          ? ['/projects/sbf/apparel.webp']
+          : p.slug === 'polish-patrol'
+            ? ['/projects/polish-patrol/home.webp']
+            : p.slug === 'neuromode'
+              ? ['/projects/neuromode/social-preview.jpg']
+              : p.slug === 'fundraiser-studio'
+                ? ['/projects/fundraiser-studio/dashboard.webp']
+                : [],
     },
   };
 }

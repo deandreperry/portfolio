@@ -1,0 +1,134 @@
+.sbf-cover {
+  position: relative;
+  aspect-ratio: 1.6;
+  overflow: hidden;
+  background: #f1eaf6;
+  color: #3b1556;
+  margin-top: 2rem;
+  isolation: isolate;
+}
+.sbf-cover-heading {
+  position: absolute;
+  top: 8%;
+  left: 5%;
+  width: 34%;
+  z-index: 2;
+}
+.sbf-cover-heading span,
+.sbf-cover-heading p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.sbf-cover-heading strong {
+  display: block;
+  font-size: clamp(2rem, 4.2vw, 4.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.05em;
+  margin: 1.2rem 0;
+}
+.sbf-cover-main {
+  position: absolute;
+  left: 42%;
+  top: 8%;
+  width: 66%;
+  box-shadow: 0 16px 35px #3b15561c;
+}
+.sbf-cover-detail {
+  position: absolute;
+  left: 20%;
+  top: 56%;
+  width: 54%;
+  box-shadow: 0 12px 30px #3b15561c;
+  border: 5px solid white;
+}
+.sbf-cover img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.sbf-pair,
+.sbf-checks {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+  margin: 2.5rem 0;
+}
+.sbf-pair > div,
+.sbf-checks > div {
+  border-top: 1px solid #dbd2e1;
+  padding-top: 1.5rem;
+}
+.sbf-takeaway {
+  border-left: 3px solid #6d01ad;
+  padding: 1rem 1.5rem;
+  margin: 2.5rem 0;
+}
+.sbf-evidence {
+  margin: 2.5rem 0;
+}
+.sbf-evidence img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid #dbd2e1;
+}
+.sbf-evidence figcaption {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-top: 1rem;
+  color: #59636e;
+}
+.sbf-flow {
+  background: #f7f1fb;
+  padding: 1.5rem 2.5rem;
+}
+.sbf-flow li {
+  padding: 0.5rem 0;
+}
+.sbf-swatches {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin: 2.5rem 0;
+}
+.sbf-swatches span {
+  display: block;
+  height: 90px;
+  border: 1px solid #dbd2e1;
+}
+.sbf-swatches h3 {
+  margin-top: 1rem;
+}
+@media (max-width: 600px) {
+  .sbf-pair,
+  .sbf-checks {
+    grid-template-columns: 1fr;
+  }
+  .sbf-swatches {
+    grid-template-columns: 1fr;
+  }
+  .sbf-cover {
+    aspect-ratio: 0.9;
+  }
+  .sbf-cover-heading {
+    top: 6%;
+    width: 90%;
+  }
+  .sbf-cover-heading strong {
+    font-size: 2.1rem;
+    margin: 0.5rem 0;
+  }
+  .sbf-cover-heading strong br {
+    display: none;
+  }
+  .sbf-cover-main {
+    top: 42%;
+    left: 15%;
+    width: 95%;
+  }
+  .sbf-cover-detail {
+    top: 72%;
+    left: 5%;
+    width: 65%;
+  }
+}

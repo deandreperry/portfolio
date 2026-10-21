@@ -144,8 +144,35 @@ export const projects: CaseStudy[] = [
   },
   {
     visible: true,
-    slug: 'gather',
+    slug: 'sbf',
     index: '03',
+    title: 'Social Butterflies Foundation',
+    subtitle:
+      'Social Butterflies Foundation — Visual Design & Information Architecture',
+    description:
+      'Two ways to support one mission. Apparel discovery and resource access shaped through visual hierarchy, content organization, and responsive page design.',
+    category: 'Visual Design / Information Architecture',
+    role: 'UX/UI design & implementation',
+    timeline: '2026',
+    team: 'Contribution: UX/UI design & implementation',
+    platform: 'Responsive web for WordPress',
+    services: [
+      'Visual Design',
+      'Information Architecture',
+      'Responsive Design',
+    ],
+    accent: '#6D01AD',
+    status: 'ready',
+    focus:
+      'Connecting merchandise discovery and practical assistance through one identity and two distinct page architectures.',
+    researchPrompts: [],
+    designPrompts: [],
+    reflectionPrompts: [],
+  },
+  {
+    visible: true,
+    slug: 'gather',
+    index: '04',
     title: 'Gather',
     subtitle: 'Gather — Native iOS Product & Visual Design',
     description:
@@ -167,7 +194,7 @@ export const projects: CaseStudy[] = [
   {
     visible: true,
     slug: 'uxd-systems',
-    index: '04',
+    index: '05',
     title: 'UXD Systems',
     subtitle: 'UXD Systems — Visual Design / Design Systems',
     description:
@@ -271,7 +298,7 @@ export const projects: CaseStudy[] = [
   {
     visible: true,
     slug: 'fundraiser-studio',
-    index: '05',
+    index: '06',
     title: 'Fundraiser Studio',
     subtitle: 'Fundraiser Studio — UX Strategy & Organizer Experience',
     description:
@@ -291,9 +318,9 @@ export const projects: CaseStudy[] = [
     reflectionPrompts: [],
   },
   {
-    visible: true,
+    visible: false,
     slug: 'uxr-forge',
-    index: '06',
+    index: '07',
     title: 'UXR Forge',
     subtitle: 'UXR Forge — User Research / Research Operations',
     description:
@@ -385,7 +412,7 @@ export const projects: CaseStudy[] = [
   {
     visible: false,
     slug: 'palette-snap',
-    index: '07',
+    index: '08',
     title: 'Palette Snap',
     subtitle: 'Palette Snap — Visual Design / Color Interaction',
     description:
@@ -478,7 +505,7 @@ export const projects: CaseStudy[] = [
   {
     visible: false,
     slug: '508-dev',
-    index: '08',
+    index: '09',
     title: '508 Dev',
     subtitle: '508 Dev — Accessibility / Inclusive Interaction',
     description:

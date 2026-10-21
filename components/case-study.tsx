@@ -1,3 +1,4 @@
+import { SbfCaseStudy } from './sbf-case-study';
 import { PolishPatrolCaseStudy } from './polish-patrol-case-study';
 import { FundraiserCaseStudy } from './fundraiser-case-study';
 import { notFound } from 'next/navigation';
@@ -13,6 +14,7 @@ export function CaseStudy({
   project: Project;
   nextProject: Project;
 }) {
+  if (project.slug === 'sbf') return <SbfCaseStudy nextProject={nextProject} />;
   if (project.slug === 'polish-patrol')
     return <PolishPatrolCaseStudy nextProject={nextProject} />;
   if (project.slug === 'fundraiser-studio')
