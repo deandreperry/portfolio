@@ -83,7 +83,7 @@ export function FundraiserCaseStudy({
           ← All work
         </a>
         <p className="eyebrow">
-          04 / INDEPENDENT PRODUCT DESIGN · OCTOBER 2026
+          05 / INDEPENDENT PRODUCT DESIGN · OCTOBER 2026
         </p>
         <h1>Fundraiser Studio</h1>
         <p className="narrative-deck">

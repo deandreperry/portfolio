@@ -46,7 +46,13 @@ export function ProjectCard({
             </span>
             <span>
               <b>STATUS</b>
-              {(project.slug === 'neuromode' ? 'Implemented native product · evaluation documented' : project.slug === 'gather' ? 'Functional iOS concept · sample data' : project.story?.outcome) ||
+              {(project.slug === 'polish-patrol'
+                ? 'Client website · delivered redesign'
+                : project.slug === 'neuromode'
+                  ? 'Implemented native product · evaluation documented'
+                  : project.slug === 'gather'
+                    ? 'Functional iOS concept · sample data'
+                    : project.story?.outcome) ||
                 'Functional product · validation proposed'}
             </span>
           </div>
@@ -57,7 +63,10 @@ export function ProjectCard({
               ))}
             </ul>
             <span className="text-link">
-              View case study <span aria-hidden="true"><ArrowIcon /></span>
+              View case study{' '}
+              <span aria-hidden="true">
+                <ArrowIcon />
+              </span>
             </span>
           </div>
         </div>

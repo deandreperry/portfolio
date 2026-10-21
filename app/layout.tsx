@@ -10,6 +10,7 @@ import './editorial.css';
 import './case-art-direction.css';
 import './neuromode.css';
 import './fundraiser.css';
+import './polish-patrol.css';
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {

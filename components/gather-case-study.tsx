@@ -43,7 +43,7 @@ export function GatherCaseStudy({ nextProject }: { nextProject: CaseStudy }) {
         <a href="/work" className="text-link">
           ← All work
         </a>
-        <p className="eyebrow">02 / iOS PRODUCT CONCEPT · 2026</p>
+        <p className="eyebrow">03 / iOS PRODUCT CONCEPT · 2026</p>
         <h1>Gather</h1>
         <p className="narrative-deck">Less debating. More together.</p>
         <p className="section-lede">

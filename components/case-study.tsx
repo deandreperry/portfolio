@@ -1,3 +1,4 @@
+import { PolishPatrolCaseStudy } from './polish-patrol-case-study';
 import { FundraiserCaseStudy } from './fundraiser-case-study';
 import { notFound } from 'next/navigation';
 import type { CaseStudy as Project } from '@/data/projects';
@@ -12,6 +13,8 @@ export function CaseStudy({
   project: Project;
   nextProject: Project;
 }) {
+  if (project.slug === 'polish-patrol')
+    return <PolishPatrolCaseStudy nextProject={nextProject} />;
   if (project.slug === 'fundraiser-studio')
     return <FundraiserCaseStudy nextProject={nextProject} />;
   if (project.slug === 'neuromode')

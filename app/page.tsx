@@ -87,8 +87,8 @@ export default function Home() {
           </div>
           <div>
             <p className="content-note">
-              Five case studies. From cognitive accessibility to research,
-              visual systems, and inclusive interaction.
+              Six case studies. From cognitive accessibility to research, visual
+              systems, and inclusive interaction.
             </p>
           </div>
         </div>

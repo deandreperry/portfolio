@@ -122,8 +122,30 @@ export const projects: CaseStudy[] = [
   },
   {
     visible: true,
-    slug: 'gather',
+    slug: 'polish-patrol',
     index: '02',
+    title: 'Polish Patrol',
+    subtitle: 'Polish Patrol — Service & Booking UX Case Study',
+    description:
+      'A client website redesign connecting service selection, clear pricing, and the right booking form. UX, content, and frontend delivery shaped by client feedback.',
+    category: 'Client Website / Service & Booking UX',
+    role: 'UX design, content & frontend development',
+    timeline: '2026 · October regression review',
+    team: 'Client feedback · TidyTrack hosted forms',
+    platform: 'Responsive web',
+    services: ['UX Design', 'Content Design', 'Frontend Development'],
+    accent: '#173f40',
+    status: 'ready',
+    focus:
+      'A client website redesign that separates service journeys, clarifies starting prices, and connects each request to the right form.',
+    researchPrompts: [],
+    designPrompts: [],
+    reflectionPrompts: [],
+  },
+  {
+    visible: true,
+    slug: 'gather',
+    index: '03',
     title: 'Gather',
     subtitle: 'Gather — Native iOS Product & Visual Design',
     description:
@@ -145,7 +167,7 @@ export const projects: CaseStudy[] = [
   {
     visible: true,
     slug: 'uxd-systems',
-    index: '03',
+    index: '04',
     title: 'UXD Systems',
     subtitle: 'UXD Systems — Visual Design / Design Systems',
     description:
@@ -249,7 +271,7 @@ export const projects: CaseStudy[] = [
   {
     visible: true,
     slug: 'fundraiser-studio',
-    index: '04',
+    index: '05',
     title: 'Fundraiser Studio',
     subtitle: 'Fundraiser Studio — UX Strategy & Organizer Experience',
     description:
@@ -271,7 +293,7 @@ export const projects: CaseStudy[] = [
   {
     visible: true,
     slug: 'uxr-forge',
-    index: '05',
+    index: '06',
     title: 'UXR Forge',
     subtitle: 'UXR Forge — User Research / Research Operations',
     description:
@@ -363,7 +385,7 @@ export const projects: CaseStudy[] = [
   {
     visible: false,
     slug: 'palette-snap',
-    index: '06',
+    index: '07',
     title: 'Palette Snap',
     subtitle: 'Palette Snap — Visual Design / Color Interaction',
     description:
@@ -456,7 +478,7 @@ export const projects: CaseStudy[] = [
   {
     visible: false,
     slug: '508-dev',
-    index: '07',
+    index: '08',
     title: '508 Dev',
     subtitle: '508 Dev — Accessibility / Inclusive Interaction',
     description:
