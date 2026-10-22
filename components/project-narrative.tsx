@@ -2,7 +2,6 @@ import { contributions } from '@/data/contributions';
 import { ArrowIcon } from '@/components/arrow-icon';
 
 import { projectLinks } from '@/data/project-links';
-import { scopeNumbers } from '@/data/scope-numbers';
 import { Toolkit } from './toolkit';
 import {
   ContextVisual,
@@ -136,20 +135,9 @@ export function ProjectNarrative({
           </div>
           <div>
             <dt>Status</dt>
-            <dd>Functional product · research proposed</dd>
+            <dd>Working prototype · user testing planned</dd>
           </div>
         </dl>
-        <dl className="scope-numbers" aria-label="Implemented product scope">
-          {scopeNumbers[project.slug].map(([value, label]) => (
-            <div key={label}>
-              <dt>{label}</dt>
-              <dd>{value}</dd>
-            </div>
-          ))}
-        </dl>
-        <p className="caption">
-          Implemented product scope, not user-research or impact metrics.
-        </p>
         <div className="case-hero-composition">
           <ProjectMedia project={project} />
           <div className="hero-evidence-strip">
@@ -181,7 +169,7 @@ export function ProjectNarrative({
                 <dd>{n.decisions[0].decision}</dd>
               </div>
               <div>
-                <dt>Implemented result</dt>
+                <dt>Current result</dt>
                 <dd>{n.outcome}</dd>
               </div>
             </dl>
@@ -201,7 +189,7 @@ export function ProjectNarrative({
           <ContextVisual slug={project.slug} />
           <section id="structure" className="case-section">
             <p className="eyebrow">02 / INFORMATION ARCHITECTURE</p>
-            <h2>A structure for different intentions.</h2>
+            <h2>Organize around the task.</h2>
             <ArchitectureVisual slug={project.slug} />
             <p className="caption">
               The main product areas support different tasks; people can move
@@ -249,7 +237,7 @@ export function ProjectNarrative({
           </section>
           <section id="contribution" className="case-section">
             <p className="eyebrow">CONTRIBUTION & EVIDENCE</p>
-            <h2>Scope, decisions, and the evidence behind them.</h2>
+            <h2>My contribution and the next questions.</h2>
             <dl className="study-at-a-glance">
               <div>
                 <dt>My contribution</dt>
@@ -262,7 +250,7 @@ export function ProjectNarrative({
                 </div>
               ) : null}
               <div>
-                <dt>User feedback & iteration</dt>
+                <dt>Next user study</dt>
                 <dd>
                   Participant testing is planned. The central question is:{' '}
                   {n.validation.question}
@@ -270,36 +258,16 @@ export function ProjectNarrative({
               </div>
               <div>
                 <dt>Constraints & priorities</dt>
-                <dd>
-                  {n.constraint} A concrete tradeoff:{' '}
-                  {n.decisions[0].tradeoff}{' '}
-                </dd>
+                <dd>{n.decisions[0].tradeoff}</dd>
               </div>
               <div>
-                <dt>Evidence of benefit</dt>
+                <dt>What the design supports</dt>
                 <dd>
                   {projectReview[project.slug].works} The next evaluation will
-                  examine: {n.validation.signal}
+                  look for: {n.validation.signal}
                 </dd>
               </div>
             </dl>
-            <h3>Verified implementation scope</h3>
-            <dl
-              className="scope-numbers"
-              aria-label="Product counts, not measured user outcomes"
-            >
-              {scopeNumbers[project.slug].map(([value, label]) => (
-                <div key={label}>
-                  <dt>{label}</dt>
-                  <dd>{value}</dd>
-                </div>
-              ))}
-            </dl>
-            <p className="caption">
-              These counts describe the implemented product. They do not measure
-              usability improvement, participant satisfaction, or business
-              impact.
-            </p>
           </section>
           <section id="validation" className="case-section">
             <p className="eyebrow">07 / PROPOSED RESEARCH · NOT CONDUCTED</p>
@@ -311,7 +279,14 @@ export function ProjectNarrative({
               </div>
               {Object.entries(n.validation).map(([label, value]) => (
                 <div key={label}>
-                  <dt>{label}</dt>
+                  <dt>
+                    {{
+                      question: 'Research question',
+                      method: 'Method',
+                      participants: 'Participants',
+                      signal: 'What to observe',
+                    }[label] || label}
+                  </dt>
                   <dd>{value}</dd>
                 </div>
               ))}

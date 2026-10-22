@@ -401,33 +401,11 @@ export function GatherCaseStudy({ nextProject }: { nextProject: CaseStudy }) {
                 </div>
               ))}
             </dl>
-            <dl className="scope-numbers">
-              <div>
-                <dt>Unit tests passed</dt>
-                <dd>12</dd>
-              </div>
-              <div>
-                <dt>UI tests passed</dt>
-                <dd>4</dd>
-              </div>
-              <div>
-                <dt>Smaller-device journey runs</dt>
-                <dd>2</dd>
-              </div>
-            </dl>
-            <p className="caption">
-              Technical test results recorded September 15, 2026; participant
-              usability testing remains planned. The native audit excludes
-              contrast findings for elements overlapping the translucent tab
-              bar, which received separate visual review.
+            <p>
+              App checks covered voting, navigation, smaller screens, and larger
+              text. Participant testing is still needed to learn whether private
+              voting helps groups reach a decision.
             </p>
-            <a
-              className="text-link"
-              href="/projects/gather/assets/QA.md"
-              download
-            >
-              Download the QA record ↓
-            </a>
           </section>
           <section id="reflection" className="case-section">
             <p className="eyebrow">08 / OUTCOME & REFLECTION</p>

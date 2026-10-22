@@ -124,13 +124,6 @@ export function FundraiserCaseStudy({
           <a className="text-link" href="#walkthrough">
             Watch the 64-second walkthrough <ArrowIcon down />
           </a>
-          <a
-            className="text-link"
-            href="/projects/fundraiser-studio/case-study.pdf"
-            download
-          >
-            Download the case study <ArrowIcon down />
-          </a>
         </div>
         <p className="caption">
           Independent concept; not commissioned, affiliated with, or endorsed by
@@ -629,10 +622,9 @@ export function FundraiserCaseStudy({
             <details className="evidence-details">
               <summary>Technical evaluation and remaining checks</summary>
               <p>
-                October 3 checks recorded no automated axe violations on 17
-                desktop routes and no horizontal overflow at tested widths from
-                320–1440px. These results apply to that version. They do not
-                establish usability or complete accessibility.
+                Automated accessibility and responsive checks helped review the
+                prototype. Manual testing is still needed to understand whether
+                people can complete the campaign journey comfortably.
               </p>
               <p>
                 Next checks include screen-reader use, browser zoom, Safari,
@@ -685,8 +677,9 @@ export function FundraiserCaseStudy({
                     save.
                   </li>
                   <li>
-                    If two participants misunderstand a recommendation, revise
-                    its wording or hierarchy.
+                    Investigate misunderstandings of a recommendation and revise
+                    its wording or hierarchy when the evidence points to a
+                    problem.
                   </li>
                   <li>
                     Address any confusion about payments or who can see a
@@ -774,11 +767,7 @@ export function FundraiserCaseStudy({
             </p>
             <details className="evidence-details">
               <summary>Project references</summary>
-              <p>
-                The October 5 case-study PDF documents the public desk review,
-                original captures, development checks, and proposed research.
-                The linked public demo is a newer browser-saved edition.
-              </p>
+              <p>Public resources reviewed while framing the concept:</p>
               <ul>
                 <li>
                   <a href="https://www.stjude.org/get-involved/fundraising-ideas.html">
@@ -799,13 +788,6 @@ export function FundraiserCaseStudy({
                   — the prototype’s donation destination.
                 </li>
               </ul>
-              <a
-                className="text-link"
-                href="/projects/fundraiser-studio/case-study.pdf"
-                download
-              >
-                Read the complete case study <ArrowIcon down />
-              </a>
             </details>
           </Chapter>
           <a href={`/work/${nextProject.slug}`} className="next-project">

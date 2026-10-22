@@ -100,7 +100,7 @@ export function PolishPatrolCaseStudy({
           </div>
           <div>
             <dt>Delivery</dt>
-            <dd>2026 · October regression review</dd>
+            <dd>2026</dd>
           </div>
         </dl>
         <div className="case-project-links">
@@ -427,25 +427,11 @@ export function PolishPatrolCaseStudy({
               </li>
               <li>Mobile navigation and pricing are easier to scan.</li>
             </ul>
-            <div className="polish-validation">
-              <strong>
-                62 <span>browser checks passed</span>
-              </strong>
-              <strong>
-                21 <span>unit tests passed</span>
-              </strong>
-              <p>
-                October 10 regression results from the project record, alongside
-                passing build, lint, and TypeScript checks. Two browser tests
-                were skipped because they applied to the other device
-                configuration.
-              </p>
-            </div>
             <p>
-              These checks covered navigation, layouts, and form loading without
-              sending live inquiries or payments. Mobile checks used browser
-              emulation. They establish technical behavior, not an improvement
-              in conversion or customer satisfaction.
+              Browser checks covered navigation, layouts, and form loading
+              without sending live inquiries or payments. Mobile checks used
+              browser emulation. They establish technical behavior, not an
+              improvement in conversion or customer satisfaction.
             </p>
             <h3>What comes next</h3>
             <p>

@@ -25,7 +25,7 @@ export default function WorkPage() {
         </p>
         <div className="page-meta">
           <span>{visibleProjects.length} selected projects</span>
-          <span>Implementation-backed case studies</span>
+          <span>Product concepts & website redesigns</span>
         </div>
       </header>
       <section className="work-index section shell" aria-label="Case studies">

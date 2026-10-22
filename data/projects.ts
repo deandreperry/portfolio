@@ -105,17 +105,17 @@ export const projects: CaseStudy[] = [
     title: 'NeuroMode',
     subtitle: 'NeuroMode — Cognitive Accessibility & Product Design Case Study',
     description:
-      'An iOS support experience for starting, finding sensory space, and returning after interruptions. Product structure and inclusive interaction connect to a working native interface.',
+      'An iOS app for starting everyday activities, managing sensory preferences, and returning after interruptions. Product design centers on manageable steps and control.',
     category: 'Product Design / Cognitive Accessibility',
     role: 'Product direction & interaction design',
-    timeline: 'September 2026 · documented milestones',
+    timeline: 'September 2026',
     team: 'Designers, developers, and project reviewers',
     platform: 'iPhone & iPad · SwiftUI',
     services: ['Product Design', 'Accessibility', 'UX Analysis'],
     accent: '#305C52',
     status: 'ready',
     focus:
-      'Designing manageable next steps, reversible sensory controls, and a reliable way back: an implementation-backed UX case study.',
+      'Designing manageable next steps, adjustable sensory controls, and a reliable way back after interruptions.',
     researchPrompts: [],
     designPrompts: [],
     reflectionPrompts: [],
@@ -130,7 +130,7 @@ export const projects: CaseStudy[] = [
       'A client website redesign connecting service selection, clear pricing, and the right booking form. UX, content, and frontend delivery shaped by client feedback.',
     category: 'Client Website / Service & Booking UX',
     role: 'UX design, content & frontend development',
-    timeline: '2026 · October regression review',
+    timeline: '2026',
     team: 'Client feedback · TidyTrack hosted forms',
     platform: 'Responsive web',
     services: ['UX Design', 'Content Design', 'Frontend Development'],
@@ -216,9 +216,9 @@ export const projects: CaseStudy[] = [
       question:
         'How can designers explore, compare, and apply system knowledge without losing its context?',
       context:
-        'Design-system guidance lives in separate documentation environments with different terminology, platform assumptions, and levels of detail. UXD Systems brings that material into a consistent learning structure while keeping official references visible.',
+        'Design-system guidance is spread across websites, each with its own terminology and platform assumptions. UXD Systems brings it into one learning workspace while keeping links to the original guidance.',
       constraint:
-        'A shared comparison model must not turn educational interpretation into an authoritative implementation specification. The product explicitly separates official guidance, explanation, analysis, and comparison.',
+        'A comparison can simplify differences too far. The workspace distinguishes official guidance from its own explanations and links back to the source.',
       flow: [
         'System library',
         'Structured profile',
@@ -233,7 +233,7 @@ export const projects: CaseStudy[] = [
             'The library has filterable system profiles; the comparison workspace exposes selectable systems and four lenses.',
           decision:
             'Use profiles for depth and comparison for a focused question across systems.',
-          why: 'A profile preserves context. Aligned comparison dimensions make differences inspectable without requiring readers to remember separate pages.',
+          why: 'Profiles explain each system in context. Aligned comparison rows let designers compare differences without remembering information from separate pages.',
           tradeoff:
             'Switching modes adds navigation; profile links preserve a route back to primary references.',
           source: 'components/CompareClient.tsx; components/SystemExplorer.tsx',
@@ -254,10 +254,10 @@ export const projects: CaseStudy[] = [
           observation:
             'The comparison table uses shared dimensions, named system columns, and links to each profile.',
           decision:
-            'Normalize the questions while retaining system names, source scope, and contextual explanation.',
-          why: 'Aligned attributes support cross-system scanning; direct references prevent the comparison from replacing the original guidance.',
+            'Use the same comparison questions while preserving each system’s name, context, and links to its guidance.',
+          why: 'Shared headings help designers scan across systems. Direct links keep the original guidance within reach.',
           tradeoff:
-            'Normalization inevitably compresses nuance. The product labels the result as educational analysis.',
+            'A shared table cannot capture every detail. Links to the original guidance keep the comparison in context.',
           source: 'components/CompareClient.tsx',
         },
         {
@@ -273,11 +273,11 @@ export const projects: CaseStudy[] = [
         },
       ],
       visual:
-        'The Token Lab ties a primitive hue to semantic surface and text values, then applies radius, spacing, and density variables to a stable preview. This makes the relationship between a system value and an interface visible. In comparison, column alignment and row headings carry the grouping; system accents identify columns without replacing their labels.',
+        'Token Lab lets designers change color, corner radius, spacing, and density while watching the same interface respond. In the comparison view, aligned columns and headings make differences easier to scan; color reinforces each system’s name.',
       accessibility:
-        'Source inspection confirms labeled range controls, pressed states on density controls, a native theme checkbox, and a live contrast readout in Token Lab. The comparison uses table headers and a labeled focusable overflow region. These are implementation observations, not a complete accessibility certification.',
+        'Token Lab uses labeled controls, clear selected states, and live contrast feedback. Table headings and a keyboard-focusable scrolling area support the comparison view. Screen-reader and task-based testing are still needed.',
       outcome:
-        'The implemented product combines structured system profiles, a comparison workspace, a component explorer, and a manipulable Token Lab. No learning improvement or task-time reduction is claimed.',
+        'The working product brings system profiles, comparisons, component states, and Token Lab into one learning workspace. Its effect on learning still needs to be tested with designers.',
       reflection:
         'The central tension is between making systems comparable and retaining the context that gives each system meaning. The next review should test whether the navigation separates learning and reference clearly enough; feature completeness alone cannot answer that.',
       validation: {
@@ -389,9 +389,9 @@ export const projects: CaseStudy[] = [
       visual:
         'The product separates learning, practice, and toolkit destinations. Within synthesis, observation IDs and supporting or challenging evidence maintain a readable chain from source material to interpretation. Readers can trace a recommendation back to the observations and counterexamples behind it.',
       accessibility:
-        'The implementation documents native select-based evidence assignment, keyboard journeys, recoverable drafts, and explicit confirmation before resets. Automated checks are documented in the source repository; assistive-technology testing and practitioner sessions remain separate validation needs.',
+        'Native selection controls support evidence assignment without dragging. Draft recovery and confirmation before resets protect work in progress. Assistive-technology testing and sessions with researchers are still needed.',
       outcome:
-        'The product implements planning, synthesis, downloadable resources, and authored research-reasoning exercises. No participant findings or measured research-training outcome is claimed.',
+        'The working product connects planning, synthesis, resources, and practice exercises. Whether it helps people make better research decisions still needs evaluation.',
       reflection:
         'Research tools need to preserve uncertainty. A structured workflow helps expose reasoning, but it should not make a recommendation appear more certain simply because every field is filled.',
       validation: {
@@ -482,9 +482,9 @@ export const projects: CaseStudy[] = [
       visual:
         'Swatches are both visual samples and editable design data. Naming and semantic roles connect appearance to purpose; explicit contrast results describe a pairing rather than declaring an entire palette accessible. The extraction, refinement, and export sequence gives each stage a different visual priority.',
       accessibility:
-        'The implementation documents keyboard reorder controls, accessible dialogs and menus, live action feedback, and explicit contrast results. Unsupported clipboard and EyeDropper paths retain upload or manual fallbacks. These observations do not establish a full accessibility audit.',
+        'Keyboard controls offer an alternative to dragging colors. Dialogs, menus, action feedback, and contrast results support editing and recovery. Upload and manual entry remain available when browser tools are unsupported. A full accessibility review is still needed.',
       outcome:
-        'The implemented workflow transforms images into editable palettes and multiple reusable formats, with local processing for uploads and pasted images. No time-saving or satisfaction metric is claimed.',
+        'Designers can turn an image into an editable palette and export it in several formats. Uploaded and pasted images are processed locally. Time savings and ease of use have not yet been measured.',
       reflection:
         'Automatic extraction starts the work; naming, grouping, correction, and recovery make the result usable. Future testing should examine whether designers understand the difference between a visually harmonious palette and a passing contrast pair.',
       validation: {
@@ -575,9 +575,9 @@ export const projects: CaseStudy[] = [
       visual:
         'The paired-example structure gives visual comparison a specific purpose: identifying behavioral differences. Labels and explanations must carry the distinction alongside color so that the teaching mechanism does not depend on the ability it is explaining.',
       accessibility:
-        'The source documents focus management, skip navigation, keyboard interactions, and reduced motion. Vision simulations illustrate some visual effects; they cannot reproduce lived experience or substitute for research with disabled users. Browser and assistive-technology combinations remain unverified until documented.',
+        'The interface includes focus management, skip navigation, keyboard interactions, and reduced motion. Vision simulations illustrate some visual effects; they cannot reproduce lived experience or substitute for research with disabled users. Browser and assistive-technology combinations remain unverified until documented.',
       outcome:
-        'The product offers interactive reference examples and routes for learning, patterns, testing, and standards. It remains a public preview; no conformance certification or learning outcome is claimed.',
+        'The public preview brings interactive examples, patterns, and testing guidance together. Learning outcomes and assistive-technology behavior still need evaluation.',
       reflection:
         'Demonstrating an inaccessible pattern creates an obligation to protect the surrounding learning experience. Future evaluation needs to establish whether the lesson stays navigable and understandable for the people it is intended to support.',
       validation: {

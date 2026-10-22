@@ -11,14 +11,12 @@ export function NeuroModeWalkthrough() {
             then choose a quieter space.
           </p>
           <p className="caption" id="walkthrough-description">
-            Actual simulator recording with fictional data, operated through
-            UI-test automation. Silent video with optional English
-            design-commentary captions.
+            Simulator walkthrough using sample data. Silent video with optional
+            English captions.
           </p>
           <p className="caption">
-            This demonstrates state retention during navigation in an in-memory
-            test store—not recovery after app termination or participant
-            usability results.
+            The walkthrough shows a paused session preserved while navigating
+            the app. It does not demonstrate recovery after closing the app.
           </p>
           <a
             className="text-link"

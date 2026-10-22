@@ -111,7 +111,7 @@ export function NeuroModeCaseStudy({
             <dd>iPhone & iPad · SwiftUI</dd>
           </div>
           <div>
-            <dt>Evidence dates</dt>
+            <dt>Design review</dt>
             <dd>September 23–25, 2026</dd>
           </div>
           <div>
@@ -138,7 +138,7 @@ export function NeuroModeCaseStudy({
           <Chapter
             id="overview"
             kicker="01 / THE 30-SECOND READ"
-            title="Help before a plan to maintain."
+            title="Get started without building a whole plan."
           >
             <p className="section-lede">
               Naming a task, choosing a priority, estimating time, and
@@ -218,14 +218,14 @@ export function NeuroModeCaseStudy({
                 [
                   '02',
                   'Returning is part of the task.',
-                  'The implementation stores a concrete next step alongside focus-session state; memory support is a lens in the desk research.',
+                  'The app saves a written next step with the focus session. The desk research also identified memory support as a consideration.',
                   'Elapsed time alone cannot reconstruct intent.',
                   'Save the person’s wording and pause together. Evaluate whether that cue is sufficient when they return.',
                 ],
                 [
                   '03',
                   'Quiet is a choice, not one setting.',
-                  'Quiet Room begins silently; sensory controls and comfort drafts are independent in the implementation.',
+                  'Quiet Room begins silently, and each sensory preference can be adjusted separately.',
                   'An intervention intended to help can still impose stimulation.',
                   'Make audio and breathing explicit opt-ins; preview persistent preferences before applying them.',
                 ],
@@ -308,8 +308,8 @@ export function NeuroModeCaseStudy({
               </li>
             </ul>
             <p className="caption">
-              These are conceptual behavioral lenses and constructed scenarios,
-              not validated audience segments or participant quotes.
+              These scenarios frame needs to investigate; they are not findings
+              from participant research.
             </p>
             <details className="evidence-details">
               <summary>Research references & scope</summary>
@@ -459,11 +459,13 @@ export function NeuroModeCaseStudy({
             <ol className="neuro-process">
               <li>
                 <strong>01 · Implemented product</strong>
-                <span>Inspect views, navigation, and saved state.</span>
+                <span>Review screens, navigation, and saved progress.</span>
               </li>
               <li>
                 <strong>02 · Structural analysis</strong>
-                <span>Separate hierarchy, disclosure, and recovery.</span>
+                <span>
+                  Map what appears first, what expands, and how people return.
+                </span>
               </li>
               <li>
                 <strong>03 · Reconstructed wireframes</strong>
@@ -471,7 +473,7 @@ export function NeuroModeCaseStudy({
               </li>
               <li>
                 <strong>04 · Figma-ready handoff</strong>
-                <span>Specify components, variants, and prototype edges.</span>
+                <span>Specify components, states, and transitions.</span>
               </li>
             </ol>
             <p className="neuro-evidence-note">
@@ -670,7 +672,7 @@ export function NeuroModeCaseStudy({
                 </p>
                 <p className="caption">
                   Dark appearance. Selected simulator states were reviewed; the
-                  complete accessibility matrix remains open.
+                  full review across accessibility settings is still needed.
                 </p>
               </div>
               <Screen
@@ -768,7 +770,7 @@ export function NeuroModeCaseStudy({
           <Chapter
             id="evaluation"
             kicker="08 / EVALUATION & ITERATION"
-            title="The interface changed through verification."
+            title="What changed after review."
           >
             <p>
               Integration testing and visual review exposed recovery and
@@ -785,14 +787,14 @@ export function NeuroModeCaseStudy({
                 ],
                 [
                   'Import also deleted the item',
-                  'Both automatic buttons in a shared-inbox row executed during integration testing.',
-                  'Independent borderless button styling separates import and delete, keeping the imported note readable.',
+                  'Selecting Import also triggered Delete in the same inbox row during app testing.',
+                  'Separated the two button actions so importing a note no longer deletes it.',
                   'Verified through integration testing.',
                 ],
                 [
                   'Dark buttons lost contrast',
-                  'White text on pale sage and weak secondary text were identified in visual/audit review.',
-                  'Adaptive on-accent foreground and opaque semantic secondary text replaced those combinations.',
+                  'Visual review found pale buttons with white labels and secondary text that was difficult to read.',
+                  'Updated button labels and secondary text to use colors suited to dark appearance.',
                   'Reviewed in dark appearance.',
                 ],
               ].map(([title, observation, change, evidence]) => (
@@ -804,7 +806,7 @@ export function NeuroModeCaseStudy({
                       <dd>{observation}</dd>
                     </div>
                     <div>
-                      <dt>Design / implementation change</dt>
+                      <dt>Design change</dt>
                       <dd>{change}</dd>
                     </div>
                   </dl>
@@ -812,26 +814,13 @@ export function NeuroModeCaseStudy({
                 </article>
               ))}
             </div>
-            <div className="neuro-validation">
-              <strong>56</strong>
-              <div>
-                <h3>Distinct tests reported passing across final runs.</h3>
-                <p>
-                  The project’s latest validation record combines final runs; it
-                  is not one uninterrupted all-green run. Tests establish
-                  technical behavior, not participant usefulness or release
-                  readiness.
-                </p>
-                <a
-                  className="text-link"
-                  href="/projects/neuromode/evidence/validation.md"
-                  download
-                >
-                  Read the validation record <ArrowIcon down />
-                </a>
-              </div>
-            </div>
-            <h3>The audit also found questions worth keeping open.</h3>
+            <p>
+              App checks covered saved sessions, recovery, and interaction
+              states. These checks helped catch defects; they do not establish
+              whether the support is useful in everyday life. That is the focus
+              of the planned participant study.
+            </p>
+            <h3>Questions for the next revision.</h3>
             <p>
               Several onboarding answers are stored but do not feed
               recommendation rules. Asking those questions creates an
@@ -844,7 +833,7 @@ export function NeuroModeCaseStudy({
               whether recovery remains findable when optional prompts are
               disabled.
             </p>
-            <h3>Design and engineering meet at the state boundary.</h3>
+            <h3>Decide what happens when saving fails.</h3>
             <p>
               Persistence and recovery connect design decisions to engineering
               constraints: what stays saved, what remains a draft, when a save
@@ -859,18 +848,17 @@ export function NeuroModeCaseStudy({
             title="Saving data isn’t the same as preserving a place."
           >
             <p className="section-lede">
-              NeuroMode demonstrates implemented support paths, reversible
-              preferences, local recovery, and a design model that can be
-              inspected beyond the screens.
+              NeuroMode connects immediate support with adjustable preferences
+              and ways to recover saved work. The next step is learning how
+              those choices hold up in everyday use.
             </p>
             <div className="neuro-two">
               <div>
                 <h3>What is demonstrated</h3>
                 <p>
-                  A feasible native foundation: editable steps, preserved
-                  context, independent sensory choices, and documented technical
-                  iterations. Reverse engineering makes the architecture and its
-                  trade-offs explicit.
+                  A working app with editable steps, saved context, and separate
+                  sensory controls. Reconstructing the screens as wireframes
+                  helped expose navigation and recovery decisions for review.
                 </p>
               </div>
               <div>

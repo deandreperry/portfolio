@@ -96,7 +96,7 @@ export function ContextVisual({ slug }: { slug: string }) {
     return (
       <Exhibit
         label="SYSTEM LANDSCAPE / ANALYTICAL MAP"
-        title="Separate authorities. One learning layer."
+        title="Bring guidance together without losing context."
       >
         <div className="system-landscape">
           <div className="ecosystems">
@@ -112,7 +112,7 @@ export function ContextVisual({ slug }: { slug: string }) {
           </div>
           <div className="landscape-core">
             <strong>UXD / SYSTEMS</strong>
-            <p>Explore context · Align comparison · Practice concepts</p>
+            <p>Explore systems · Compare decisions · Try concepts</p>
           </div>
           <p className="exhibit-caption">
             The learning layer links back to primary sources. It does not
@@ -346,7 +346,7 @@ export function DetailVisual({ slug, index }: { slug: string; index: number }) {
         <AnnotatedScreen
           path="uxd-systems/hero/desktop.png"
           alt="UXD Systems comparison with named columns for Apple HIG, Material 3, and Carbon"
-          caption="Actual comparison workspace. Shared row labels align the question while each system retains its context."
+          caption="Shared row headings help compare the same question across design systems."
           notes={[
             {
               title: 'Choose the comparison',
@@ -358,7 +358,7 @@ export function DetailVisual({ slug, index }: { slug: string; index: number }) {
             },
             {
               title: 'Return to context',
-              text: 'Each column links to its profile; normalized analysis remains connected to sources.',
+              text: 'Each column links to its profile so designers can return to the original context.',
             },
           ]}
         />
@@ -421,8 +421,8 @@ export function DetailVisual({ slug, index }: { slug: string; index: number }) {
           <span>05 Disabled: unavailable action</span>
         </div>
         <p className="exhibit-caption">
-          The explorer forces visual states for study. It does not constitute a
-          cross-system implementation specification.
+          The explorer lets designers inspect each state. Those examples still
+          need to be tested within a complete user task.
         </p>
       </Exhibit>
     );
@@ -459,7 +459,7 @@ export function DetailVisual({ slug, index }: { slug: string; index: number }) {
         <AnnotatedScreen
           path="uxr-forge/screens/planner.png"
           alt="UXR Forge planning workspace with research decision, questions, and plan stages"
-          caption="A fresh planner capture. Question framing precedes study design in the actual workspace."
+          caption="The planner begins with the research question before asking for study details."
           notes={[
             {
               title: 'Frame before choosing',

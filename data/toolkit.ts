@@ -6,14 +6,14 @@ export const toolkit: ToolGroup[] = [
     note: 'Visual exploration, interface design, and interactive prototypes.',
   },
   {
-    label: 'High-fidelity implementation',
+    label: 'Front-end prototyping',
     tools: ['React', 'Next.js', 'TypeScript', 'HTML', 'CSS', 'JavaScript'],
-    note: 'Explore working behavior beyond static screens.',
+    note: 'Build and test interactions beyond static screens.',
   },
   {
     label: 'Workflow & AI assistance',
     tools: ['Git', 'GitHub', 'Codex', 'Claude Code'],
-    note: 'Versioned work and AI-assisted implementation. Design judgment and verification remain human responsibilities.',
+    note: 'Git tracks changes; Codex and Claude Code assist with coding and review.',
   },
 ];
 export const projectTools: Record<string, ToolGroup[]> = {
