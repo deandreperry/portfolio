@@ -116,7 +116,7 @@ export function NeuroModeCaseStudy({
           </div>
           <div>
             <dt>Context</dt>
-            <dd>Product design · retrospective UX analysis</dd>
+            <dd>Product design & UX review</dd>
           </div>
         </dl>
         <div className="case-project-links">
@@ -521,8 +521,8 @@ export function NeuroModeCaseStudy({
                 </p>
               </div>
               <div>
-                <p className="eyebrow">IMPLEMENTATION REFERENCE</p>
-                <h4>FocusSession · FocusParkingView</h4>
+                <p className="eyebrow">SAVE & PAUSE BEHAVIOR</p>
+                <h4>Keep the next step safe</h4>
                 <p>
                   Saving and pausing are one action. Close the sheet only when
                   the save succeeds.
@@ -530,7 +530,7 @@ export function NeuroModeCaseStudy({
               </div>
             </div>
             <p>
-              The handoff specifies semantic color modes, Auto Layout recipes,
+              The handoff specifies semantic color modes, Auto Layout guidance,
               native text styles, component variants, error states, and a
               start-and-return prototype path. These details connect future
               Figma refinements to the way the app works.
@@ -588,8 +588,8 @@ export function NeuroModeCaseStudy({
               </article>
             ))}
             <p className="caption">
-              These alternatives emerged during the retrospective review and are
-              candidates for future testing.
+              These alternatives emerged while reviewing the first version and
+              are candidates for future testing.
             </p>
           </Chapter>
           <Chapter
@@ -599,9 +599,8 @@ export function NeuroModeCaseStudy({
           >
             <p>
               Warm neutral surfaces and sage actions establish the product’s
-              identity. Semantic typography and native controls keep that
-              identity responsive to appearance, text size, and familiar
-              platform behavior.
+              identity. Text scales with the user’s preferred size, while
+              familiar controls make the interface easier to recognize and use.
             </p>
             <div className="neuro-swatches">
               {[
@@ -638,8 +637,8 @@ export function NeuroModeCaseStudy({
                 <dt>States</dt>
                 <dd>
                   Applied versus draft, paused versus active, saved versus
-                  failed. Labels and native semantics carry meaning alongside
-                  color.
+                  failed. Labels and screen-reader descriptions carry meaning
+                  alongside color.
                 </dd>
               </div>
               <div>

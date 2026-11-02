@@ -104,8 +104,8 @@ export function GatherCaseStudy({ nextProject }: { nextProject: CaseStudy }) {
               <div>
                 <dt>The design response</dt>
                 <dd>
-                  A shared lobby, requirement-aware recommendations, private
-                  voting, aggregate consensus, and a final actionable plan.
+                  A shared lobby, recommendations that respect everyone’s needs,
+                  private voting, a group result, and a plan people can follow.
                 </dd>
               </div>
               <div>
@@ -327,8 +327,8 @@ export function GatherCaseStudy({ nextProject }: { nextProject: CaseStudy }) {
               <div>
                 <dt>Fold-aware</dt>
                 <dd>
-                  A schematic separation explores how content could adapt across
-                  a larger canvas.
+                  A divided layout explores how content could adapt across a
+                  larger screen.
                 </dd>
               </div>
             </dl>

@@ -20,8 +20,8 @@ export default function WorkPage() {
           has a story.
         </h1>
         <p>
-          Research, product thinking, and interface craft—four lenses on
-          designing with intention.
+          Research, product thinking, and visual design shape how each project
+          solves a different problem.
         </p>
         <div className="page-meta">
           <span>{visibleProjects.length} selected projects</span>

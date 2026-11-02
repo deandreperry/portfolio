@@ -279,7 +279,7 @@ export const projects: CaseStudy[] = [
       outcome:
         'The working product brings system profiles, comparisons, component states, and Token Lab into one learning workspace. Its effect on learning still needs to be tested with designers.',
       reflection:
-        'The central tension is between making systems comparable and retaining the context that gives each system meaning. The next review should test whether the navigation separates learning and reference clearly enough; feature completeness alone cannot answer that.',
+        'Comparing systems requires simplifying them without losing important context. The next study should test whether designers can move between quick comparisons and deeper guidance without getting lost.',
       validation: {
         question:
           'Can designers explain a system difference and predict what a token change will affect?',
@@ -358,10 +358,10 @@ export const projects: CaseStudy[] = [
           observation:
             'Study records link observations to themes, insights, recommendations, and counterexamples.',
           decision:
-            'Retain stable record IDs and direct finding-to-observation navigation.',
+            'Link each finding to its supporting observations so readers can check the reasoning.',
           why: 'Separating observation from interpretation lets a reader inspect what supports a conclusion and what challenges it.',
           tradeoff:
-            'More explicit relationships increase authoring effort and demand validation of references.',
+            'Linking findings to observations takes more work, and each reference needs to be checked.',
           source: 'README.md: Evidence relationships; src/data.ts',
         },
         {
@@ -376,10 +376,11 @@ export const projects: CaseStudy[] = [
           source: 'README.md: Learning and practice release',
         },
         {
-          title: 'Keep practice and research provenance visible',
+          title: 'Distinguish practice examples from completed research',
           observation:
-            'Every displayed study is labeled as synthetic; planner exports identify unexecuted drafts.',
-          decision: 'Carry provenance into both the interface and exports.',
+            'Study examples are labeled as practice data; exported plans are marked as drafts.',
+          decision:
+            'Label practice data and untested study plans in both the interface and exported files.',
           why: 'An observation count is not a population estimate, and a teaching dataset is not participant evidence. Labels reduce the risk of confusing practice with completed research.',
           tradeoff:
             'Repeated labeling adds content, but removing it could create a materially misleading impression.',

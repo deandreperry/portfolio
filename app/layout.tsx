@@ -22,10 +22,10 @@ export const metadata: Metadata = {
     'Research-led thinking. Detail-driven design. De’Andre Perry connects user needs, complex workflows, and thoughtful interfaces.',
   alternates: { canonical: '/' },
   icons: { icon: '/favicon.png', apple: '/brandmark.png' },
-  robots: { index: false, follow: true },
+  robots: { index: true, follow: true },
   openGraph: {
     title: 'De’Andre Perry — UX Designer',
-    description: 'Understand the people. Clarify the product.',
+    description: 'Understand the people. Design with intention.',
     type: 'website',
     url: '/',
     images: [
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
         url: '/social-preview.png',
         width: 1200,
         height: 630,
-        alt: 'De’Andre Perry — Understand the people. Clarify the product.',
+        alt: 'De’Andre Perry — UX Designer',
       },
     ],
   },
