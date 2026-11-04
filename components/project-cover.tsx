@@ -15,7 +15,7 @@ export function ProjectCover({ project }: { project: CaseStudy }) {
     project.slug === 'uxd-systems'
       ? 'details/token-comfortable.png'
       : project.slug === 'uxr-forge'
-        ? 'screens/synthesis.png'
+        ? 'screens/headset-finding.png'
         : project.slug === '508-dev'
           ? 'details/target-comparison.png'
           : 'details/palette.png';
@@ -31,7 +31,7 @@ export function ProjectCover({ project }: { project: CaseStudy }) {
       <div className="cover-interface">
         <Image
           src={`/projects/${project.slug}/hero/desktop.png`}
-          alt={`${project.title} case-study cover showing the actual ${project.slug === 'uxd-systems' ? 'design-system comparison interface' : project.slug === 'uxr-forge' ? 'research learning workflow' : project.slug === '508-dev' ? 'target-size accessibility lesson' : 'palette refinement workspace'}`}
+          alt={`${project.title} case-study cover showing the actual ${project.slug === 'uxd-systems' ? 'design-system comparison interface' : project.slug === 'uxr-forge' ? 'hardware and software research workspace' : project.slug === '508-dev' ? 'target-size accessibility lesson' : 'palette refinement workspace'}`}
           width={1440}
           height={1000}
         />

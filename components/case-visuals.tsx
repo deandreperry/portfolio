@@ -479,7 +479,7 @@ export function DetailVisual({ slug, index }: { slug: string; index: number }) {
     return (
       <Screen
         path="uxr-forge/screens/synthesis.png"
-        alt="UXR Forge synthesis workspace for linking evidence and interpretation"
+        alt="UXR Forge synthesis workspace using the connected-headset hardware and software practice study"
         caption="Each finding links to the observations behind it. This screen uses fictional practice data."
       />
     );
@@ -597,6 +597,41 @@ export function DetailVisual({ slug, index }: { slug: string; index: number }) {
   );
 }
 export function ResponsiveVisual({ slug }: { slug: string }) {
+  if (slug === 'uxr-forge')
+    return (
+      <Exhibit
+        label="HARDWARE & SOFTWARE / PRACTICE EXAMPLE"
+        title="One action. Two places to check the result."
+      >
+        <p>
+          The connected-headset example asks whether a physical mute button, a
+          status light, and a companion app communicate the same microphone
+          state. It also explores what happens when the connection drops.
+        </p>
+        <Chain
+          items={[
+            ['Physical action', 'Press the headset’s mute control.'],
+            [
+              'Software feedback',
+              'Check whether the app reports the same microphone state.',
+            ],
+            [
+              'Research question',
+              'Can someone explain what the other caller can hear?',
+            ],
+            [
+              'Next evaluation',
+              'Test timing, feedback, and recovery on working hardware.',
+            ],
+          ]}
+        />
+        <Screen
+          path="uxr-forge/screens/headset-finding.png"
+          alt="Connected-headset practice finding linking physical mute actions to companion-app feedback and fictional observations"
+          caption="Current UXR Forge interface. This teaching example uses fictional observations; no hardware testing or participant sessions are claimed."
+        />
+      </Exhibit>
+    );
   if (slug !== 'uxd-systems' && slug !== 'palette-snap') return null;
   return (
     <Exhibit

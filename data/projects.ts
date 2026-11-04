@@ -322,27 +322,27 @@ export const projects: CaseStudy[] = [
     slug: 'uxr-forge',
     index: '06',
     title: 'UXR Forge',
-    subtitle: 'UXR Forge — User Research / Research Operations',
+    subtitle: 'UXR Forge — Hardware & Software UX Research',
     description:
-      'A workspace for practicing research planning and synthesis. The design helps learners choose a method, connect findings to observations, and explain their recommendations.',
-    category: 'User Research / Research Operations',
+      'A research practice workspace for hardware and software experiences. The design connects study planning, human factors, and evidence synthesis through examples such as a headset and its companion app.',
+    category: 'User Research / Hardware & Software',
     role: 'UX Designer',
     timeline: 'Dates to confirm',
     team: 'Authorship scope to confirm',
     platform: 'Web',
-    services: ['User Research', 'Research Strategy', 'Interaction Design'],
+    services: ['User Research', 'Human Factors', 'Interaction Design'],
     accent: '#496856',
     status: 'ready',
     focus:
-      'A research learning and practice environment that connects questions, methods, evidence, and proposed decisions.',
+      'A workspace for practicing research across hardware and software, connecting physical actions, interface feedback, and the evidence behind a design decision.',
     researchPrompts: [],
     designPrompts: [],
     reflectionPrompts: [],
     narrative: {
       question:
-        'How can learners practice the reasoning behind a research decision?',
+        'How can researchers examine the whole interaction—from a physical control to the software behind it?',
       context:
-        'Learning the steps of research is different from deciding which method fits a question or whether an observation supports a recommendation. UXR Forge brings method guidance, practice exercises, study planning, and synthesis into one workspace. Its example studies use fictional practice data.',
+        'Hardware and software can tell conflicting stories: a headset button may suggest the microphone is muted while its companion app shows it is on. UXR Forge uses examples like this to help learners consider physical actions, feedback, and context when planning research. Method guidance, practice exercises, study planning, and synthesis share one workspace. The examples use fictional practice data.',
       constraint:
         'Written feedback can explain a method’s strengths and limitations, but it cannot account for every detail of a research situation. Exercises therefore use explanation and reflection rather than a score that could imply there is one correct answer.',
       flow: [
