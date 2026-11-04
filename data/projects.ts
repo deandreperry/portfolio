@@ -324,7 +324,7 @@ export const projects: CaseStudy[] = [
     title: 'UXR Forge',
     subtitle: 'UXR Forge — User Research / Research Operations',
     description:
-      'A research learning environment. The experience connects research questions, method selection, synthesis, and the evidence behind design decisions.',
+      'A workspace for practicing research planning and synthesis. The design helps learners choose a method, connect findings to observations, and explain their recommendations.',
     category: 'User Research / Research Operations',
     role: 'UX Designer',
     timeline: 'Dates to confirm',
@@ -340,11 +340,11 @@ export const projects: CaseStudy[] = [
     reflectionPrompts: [],
     narrative: {
       question:
-        'How can a research tool develop judgment without reducing research to a checklist?',
+        'How can learners practice the reasoning behind a research decision?',
       context:
-        'UXR Forge combines method guidance, practice exercises, a Decision Lab, study planning, and synthesis. Its displayed studies are synthetic teaching material—not research conducted with participants.',
+        'Learning the steps of research is different from deciding which method fits a question or whether an observation supports a recommendation. UXR Forge brings method guidance, practice exercises, study planning, and synthesis into one workspace. Its example studies use fictional practice data.',
       constraint:
-        'Authored feedback can explain tradeoffs but cannot grade the quality of an open-ended research judgment. The product avoids scores, certificates, and simulated AI critique.',
+        'Written feedback can explain a method’s strengths and limitations, but it cannot account for every detail of a research situation. Exercises therefore use explanation and reflection rather than a score that could imply there is one correct answer.',
       flow: [
         'Learn',
         'Practice',
@@ -369,10 +369,10 @@ export const projects: CaseStudy[] = [
           observation:
             'Practice activities provide approach-specific feedback and ungraded written reflections.',
           decision:
-            'Present costs and assumptions behind defensible approaches.',
+            'Explain what each approach can answer, what it cannot answer, and what it requires.',
           why: 'A usability task can reveal interaction breakdowns; a survey answers a different kind of question. Method choice should follow the decision to be informed.',
           tradeoff:
-            'Authored feedback cannot respond to every contextual detail in a learner’s reflection.',
+            'Written feedback cannot respond to every detail in a learner’s reflection.',
           source: 'README.md: Learning and practice release',
         },
         {
@@ -381,14 +381,14 @@ export const projects: CaseStudy[] = [
             'Study examples are labeled as practice data; exported plans are marked as drafts.',
           decision:
             'Label practice data and untested study plans in both the interface and exported files.',
-          why: 'An observation count is not a population estimate, and a teaching dataset is not participant evidence. Labels reduce the risk of confusing practice with completed research.',
+          why: 'Practice observations cannot establish how real users behave. Clear labels help learners understand what the examples can teach and what still requires a study.',
           tradeoff:
-            'Repeated labeling adds content, but removing it could create a materially misleading impression.',
+            'Labels take up space, but they need to remain visible when examples are shared or exported.',
           source: 'README.md: Research status; Local storage and exports',
         },
       ],
       visual:
-        'The product separates learning, practice, and toolkit destinations. Within synthesis, observation IDs and supporting or challenging evidence maintain a readable chain from source material to interpretation. Readers can trace a recommendation back to the observations and counterexamples behind it.',
+        'Learning, practice, and planning have separate destinations. In synthesis, each finding stays connected to supporting observations and examples that challenge it. This lets a reviewer follow the reasoning behind a recommendation and question it.',
       accessibility:
         'Native selection controls support evidence assignment without dragging. Draft recovery and confirmation before resets protect work in progress. Assistive-technology testing and sessions with researchers are still needed.',
       outcome:
@@ -399,11 +399,11 @@ export const projects: CaseStudy[] = [
         question:
           'Do learners distinguish observations, interpretations, and proposed recommendations?',
         method:
-          'Proposed moderated synthesis exercise followed by explanation and navigation tasks.',
+          'Moderated task sessions with a fictional study brief and practice observations. Ask participants to choose a method, group observations, and explain a recommendation. Observe their first attempt before asking follow-up questions.',
         participants:
-          'Early-career researchers and practitioners reviewing research plans.',
+          'Recruit people who are learning to plan or synthesize research. Include practitioners who review research plans to check whether the reasoning is understandable to another reader. These sessions have not been conducted.',
         signal:
-          'Trace an insight to evidence, identify a counterexample, and explain a method choice without treating synthetic data as real findings.',
+          'Observe whether participants can trace a finding to its observations, recognize evidence that challenges it, and explain why a method fits the question. Record hesitation, requests for help, and confusion between practice examples and completed research.',
       },
       capture:
         'Capture the current learning homepage and a finding with supporting observations and counterexamples.',
@@ -617,9 +617,9 @@ export const projectReview: Record<
     tasks:
       'Frame a question, justify a method, inspect a counterexample, and recover a saved draft.',
     works:
-      'Evidence relationships remain inspectable rather than collapsing into a confidence score.',
+      'Readers can open the observations behind a recommendation and check evidence that challenges it.',
     limit:
-      'Authored scenarios and feedback cannot reproduce the ambiguity of a live research engagement.',
+      'Practice scenarios cannot reproduce the changing constraints and unexpected responses of a live study.',
   },
   '508-dev': {
     audience:

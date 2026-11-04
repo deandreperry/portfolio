@@ -431,20 +431,20 @@ export function DetailVisual({ slug, index }: { slug: string; index: number }) {
     if (index === 0)
       return (
         <Exhibit
-          label="TRACEABILITY / IMPLEMENTED CONTENT MODEL"
-          title="An insight should have a way back."
+          label="FROM OBSERVATION TO RECOMMENDATION"
+          title="Check the evidence behind a finding."
         >
           <Chain
             items={[
-              ['Observation ID', 'The recorded teaching example'],
+              ['Observation ID', 'The original practice observation'],
               ['Theme', 'A grouping of observations'],
               [
                 'Insight',
-                'An interpretation with supporting and challenging records',
+                'An interpretation with observations that support or challenge it',
               ],
               [
                 'Recommendation',
-                'A proposed response, tradeoff, and validation plan',
+                'A proposed change, its tradeoffs, and a plan to evaluate it',
               ],
             ]}
           />
@@ -470,8 +470,8 @@ export function DetailVisual({ slug, index }: { slug: string; index: number }) {
               text: 'The plan divides framing, study design, and preparation instead of displaying one undifferentiated form.',
             },
             {
-              title: 'Make storage boundaries explicit',
-              text: 'Local-draft notices distinguish browser persistence from shared or cloud storage.',
+              title: 'Explain where drafts are saved',
+              text: 'Draft notices explain that work is saved in this browser, rather than shared with a team or stored in the cloud.',
             },
           ]}
         />
@@ -480,7 +480,7 @@ export function DetailVisual({ slug, index }: { slug: string; index: number }) {
       <Screen
         path="uxr-forge/screens/synthesis.png"
         alt="UXR Forge synthesis workspace for linking evidence and interpretation"
-        caption="Synthesis uses explicit evidence relationships. Practice content is authored teaching material, not completed research."
+        caption="Each finding links to the observations behind it. This screen uses fictional practice data."
       />
     );
   }

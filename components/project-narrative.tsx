@@ -65,13 +65,20 @@ export function ProjectNarrative({
   const n = project.narrative!;
   const sections = [
     { id: 'overview', label: 'Overview' },
-    { id: 'structure', label: 'Structure' },
+    {
+      id: 'structure',
+      label: project.slug === 'uxr-forge' ? 'Method selection' : 'Structure',
+    },
     { id: 'decisions', label: 'Design decisions' },
     { id: 'visual-system', label: 'Visual system' },
     { id: 'accessibility', label: 'Accessibility' },
     { id: 'outcome', label: 'Outcome' },
     { id: 'contribution', label: 'Contribution & evidence' },
-    { id: 'validation', label: 'Future validation' },
+    {
+      id: 'validation',
+      label:
+        project.slug === 'uxr-forge' ? 'Evaluation plan' : 'Future validation',
+    },
     { id: 'tools', label: 'Tools & workflow' },
   ];
   return (
@@ -164,6 +171,12 @@ export function ProjectNarrative({
                 <dt>The challenge</dt>
                 <dd>{n.context}</dd>
               </div>
+              {project.slug === 'uxr-forge' && (
+                <div>
+                  <dt>My contribution</dt>
+                  <dd>{contributions[project.slug]?.role}</dd>
+                </div>
+              )}
               <div>
                 <dt>Key design decision</dt>
                 <dd>{n.decisions[0].decision}</dd>
@@ -188,12 +201,21 @@ export function ProjectNarrative({
           </section>
           <ContextVisual slug={project.slug} />
           <section id="structure" className="case-section">
-            <p className="eyebrow">02 / INFORMATION ARCHITECTURE</p>
-            <h2>Organize around the task.</h2>
+            <p className="eyebrow">
+              {project.slug === 'uxr-forge'
+                ? '02 / RESEARCH PLANNING'
+                : '02 / INFORMATION ARCHITECTURE'}
+            </p>
+            <h2>
+              {project.slug === 'uxr-forge'
+                ? 'Choose a method that fits the question.'
+                : 'Organize around the task.'}
+            </h2>
             <ArchitectureVisual slug={project.slug} />
             <p className="caption">
-              The main product areas support different tasks; people can move
-              between them as their needs change.
+              {project.slug === 'uxr-forge'
+                ? 'The method guide helps learners consider the evidence they need before building a study plan.'
+                : 'The main product areas support different tasks; people can move between them as their needs change.'}
             </p>
           </section>
           <section id="decisions" className="case-section">
@@ -211,7 +233,9 @@ export function ProjectNarrative({
             <h2>
               {project.slug === 'uxd-systems'
                 ? 'From a variable to an interface.'
-                : 'Give the structure a visual expression.'}
+                : project.slug === 'uxr-forge'
+                  ? 'Make the reasoning easy to follow.'
+                  : 'Give the structure a visual expression.'}
             </h2>
             <p className="section-lede">{n.visual}</p>
             {project.slug === 'uxd-systems' && <TokenStates />}
@@ -291,6 +315,47 @@ export function ProjectNarrative({
                 </div>
               ))}
             </dl>
+            {project.slug === 'uxr-forge' && (
+              <div className="narrative-note">
+                <h3>Observe first. Ask without leading.</h3>
+                <p>
+                  The proposed sessions would test whether learners can explain
+                  their decisions using the workspace. Completing every field
+                  would not, on its own, show that the reasoning is sound.
+                </p>
+                <dl className="validation-plan">
+                  <div>
+                    <dt>Prepare the session</dt>
+                    <dd>
+                      Explain the purpose, obtain consent, and make clear that
+                      the product is being evaluated. Ask about access needs and
+                      use fictional materials so participants do not need to
+                      share confidential research.
+                    </dd>
+                  </div>
+                  <div>
+                    <dt>Facilitate without teaching</dt>
+                    <dd>
+                      Give participants the same brief and allow time to work
+                      before offering help. Use neutral prompts such as “What
+                      led you to that choice?” Record where help was needed and
+                      distinguish independent actions from prompted ones.
+                    </dd>
+                  </div>
+                  <div>
+                    <dt>Turn observations into changes</dt>
+                    <dd>
+                      Separate difficulty using the interface from difficulty
+                      understanding a research concept. Compare observations
+                      across sessions, retain conflicting examples, and
+                      prioritize problems that prevent someone from checking or
+                      explaining a finding. Test revised guidance and
+                      interactions in a follow-up round.
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+            )}
           </section>
           <section id="tools" className="case-section">
             <p className="eyebrow">TOOLS & WORKFLOW</p>
