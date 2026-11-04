@@ -296,9 +296,9 @@ export const projects: CaseStudy[] = [
     },
   },
   {
-    visible: true,
+    visible: false,
     slug: 'fundraiser-studio',
-    index: '06',
+    index: '07',
     title: 'Fundraiser Studio',
     subtitle: 'Fundraiser Studio — UX Strategy & Organizer Experience',
     description:
@@ -318,9 +318,9 @@ export const projects: CaseStudy[] = [
     reflectionPrompts: [],
   },
   {
-    visible: false,
+    visible: true,
     slug: 'uxr-forge',
-    index: '07',
+    index: '06',
     title: 'UXR Forge',
     subtitle: 'UXR Forge — User Research / Research Operations',
     description:
