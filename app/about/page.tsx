@@ -22,12 +22,13 @@ export default function AboutPage() {
             Craft brings it into focus.
           </h1>
           <p>
-            I’m De’Andre Perry, a UX Designer working across visual design, user
-            research, accessibility, and design systems. Front-end prototyping
-            helps me explore behavior beyond static screens and communicate
-            design decisions with engineering. My project work has included
-            contributions from other designers and developers, alongside my own
-            work on product direction, interaction design, and accessibility.
+            I’m De’Andre Perry, a UX Designer & Researcher working across visual
+            design, user research, accessibility, and design systems. Front-end
+            prototyping helps me explore behavior beyond static screens and
+            communicate design decisions with engineering. My project work has
+            included contributions from other designers and developers,
+            alongside my own work on product direction, interaction design, and
+            accessibility.
           </p>
         </div>
         <Image

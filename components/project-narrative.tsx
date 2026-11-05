@@ -123,7 +123,7 @@ export function ProjectNarrative({
         <dl className="case-metadata">
           <div>
             <dt>Role</dt>
-            <dd>UX Designer</dd>
+            <dd>UX Designer & Researcher</dd>
           </div>
           <div>
             <dt>Focus</dt>

@@ -15,16 +15,16 @@ import './sbf.css';
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: 'De’Andre Perry — UX Designer',
-    template: '%s — De’Andre Perry',
+    default: 'De’Andre Perry — UX Designer & Researcher',
+    template: '%s — De’Andre Perry, UX Designer & Researcher',
   },
   description:
-    'Research-led thinking. Detail-driven design. De’Andre Perry connects user needs, complex workflows, and thoughtful interfaces.',
+    'De’Andre Perry is a UX Designer & Researcher working across research planning, interaction design, accessibility, and visual systems.',
   alternates: { canonical: '/' },
   icons: { icon: '/favicon.png', apple: '/brandmark.png' },
   robots: { index: true, follow: true },
   openGraph: {
-    title: 'De’Andre Perry — UX Designer',
+    title: 'De’Andre Perry — UX Designer & Researcher',
     description: 'Understand the people. Design with intention.',
     type: 'website',
     url: '/',
@@ -33,14 +33,15 @@ export const metadata: Metadata = {
         url: '/social-preview.png',
         width: 1200,
         height: 630,
-        alt: 'De’Andre Perry — UX Designer',
+        alt: 'De’Andre Perry — UX Designer & Researcher',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'De’Andre Perry — UX Designer',
-    description: 'Research-led thinking. Detail-driven design.',
+    title: 'De’Andre Perry — UX Designer & Researcher',
+    description:
+      'Research planning, thoughtful design, and accessible experiences.',
     images: ['/social-preview.png'],
   },
 };

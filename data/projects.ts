@@ -200,7 +200,7 @@ export const projects: CaseStudy[] = [
     description:
       'A design-system learning workspace. Principles, tokens, and component comparisons help designers understand how interface choices fit together.',
     category: 'Visual Design / Design Systems',
-    role: 'UX Designer',
+    role: 'UX Designer & Researcher',
     timeline: 'Dates to confirm',
     team: 'Designers, developers, and design-system reviewers',
     platform: 'Web',
@@ -326,7 +326,7 @@ export const projects: CaseStudy[] = [
     description:
       'A research practice workspace for hardware and software experiences. The design connects study planning, human factors, and evidence synthesis through examples such as a headset and its companion app.',
     category: 'User Research / Hardware & Software',
-    role: 'UX Designer',
+    role: 'UX Designer & Researcher',
     timeline: 'Dates to confirm',
     team: 'Authorship scope to confirm',
     platform: 'Web',
@@ -419,7 +419,7 @@ export const projects: CaseStudy[] = [
     description:
       'An image-to-color workflow that makes extracted palettes editable, reusable, and easier to evaluate.',
     category: 'Visual Design / Color Interaction',
-    role: 'UX Designer',
+    role: 'UX Designer & Researcher',
     timeline: 'Dates to confirm',
     team: 'Authorship scope to confirm',
     platform: 'Web',
@@ -512,7 +512,7 @@ export const projects: CaseStudy[] = [
     description:
       'An interactive accessibility learning environment that makes the consequences of interface decisions tangible.',
     category: 'Accessibility / Inclusive Interaction',
-    role: 'UX Designer',
+    role: 'UX Designer & Researcher',
     timeline: 'Dates to confirm',
     team: 'Authorship scope to confirm',
     platform: 'Web',

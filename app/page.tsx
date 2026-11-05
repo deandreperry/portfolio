@@ -10,15 +10,15 @@ export default function Home() {
         <div className="hero-copy">
           <p className="eyebrow">
             <span className="blue-dot" />
-            DE’ANDRE PERRY · UX DESIGNER
+            DE’ANDRE PERRY · UX DESIGNER & RESEARCHER
           </p>
           <h1>
             Understand the people.
             <span>Design with intention.</span>
           </h1>
           <p className="hero-deck">
-            I create accessible digital experiences grounded in research,
-            purposeful visual systems, and high-fidelity prototyping.
+            I connect research questions and evidence with accessible
+            interfaces, purposeful visual systems, and high-fidelity prototypes.
           </p>
           <div className="hero-actions">
             <a href="#selected-work" className="button button-primary">
@@ -115,8 +115,8 @@ export default function Home() {
             Careful with the how.
           </h2>
           <p>
-            I’m De’Andre, a UX Designer with an interest in the space between
-            understanding a problem and making something useful.
+            I’m De’Andre, a UX Designer & Researcher with an interest in the
+            space between understanding a problem and making something useful.
           </p>
           <a href="/about" className="text-link">
             My approach & background{' '}

@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: 'De’Andre Perry',
-  role: 'UX Designer',
+  role: 'UX Designer & Researcher',
   email: 'design@deandreperry.com',
   github: 'https://github.com/deandreperry',
   linkedin: 'https://www.linkedin.com/in/iamdeandreperry',

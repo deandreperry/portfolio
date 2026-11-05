@@ -5,7 +5,7 @@ import { siteConfig } from '@/data/site';
 export const metadata: Metadata = {
   title: 'Resume',
   description:
-    'Resume and professional background for De’Andre Perry, UX Designer.',
+    'Resume and professional background for De’Andre Perry, UX Designer & Researcher.',
   alternates: { canonical: '/resume' },
 };
 export default function ResumePage() {
@@ -51,7 +51,10 @@ export default function ResumePage() {
         </section>
       )}
       <a href="/about" className="text-link">
-        Explore my approach <span aria-hidden="true"><ArrowIcon /></span>
+        Explore my approach{' '}
+        <span aria-hidden="true">
+          <ArrowIcon />
+        </span>
       </a>
     </main>
   );
