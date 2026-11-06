@@ -1,3 +1,4 @@
+import type { CompletedParticipantStudy } from './research-studies';
 export type ProjectAsset = {
   src: string;
   alt: string;
@@ -64,6 +65,7 @@ export type CaseStudy = {
   services: string[];
   accent: string;
   status: 'placeholder' | 'ready';
+  participantStudy?: CompletedParticipantStudy;
   story?: ProjectStory;
   narrative?: Narrative;
   focus: string;
@@ -298,7 +300,7 @@ export const projects: CaseStudy[] = [
   {
     visible: false,
     slug: 'fundraiser-studio',
-    index: '07',
+    index: '10',
     title: 'Fundraiser Studio',
     subtitle: 'Fundraiser Studio — UX Strategy & Organizer Experience',
     description:
@@ -409,6 +411,27 @@ export const projects: CaseStudy[] = [
         'Capture the current learning homepage and a finding with supporting observations and counterexamples.',
       source: 'uxr-forge',
     },
+  },
+  {
+    visible: true,
+    slug: 'downtownsf-accessibility-audit',
+    index: '07',
+    title: 'DowntownSF Accessibility Audit',
+    subtitle: 'DowntownSF Partnership — Website Accessibility Audit',
+    description:
+      'An expert review of a public website using automated checks and VoiceOver on macOS, followed by recommendations for the partnership.',
+    category: 'Accessibility / Expert Evaluation',
+    role: 'UX & Visual Designer',
+    timeline: '',
+    team: 'DowntownSF Partnership stakeholders',
+    platform: 'Web',
+    services: ['Accessibility Evaluation', 'Stakeholder Collaboration'],
+    accent: '#26564a',
+    status: 'ready',
+    focus: 'Manual accessibility evaluation and stakeholder recommendations.',
+    researchPrompts: [],
+    designPrompts: [],
+    reflectionPrompts: [],
   },
   {
     visible: false,

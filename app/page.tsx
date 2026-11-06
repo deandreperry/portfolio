@@ -10,7 +10,7 @@ export default function Home() {
         <div className="hero-copy">
           <p className="eyebrow">
             <span className="blue-dot" />
-            DE’ANDRE PERRY · UX DESIGNER & RESEARCHER
+            DE’ANDRE PERRY · UX DESIGNER
           </p>
           <h1>
             Understand the people.
@@ -87,8 +87,8 @@ export default function Home() {
           </div>
           <div>
             <p className="content-note">
-              Six case studies. From cognitive accessibility to research, visual
-              systems, and inclusive interaction.
+              Explore product decisions, accessibility evaluations, and client
+              work.
             </p>
           </div>
         </div>
@@ -96,6 +96,39 @@ export default function Home() {
           {visibleProjects.map((p, index) => (
             <ProjectCard key={p.slug} project={p} featured={index === 0} />
           ))}
+        </div>
+      </section>
+      <section
+        className="section shell research-highlights"
+        aria-labelledby="research-title"
+      >
+        <h2 id="research-title">Research &amp; Evaluation</h2>
+        <div>
+          <article>
+            <h3>Planning a user study</h3>
+            <p>
+              UXR Forge uses a headset and its companion app to explore method
+              selection, neutral moderator prompts, behavioral observation, and
+              synthesis. The exercises use fictional practice data.
+            </p>
+            <a className="text-link" href="/work/uxr-forge">
+              Explore UXR Forge <ArrowIcon />
+            </a>
+          </article>
+          <article>
+            <h3>Evaluating accessibility</h3>
+            <p>
+              For DowntownSF Partnership, I combined automated checks with a
+              manual VoiceOver review and discussed remediation priorities with
+              stakeholders.
+            </p>
+            <a
+              className="text-link"
+              href="/work/downtownsf-accessibility-audit"
+            >
+              Read the accessibility audit <ArrowIcon />
+            </a>
+          </article>
         </div>
       </section>
       <section
@@ -115,8 +148,8 @@ export default function Home() {
             Careful with the how.
           </h2>
           <p>
-            I’m De’Andre, a UX Designer & Researcher with an interest in the
-            space between understanding a problem and making something useful.
+            I’m De’Andre, a UX Designer. My work connects research planning,
+            accessible interaction, and visual design.
           </p>
           <a href="/about" className="text-link">
             My approach & background{' '}

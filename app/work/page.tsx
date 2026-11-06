@@ -1,10 +1,11 @@
+import { WorkFilter } from '@/components/work-filter';
 import type { Metadata } from 'next';
 import { ProjectCard } from '@/components/project-card';
 import { visibleProjects } from '@/data/projects';
 export const metadata: Metadata = {
   title: 'Work',
   description:
-    'NeuroMode, Polish Patrol, Social Butterflies Foundation, Gather, UXD Systems, and Fundraiser Studio: product design, client collaboration, accessibility, and research.',
+    'Explore UX design projects, client work, and accessibility evaluations by De’Andre Perry.',
   alternates: { canonical: '/work' },
 };
 export default function WorkPage() {
@@ -29,11 +30,18 @@ export default function WorkPage() {
         </div>
       </header>
       <section className="work-index section shell" aria-label="Case studies">
-        <div className="work-index-grid">
-          {visibleProjects.map((p, index) => (
-            <ProjectCard key={p.slug} project={p} featured={index === 0} />
-          ))}
-        </div>
+        <WorkFilter
+          items={visibleProjects.map((project) => ({
+            slug: project.slug,
+            card: (
+              <ProjectCard
+                key={project.slug}
+                project={project}
+                featured={project.slug === 'neuromode'}
+              />
+            ),
+          }))}
+        />
       </section>
     </main>
   );

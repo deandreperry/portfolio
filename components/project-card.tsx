@@ -46,15 +46,17 @@ export function ProjectCard({
             </span>
             <span>
               <b>STATUS</b>
-              {(project.slug === 'sbf'
-                ? 'Responsive website · user testing planned'
-                : project.slug === 'polish-patrol'
-                  ? 'Client website · delivered redesign'
-                  : project.slug === 'neuromode'
-                    ? 'Working iOS app · user testing planned'
-                    : project.slug === 'gather'
-                      ? 'Functional iOS concept · sample data'
-                      : project.story?.outcome) ||
+              {(project.slug === 'downtownsf-accessibility-audit'
+                ? 'Completed expert evaluation'
+                : project.slug === 'sbf'
+                  ? 'Responsive website · user testing planned'
+                  : project.slug === 'polish-patrol'
+                    ? 'Client website · delivered redesign'
+                    : project.slug === 'neuromode'
+                      ? 'Working iOS app · user testing planned'
+                      : project.slug === 'gather'
+                        ? 'Functional iOS concept · sample data'
+                        : project.story?.outcome) ||
                 'Working prototype · user testing planned'}
             </span>
           </div>

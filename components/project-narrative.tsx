@@ -319,7 +319,7 @@ export function ProjectNarrative({
               <div className="narrative-note">
                 <h3>Observe first. Ask without leading.</h3>
                 <p>
-                  The proposed sessions would test whether learners can explain
+                  As facilitator, I would ask learners to talk through a method choice and follow a finding back to the original observation. The proposed sessions would test whether learners can explain
                   their decisions using the workspace. Completing every field
                   would not, on its own, show that the reasoning is sound.
                 </p>
