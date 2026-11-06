@@ -16,31 +16,35 @@ export type CompletedParticipantStudy = {
 
 export const downtownAudit = [
   [
-    'The challenge',
-    'DowntownSF Partnership needed to understand where its website might create barriers for visitors using assistive technology. The team needed recommendations that both designers and developers could act on.',
+    'The question',
+    'Where could the website make it difficult for someone using assistive technology to navigate, understand content, or use a control? DowntownSF Partnership needed to decide which barriers to address while working toward its accessibility compliance objectives.',
   ],
   [
     'My role',
-    'As the UX and visual designer on the audit, I evaluated the site, documented findings, and presented recommendations. DowntownSF stakeholders joined the discussion about priorities.',
+    'As UX Designer & Researcher, I evaluated the website, documented the issues, and prioritized recommendations. I presented the findings to the nonprofit’s stakeholders and discussed what its designers and web developers could do next.',
   ],
   [
-    'Evaluation methods',
-    'I used automated accessibility scans to flag potential issues, then navigated the site with VoiceOver on macOS to examine how the screen reader presented content and interactive elements.',
+    'How I evaluated the site',
+    'I used WAVE scans to flag potential issues for inspection. I also navigated by keyboard and listened to Apple VoiceOver on macOS to examine how the website exposed content and controls. I reviewed accessibility against WCAG 2.1 and 2.2 and used usability heuristics to assess interactions that could still be difficult to understand or complete.',
   ],
   [
-    'Evidence and observations',
-    'The scans pointed to places that warranted a closer look. During manual review, I could listen to what VoiceOver announced and consider what someone would need to know to navigate or use a control. The evidence came from my evaluation of the interface.',
+    'What the evaluation established',
+    'The manual and technical reviews identified accessibility barriers in the website. I documented the issues and considered their relevance to people who rely on assistive technology. A WAVE flag was a starting point for inspection. The behavior I could verify in the interface was the basis for an accessibility finding.',
   ],
   [
-    'From findings to decisions',
-    'For stakeholders, I explained what each issue could mean for someone using the site. For designers and developers, I translated the same findings into steps they could take to address the barrier. We discussed which issues to prioritize.',
+    'What needed participant research',
+    'The heuristic review also identified potential usability problems. A reviewer can describe what a control does and what VoiceOver announces. Whether a visitor understands that feedback, hesitates, or needs help is a separate question for a participant session.',
   ],
   [
-    'Outcomes and limits',
-    'The partnership received a structured evaluation, documented findings, presentations, and guidance for remediation. The engagement documented expert observations. The effect of any subsequent fixes on visitors has yet to be established.',
+    'How findings shaped recommendations',
+    'I prioritized the findings and presented WCAG-aligned recommendations to stakeholders. For each discussion, the practical question was what a designer or developer could change and how that change would address the barrier. This gave the partnership a way to consider visitor needs alongside its compliance objectives.',
+  ],
+  [
+    'What the partnership received',
+    'The engagement delivered a documented evaluation, prioritized implementation guidance, and a stakeholder presentation. The donated professional services were valued at $4,212. The impact of remediation on visitors remains open for follow-up evaluation.',
   ],
   [
     'Reflection and next steps',
-    'Listening to the site gave context to the scan results and helped me explain why a barrier mattered. After remediation, I would repeat the affected tasks with VoiceOver, then invite people who use screen readers to try those tasks and describe their experience.',
+    'Listening to the site with VoiceOver helped me explain why a technical issue could matter during an interaction. After changes are implemented, I would repeat the keyboard and VoiceOver checks, then ask people who use assistive technology to try the affected tasks. Their observations would help distinguish resolved barriers from questions that need further design work.',
   ],
 ] as const;

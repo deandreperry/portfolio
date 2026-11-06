@@ -118,15 +118,16 @@ export default function Home() {
           <article>
             <h3>Evaluating accessibility</h3>
             <p>
-              For DowntownSF Partnership, I combined automated checks with a
-              manual VoiceOver review and discussed remediation priorities with
+              For DowntownSF Partnership, I combined VoiceOver and keyboard
+              testing with WAVE scans and a usability heuristic review. I
+              presented findings and remediation priorities to the nonprofit’s
               stakeholders.
             </p>
             <a
               className="text-link"
               href="/work/downtownsf-accessibility-audit"
             >
-              Read the accessibility audit <ArrowIcon />
+              Read the DowntownSF evaluation <ArrowIcon />
             </a>
           </article>
         </div>

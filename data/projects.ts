@@ -416,19 +416,22 @@ export const projects: CaseStudy[] = [
     visible: true,
     slug: 'downtownsf-accessibility-audit',
     index: '07',
-    title: 'DowntownSF Accessibility Audit',
-    subtitle: 'DowntownSF Partnership — Website Accessibility Audit',
+    title:
+      'Website Accessibility & Usability Evaluation — DowntownSF Partnership',
+    subtitle:
+      'Website Accessibility & Usability Evaluation — DowntownSF Partnership',
     description:
-      'An expert review of a public website using automated checks and VoiceOver on macOS, followed by recommendations for the partnership.',
-    category: 'Accessibility / Expert Evaluation',
-    role: 'UX & Visual Designer',
+      'I evaluated the partnership’s website using VoiceOver, keyboard navigation, WAVE scans, and usability heuristics. The nonprofit received a prioritized set of recommendations for its designers and developers.',
+    category: 'Accessibility & Usability / Expert Evaluation',
+    role: 'UX Designer & Researcher',
     timeline: '',
     team: 'DowntownSF Partnership stakeholders',
     platform: 'Web',
     services: ['Accessibility Evaluation', 'Stakeholder Collaboration'],
     accent: '#26564a',
     status: 'ready',
-    focus: 'Manual accessibility evaluation and stakeholder recommendations.',
+    focus:
+      'An expert evaluation of website accessibility and usability, including WCAG review and prioritized recommendations for nonprofit stakeholders.',
     researchPrompts: [],
     designPrompts: [],
     reflectionPrompts: [],

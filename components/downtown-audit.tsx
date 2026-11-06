@@ -5,7 +5,7 @@ export function AuditCover() {
   return (
     <div className="audit-cover">
       <span>DowntownSF Partnership</span>
-      <strong>Website accessibility audit</strong>
+      <strong>Accessibility & usability evaluation</strong>
       <span>
         VoiceOver on macOS <b aria-hidden="true">/</b> Manual evaluation
       </span>
@@ -19,10 +19,13 @@ export function DowntownAudit({ nextProject }: { nextProject: CaseStudy }) {
       <header className="case-hero shell">
         <a href="/work">← All work</a>
         <p className="eyebrow">Completed expert evaluation</p>
-        <h1>DowntownSF Accessibility Audit</h1>
+        <h1>
+          Website Accessibility & Usability Evaluation — DowntownSF Partnership
+        </h1>
         <p className="narrative-deck">
-          Using VoiceOver and automated checks to turn website accessibility
-          concerns into recommendations for DowntownSF Partnership.
+          I reviewed the nonprofit’s website by keyboard and screen reader,
+          checked it against accessibility standards, and presented the team
+          with priorities for remediation.
         </p>
         <a
           className="text-link"
