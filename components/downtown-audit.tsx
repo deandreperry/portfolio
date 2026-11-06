@@ -1,5 +1,9 @@
 import Image from 'next/image';
-import { downtownAudit } from '@/data/research-studies';
+import {
+  auditFindings,
+  auditRoadmap,
+  downtownAudit,
+} from '@/data/research-studies';
 import type { CaseStudy } from '@/data/projects';
 
 export function AuditCover() {
@@ -59,26 +63,50 @@ export function DowntownAudit({ nextProject }: { nextProject: CaseStudy }) {
             <h2>{heading}</h2>
             <p>{body}</p>
             {heading === 'What the evaluation established' && (
-              <figure className="audit-evidence">
-                <a
-                  href="/projects/downtownsf/wave-review.webp"
-                  aria-label="Open full-size WAVE screenshot of the DowntownSF event listings"
-                >
-                  <Image
-                    src="/projects/downtownsf/wave-review.webp"
-                    alt="WAVE panel beside the DowntownSF event carousel. Contrast markers appear on View Details buttons."
-                    width="2048"
-                    height="1163"
-                    loading="lazy"
-                  />
-                </a>
-                <figcaption>
-                  <strong>Reading the event-listing scan</strong> WAVE reported
-                  17 contrast errors and 8 alerts in this capture. The markers
-                  on the “View Details” buttons show where to inspect the text
-                  and background together. These counts describe this scan only.
-                </figcaption>
-              </figure>
+              <>
+                <dl className="study-at-a-glance">
+                  {auditFindings.map(([area, observation, recommendation]) => (
+                    <div key={area}>
+                      <dt>{area}</dt>
+                      <dd>{observation}</dd>
+                      <dd>
+                        <strong>Recommendation</strong> · {recommendation}
+                      </dd>
+                    </div>
+                  ))}
+                </dl>
+                <figure className="audit-evidence">
+                  <a
+                    href="/projects/downtownsf/wave-review.webp"
+                    aria-label="Open full-size WAVE screenshot of the DowntownSF event listings"
+                  >
+                    <Image
+                      src="/projects/downtownsf/wave-review.webp"
+                      alt="WAVE panel beside the DowntownSF event carousel. Contrast markers appear on View Details buttons."
+                      width="2048"
+                      height="1163"
+                      loading="lazy"
+                    />
+                  </a>
+                  <figcaption>
+                    <strong>Reading the event-listing scan</strong> WAVE
+                    reported 17 contrast errors and 8 alerts in this capture.
+                    The markers on the “View Details” buttons show where to
+                    inspect the text and background together. These counts
+                    describe this scan only.
+                  </figcaption>
+                </figure>
+              </>
+            )}
+            {heading === 'How findings shaped recommendations' && (
+              <dl className="study-at-a-glance">
+                {auditRoadmap.map(([phase, action]) => (
+                  <div key={phase}>
+                    <dt>{phase}</dt>
+                    <dd>{action}</dd>
+                  </div>
+                ))}
+              </dl>
             )}
           </section>
         ))}

@@ -29,7 +29,7 @@ export const downtownAudit = [
   ],
   [
     'What the evaluation established',
-    'The manual and technical reviews identified accessibility barriers in the website. I documented the issues and considered their relevance to people who rely on assistive technology. A WAVE flag was a starting point for inspection. The behavior I could verify in the interface was the basis for an accessibility finding.',
+    'The audit documented eight findings against a WCAG 2.2 Level AA target. The highest priorities concerned how people find the menu and search, where focus goes when a panel closes, and what information an image communicates.',
   ],
   [
     'What needed participant research',
@@ -37,7 +37,7 @@ export const downtownAudit = [
   ],
   [
     'How findings shaped recommendations',
-    'I prioritized the findings and presented WCAG-aligned recommendations to stakeholders. For each discussion, the practical question was what a designer or developer could change and how that change would address the barrier. This gave the partnership a way to consider visitor needs alongside its compliance objectives.',
+    'I presented a three-month remediation roadmap to stakeholders. It put navigation and focus first, followed by visual and content fixes, then testing and staff training. The timing below reflects the proposed sequence.',
   ],
   [
     'What the partnership received',
@@ -46,5 +46,43 @@ export const downtownAudit = [
   [
     'Reflection and next steps',
     'Listening to the site with VoiceOver helped me explain why a technical issue could matter during an interaction. After changes are implemented, I would repeat the keyboard and VoiceOver checks, then ask people who use assistive technology to try the affected tasks. Their observations would help distinguish resolved barriers from questions that need further design work.',
+  ],
+] as const;
+
+export const auditFindings = [
+  [
+    'Navigation and search',
+    'The primary menu and search form lacked landmarks. The search input also lacked an explicit label.',
+    'Identify both regions and label the search field so someone navigating by screen reader can find search and hear what to enter.',
+  ],
+  [
+    'Focus in collapsed panels',
+    'Closing a panel could leave its hidden content reachable by keyboard or screen reader.',
+    'Hide closed panels from both the tab order and screen-reader navigation. Recheck the path as the menu opens and closes.',
+  ],
+  [
+    'Contrast and image descriptions',
+    'The teal accent used for text on white had insufficient contrast. Some informative images lacked alternative text.',
+    'Darken the text color, verify the contrast on white, and describe the information each image contributes.',
+  ],
+  [
+    'Headings and document links',
+    'Some headings jumped from level one to level three. PDF links gave little indication that they opened documents.',
+    'Restore the heading hierarchy and identify PDF destinations before someone opens them.',
+  ],
+] as const;
+
+export const auditRoadmap = [
+  [
+    'Month 1 · Navigation and structure',
+    'Repair landmarks, contain focus in closed menus, label form inputs, and correct heading levels on the homepage and Visit pages.',
+  ],
+  [
+    'Month 2 · Visual design and content',
+    'Adjust teal text contrast, review image descriptions, clarify ambiguous links, and identify document and email destinations.',
+  ],
+  [
+    'Month 3 · Validation and maintenance',
+    'Retest with VoiceOver on macOS and NVDA on Windows, train content editors on accessible PDFs, and prepare an accessibility statement. The roadmap also recommends quarterly scans as content changes.',
   ],
 ] as const;
