@@ -13,7 +13,7 @@ export default function Home() {
             {siteConfig.name.toUpperCase()} · {siteConfig.role.toUpperCase()}
           </p>
           <h1>
-            Understand the people.
+            Understand people.
             <span>Design with intention.</span>
           </h1>
           <p className="hero-deck">

@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
   openGraph: {
     title: 'De’Andre Perry — UX Designer & Researcher',
-    description: 'Understand the people. Design with intention.',
+    description: 'Understand people. Design with intention.',
     type: 'website',
     url: '/',
     images: [
