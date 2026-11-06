@@ -4603,9 +4603,19 @@ img {
 .work-filters button[aria-pressed=true] { background:#192a40; border-color:#192a40; color:white; }
 .work-filters button:focus-visible { outline:3px solid #146ff8; outline-offset:3px; }
 .work-index-grid { margin-top:1.5rem; }
-.audit-cover { display:grid; align-content:center; gap:1.5rem; width:100%; min-height:clamp(230px,34vw,470px); padding:clamp(1.5rem,5vw,5rem); background:#eaf1ed; color:#183b32; }
-.audit-cover strong { max-width:14ch; font-size:clamp(2rem,5vw,4.8rem); line-height:1.05; letter-spacing:-.045em; }
-.audit-cover b { padding-inline:.4em; }
+
+.audit-cover { display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.4fr);align-items:center;gap:clamp(1rem,4vw,4rem);padding:clamp(1.5rem,4.5vw,5rem);width:100%;background:#28233f;color:white;overflow:hidden;text-align:left; }
+.audit-cover-type {display:grid;gap:1.25rem;align-content:center;}
+.audit-cover-type span {color:#ebe8ff;font-size:1rem;line-height:1.45;}
+.audit-cover-type span:first-child {border-top:2px solid #91d4ae;padding-top:.85rem;}
+.audit-cover-type strong {font-size:clamp(2rem,4.8vw,4.75rem);line-height:1;letter-spacing:-.055em;color:white;}
+.audit-cover-media img,.audit-evidence img {display:block;width:100%;height:auto;}
+.audit-cover-media {background:#655f93;border:1px solid #887eaa;box-shadow:10px 10px 0 #554c70;}
+.audit-hero-figure,.audit-evidence {margin:2rem 0 0;}
+.audit-evidence a {display:block;border:1px solid #c7cfd7;}
+.audit-hero-figure figcaption,.audit-evidence figcaption {margin-top:.85rem;color:#455362;font-size:1rem;line-height:1.6;}
+.audit-evidence figcaption strong {display:block;color:#192537;}
+@media(max-width:700px){.audit-cover{grid-template-columns:1fr;gap:1.4rem}.audit-cover-type{gap:.65rem}.audit-cover-type strong br{display:none}.audit-cover-media{box-shadow:5px 5px 0 #554c70;}}
 .audit-story { max-width:76ch; }
 .research-highlights > div { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,18rem),1fr)); gap:2rem; margin-top:2rem; }
 .research-highlights article { border-top:1px solid #c7cfd7; padding-top:1rem; }

@@ -1,14 +1,26 @@
+import Image from 'next/image';
 import { downtownAudit } from '@/data/research-studies';
 import type { CaseStudy } from '@/data/projects';
 
 export function AuditCover() {
   return (
     <div className="audit-cover">
-      <span>DowntownSF Partnership</span>
-      <strong>Accessibility & usability evaluation</strong>
-      <span>
-        VoiceOver on macOS <b aria-hidden="true">/</b> Manual evaluation
-      </span>
+      <div className="audit-cover-type">
+        <span>DowntownSF Partnership</span>
+        <strong>
+          Access to
+          <br /> downtown.
+        </strong>
+        <span>Website accessibility &amp; usability evaluation</span>
+      </div>
+      <div className="audit-cover-media">
+        <Image
+          src="/projects/downtownsf/homepage.webp"
+          alt="DowntownSF homepage with a street performance beneath the San Francisco skyline"
+          width="1440"
+          height="900"
+        />
+      </div>
     </div>
   );
 }
@@ -33,12 +45,41 @@ export function DowntownAudit({ nextProject }: { nextProject: CaseStudy }) {
         >
           View the engagement on Catchafire ↗
         </a>
+        <figure className="audit-hero-figure">
+          <AuditCover />
+          <figcaption>
+            Website under review ·{' '}
+            <a href="https://downtownsf.org/">DowntownSF Partnership</a>
+          </figcaption>
+        </figure>
       </header>
       <article className="shell audit-story">
         {downtownAudit.map(([heading, body]) => (
           <section className="case-section" key={heading}>
             <h2>{heading}</h2>
             <p>{body}</p>
+            {heading === 'What the evaluation established' && (
+              <figure className="audit-evidence">
+                <a
+                  href="/projects/downtownsf/wave-review.webp"
+                  aria-label="Open full-size WAVE screenshot of the DowntownSF event listings"
+                >
+                  <Image
+                    src="/projects/downtownsf/wave-review.webp"
+                    alt="WAVE panel beside the DowntownSF event carousel. Contrast markers appear on View Details buttons."
+                    width="2048"
+                    height="1163"
+                    loading="lazy"
+                  />
+                </a>
+                <figcaption>
+                  <strong>Reading the event-listing scan</strong> WAVE reported
+                  17 contrast errors and 8 alerts in this capture. The markers
+                  on the “View Details” buttons show where to inspect the text
+                  and background together. These counts describe this scan only.
+                </figcaption>
+              </figure>
+            )}
           </section>
         ))}
         <a className="next-project" href={'/work/' + nextProject.slug}>
