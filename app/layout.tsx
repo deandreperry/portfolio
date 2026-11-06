@@ -12,6 +12,7 @@ import './neuromode.css';
 import './fundraiser.css';
 import './polish-patrol.css';
 import './sbf.css';
+import './project-covers.css';
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {

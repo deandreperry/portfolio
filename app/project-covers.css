@@ -1,0 +1,154 @@
+/* Covers respond to their card width, including narrow desktop columns. */
+.project-art {
+  container-type: inline-size;
+  container-name: project-cover;
+  min-width: 0;
+}
+.project-art > div {
+  width: 100%;
+  margin-top: 0;
+}
+.project-art .audit-cover {
+  gap: clamp(20px, 4cqw, 48px);
+  padding: clamp(24px, 5cqw, 60px);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+}
+.audit-cover-type,
+.audit-cover-media {
+  min-width: 0;
+}
+.project-art .audit-cover-type strong {
+  font-size: clamp(2rem, 5.6cqw, 4.75rem);
+  overflow-wrap: normal;
+}
+.project-art .sbf-cover-heading strong {
+  font-size: clamp(2rem, 4.2cqw, 4.5rem);
+}
+.project-art .polish-cover-heading strong {
+  font-size: clamp(1.8rem, 3.7cqw, 3.7rem);
+}
+.project-art .neuro-cover-copy strong {
+  font-size: clamp(2rem, 4.3cqw, 4.5rem);
+}
+.project-art .gather-cover-copy strong {
+  font-size: clamp(2rem, 5.5cqw, 5rem);
+}
+.project-art .cover-heading strong {
+  font-size: clamp(2rem, 4cqw, 3.8rem);
+}
+.project-art .gather-cover,
+.project-art .neuro-cover,
+.project-art .fundraiser-cover {
+  padding: clamp(24px, 5cqw, 64px);
+}
+@container project-cover (max-width: 700px) {
+  .project-art .audit-cover,
+  .project-art .gather-cover,
+  .project-art .neuro-cover,
+  .project-art .fundraiser-cover {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+    min-height: 0;
+  }
+  .project-art .audit-cover-type {
+    gap: 12px;
+  }
+  .project-art .audit-cover-type strong br {
+    display: none;
+  }
+  .project-art .audit-cover-media {
+    box-shadow: 5px 5px 0 #554c70;
+  }
+  .project-art .sbf-cover,
+  .project-art .polish-cover {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+    padding: 24px;
+    aspect-ratio: auto;
+  }
+  .project-art .sbf-cover-heading,
+  .project-art .polish-cover-heading,
+  .project-art .sbf-cover-main,
+  .project-art .sbf-cover-detail,
+  .project-art .polish-cover-desktop,
+  .project-art .polish-cover-mobile,
+  .project-art .polish-cover-caption {
+    position: static;
+    width: 100%;
+    max-width: none;
+  }
+  .project-art .sbf-cover-heading strong br {
+    display: none;
+  }
+  .project-art .sbf-cover-detail {
+    width: 80%;
+    justify-self: end;
+    margin-top: -40px;
+  }
+  .project-art .polish-cover-mobile {
+    width: 28%;
+    justify-self: end;
+    margin-top: -60px;
+  }
+  .project-art .polish-cover-caption {
+    padding-right: 48px;
+  }
+  .project-art .neuro-cover-copy .eyebrow {
+    margin-bottom: 16px;
+  }
+  .project-art .neuro-cover-copy p {
+    margin: 16px 0;
+  }
+  .project-art .neuro-cover-note {
+    margin-top: 0;
+    padding-top: 16px;
+  }
+  .project-art .neuro-cover-screens {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    height: auto;
+    padding-bottom: 20px;
+  }
+  .project-art .neuro-cover-screens img {
+    position: static;
+    width: calc((100% - 16px) / 2);
+    transform: none;
+  }
+  .project-art .neuro-cover-quiet {
+    margin-top: 24px;
+  }
+  .project-art .gather-cover-copy strong {
+    margin: 16px 0;
+  }
+  .project-art .gather-cover-copy p {
+    font-size: 1.75rem;
+  }
+  .project-art .gather-cover-caption {
+    margin-top: 16px;
+  }
+  .project-art .editorial-cover {
+    min-height: 0;
+    padding: 24px;
+  }
+  .project-art .cover-heading {
+    max-width: 100%;
+  }
+  .project-art .cover-interface {
+    width: 100%;
+    margin: 24px 0 0;
+    transform: none;
+  }
+  .project-art .cover-detail {
+    position: relative;
+    inset: auto;
+    width: 80%;
+    margin: -32px 0 0 auto;
+  }
+  .project-art .cover-footnote {
+    position: static;
+    display: block;
+    padding: 24px 48px 0 0;
+  }
+}
