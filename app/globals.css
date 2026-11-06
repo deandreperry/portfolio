@@ -4620,3 +4620,11 @@ img {
 .research-highlights > div { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,18rem),1fr)); gap:2rem; margin-top:2rem; }
 .research-highlights article { border-top:1px solid #c7cfd7; padding-top:1rem; }
 .research-highlights article p { margin-block:1rem; max-width:57ch; }
+
+.audit-focus { margin:1.5rem 0 0; }
+.audit-focus figcaption { margin-bottom:.75rem; color:#455362; }
+.audit-focus ol { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,11rem),1fr)); gap:1rem; padding:0; list-style-position:inside; }
+.audit-focus li { border-top:2px solid #305c52; padding:.75rem 0; }
+.audit-focus li p,.audit-topic dd { margin-top:.5rem; }
+.audit-topic { margin-top:2rem; }
+.audit-story blockquote { margin:1.5rem 0; border-left:3px solid #146ff8; padding:.5rem 1rem; font-size:1.25rem; }
