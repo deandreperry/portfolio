@@ -5,11 +5,11 @@ export function SbfCover() {
       <div className="sbf-cover-heading">
         <span>SOCIAL BUTTERFLIES FOUNDATION</span>
         <strong>
-          Two ways
+          From discovery
           <br />
-          to support.
+          to confidence.
         </strong>
-        <p>Apparel discovery & resource access</p>
+        <p>Storefront design · Research walkthrough</p>
       </div>
       <div className="sbf-cover-main">
         <Image

@@ -5,6 +5,7 @@ const groups = {
   'User Research & Evaluation': [
     'uxr-forge',
     'downtownsf-accessibility-audit',
+    'sbf',
     'neuromode',
   ],
   'Product & Interaction Design': [

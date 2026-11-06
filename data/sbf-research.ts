@@ -1,0 +1,130 @@
+// Constructed data from SBF_Research_Case_Study.pdf and supplied research boards.
+// Replace this collection together when verified participant records are available.
+export const sbfResearch = {
+  label: 'Worked example · Illustrative study data',
+  sample: 10,
+  tasks: [
+    {
+      id: 'T1',
+      name: 'Find apparel',
+      completed: 8,
+      script:
+        'Imagine you want to support SBF by buying something to wear. Find an item that interests you.',
+    },
+    {
+      id: 'T2',
+      name: 'Personalize an item',
+      completed: 6,
+      script:
+        'Choose an eligible item and set it up with a name or number you would want. Tell me when you think your choices are saved.',
+    },
+    {
+      id: 'T3',
+      name: 'Find delivery information',
+      completed: 5,
+      script:
+        'Before purchasing, find the information that would help you decide when the item could arrive.',
+    },
+    {
+      id: 'T4',
+      name: 'Review the order',
+      completed: 7,
+      script:
+        'Continue as far as you can without paying and tell me what you expect to receive and what the total would be.',
+    },
+  ],
+  positivePaths: ['P03', 'P08', 'P10'],
+  spotlight: {
+    id: 'P09',
+    context: 'Mobile · Event supporter',
+    story:
+      'P09 found apparel and delivery information independently. During personalization, they were unsure whether customization had saved. At review, they hesitated when the total changed and did not complete the task independently.',
+  },
+  findings: [
+    {
+      id: 'F01',
+      task: 'T3',
+      priority: 'High',
+      title: 'Delivery information was hard to find',
+      behavior:
+        'P01 searched the footer for a delivery estimate. P05 looked for the fulfillment policy, and P07 could not see delivery reassurance.',
+      decision: 'Can I receive this in time?',
+      response:
+        'Show a concise production and shipping estimate on the product page with a clear details link.',
+      check:
+        'Repeat T3 and ask shoppers to explain when the item could arrive.',
+      handoff:
+        'Content and fulfillment would need to agree on a reliable estimate, exceptions, and who keeps it current.',
+    },
+    {
+      id: 'F02',
+      task: 'T2',
+      priority: 'High',
+      title: 'Shoppers were unsure whether customization saved',
+      behavior:
+        'P02 rechecked the name field. P06 could not tell whether a number had applied, and P09 was unsure whether customization was confirmed.',
+      decision: 'Will the item have the name or number I chose?',
+      response:
+        'Confirm updates immediately and keep the chosen name or number visible in the summary.',
+      check:
+        'Repeat T2 and observe rechecking and whether shoppers can verify their selection.',
+      handoff:
+        'Design and development would need to confirm the store platform supports saved-state feedback, persistence, and accessible announcements.',
+    },
+    {
+      id: 'F04',
+      task: 'T4',
+      priority: 'High',
+      title: 'Some shoppers struggled to reach or trust order review',
+      behavior:
+        'P04 exited before order review. P07 stopped at checkout. P09 hesitated when the total changed.',
+      decision: 'What will I receive, and what will I pay?',
+      response:
+        'Put selections, full costs, and fulfillment details together before payment.',
+      check:
+        'Repeat T4 and ask shoppers to explain what they will receive and what they will pay.',
+      handoff:
+        'Development and fulfillment would need to establish when shipping and other costs become available and what the checkout platform permits.',
+    },
+    {
+      id: 'F03',
+      task: 'T1',
+      priority: 'Medium',
+      title: 'Category labels did not match some shoppers’ expectations',
+      behavior:
+        'P04 missed the apparel category. P07 expected shirts under a different category.',
+      decision: 'Where should I start looking?',
+      response: 'Test clearer apparel labels and navigation placement.',
+      check: 'Run a first-click check and repeat T1.',
+      handoff:
+        'Content and design would need to balance familiar shopper language with the existing collection taxonomy.',
+    },
+  ],
+  journey: [
+    {
+      stage: 'Discover',
+      task: 'T1',
+      text: 'Find apparel that supports SBF. Category expectations can make the first step harder.',
+    },
+    {
+      stage: 'Choose',
+      task: null,
+      text: 'Compare style, size, and connection to the mission. No separate task measure or P09 observation was recorded for this stage.',
+    },
+    {
+      stage: 'Personalize',
+      task: 'T2',
+      text: 'Add a name or number and verify that it saved. Confirmation needs to stay visible.',
+    },
+    {
+      stage: 'Assess trust',
+      task: 'T3',
+      text: 'Check delivery timing and policies before deciding. Information needs to be available at the decision point.',
+    },
+    {
+      stage: 'Review',
+      task: 'T4',
+      text: 'Confirm selections and full costs before payment. A changing total can interrupt confidence.',
+    },
+  ],
+};

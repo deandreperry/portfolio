@@ -149,26 +149,26 @@ export const projects: CaseStudy[] = [
   {
     visible: true,
     slug: 'sbf',
-    index: '03',
+    index: '01',
     title: 'Social Butterflies Foundation',
     subtitle:
-      'Social Butterflies Foundation — Visual Design & Information Architecture',
+      'Social Butterflies Foundation — Apparel Usability Research Walkthrough',
     description:
-      'Two ways to support one mission. Apparel discovery and resource access shaped through visual hierarchy, content organization, and responsive page design.',
-    category: 'Visual Design / Information Architecture',
+      'I designed SBF’s apparel discovery experience. An illustrative research walkthrough explores how supporters find products, confirm customization, and assess an order.',
+    category: 'Usability Research Walkthrough / Storefront Design',
     role: 'UX/UI design & implementation',
     timeline: '2026',
     team: 'Contribution: UX/UI design & implementation',
     platform: 'Responsive web for WordPress',
     services: [
-      'Visual Design',
-      'Information Architecture',
-      'Responsive Design',
+      'Study Planning',
+      'Illustrative Synthesis',
+      'Interaction Design',
     ],
     accent: '#6D01AD',
     status: 'ready',
     focus:
-      'Connecting merchandise discovery and practical assistance through one identity and two distinct page architectures.',
+      'Live storefront design and a clearly labeled worked example of study planning, neutral facilitation, synthesis, and design decisions.',
     researchPrompts: [],
     designPrompts: [],
     reflectionPrompts: [],
@@ -324,7 +324,7 @@ export const projects: CaseStudy[] = [
   {
     visible: true,
     slug: 'uxr-forge',
-    index: '01',
+    index: '02',
     title: 'UXR Forge',
     subtitle: 'UXR Forge — Hardware & Software UX Research',
     description:
@@ -417,7 +417,7 @@ export const projects: CaseStudy[] = [
   {
     visible: true,
     slug: 'downtownsf-accessibility-audit',
-    index: '02',
+    index: '03',
     title:
       'Website Accessibility & Usability Evaluation — DowntownSF Partnership',
     subtitle:
