@@ -18,21 +18,18 @@ const groups = {
 export function WorkFilter({
   items,
 }: {
-  items: { slug: string; card: ReactNode }[];
+  items: { slug: string; secondary: boolean; card: ReactNode }[];
 }) {
   const [active, setActive] = useState<keyof typeof groups>('All work');
-  const cards =
-    active === 'All work'
-      ? items
-      : groups[active].flatMap((slug) =>
-          items.filter((item) => item.slug === slug),
-        );
+  const allowed: readonly string[] = groups[active];
+  const cards = items.filter((item) =>
+    active === 'All work' ? !item.secondary : allowed.includes(item.slug),
+  );
+  const secondary =
+    active === 'All work' ? items.filter((item) => item.secondary) : [];
   return (
     <>
-      <fieldset
-        className="work-filters"
-        aria-label="Filter case studies"
-      >
+      <fieldset className="work-filters" aria-label="Filter case studies">
         {(Object.keys(groups) as (keyof typeof groups)[]).map((label) => (
           <button
             type="button"
@@ -45,9 +42,17 @@ export function WorkFilter({
         ))}
       </fieldset>
       <output className="content-note" aria-live="polite">
-        {cards.length} projects · {active}
+        {cards.length + secondary.length} projects · {active}
       </output>
       <div className="work-index-grid">{cards.map((item) => item.card)}</div>
+      {secondary.length > 0 && (
+        <section className="section" aria-labelledby="additional-projects">
+          <h2 id="additional-projects">Additional client work</h2>
+          <div className="work-index-grid">
+            {secondary.map((item) => item.card)}
+          </div>
+        </section>
+      )}
     </>
   );
 }

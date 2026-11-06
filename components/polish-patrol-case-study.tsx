@@ -78,7 +78,7 @@ export function PolishPatrolCaseStudy({
         <a href="/work" className="text-link">
           ← All work
         </a>
-        <p className="eyebrow">02 / CLIENT WEBSITE REDESIGN · 2026</p>
+        <p className="eyebrow">CLIENT WEBSITE REDESIGN · 2026</p>
         <h1>Polish Patrol</h1>
         <p className="narrative-deck">A clearer path to a cleaner space.</p>
         <p className="section-lede">

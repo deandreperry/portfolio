@@ -94,7 +94,7 @@ export function NeuroModeCaseStudy({
         <a href="/work" className="text-link">
           ← All work
         </a>
-        <p className="eyebrow">01 / FLAGSHIP CASE STUDY · PRODUCT DESIGN</p>
+        <p className="eyebrow">PRODUCT DESIGN · COGNITIVE ACCESSIBILITY</p>
         <h1>NeuroMode</h1>
         <p className="narrative-deck">Support for the next moment.</p>
         <p className="section-lede">

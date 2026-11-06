@@ -1,7 +1,7 @@
 import { WorkFilter } from '@/components/work-filter';
 import type { Metadata } from 'next';
 import { ProjectCard } from '@/components/project-card';
-import { visibleProjects } from '@/data/projects';
+import { featuredProjects, visibleProjects } from '@/data/projects';
 export const metadata: Metadata = {
   title: 'Work',
   description:
@@ -13,7 +13,7 @@ export default function WorkPage() {
     <main id="main-content" tabIndex={-1}>
       <header className="page-hero shell">
         <p className="eyebrow">
-          SELECTED WORK / 01—{String(visibleProjects.length).padStart(2, '0')}
+          SELECTED WORK / 01—{String(featuredProjects.length).padStart(2, '0')}
         </p>
         <h1>
           Every decision
@@ -25,7 +25,7 @@ export default function WorkPage() {
           solves a different problem.
         </p>
         <div className="page-meta">
-          <span>{visibleProjects.length} selected projects</span>
+          <span>{featuredProjects.length} selected projects</span>
           <span>Product concepts & website redesigns</span>
         </div>
       </header>
@@ -33,11 +33,12 @@ export default function WorkPage() {
         <WorkFilter
           items={visibleProjects.map((project) => ({
             slug: project.slug,
+            secondary: Boolean(project.secondary),
             card: (
               <ProjectCard
                 key={project.slug}
                 project={project}
-                featured={project.slug === 'neuromode'}
+                featured={project === featuredProjects[0]}
               />
             ),
           }))}

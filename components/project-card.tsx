@@ -13,7 +13,11 @@ export function ProjectCard({
       className={`project-card ${featured ? 'project-featured' : ''} project-editorial-${project.index}`}
       style={{ '--project-accent': project.accent } as React.CSSProperties}
     >
-      <a href={`/work/${project.slug}`} className="project-card-link">
+      <a
+        href={`/work/${project.slug}`}
+        className="project-card-link"
+        aria-label={`View case study: ${project.title}`}
+      >
         <div className="project-art">
           <ProjectCover project={project} />
           <span className="project-open" aria-hidden="true">

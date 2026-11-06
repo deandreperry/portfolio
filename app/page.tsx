@@ -2,7 +2,7 @@ import { ArrowIcon } from '@/components/arrow-icon';
 import { Toolkit } from '@/components/toolkit';
 import { ProjectCard } from '@/components/project-card';
 import { siteConfig } from '@/data/site';
-import { visibleProjects } from '@/data/projects';
+import { featuredProjects } from '@/data/projects';
 export default function Home() {
   return (
     <main id="main-content" tabIndex={-1}>
@@ -10,7 +10,7 @@ export default function Home() {
         <div className="hero-copy">
           <p className="eyebrow">
             <span className="blue-dot" />
-            DE’ANDRE PERRY · UX DESIGNER
+            {siteConfig.name.toUpperCase()} · {siteConfig.role.toUpperCase()}
           </p>
           <h1>
             Understand the people.
@@ -81,7 +81,7 @@ export default function Home() {
           <div>
             <p className="eyebrow">
               Selected work / 01—
-              {String(visibleProjects.length).padStart(2, '0')}
+              {String(featuredProjects.length).padStart(2, '0')}
             </p>
             <h2 id="selected-title">Selected work.</h2>
           </div>
@@ -93,7 +93,7 @@ export default function Home() {
           </div>
         </div>
         <div className="featured-work">
-          {visibleProjects.map((p, index) => (
+          {featuredProjects.map((p, index) => (
             <ProjectCard key={p.slug} project={p} featured={index === 0} />
           ))}
         </div>

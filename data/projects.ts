@@ -52,6 +52,7 @@ export type ProjectStory = {
 };
 export type CaseStudy = {
   visible: boolean;
+  secondary?: boolean;
   slug: string;
   index: string;
   title: string;
@@ -103,7 +104,7 @@ export const projects: CaseStudy[] = [
   {
     visible: true,
     slug: 'neuromode',
-    index: '01',
+    index: '04',
     title: 'NeuroMode',
     subtitle: 'NeuroMode — Cognitive Accessibility & Product Design Case Study',
     description:
@@ -125,7 +126,8 @@ export const projects: CaseStudy[] = [
   {
     visible: true,
     slug: 'polish-patrol',
-    index: '02',
+    secondary: true,
+    index: '07',
     title: 'Polish Patrol',
     subtitle: 'Polish Patrol — Service & Booking UX Case Study',
     description:
@@ -174,7 +176,7 @@ export const projects: CaseStudy[] = [
   {
     visible: true,
     slug: 'gather',
-    index: '04',
+    index: '05',
     title: 'Gather',
     subtitle: 'Gather — Native iOS Product & Visual Design',
     description:
@@ -196,7 +198,7 @@ export const projects: CaseStudy[] = [
   {
     visible: true,
     slug: 'uxd-systems',
-    index: '05',
+    index: '06',
     title: 'UXD Systems',
     subtitle: 'UXD Systems — Visual Design / Design Systems',
     description:
@@ -322,12 +324,12 @@ export const projects: CaseStudy[] = [
   {
     visible: true,
     slug: 'uxr-forge',
-    index: '06',
+    index: '01',
     title: 'UXR Forge',
     subtitle: 'UXR Forge — Hardware & Software UX Research',
     description:
-      'A research practice workspace for hardware and software experiences. The design connects study planning, human factors, and evidence synthesis through examples such as a headset and its companion app.',
-    category: 'User Research / Hardware & Software',
+      'A platform where UX researchers can plan studies, compare methods, and trace recommendations back to observations. Practice studies explore how people use hardware and software together.',
+    category: 'UX Research · Product Design · Research Tools',
     role: 'UX Designer & Researcher',
     timeline: 'Dates to confirm',
     team: 'Authorship scope to confirm',
@@ -415,7 +417,7 @@ export const projects: CaseStudy[] = [
   {
     visible: true,
     slug: 'downtownsf-accessibility-audit',
-    index: '07',
+    index: '02',
     title:
       'Website Accessibility & Usability Evaluation — DowntownSF Partnership',
     subtitle:
@@ -713,4 +715,9 @@ export const processSteps = [
 ];
 
 /** Listings and next-project navigation share this single visibility rule. */
-export const visibleProjects = projects.filter((project) => project.visible);
+export const visibleProjects = projects
+  .filter((project) => project.visible)
+  .sort((a, b) => Number(a.index) - Number(b.index));
+export const featuredProjects = visibleProjects.filter(
+  (project) => !project.secondary,
+);
