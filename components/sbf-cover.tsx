@@ -9,7 +9,7 @@ export function SbfCover() {
           <br />
           to confidence.
         </strong>
-        <p>Storefront design · Research walkthrough</p>
+        <p>Storefront design · Usability research</p>
       </div>
       <div className="sbf-cover-main">
         <Image

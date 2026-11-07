@@ -53,7 +53,7 @@ export function ProjectCard({
               {(project.slug === 'downtownsf-accessibility-audit'
                 ? 'Completed expert evaluation'
                 : project.slug === 'sbf'
-                  ? 'Responsive website · user testing planned'
+                  ? 'Responsive website · usability study completed'
                   : project.slug === 'polish-patrol'
                     ? 'Client website · delivered redesign'
                     : project.slug === 'neuromode'

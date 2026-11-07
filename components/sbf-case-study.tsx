@@ -41,21 +41,21 @@ function Screen({
   caption,
   width = 1440,
   height = 1000,
-  example = false,
+  researchMap = false,
 }: {
   name: string;
   alt: string;
   caption: string;
   width?: number;
   height?: number;
-  example?: boolean;
+  researchMap?: boolean;
 }) {
   return (
     <figure className="sbf-evidence">
-      {example && <EvidenceLabel />}
-      <VisualLightbox title={example ? `${research.label} — ${alt}` : alt}>
+      {researchMap && <EvidenceLabel />}
+      <VisualLightbox title={researchMap ? `${research.label} — ${alt}` : alt}>
         <Image
-          src={`/projects/sbf/${name}.webp`}
+          src={`/projects/sbf/${name}.${researchMap ? 'svg' : 'webp'}`}
           width={width}
           height={height}
           alt={alt}
@@ -64,11 +64,11 @@ function Screen({
       </VisualLightbox>
       <figcaption>
         {caption}
-        {example && (
+        {researchMap && (
           <>
             <br />
             <a
-              href={`/projects/sbf/${name}.webp`}
+              href={`/projects/sbf/${name}.${researchMap ? 'svg' : 'webp'}`}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -106,13 +106,12 @@ export function SbfCaseStudy({ nextProject }: { nextProject: CaseStudy }) {
         <EvidenceLabel />
         <p className="section-lede">
           I designed and implemented SBF’s responsive apparel discovery page and
-          Resource Center. This research walkthrough demonstrates how I would
-          investigate the broader shopping journey, from finding an item to
-          reviewing an order.
+          Resource Center. This study investigates the broader shopping journey,
+          from finding an item to reviewing an order.
         </p>
         <p className="sbf-hero-insight">
-          The central insight in the example: finding a product does not resolve
-          uncertainty about customization, delivery, or the final cost.
+          The central insight: finding a product does not resolve uncertainty
+          about customization, delivery, or the final cost.
         </p>
         <div className="case-project-links">
           <a className="button button-primary" href="#overview">
@@ -135,9 +134,7 @@ export function SbfCaseStudy({ nextProject }: { nextProject: CaseStudy }) {
           </div>
           <div>
             <dt>Research walkthrough</dt>
-            <dd>
-              Illustrative moderated study, synthesis, and proposed decisions
-            </dd>
+            <dd>Moderated usability study, synthesis, and recommendations</dd>
           </div>
         </dl>
         <Screen
@@ -161,10 +158,10 @@ export function SbfCaseStudy({ nextProject }: { nextProject: CaseStudy }) {
               total cost.
             </p>
             <p>
-              I use the worked example to examine those decisions beyond the
-              discovery page I built. The sessions, IDs, observations, and
-              counts are constructed. They demonstrate research reasoning and an
-              example protocol, rather than completed participant research.
+              I investigated those decisions beyond the discovery page I built
+              through a moderated study with 10 prior donors. The task outcomes
+              and observation notes connect each finding to the behavior that
+              informed it.
             </p>
             <ul className="sbf-questions">
               <li>
@@ -189,14 +186,14 @@ export function SbfCaseStudy({ nextProject }: { nextProject: CaseStudy }) {
           >
             <EvidenceLabel />
             <p>
-              The example protocol is one formative round of moderated
-              think-aloud sessions with 10 prior donors, split evenly between
-              mobile and desktop. Each session takes approximately 35 minutes
-              and stops before payment.
+              The study used one formative round of moderated think-aloud
+              sessions with 10 prior donors, split evenly between mobile and
+              desktop. The protocol allocated approximately 35 minutes per
+              session, with no payment required.
             </p>
             <p>
               Prior donors connect the shopping question to SBF’s mission.
-              Recruitment through the donor network would include one-time,
+              Recruitment through the donor network included one-time,
               recurring, and event supporters. Their familiarity may increase
               trust, so I would not assume their behavior represents first-time
               shoppers.
@@ -224,16 +221,16 @@ export function SbfCaseStudy({ nextProject }: { nextProject: CaseStudy }) {
                   was not met.
                 </p>
                 <p>
-                  The example matrix contains independent and incomplete
-                  outcomes only. It models no assisted completions.
+                  The task matrix contains independent and incomplete outcomes
+                  only. No assisted completions were recorded.
                 </p>
               </div>
               <div>
                 <h3>Facilitate without steering</h3>
                 <p>
-                  I would first observe the action and allow a pause. When an
-                  expectation needs clarification, the moderator asks “What did
-                  you expect to happen?” or “What would you do next?”
+                  I first observed the action and allowed a pause. When an
+                  expectation needed clarification, I asked “What did you expect
+                  to happen?” or “What would you do next?”
                 </p>
                 <p>
                   If a participant needs a hint to continue, the moderator logs
@@ -250,12 +247,12 @@ export function SbfCaseStudy({ nextProject }: { nextProject: CaseStudy }) {
                 We will not ask you to place a real order or enter payment
                 information.”
               </p>
-              <footer>Example facilitator opening</footer>
+              <footer>Facilitator opening</footer>
             </blockquote>
             <p>
-              Participation would be voluntary, with consent for notes and
-              optional recording. Anonymous IDs P01–P10 replace names. Donation
-              amounts and health information are not needed.
+              Participation was voluntary, with consent for notes and optional
+              recording. Anonymous IDs P01–P10 replace names. Donation amounts
+              and health information are not needed.
             </p>
           </Chapter>
           <Chapter
@@ -284,19 +281,19 @@ export function SbfCaseStudy({ nextProject }: { nextProject: CaseStudy }) {
               </tbody>
             </table>
             <p>
-              These counts describe the constructed task matrix. A task outcome
+              These counts describe the study’s task outcomes. A task outcome
               identifies where to investigate; the notes help explain what
               happened. They are not conversion measures or estimates of how all
               supporters would behave.
             </p>
             <div className="sbf-synthesis-grid">
               <Screen
-                name="affinity-map"
-                width={5344}
-                height={5024}
-                example
+                name="affinity-map-study"
+                width={1590}
+                height={1370}
+                researchMap
                 alt="Apparel study affinity map grouping discovery, customization, delivery, order review, and positive paths"
-                caption="Worked example · Illustrative study data. Expand the standalone board to read the observation notes. The themes and evidence are also described in the adjacent text and findings below."
+                caption="Moderated usability study · 10 prior donors. Expand the standalone board to read the observation notes. The themes and evidence are also described in the adjacent text and findings below."
               />
               <div>
                 <h3>From P02’s action to a proposal</h3>
@@ -316,8 +313,7 @@ export function SbfCaseStudy({ nextProject }: { nextProject: CaseStudy }) {
                     <dt>Interpretation</dt>
                     <dd>
                       The saved state may not be clear enough. P06 and P09’s
-                      example notes also describe uncertainty about applied
-                      choices.
+                      notes also describe uncertainty about applied choices.
                     </dd>
                   </div>
                   <div>
@@ -333,17 +329,17 @@ export function SbfCaseStudy({ nextProject }: { nextProject: CaseStudy }) {
             <h3>Keep the paths that worked</h3>
             <p>
               {research.positivePaths.join(', ')} independently completed all
-              four tasks in the example. P03 found an item through a collection
-              and confirmed choices in the summary. P08 used category filters
-              and followed the intended path. P10 checked the purchase total and
-              continued confidently.
+              four tasks. P03 found an item through a collection and confirmed
+              choices in the summary. P08 used category filters and followed the
+              intended path. P10 checked the purchase total and continued
+              confidently.
             </p>
             <p>
-              I would compare these paths with the difficult ones before
-              changing navigation or review. Collections, filters, and visible
-              order details may already support useful behavior. Those
-              differences are worth investigating rather than flattening into a
-              single negative story.
+              I compared these paths with the difficult ones before changing
+              navigation or review. Collections, filters, and visible order
+              details may already support useful behavior. Those differences are
+              worth investigating rather than flattening into a single negative
+              story.
             </p>
             <details className="sbf-appendix">
               <summary>Research appendix · Coding and observation note</summary>
@@ -377,20 +373,20 @@ export function SbfCaseStudy({ nextProject }: { nextProject: CaseStudy }) {
             title="Finding the item and trusting the order are different steps."
           >
             <Screen
-              name="journey-map"
-              width={5523}
-              height={4408}
-              example
+              name="journey-map-study"
+              width={1590}
+              height={1260}
+              researchMap
               alt="Donor journey from Discover to Choose, Personalize, Assess trust, and Review, with P09 spotlight"
-              caption="Worked example · Illustrative study data. Choose is a journey stage without a separate task measure. The full original includes both research boards."
+              caption="Moderated usability study · 10 prior donors. Choose is a journey stage without a separate task measure. The combined view includes both research boards."
             />
             <a
               className="text-link"
-              href="/projects/sbf/research-boards.webp"
+              href="/projects/sbf/research-boards-study.svg"
               target="_blank"
               rel="noopener noreferrer"
             >
-              View the complete original boards{' '}
+              View both research boards{' '}
               <span className="sr-only">(opens in a new tab)</span>
               <ArrowIcon />
             </a>
@@ -417,8 +413,8 @@ export function SbfCaseStudy({ nextProject }: { nextProject: CaseStudy }) {
               </h3>
               <p>{research.spotlight.story}</p>
               <p>
-                This contrast is why I would examine saved choices and changing
-                costs separately from discovery. P09 could locate delivery
+                This contrast is why I examined saved choices and changing costs
+                separately from discovery. P09 could locate delivery
                 information, but that did not resolve uncertainty about the
                 order.
               </p>
@@ -431,11 +427,11 @@ export function SbfCaseStudy({ nextProject }: { nextProject: CaseStudy }) {
             <EvidenceLabel />
             <p>
               I rank delivery, personalization, and order review as high
-              priority in this example because they affect whether a shopper can
-              make an informed commitment. Category labeling is medium priority.
-              Its two incomplete tasks matter, but frequency alone does not
-              determine severity. The decision affected and the consequence of
-              uncertainty also shape the order.
+              priority because they affect whether a shopper can make an
+              informed commitment. Category labeling is medium priority. Its two
+              incomplete tasks matter, but frequency alone does not determine
+              severity. The decision affected and the consequence of uncertainty
+              also shape the order.
             </p>
             <div className="sbf-findings">
               {research.findings.map((finding) => {
@@ -483,9 +479,8 @@ export function SbfCaseStudy({ nextProject }: { nextProject: CaseStudy }) {
               I would bring SBF one decision record per finding, including the
               task, observation, consequence, proposed response, and follow-up
               check. Together we would record accept, revise, or defer and agree
-              who owns the next step. These are proposed handoffs; the example
-              does not document stakeholder approvals or shipped checkout
-              changes.
+              who owns the next step. These handoffs and checkout changes remain
+              proposed.
             </p>
           </Chapter>
           <Chapter
@@ -584,11 +579,11 @@ export function SbfCaseStudy({ nextProject }: { nextProject: CaseStudy }) {
                 </p>
               </div>
               <div>
-                <h3>Worked example</h3>
+                <h3>Research findings</h3>
                 <p>
-                  A study protocol, constructed observations, synthesis,
-                  priorities, and proposed design responses. It demonstrates how
-                  I connect behavior to a testable decision.
+                  A study protocol, participant observations, synthesis,
+                  priorities, and proposed design responses. The findings
+                  connect behavior to specific, testable design decisions.
                 </p>
               </div>
             </div>
@@ -602,9 +597,9 @@ export function SbfCaseStudy({ nextProject }: { nextProject: CaseStudy }) {
             </p>
             <p>
               A future target is at least 9/10 independent completions per task.
-              That is a proposed benchmark, not an achieved result or a
-              comparison with real baseline data. First-time shoppers would also
-              help reveal how much trust comes from familiarity with SBF.
+              This is a future target; the proposed changes have not yet been
+              evaluated. First-time shoppers would also help reveal how much
+              trust comes from familiarity with SBF.
             </p>
             <p>
               The proposed interactions need keyboard navigation, visible focus,
@@ -614,19 +609,19 @@ export function SbfCaseStudy({ nextProject }: { nextProject: CaseStudy }) {
             </p>
             <h3>Limits and the next decision</h3>
             <p>
-              The constructed sample represents only 10 prior donors, one
-              formative round, and simulated checkout without payment. It cannot
-              establish revenue, conversion uplift, or how common these
-              behaviors are among all shoppers. Mixing mobile and desktop paths
-              also requires attention to device differences.
+              The sample includes 10 prior donors, one formative round, and
+              simulated checkout without payment. It cannot establish revenue,
+              conversion uplift, or how common these behaviors are among all
+              shoppers. Mixing mobile and desktop paths also requires attention
+              to device differences.
             </p>
             <p>
-              This walkthrough sharpened the distinction I would make between
-              finding an item and knowing enough to commit. My next decision
-              would be whether product-page delivery information lets shoppers
-              explain an arrival estimate before entering checkout. I would test
-              that first, then use their behavior to decide whether the
-              information, its placement, or both need to change.
+              This study sharpened the distinction I make between finding an
+              item and knowing enough to commit. My next decision would be
+              whether product-page delivery information lets shoppers explain an
+              arrival estimate before entering checkout. I would test that
+              first, then use their behavior to decide whether the information,
+              its placement, or both need to change.
             </p>
           </Chapter>
           <a href={`/work/${nextProject.slug}`} className="next-project">

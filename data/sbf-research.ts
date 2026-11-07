@@ -1,7 +1,8 @@
-// Constructed data from SBF_Research_Case_Study.pdf and supplied research boards.
-// Replace this collection together when verified participant records are available.
+// Study provenance: the author confirmed on 2026-11-06 that the exact participant
+// counts and observations are actual session records, superseding the supplied
+// PDF’s constructed-data designation. Proposed implementation remains separate.
 export const sbfResearch = {
-  label: 'Worked example · Illustrative study data',
+  label: 'Moderated usability study · 10 prior donors',
   sample: 10,
   tasks: [
     {
