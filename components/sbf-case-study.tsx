@@ -487,6 +487,36 @@ export function SbfCaseStudy({ nextProject }: { nextProject: CaseStudy }) {
             id="apparel"
             title="The storefront I designed starts with recognition."
           >
+            <h3>Before · Introducing the original store</h3>
+            <p>
+              The previous experience introduced MySocialButterflies through a
+              short mission statement, a link to the store, and a grid of
+              apparel and accessories. The storefront grouped products under
+              Women’s Apparel, Men’s Apparel, and Accessories, followed by
+              individual product cards with names, price ranges, and tax
+              information.
+            </p>
+            <Screen
+              name="store-before-introduction"
+              width={3024}
+              height={1248}
+              alt="Previous SBF store introduction with mission copy, a MySocialButterflies link, and a grid of shirts and bags"
+              caption="Before · The original introduction connected merchandise to SBF’s mission and directed visitors to MySocialButterflies."
+            />
+            <Screen
+              name="store-before-catalog"
+              width={1596}
+              height={1527}
+              alt="Previous storefront with Women’s Apparel, Men’s Apparel, and Accessories categories above product cards with price ranges"
+              caption="Before · The original catalog used audience-based apparel categories and an accessories category. Product cards displayed price ranges and noted that Virginia tax was excluded."
+            />
+            <h3>After · Lead with the custom collection</h3>
+            <p>
+              I gave the custom apparel landing page a product-led introduction
+              and clothing-type entry points. These views document the changes
+              to apparel discovery. Customization and order-review
+              recommendations are discussed separately above.
+            </p>
             <p>
               The live apparel page pairs a dominant jacket image with “Wear
               Your Strength. Represent the Fight.” I used the product image and
