@@ -16,7 +16,8 @@ const sections = [
   ['stakeholders', 'Stakeholder briefing'],
   ['decisions', 'Recommendations'],
   ['apparel', 'Storefront design'],
-  ['validation', 'Reflection & retest'],
+  ['validation', 'Retest plan'],
+  ['reflection', 'Reflection'],
 ].map(([id, label]) => ({ id, label }));
 const base = '/projects/sbf/';
 function Chapter({
@@ -80,8 +81,26 @@ function Visual({
 }
 function Report({ file, children }: { file: string; children: ReactNode }) {
   return (
-    <a href={base + 'research/' + file + '.pdf'} download>
-      {children} (PDF)
+    <a
+      className="sbf-download"
+      href={base + 'research/' + file + '.pdf'}
+      download
+    >
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.75"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path d="M12 3v12m-5-5 5 5 5-5M4 16v4h16v-4" />
+      </svg>
+      <span>{children} (PDF)</span>
     </a>
   );
 }
@@ -169,9 +188,8 @@ export function SbfCaseStudy({ nextProject }: { nextProject: CaseStudy }) {
             </p>
             <p className="content-note">
               Study plan dated August 7, 2026 and revised November 7, 2026.
-              These dates refer to the plan.{' '}
-              <Report file="study-plan">Download the study plan</Report>.
             </p>
+            <Report file="study-plan">Download the study plan</Report>
           </Chapter>
           <Chapter
             id="methods"
@@ -269,8 +287,8 @@ export function SbfCaseStudy({ nextProject }: { nextProject: CaseStudy }) {
                   </li>
                 ))}
               </ol>
-              <Report file="session-guide">Download the session guide</Report>
             </details>
+            <Report file="session-guide">Download the session guide</Report>
           </Chapter>
           <Chapter
             id="findings"
@@ -331,12 +349,11 @@ export function SbfCaseStudy({ nextProject }: { nextProject: CaseStudy }) {
               in the summary. P08 used category filters and followed the
               intended checkout path. P10 checked the total and continued
               through review. I would preserve those routes when testing
-              changes.{' '}
-              <Report file="data-summary">
-                Download the results and participant matrix
-              </Report>
-              .
+              changes.
             </p>
+            <Report file="data-summary">
+              Download the results and participant matrix
+            </Report>
           </Chapter>
           <Chapter
             id="synthesis"
@@ -361,12 +378,11 @@ export function SbfCaseStudy({ nextProject }: { nextProject: CaseStudy }) {
               The consequence for a shopper was specific: they could enter the
               right details and still be unsure what would be printed. That led
               me to recommend immediate confirmation and a summary that keeps
-              the selected name or number visible.{' '}
-              <Report file="evidence-workbook">
-                Download the evidence workbook and decision-log format
-              </Report>
-              .
+              the selected name or number visible.
             </p>
+            <Report file="evidence-workbook">
+              Download the evidence workbook and decision-log format
+            </Report>
           </Chapter>
           <Chapter
             id="journey"
@@ -549,11 +565,22 @@ export function SbfCaseStudy({ nextProject }: { nextProject: CaseStudy }) {
             <p>
               I would start by testing the product-page estimate. If shoppers
               can find it but still cannot explain when an item might arrive,
-              the next revision should address the wording. A separate
-              first-time supporter study could reveal how unfamiliarity with SBF
-              changes trust or category expectations. Focused accessibility
+              the next revision should address the wording. Focused accessibility
               sessions would examine keyboard focus, form feedback and
               screen-reader announcements separately.
+            </p>
+          </Chapter>
+          <Chapter id="reflection" title="What I would do differently">
+            <p>
+              Looking back, I would include first-time supporters alongside prior
+              donors to understand what people unfamiliar with SBF need before
+              feeling comfortable purchasing. I would also invite feedback on my
+              task wording and interpretation of the findings to catch assumptions
+              I might have missed. After making changes, I would test the
+              experience again, looking for both improvements and new points of
+              friction. For me, research means staying curious, being willing to
+              revise my thinking, and continuing to ask where the experience
+              could work better.
             </p>
           </Chapter>
           <a href={`/work/${nextProject.slug}`} className="next-project">

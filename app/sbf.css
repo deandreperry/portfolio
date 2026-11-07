@@ -284,3 +284,34 @@
 .sbf-study .sbf-results td {
   overflow-wrap: anywhere;
 }
+
+.sbf-study .case-section p + p {
+  margin-block-start: 1.25rem;
+}
+.sbf-study .case-section > p:not(.eyebrow) {
+  max-inline-size: 72ch;
+}
+.sbf-study .case-section :is(p, dl, ol) + h3 {
+  margin-block-start: 2rem;
+}
+.sbf-study .sbf-download {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  width: fit-content;
+  max-width: 100%;
+  min-height: 44px;
+  margin-block-start: 1rem;
+  padding-block: 0.5rem;
+  color: var(--color-brand-hover);
+  font-weight: 600;
+  line-height: 1.5;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+.sbf-download svg {
+  flex-shrink: 0;
+}
+.sbf-download:hover {
+  text-decoration-thickness: 2px;
+}
