@@ -274,3 +274,13 @@
     font-size: clamp(2rem, 8.5vw, 3rem);
   }
 }
+
+.sbf-priorities {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+}
+.sbf-study .sbf-results th,
+.sbf-study .sbf-results td {
+  overflow-wrap: anywhere;
+}

@@ -1,45 +1,37 @@
-// Study provenance: the author confirmed on 2026-11-06 that the exact participant
-// counts and observations are actual session records, superseding the supplied
-// PDF’s constructed-data designation. Proposed implementation remains separate.
 export const sbfResearch = {
-  label: 'Moderated usability study · 10 prior donors',
   sample: 10,
   tasks: [
     {
       id: 'T1',
       name: 'Find apparel',
       completed: 8,
-      script:
-        'Imagine you want to support SBF by buying something to wear. Find an item that interests you.',
+      criterion: 'Reach an eligible customizable product page.',
     },
     {
       id: 'T2',
       name: 'Personalize an item',
       completed: 6,
-      script:
-        'Choose an eligible item and set it up with a name or number you would want. Tell me when you think your choices are saved.',
+      criterion:
+        'Set the required options and verify that the intended personalization saved.',
     },
     {
       id: 'T3',
       name: 'Find delivery information',
       completed: 5,
-      script:
-        'Before purchasing, find the information that would help you decide when the item could arrive.',
+      criterion:
+        'Find the applicable production and shipping information and explain the timing or uncertainty.',
     },
     {
       id: 'T4',
       name: 'Review the order',
       completed: 7,
-      script:
-        'Continue as far as you can without paying and tell me what you expect to receive and what the total would be.',
+      criterion:
+        'Reach the pre-payment review, check the item, options and known costs, and identify any costs still unavailable.',
     },
   ],
-  positivePaths: ['P03', 'P08', 'P10'],
   spotlight: {
-    id: 'P09',
-    context: 'Mobile · Event supporter',
     story:
-      'P09 found apparel and delivery information independently. During personalization, they were unsure whether customization had saved. At review, they hesitated when the total changed and did not complete the task independently.',
+      'P09 found apparel and delivery information independently. They did not complete personalization independently and were unsure whether the choice had saved. At review, they hesitated when the total changed and did not complete the task independently.',
   },
   findings: [
     {
@@ -81,7 +73,7 @@ export const sbfResearch = {
         'P04 exited before order review. P07 stopped at checkout. P09 hesitated when the total changed.',
       decision: 'What will I receive, and what will I pay?',
       response:
-        'Put selections, full costs, and fulfillment details together before payment.',
+        'Show selections, known costs, and fulfillment details together. Explain which costs depend on information available later.',
       check:
         'Repeat T4 and ask shoppers to explain what they will receive and what they will pay.',
       handoff:
@@ -118,7 +110,7 @@ export const sbfResearch = {
       text: 'Add a name or number and verify that it saved. Confirmation needs to stay visible.',
     },
     {
-      stage: 'Assess trust',
+      stage: 'Check delivery',
       task: 'T3',
       text: 'Check delivery timing and policies before deciding. Information needs to be available at the decision point.',
     },
