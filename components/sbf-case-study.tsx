@@ -136,8 +136,8 @@ export function SbfCaseStudy({ nextProject }: { nextProject: CaseStudy }) {
         <p className="sbf-hero-insight">
           I designed this nonprofit’s apparel discovery page and led a study of
           the shopping journey through order review. In moderated think-aloud
-          sessions, eight of ten donors found apparel independently. Six could
-          confirm personalization and five could find delivery information
+          sessions, eight of ten donors found apparel independently. Six
+          completed the personalization task and five found delivery information
           independently.
         </p>
         <dl className="case-metadata">
@@ -321,10 +321,10 @@ export function SbfCaseStudy({ nextProject }: { nextProject: CaseStudy }) {
             </table>
             <p>
               The participant matrix records whether each task was completed
-              independently. The remaining outcomes combine assisted and
-              unfinished attempts. The selected notes explain particular
-              difficulties, so I keep their counts separate from the task
-              totals.
+              independently. A “No” means the participant did not complete that
+              task independently. The records do not specify how many finished
+              with help and how many stopped. The notes below describe selected
+              participants’ experiences.
             </p>
             <dl className="sbf-trace">
               {research.findings.map((f) => (
@@ -352,7 +352,7 @@ export function SbfCaseStudy({ nextProject }: { nextProject: CaseStudy }) {
               changes.
             </p>
             <Report file="data-summary">
-              Download the results and participant matrix
+              Download the study results and completed participant matrix
             </Report>
           </Chapter>
           <Chapter
@@ -380,8 +380,14 @@ export function SbfCaseStudy({ nextProject }: { nextProject: CaseStudy }) {
               me to recommend immediate confirmation and a summary that keeps
               the selected name or number visible.
             </p>
+            <p className="content-note">
+              The worksheet has blank fields for recording sessions and
+              decisions, plus a summary of the four findings on page 3. The{' '}
+              <a href="#findings">task results section</a> includes the
+              completed participant matrix.
+            </p>
             <Report file="evidence-workbook">
-              Download the evidence workbook and decision-log format
+              Download the research worksheet template
             </Report>
           </Chapter>
           <Chapter
@@ -565,22 +571,22 @@ export function SbfCaseStudy({ nextProject }: { nextProject: CaseStudy }) {
             <p>
               I would start by testing the product-page estimate. If shoppers
               can find it but still cannot explain when an item might arrive,
-              the next revision should address the wording. Focused accessibility
-              sessions would examine keyboard focus, form feedback and
-              screen-reader announcements separately.
+              the next revision should address the wording. Focused
+              accessibility sessions would examine keyboard focus, form feedback
+              and screen-reader announcements separately.
             </p>
           </Chapter>
           <Chapter id="reflection" title="What I would do differently">
             <p>
-              Looking back, I would include first-time supporters alongside prior
-              donors to understand what people unfamiliar with SBF need before
-              feeling comfortable purchasing. I would also invite feedback on my
-              task wording and interpretation of the findings to catch assumptions
-              I might have missed. After making changes, I would test the
-              experience again, looking for both improvements and new points of
-              friction. For me, research means staying curious, being willing to
-              revise my thinking, and continuing to ask where the experience
-              could work better.
+              Looking back, I would include first-time supporters alongside
+              prior donors to understand what people unfamiliar with SBF need
+              before feeling comfortable purchasing. I would also invite
+              feedback on my task wording and interpretation of the findings to
+              catch assumptions I might have missed. After making changes, I
+              would test the experience again, looking for both improvements and
+              new points of friction. For me, research means staying curious,
+              being willing to revise my thinking, and continuing to ask where
+              the experience could work better.
             </p>
           </Chapter>
           <a href={`/work/${nextProject.slug}`} className="next-project">
