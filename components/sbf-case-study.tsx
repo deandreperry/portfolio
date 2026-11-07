@@ -16,7 +16,8 @@ const sections = [
   ['stakeholders', 'Stakeholder briefing'],
   ['decisions', 'Recommendations'],
   ['apparel', 'Storefront design'],
-  ['validation', 'Retest plan'],
+  ['outcome', 'Launch outcome'],
+  ['validation', 'Post-launch testing'],
   ['reflection', 'Reflection'],
 ].map(([id, label]) => ({ id, label }));
 const base = '/projects/sbf/';
@@ -44,6 +45,7 @@ function Visual({
   alt,
   caption,
   original,
+  originalLabel,
 }: {
   file: string;
   width?: number;
@@ -51,6 +53,7 @@ function Visual({
   alt: string;
   caption: string;
   original?: string;
+  originalLabel?: string;
 }) {
   return (
     <figure className="sbf-evidence">
@@ -69,8 +72,11 @@ function Visual({
           <>
             {' '}
             <a href={base + original}>
-              Open the full-resolution{' '}
-              {original.includes('affinity') ? 'affinity map' : 'journey map'}
+              {originalLabel ??
+                'Open the full-resolution ' +
+                  (original.includes('affinity')
+                    ? 'affinity map'
+                    : 'journey map')}
             </a>
             .
           </>
@@ -452,7 +458,9 @@ export function SbfCaseStudy({ nextProject }: { nextProject: CaseStudy }) {
               Personalization and review also carried a consequence for the item
               or amount paid. Discovery had the highest independent completion
               count, and the successful collection and filter paths gave us
-              something specific to preserve.
+              something specific to preserve. These are recommendations to
+              evaluate against the live store. Launch does not establish that
+              every individual recommendation has been implemented.
             </p>
             <ol className="sbf-priorities">
               {research.findings.map((f) => (
@@ -464,9 +472,18 @@ export function SbfCaseStudy({ nextProject }: { nextProject: CaseStudy }) {
                   <a href={`#evidence-${f.id}`}>
                     Read the observations for {f.id}
                   </a>
-                  <p>{f.response}</p>
                   <p>
-                    <strong>Retest.</strong> {f.check}
+                    <strong>Recommended response.</strong> {f.response}
+                  </p>
+                  <p>
+                    <strong>Intended shopper benefit.</strong> {f.userBenefit}
+                  </p>
+                  <p>
+                    <strong>Potential benefit for SBF.</strong>{' '}
+                    {f.organizationBenefit}
+                  </p>
+                  <p>
+                    <strong>Post-launch check.</strong> {f.check}
                   </p>
                   <details className="sbf-appendix">
                     <summary>Implementation consideration</summary>
@@ -484,26 +501,28 @@ export function SbfCaseStudy({ nextProject }: { nextProject: CaseStudy }) {
               I designed and implemented SBF’s responsive apparel discovery page
               and Resource Center. The apparel page introduces the collection,
               explains custom-order policies and hands shoppers off to the
-              store. The following views document that design work. The
-              proposals for saved selections, delivery estimates and order
-              review still need evaluation.
+              store. The redesigned apparel experience is live. The following
+              views document my design work. Post-launch testing will assess the
+              shopping journey; implementation of each recommendation for saved
+              selections, delivery estimates and order review is not yet
+              established.
             </p>
             <Visual
               file="apparel.webp"
               alt="SBF’s custom jacket beside the Wear Your Strength apparel introduction and collection link"
-              caption="Existing design · The jacket and mission message introduce apparel as a way to support SBF."
+              caption="Launched apparel page · The jacket and mission message introduce apparel as a way to support SBF."
             />
             <Visual
               file="catalog.webp"
               alt="Existing apparel collection cards organized by clothing type"
-              caption="Existing design · Baseball, football, basketball, hockey, hoodies and jackets give shoppers six entry points. F03 calls for checking where people look first and which labels they expect."
+              caption="Launched apparel page · Baseball, football, basketball, hockey, hoodies and jackets give shoppers six entry points. F03 calls for checking where people look first and which labels they expect."
             />
             <p>
               Product cards describe the item, price and store destination.
               Sizing, customization, shipping and returns appear in expandable
-              policy sections. F01 raises a more specific question for the next
-              design: can a shopper explain an arrival estimate while
-              considering an individual product? <StoreLink />
+              policy sections. F01 raises a more specific question for
+              post-launch testing: can a shopper explain an arrival estimate
+              while considering an individual product? <StoreLink />
             </p>
             <details className="sbf-appendix">
               <summary>Earlier store and Resource Center</summary>
@@ -545,35 +564,98 @@ export function SbfCaseStudy({ nextProject }: { nextProject: CaseStudy }) {
               </a>
             </details>
           </Chapter>
+          <Chapter id="outcome" title="Launch outcome and next steps">
+            <p>
+              The redesigned apparel experience is live, and SBF is receiving
+              orders through the store. My next step is post-launch usability
+              testing to evaluate whether shoppers can find apparel, confirm
+              personalization, locate delivery information, and review their
+              orders more easily. I would compare independent task completion
+              with the initial study and use the findings, alongside order
+              trends and stakeholder feedback, to identify further improvements.
+            </p>
+            <dl className="sbf-trace sbf-launch-status">
+              <div>
+                <dt>Launched</dt>
+                <dd>The redesigned apparel experience.</dd>
+              </div>
+              <div>
+                <dt>Observed business activity</dt>
+                <dd>SBF is receiving orders through the store.</dd>
+              </div>
+              <div>
+                <dt>Next evaluation</dt>
+                <dd>Post-launch usability testing has not happened yet.</dd>
+              </div>
+            </dl>
+            <h3>Supporting SBF’s mission</h3>
+            <p>
+              Beyond the apparel experience, my broader website redesign helped
+              SBF explain its mission and how people could support its work. The
+              project listing estimated the donated website-design work at
+              $11,946 in savings, allowing SBF to direct more resources toward
+              programs and services.
+            </p>
+            <div className="sbf-takeaway sbf-project-value">
+              <p className="sbf-value">$11,946</p>
+              <p>
+                <strong>
+                  Estimated savings for the broader website-design project
+                </strong>
+              </p>
+              <p className="content-note">
+                Source: SBF’s project listing, reproduced below. This is an
+                estimate of donated project value, separate from store revenue
+                and usability results.
+              </p>
+            </div>
+            <Visual
+              file="project-value-listing.png"
+              width={2619}
+              height={1157}
+              alt="Social Butterflies Foundation project listing describing the website redesign and estimated project savings of $11,946."
+              caption="The project listing attributes the estimated savings to the broader website-design engagement."
+              original="project-value-listing.png"
+              originalLabel="Open the full-resolution project listing"
+            />
+          </Chapter>
           <Chapter
             id="validation"
-            title="What would convince me the changes helped?"
+            title="Does the live experience resolve the earlier difficulties?"
           >
             <p>
-              Prior donors already had a reason to trust SBF. Watching P09
-              showed me how little that familiarity tells me about confidence in
-              a customized order. A neutral follow-up gives a shopper room to
-              explain a second look. Logging assistance matters just as much:
-              once I point to a link, I can no longer count finding it as
-              independent.
+              Post-launch usability testing is the next step. The initial study
+              remains the baseline: 8/10 (80%) independently found apparel, 6/10
+              (60%) personalized an item, 5/10 (50%) found delivery information,
+              and 7/10 (70%) reviewed the order.
             </p>
             <p>
-              After revisions, I would repeat the four tasks with 10 new,
-              comparable prior donors, again five mobile and five desktop. The
-              proposed retest target is{' '}
+              I would repeat the same four core tasks and independent-completion
+              criteria with 10 new, comparable prior donors, again five mobile
+              and five desktop. Testing would stop before payment. The proposed
+              post-launch testing target is{' '}
               <strong>
                 at least 9/10 independent completions on each task
               </strong>
-              . I would also record rechecking and backtracking, and ask
-              shoppers to explain the selected details, delivery timing and
-              known total.
+              . This is a future target; no post-launch task results are
+              available yet.
             </p>
             <p>
-              I would start by testing the product-page estimate. If shoppers
-              can find it but still cannot explain when an item might arrive,
-              the next revision should address the wording. Focused
-              accessibility sessions would examine keyboard focus, form feedback
-              and screen-reader announcements separately.
+              I would record rechecking, backtracking and requests for
+              assistance, and ask shoppers to explain whether their
+              personalization saved, when the item could arrive, and what costs
+              are known. Directional assistance would be recorded separately
+              from independent completion. Comparing these observations with the
+              baseline would help identify remaining difficulties and any new
+              friction.
+            </p>
+            <p>
+              I would start by checking the product-page delivery information.
+              If shoppers can find it but still cannot explain when an item
+              might arrive, the next revision should address the wording.
+              Focused accessibility sessions would examine keyboard navigation,
+              visible focus, form feedback and screen-reader announcements
+              separately.
             </p>
           </Chapter>
           <Chapter id="reflection" title="What I would do differently">

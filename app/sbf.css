@@ -315,3 +315,14 @@
 .sbf-download:hover {
   text-decoration-thickness: 2px;
 }
+
+.sbf-launch-status {
+  margin-block: 2rem;
+}
+.sbf-project-value .sbf-value {
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  font-weight: 650;
+  line-height: 1.15;
+  letter-spacing: -0.04em;
+  color: var(--color-text-primary);
+}

@@ -36,6 +36,9 @@ export const sbfResearch = {
   findings: [
     {
       id: 'F01',
+      userBenefit: 'Understand arrival expectations before deciding to buy.',
+      organizationBenefit:
+        'Reduce avoidable delivery questions and purchase hesitation.',
       task: 'T3',
       priority: 'High',
       title: 'Delivery information was hard to find',
@@ -51,6 +54,9 @@ export const sbfResearch = {
     },
     {
       id: 'F02',
+      userBenefit: 'Verify that the intended name or number was saved.',
+      organizationBenefit:
+        'Reduce customization questions and potential order corrections.',
       task: 'T2',
       priority: 'High',
       title: 'Shoppers were unsure whether customization saved',
@@ -66,6 +72,8 @@ export const sbfResearch = {
     },
     {
       id: 'F04',
+      userBenefit: 'Confirm selections and understand costs before payment.',
+      organizationBenefit: 'Reduce uncertainty during the ordering process.',
       task: 'T4',
       priority: 'High',
       title: 'Some shoppers struggled to reach or trust order review',
@@ -81,6 +89,8 @@ export const sbfResearch = {
     },
     {
       id: 'F03',
+      userBenefit: 'Find relevant products with less searching.',
+      organizationBenefit: 'Help interested supporters reach merchandise.',
       task: 'T1',
       priority: 'Medium',
       title: 'Category labels did not match some shoppers’ expectations',
