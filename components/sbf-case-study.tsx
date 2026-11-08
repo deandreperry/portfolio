@@ -496,7 +496,7 @@ export function SbfCaseStudy({ nextProject }: { nextProject: CaseStudy }) {
           </Chapter>
           <Chapter
             id="apparel"
-            title="Where the recommendations meet the storefront"
+            title="From the earlier storefront to the launched experience"
           >
             <p>
               I designed and implemented SBF’s responsive apparel discovery page
@@ -508,6 +508,43 @@ export function SbfCaseStudy({ nextProject }: { nextProject: CaseStudy }) {
               selections, delivery estimates and order review is not yet
               established.
             </p>
+            <h3>The earlier storefront</h3>
+            <p>
+              The earlier store introduced merchandise through a grid of shirts
+              and bags. Its catalog offered Women’s Apparel, Men’s Apparel and
+              Accessories.
+            </p>
+            <Visual
+              file="store-before-introduction.webp"
+              width={3024}
+              height={1248}
+              alt="Original MySocialButterflies store introduction with a mission statement and apparel and bag imagery"
+              caption="Earlier storefront · The introduction directed visitors to the online store."
+            />
+            <Visual
+              file="store-before-catalog.webp"
+              width={1596}
+              height={1527}
+              alt="Earlier catalog with audience-based apparel categories, accessories and product prices"
+              caption="Earlier catalog · Product cards showed price ranges and identified the tax exclusion."
+            />
+            <h3>What the research asks the design to address</h3>
+            <p>
+              P04 and P07’s discovery difficulties made category language a
+              question to test (F03). The delivery finding (F01) showed that
+              having policy information available was only part of the problem:
+              shoppers needed to find and interpret it while deciding on an
+              item. These findings give me specific checks for the redesigned
+              discovery page and its handoff to the store.
+            </p>
+            <p>
+              Personalization confirmation (F02) and order clarity (F04) extend
+              beyond the discovery page. They inform recommendations for saved
+              selections and pre-payment review. The screens below show the
+              launched apparel page; follow-up testing will examine the complete
+              shopping journey.
+            </p>
+            <h3>The launched apparel experience</h3>
             <Visual
               file="apparel.webp"
               alt="SBF’s custom jacket beside the Wear Your Strength apparel introduction and collection link"
@@ -526,26 +563,7 @@ export function SbfCaseStudy({ nextProject }: { nextProject: CaseStudy }) {
               while considering an individual product? <StoreLink />
             </p>
             <details className="sbf-appendix">
-              <summary>Earlier store and Resource Center</summary>
-              <p>
-                The earlier store introduced merchandise through a grid of
-                shirts and bags. Its catalog offered Women’s Apparel, Men’s
-                Apparel and Accessories.
-              </p>
-              <Visual
-                file="store-before-introduction.webp"
-                width={3024}
-                height={1248}
-                alt="Original MySocialButterflies store introduction with a mission statement and apparel and bag imagery"
-                caption="Earlier storefront · The introduction directed visitors to the online store."
-              />
-              <Visual
-                file="store-before-catalog.webp"
-                width={1596}
-                height={1527}
-                alt="Earlier catalog with audience-based apparel categories, accessories and product prices"
-                caption="Earlier catalog · Product cards showed price ranges and identified the tax exclusion."
-              />
+              <summary>Related work · Resource Center</summary>
               <h3 id="resources">A different visitor goal</h3>
               <p>
                 I organized the Resource Center around condition education and
