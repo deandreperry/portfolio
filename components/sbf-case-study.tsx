@@ -17,6 +17,7 @@ const sections = [
   ['decisions', 'Recommendations'],
   ['apparel', 'Storefront design'],
   ['outcome', 'Launch outcome'],
+  ['post-launch-research', 'Post-launch research'],
   ['validation', 'Post-launch testing'],
   ['reflection', 'Reflection'],
 ].map(([id, label]) => ({ id, label }));
@@ -567,8 +568,9 @@ export function SbfCaseStudy({ nextProject }: { nextProject: CaseStudy }) {
           <Chapter id="outcome" title="Launch outcome and next steps">
             <p>
               The redesigned apparel experience is live, and SBF is receiving
-              orders through the store. My next step is post-launch usability
-              testing to evaluate whether shoppers can find apparel, confirm
+              orders through the store. I developed a post-launch survey and
+              plan to collect responses, followed by usability testing to
+              evaluate whether shoppers can find apparel, confirm
               personalization, locate delivery information, and review their
               orders more easily. I would compare independent task completion
               with the initial study and use the findings, alongside order
@@ -585,7 +587,10 @@ export function SbfCaseStudy({ nextProject }: { nextProject: CaseStudy }) {
               </div>
               <div>
                 <dt>Next evaluation</dt>
-                <dd>Post-launch usability testing has not happened yet.</dd>
+                <dd>
+                  Survey developed. Response collection and follow-up usability
+                  testing are planned.
+                </dd>
               </div>
             </dl>
             <h3>Supporting SBF’s mission</h3>
@@ -619,15 +624,116 @@ export function SbfCaseStudy({ nextProject }: { nextProject: CaseStudy }) {
               originalLabel="Open the full-resolution project listing"
             />
           </Chapter>
+          <Chapter id="post-launch-research" title="Post-Launch Research">
+            <p className="sbf-status">
+              Survey developed · Response collection planned
+            </p>
+            <p>
+              With the redesigned store live and orders coming in, I developed a
+              post-launch survey to understand how supporters experience the
+              shopping process outside moderated sessions.
+            </p>
+            <p>
+              The survey revisits the issues identified during the initial
+              study, including product discovery, personalization confirmation,
+              delivery information, and order clarity. It captures feedback from
+              purchasers and visitors who leave without ordering, helping me
+              understand what supports a purchase and what still creates
+              friction.
+            </p>
+            <p>
+              I plan to use the responses to prioritize improvements and shape
+              follow-up usability sessions. Combining this feedback with
+              observed task completion and store analytics will help me assess
+              how well the experience supports shoppers and SBF’s merchandise
+              goals.
+            </p>
+            <h3>What I want to learn</h3>
+            <dl className="sbf-trace">
+              <div>
+                <dt>Product discovery</dt>
+                <dd>
+                  Learn whether shoppers report finding apparel easily and
+                  identify navigation issues to investigate.
+                </dd>
+              </div>
+              <div>
+                <dt>Personalization confidence</dt>
+                <dd>
+                  Learn whether shoppers understand that their choices have been
+                  saved and identify feedback that needs clarification.
+                </dd>
+              </div>
+              <div>
+                <dt>Delivery and cost clarity</dt>
+                <dd>
+                  Learn whether shoppers understand delivery expectations and
+                  the amount they will pay before ordering.
+                </dd>
+              </div>
+              <div>
+                <dt>Reasons for leaving</dt>
+                <dd>
+                  Identify reported barriers, including pricing, availability,
+                  technical problems, and uncertainty.
+                </dd>
+              </div>
+              <div>
+                <dt>Order confidence</dt>
+                <dd>
+                  Learn whether purchasers believe the recorded order matches
+                  their intended selections.
+                </dd>
+              </div>
+            </dl>
+            <div className="sbf-pair">
+              <div>
+                <h3>For shoppers</h3>
+                <p>
+                  This research will help identify changes that make selecting,
+                  personalizing, and reviewing apparel easier.
+                </p>
+              </div>
+              <div>
+                <h3>For SBF</h3>
+                <p>
+                  The responses will help prioritize improvements that could
+                  support merchandise sales and reduce avoidable order
+                  questions. These are intended benefits to evaluate.
+                </p>
+              </div>
+            </div>
+            <div className="sbf-survey-preview">
+              <Visual
+                file="research/post-launch-survey-preview.webp"
+                width={1391}
+                height={1800}
+                alt="Post-launch survey page 4, with questions 4–7 about finding apparel, attempting personalization, confidence that choices saved, and delivery clarity."
+                caption="Questionnaire preview · Page 4 of the prepared survey. Questions include options for shoppers who did not attempt personalization or could not find delivery information."
+              />
+            </div>
+            <a
+              className="sbf-download"
+              href="/projects/sbf/research/post-launch-survey.pdf"
+            >
+              View Post-Launch Survey (PDF) <ArrowIcon />
+            </a>
+            <p className="content-note">
+              Response collection and follow-up usability testing are planned.
+              The survey will capture reported experiences. Observed task
+              completion and store analytics will provide separate evidence;
+              incoming orders alone do not establish improvement.
+            </p>
+          </Chapter>
           <Chapter
             id="validation"
             title="Does the live experience resolve the earlier difficulties?"
           >
             <p>
-              Post-launch usability testing is the next step. The initial study
-              remains the baseline: 8/10 (80%) independently found apparel, 6/10
-              (60%) personalized an item, 5/10 (50%) found delivery information,
-              and 7/10 (70%) reviewed the order.
+              Follow-up usability sessions will build on the survey feedback.
+              The initial study remains the baseline: 8/10 (80%) independently
+              found apparel, 6/10 (60%) personalized an item, 5/10 (50%) found
+              delivery information, and 7/10 (70%) reviewed the order.
             </p>
             <p>
               I would repeat the same four core tasks and independent-completion

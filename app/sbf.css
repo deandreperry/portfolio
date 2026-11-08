@@ -326,3 +326,7 @@
   letter-spacing: -0.04em;
   color: var(--color-text-primary);
 }
+
+.sbf-survey-preview {
+  max-inline-size: 44rem;
+}
