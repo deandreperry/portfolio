@@ -10,9 +10,9 @@ const sections = [
   ['overview', 'Research question'],
   ['methods', 'Methods & participants'],
   ['protocol', 'Facilitation'],
-  ['findings', 'Task results'],
+  ['findings', 'Results & insights'],
   ['synthesis', 'Affinity map'],
-  ['journey', 'Donor journey'],
+  ['journey', 'P09’s journey'],
   ['stakeholders', 'Stakeholder briefing'],
   ['decisions', 'Recommendations'],
   ['apparel', 'Storefront design'],
@@ -136,16 +136,18 @@ export function SbfCaseStudy({ nextProject }: { nextProject: CaseStudy }) {
         </p>
         <h1>Helping SBF supporters buy with confidence</h1>
         <p className="section-lede">
-          P09, an SBF event supporter, found apparel on their phone and located
-          delivery information. They were unsure whether their personalization
-          had saved. When the total changed at review, they hesitated.
+          One prior donor, an SBF event supporter identified as P09, used their
+          phone to find and personalize apparel. Finding an item was
+          straightforward. Knowing what would arrive was harder: P09 couldn’t
+          tell whether their customization had saved. When the total changed
+          during order review, they hesitated.
         </p>
         <p className="sbf-hero-insight">
-          I designed this nonprofit’s apparel discovery page and led a study of
-          the shopping journey through order review. In moderated think-aloud
-          sessions, eight of ten donors found apparel independently. Six
-          completed the personalization task and five found delivery information
-          independently.
+          I designed SBF’s apparel discovery page and led a usability study with
+          ten prior donors. Eight found apparel independently, but only five
+          found delivery information independently. The design priority was to
+          help shoppers check three things before paying: what would be printed,
+          when it could arrive, and what they would pay.
         </p>
         <dl className="case-metadata">
           <div>
@@ -333,6 +335,7 @@ export function SbfCaseStudy({ nextProject }: { nextProject: CaseStudy }) {
               with help and how many stopped. The notes below describe selected
               participants’ experiences.
             </p>
+            <h3>What the observations tell us</h3>
             <dl className="sbf-trace">
               {research.findings.map((f) => (
                 <div key={f.id} id={`evidence-${f.id}`}>
@@ -346,6 +349,9 @@ export function SbfCaseStudy({ nextProject }: { nextProject: CaseStudy }) {
                       {research.sample}
                     </strong>{' '}
                     completed {f.task} independently.
+                    <p>
+                      <strong>Design implication.</strong> {f.insight}
+                    </p>
                   </dd>
                 </div>
               ))}
@@ -402,9 +408,10 @@ export function SbfCaseStudy({ nextProject }: { nextProject: CaseStudy }) {
             title="P09 found delivery details and still hesitated at review."
           >
             <p>
-              Mapping the tasks in order helped me see where uncertainty
-              returned. {research.spotlight.story} Earlier progress alone could
-              not explain that last decision.
+              {research.spotlight.story} That distinction shaped my
+              recommendation: a shopper who can find shipping information still
+              needs to see the saved customization and understand the final
+              price.
             </p>
             <Visual
               file="research/donor-journey.webp"

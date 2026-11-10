@@ -36,6 +36,8 @@ export const sbfResearch = {
   findings: [
     {
       id: 'F01',
+      insight:
+        'Shoppers looked in different places for the same answer. Put the arrival estimate beside the item, where it can inform the decision to order.',
       userBenefit: 'Understand arrival expectations before deciding to buy.',
       organizationBenefit:
         'Reduce avoidable delivery questions and purchase hesitation.',
@@ -54,6 +56,8 @@ export const sbfResearch = {
     },
     {
       id: 'F02',
+      insight:
+        'Entering a detail and knowing it will be printed are separate steps. Keep the saved name or number visible so shoppers can check it without entering it again.',
       userBenefit: 'Verify that the intended name or number was saved.',
       organizationBenefit:
         'Reduce customization questions and potential order corrections.',
@@ -72,6 +76,8 @@ export const sbfResearch = {
     },
     {
       id: 'F04',
+      insight:
+        'Reaching order review and understanding the total are separate problems. Test both the route to review and whether shoppers can explain the price once there.',
       userBenefit: 'Confirm selections and understand costs before payment.',
       organizationBenefit: 'Reduce uncertainty during the ordering process.',
       task: 'T4',
@@ -89,6 +95,8 @@ export const sbfResearch = {
     },
     {
       id: 'F03',
+      insight:
+        'Collections worked for some donors. Test the labels that sent others elsewhere before changing the routes shoppers already used successfully.',
       userBenefit: 'Find relevant products with less searching.',
       organizationBenefit: 'Help interested supporters reach merchandise.',
       task: 'T1',
