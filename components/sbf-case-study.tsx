@@ -4,6 +4,7 @@ import type { CaseStudy } from '@/data/projects';
 import { sbfResearch as research } from '@/data/sbf-research';
 import { ArrowIcon } from './arrow-icon';
 import { CaseStudyTOC, VisualLightbox } from './case-study-tools';
+import { SbfPresentation } from './sbf-presentation';
 import { ProjectMedia } from './project-media';
 
 const sections = [
@@ -328,12 +329,36 @@ export function SbfCaseStudy({ nextProject }: { nextProject: CaseStudy }) {
                 ))}
               </tbody>
             </table>
+            <h3>How I read these results</h3>
             <p>
-              The participant matrix records whether each task was completed
-              independently. A “No” means the participant did not complete that
-              task independently. The records do not specify how many finished
-              with help and how many stopped. The notes below describe selected
-              participants’ experiences.
+              <strong>8/10 for finding apparel was a relative strength.</strong>{' '}
+              Most donors found a customizable item without being pointed to it.
+              But two did not: P04 missed the apparel category, and P07 expected
+              shirts somewhere else. I would keep the collection and filter
+              paths that worked and test clearer labels where people took a
+              wrong turn.
+            </p>
+            <p>
+              <strong>5/10 for delivery was the clearest problem.</strong> Only
+              half the donors could independently find the applicable shipping
+              information and explain what it meant for arrival. That matters
+              before someone commits to a custom order, especially if they need
+              it by a particular date. I recommended putting the estimate on the
+              product page and testing whether shoppers can explain it in their
+              own words.
+            </p>
+            <p>
+              Personalization (6/10) and order review (7/10) also deserved
+              attention: uncertainty at those steps can affect what a supporter
+              thinks will be printed or what they expect to pay.
+            </p>
+            <p className="content-note">
+              These counts describe ten prior donors in the initial study.
+              Independent means completing the task without directional help.
+              For the other attempts, the records do not distinguish between
+              finishing with help and stopping. The counts guide design
+              priorities; they do not measure purchases or predict how often all
+              store visitors will succeed.
             </p>
             <h3>What the observations tell us</h3>
             <dl className="sbf-trace">
@@ -440,13 +465,7 @@ export function SbfCaseStudy({ nextProject }: { nextProject: CaseStudy }) {
               notes explain why a saved name, an arrival estimate or a changed
               total deserved attention.
             </p>
-            <Visual
-              file="research/delivery-slide.webp"
-              width={1440}
-              height={810}
-              alt="Briefing slide linking five donors’ difficulty finding delivery details with observations from P01, P05 and P07 and a product-page estimate recommendation"
-              caption="Stakeholder briefing, slide 7. Five donors did not find delivery information independently. The notes describe three of those experiences."
-            />
+            <SbfPresentation />
             <p>
               For the shopper, delivery timing determines whether an item could
               work as a gift. For SBF, missing information could delay a

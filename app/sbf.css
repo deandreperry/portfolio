@@ -330,3 +330,19 @@
 .sbf-survey-preview {
   max-inline-size: 44rem;
 }
+
+.sbf-deck {
+  margin-block: 2.5rem;
+}
+.sbf-deck .sbf-evidence {
+  margin-block: 1rem;
+}
+.sbf-deck-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+.sbf-deck-controls button:disabled {
+  opacity: 0.55;
+  cursor: default;
+}
