@@ -144,13 +144,19 @@ export function SbfCaseStudy({ nextProject }: { nextProject: CaseStudy }) {
           during order review, they hesitated.
         </p>
         <p className="sbf-hero-insight">
-          I designed SBF’s apparel discovery page and led a usability study with
-          ten prior donors. Eight found apparel independently, but only five
-          found delivery information independently. The design priority was to
-          help shoppers check three things before paying: what would be printed,
-          when it could arrive, and what they would pay.
+          I designed and built SBF’s apparel discovery page, planned and
+          moderated the donor study, and translated the session notes into
+          recommendations for SBF. Eight of ten donors found apparel
+          independently, but only five found delivery information independently.
+          The design priority was to help shoppers check three things before
+          paying: what would be printed, when it could arrive, and what they
+          would pay.
         </p>
         <dl className="case-metadata">
+          <div>
+            <dt>My role</dt>
+            <dd>UX Designer &amp; Researcher</dd>
+          </div>
           <div>
             <dt>Participants</dt>
             <dd>10 prior SBF donors</dd>
