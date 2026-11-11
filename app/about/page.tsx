@@ -22,14 +22,15 @@ export default function AboutPage() {
             Craft brings it into focus.
           </h1>
           <p>
-            I’m De’Andre Perry, a UX Designer & Researcher working across visual
-            design, user research, accessibility, and design systems. Front-end
-            prototyping helps me explore behavior beyond static screens and
-            communicate design decisions with engineering. My project work has
-            included contributions from other designers and developers,
-            alongside my own work on product direction, interaction design, and
-            accessibility.
+            I’m De’Andre Perry, a UX Designer &amp; Researcher. I study how
+            people work through everyday tasks and use what I learn to design
+            clearer, more accessible interfaces. My work spans planning and
+            moderating usability studies, designing interactions, and building
+            prototypes that people can try.
           </p>
+          <a className="text-link" href="/work">
+            View my work <ArrowIcon />
+          </a>
         </div>
         <Image
           src="/headshot.png"
@@ -40,11 +41,12 @@ export default function AboutPage() {
         />
       </header>
       <section className="about-manifesto section shell">
-        <p className="eyebrow">MY DESIGN PHILOSOPHY</p>
-        <blockquote>
-          Understand the people. Question the assumptions. Make the complex feel
-          clear, all the way down to the details.
-        </blockquote>
+        <h2 className="eyebrow">How I run a study</h2>
+        <p className="about-study-note">
+          I give people room to try a task before asking a follow-up question.
+          If I need to point someone toward the next step, I record that help.
+          It changes what I can conclude about how well the design worked.
+        </p>
       </section>
       <section className="section shell">
         <div className="section-intro">

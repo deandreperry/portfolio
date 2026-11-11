@@ -1247,7 +1247,7 @@ img {
   grid-template-columns: 1fr 2fr;
   gap: 40px;
 }
-.about-manifesto blockquote {
+.about-study-note {
   font-size: clamp(1.5rem, 3vw, 2.6rem);
   letter-spacing: -0.035em;
   line-height: 1.5;
