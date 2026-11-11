@@ -161,6 +161,7 @@ export default function AboutPage() {
           </article>
         </section>
         {[
+          { key: 'research', title: 'Research certificates' },
           { key: 'design', title: 'Design certificates' },
           { key: 'related', title: 'Development and advertising certificates' },
         ].map((group) => (
@@ -182,6 +183,15 @@ export default function AboutPage() {
                     <h4>{certificate.title}</h4>
                     {certificate.id && (
                       <p className="caption">Credential ID: {certificate.id}</p>
+                    )}
+                    {certificate.pdf && (
+                      <a
+                        className="text-link"
+                        href={certificate.pdf}
+                        aria-label={`View ${certificate.title} certificate (PDF)`}
+                      >
+                        View certificate (PDF)
+                      </a>
                     )}
                     {certificate.url.startsWith('https://') && (
                       <p className="credential-destination">

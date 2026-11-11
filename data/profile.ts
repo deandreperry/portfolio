@@ -1,5 +1,31 @@
 export const certificates = [
   {
+    title: 'Research Explorer',
+    group: 'research',
+    issuer: 'UserTesting',
+    date: 'Issued November 11, 2026',
+    id: 'i8jpeoxsa7v3',
+    url: 'https://verify.skilljar.com/c/i8jpeoxsa7v3',
+    pdf: '/certificates/research-explorer.pdf',
+  },
+  {
+    title: 'UserTesting Trailblazer',
+    group: 'research',
+    issuer: 'UserTesting',
+    date: 'Valid November 11, 2026 – November 11, 2027',
+    id: '8kkhttowhsxe',
+    url: 'https://verify.skilljar.com/c/8kkhttowhsxe',
+    pdf: '/certificates/usertesting-trailblazer.pdf',
+  },
+  {
+    title: 'Analyzing Qualitative Data with AI',
+    group: 'research',
+    issuer: 'UXR Institute',
+    date: 'Completed November 11, 2026',
+    id: '',
+    url: '/certificates/analyzing-qualitative-data-with-ai.pdf',
+  },
+  {
     title: 'Meta Front-End Developer',
     group: 'related',
     issuer: 'Meta',
