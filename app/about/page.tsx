@@ -133,46 +133,84 @@ export default function AboutPage() {
             <p className="caption">In progress</p>
           </div>
         </div>
-        <div className="certificate-list">
-          <h3>Professional certificates</h3>
-          {certificates.map((certificate) => (
-            <article key={certificate.title} className="certificate-row">
-              <div>
-                <p className="eyebrow">
-                  {certificate.issuer}
-                  {certificate.date ? ` · ${certificate.date}` : ''}
-                </p>
-                <h4>{certificate.title}</h4>
-                {certificate.id && (
-                  <p className="caption">Credential ID: {certificate.id}</p>
-                )}
-                {certificate.url.startsWith('https://') && (
-                  <p className="credential-destination">
-                    {certificate.url.replace('https://', '')}
-                  </p>
-                )}
-              </div>
-              {certificate.url ? (
-                <a
-                  className="text-link credential-cta"
-                  href={certificate.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`Show credential: ${certificate.title} (opens in a new tab)`}
-                >
-                  {certificate.url.endsWith('.pdf')
-                    ? 'View certificate (PDF)'
-                    : 'Show credential'}{' '}
-                  <ArrowIcon />
-                </a>
-              ) : (
-                <span className="credential-pending">
-                  edX · Credential ID listed above
-                </span>
-              )}
-            </article>
-          ))}
-        </div>
+        <section
+          className="certificate-list"
+          aria-labelledby="research-training"
+        >
+          <h3 id="research-training">Research ethics training</h3>
+          <article className="certificate-row">
+            <div>
+              <p className="eyebrow">
+                Office for Human Research Protections · U.S. Department of
+                Health and Human Services
+              </p>
+              <h4>Human Research Protection Training</h4>
+              <p>
+                Completed eight training modules on November 10–11, 2026. Topics
+                included participant-centered informed consent, privacy and
+                confidentiality, equitable participant selection, and the role
+                of institutional review boards.
+              </p>
+            </div>
+            <a
+              className="text-link credential-cta"
+              href="/certificates/ohrp-training-records.pdf"
+            >
+              View training records (PDF)
+            </a>
+          </article>
+        </section>
+        {[
+          { key: 'design', title: 'Design certificates' },
+          { key: 'related', title: 'Development and advertising certificates' },
+        ].map((group) => (
+          <section
+            key={group.key}
+            className="certificate-list"
+            aria-labelledby={group.key + '-certificates'}
+          >
+            <h3 id={group.key + '-certificates'}>{group.title}</h3>
+            {certificates
+              .filter((c) => c.group === group.key)
+              .map((certificate) => (
+                <article key={certificate.title} className="certificate-row">
+                  <div>
+                    <p className="eyebrow">
+                      {certificate.issuer}
+                      {certificate.date ? ` · ${certificate.date}` : ''}
+                    </p>
+                    <h4>{certificate.title}</h4>
+                    {certificate.id && (
+                      <p className="caption">Credential ID: {certificate.id}</p>
+                    )}
+                    {certificate.url.startsWith('https://') && (
+                      <p className="credential-destination">
+                        {certificate.url.replace('https://', '')}
+                      </p>
+                    )}
+                  </div>
+                  {certificate.url ? (
+                    <a
+                      className="text-link credential-cta"
+                      href={certificate.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Show credential: ${certificate.title} (opens in a new tab)`}
+                    >
+                      {certificate.url.endsWith('.pdf')
+                        ? 'View certificate (PDF)'
+                        : 'Show credential'}{' '}
+                      <ArrowIcon />
+                    </a>
+                  ) : (
+                    <span className="credential-pending">
+                      edX · Credential ID listed above
+                    </span>
+                  )}
+                </article>
+              ))}
+          </section>
+        ))}
         <aside
           className="apple-recognition"
           aria-label="Apple Teacher recognition"

@@ -1,6 +1,7 @@
 export const certificates = [
   {
     title: 'Meta Front-End Developer',
+    group: 'related',
     issuer: 'Meta',
     date: '',
     id: '60ZWCM6VJUJF',
@@ -8,6 +9,7 @@ export const certificates = [
   },
   {
     title: 'Google UX Design Professional Certificate',
+    group: 'design',
     issuer: 'Google',
     date: 'Issued September 2026',
     id: '0CUP60ZJGYEA',
@@ -15,6 +17,7 @@ export const certificates = [
   },
   {
     title: 'Microsoft UX Design Professional Certificate',
+    group: 'design',
     issuer: 'Microsoft',
     date: 'Issued April 2026',
     id: 'V1DFUDNGB7YS',
@@ -22,6 +25,7 @@ export const certificates = [
   },
   {
     title: 'IBM UI/UX Designer',
+    group: 'design',
     issuer: 'IBM',
     date: '',
     id: 'J24HAR3WR44T',
@@ -29,6 +33,7 @@ export const certificates = [
   },
   {
     title: 'Adobe Graphic Designer: Design that Demands Attention',
+    group: 'design',
     issuer: 'Adobe',
     date: 'Issued April 2026',
     id: 'RMF04P4S8AI2',
@@ -37,6 +42,7 @@ export const certificates = [
   {
     title:
       'Human-Computer Interaction I: Fundamentals & Design Principles (2025–2026)',
+    group: 'design',
     issuer: 'edX',
     date: 'Issued April 2026',
     id: '9836d52bed4b4785af6f6cef52cf7abd',
@@ -44,10 +50,10 @@ export const certificates = [
   },
   {
     title: 'Apple Ads Certification',
+    group: 'related',
     issuer: 'Apple',
     date: 'Class of 2026',
     id: '',
     url: '/certificates/apple-ads-certification.pdf',
   },
-
 ];
